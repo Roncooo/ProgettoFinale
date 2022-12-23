@@ -4,7 +4,7 @@ Griglia::Griglia()
 {
 	for(int i=0; i<rows; i++)
 		for(int j=0; j<cols; j++)
-			matrix[i][j] = ' ';
+			matrix[i][j] = '\0';
 	matrix[4][3] = 'C';
 	matrix[4][4] = 'I';
 	matrix[4][5] = 'A';
@@ -69,7 +69,12 @@ void Griglia::print() const
 	{
 		std::cout << letters[r] << " |";
 		for(int c=0; c<cols; c++)
-			std::cout << " " << matrix[r][c] << " |";
+		{
+			std::cout << " " << matrix[r][c];
+			if(matrix[r][c] == '\0')
+				std::cout << " ";
+			std::cout << " |";
+		}
 		std::cout << "\n" << delimiter_line << "\n";
 	}
 }

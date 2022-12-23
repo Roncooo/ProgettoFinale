@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Francesco
-Date                   :=22/12/2022
+Date                   :=23/12/2022
 CodeLitePath           :="C:/Program Files/CodeLite"
 MakeDirCommand         :=mkdir
 LinkerName             :=C:/mingw64/bin/g++.exe
@@ -64,7 +64,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) 
 
 
 
@@ -95,14 +95,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix): Griglia.cpp $(IntermediateDirectory)/Griglia.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Griglia.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Griglia.cpp$(DependSuffix): Griglia.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Griglia.cpp$(DependSuffix) -MM Griglia.cpp
-
-$(IntermediateDirectory)/Griglia.cpp$(PreprocessSuffix): Griglia.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Griglia.cpp$(PreprocessSuffix) Griglia.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
@@ -110,6 +102,14 @@ $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix): Griglia.cpp $(IntermediateDirectory)/Griglia.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Griglia.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Griglia.cpp$(DependSuffix): Griglia.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Griglia.cpp$(DependSuffix) -MM Griglia.cpp
+
+$(IntermediateDirectory)/Griglia.cpp$(PreprocessSuffix): Griglia.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Griglia.cpp$(PreprocessSuffix) Griglia.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
