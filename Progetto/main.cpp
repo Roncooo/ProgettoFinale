@@ -2,7 +2,8 @@
 
 int main(void)
 {
-	Griglia g;
-	g.print();
+	Griglia difesa;
+	Griglia attacco;
+	Griglia::print(attacco, difesa);
 	return 0;
 }

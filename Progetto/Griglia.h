@@ -8,7 +8,12 @@ class Griglia
 public:
 	Griglia();
 	~Griglia();
-	void print() const;
+	// interne così accedono tranquillamente a matrix
+	// statiche così passiamo gli argomenti tra parentesi
+	// la prima versione stampa una sola griglia
+	// l'altra ne stampa due affiancate
+	static void print(const Griglia& a);
+	static void print(const Griglia& a, const Griglia& b);
 private:
 	static constexpr int cols {12};
 	static constexpr int rows {12};

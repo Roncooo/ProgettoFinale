@@ -18,7 +18,7 @@ Griglia::~Griglia()
 {
 }
 
-void Griglia::print() const
+void Griglia::print(const Griglia& a)
 {
 	// formato in uso:
 	//  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10| 11| 12|
@@ -67,14 +67,77 @@ void Griglia::print() const
 	// inizio matrice
 	for(int r=0; r<rows; r++)
 	{
-		std::cout << letters[r] << " |";
+		std::cout << a.letters[r] << " |";
 		for(int c=0; c<cols; c++)
 		{
-			std::cout << " " << matrix[r][c];
-			if(matrix[r][c] == '\0')
+			std::cout << " " << a.matrix[r][c];
+			if(a.matrix[r][c] == '\0')
 				std::cout << " ";
 			std::cout << " |";
 		}
 		std::cout << "\n" << delimiter_line << "\n";
+	}
+}
+
+// stampa due griglie affiancate
+void Griglia::print(const Griglia& a, const Griglia& b)
+{
+	std::string margin = "\t";
+	
+	std::string delimiter_line = "  +";
+	for(int i=0; i<cols; i++)
+		delimiter_line += "---+";
+	
+	// riga dei numeri a
+	std::cout << "  ";	// identazione per le lettere
+	for(int i=1; i<=cols; i++)
+	{
+		std::cout << "| "+std::to_string(i);
+		if(i<10)
+			std::cout << " ";	// padding a destra
+	}
+	std::cout << "|";	// ultimo delimitatore
+
+	std::cout << margin;
+	
+	// riga di numeri 2
+	std::cout << "  ";	// identazione per le lettere
+	for(int i=1; i<=cols; i++)
+	{
+		std::cout << "| "+std::to_string(i);
+		if(i<10)
+			std::cout << " ";	// padding a destra
+	}
+	
+	std::cout << "|";	// ultimo delimitatore
+	
+	std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
+	
+	// inizio matrice
+	for(int r=0; r<rows; r++)
+	{
+		// riga matrice a
+		std::cout << a.letters[r] << " |";
+		for(int c=0; c<cols; c++)
+		{
+			std::cout << " " << a.matrix[r][c];
+			if(a.matrix[r][c] == '\0')
+				std::cout << " ";
+			std::cout << " |";
+		}
+		
+		std::cout << margin;
+		
+		// riga matrice b
+		std::cout << a.letters[r] << " |";
+		for(int c=0; c<cols; c++)
+		{
+			std::cout << " " << a.matrix[r][c];
+			if(a.matrix[r][c] == '\0')
+				std::cout << " ";
+			std::cout << " |";
+		}
+		
+		std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
 	}
 }
