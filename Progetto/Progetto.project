@@ -93,6 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Giocatore.cpp"/>
+    <File Name="Giocatore.h"/>
     <File Name="Supporto.cpp"/>
     <File Name="Supporto.h"/>
     <File Name="Sottomarino.cpp"/>
