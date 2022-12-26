@@ -1,3 +1,10 @@
+C:\Users\franc\Desktop\ProgettoFinale\Progetto\Posizione.h
+C:\Users\franc\Desktop\ProgettoFinale\Progetto\GrigliaAttacco.cpp
+C:\Users\franc\Desktop\ProgettoFinale\Progetto\GrigliaAttacco.h
+C:\Users\franc\Desktop\ProgettoFinale\Progetto\GrigliaDifesa.cpp
+C:\Users\franc\Desktop\ProgettoFinale\Progetto\GrigliaDifesa.h
+C:\Users\franc\Desktop\ProgettoFinale\Progetto\Nave.cpp
 C:\Users\franc\Desktop\ProgettoFinale\Progetto\Griglia.h
+C:\Users\franc\Desktop\ProgettoFinale\Progetto\Nave.h
 C:\Users\franc\Desktop\ProgettoFinale\Progetto\main.cpp
 C:\Users\franc\Desktop\ProgettoFinale\Progetto\Griglia.cpp
