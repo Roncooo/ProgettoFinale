@@ -7,9 +7,10 @@ class Posizione
 {
 public:
 	Posizione(int r=-1, int c=-1) : row{r}, col{c} {};
-	void update(int r, int c);
 	int row;
 	int col;
+	void operator= (const Posizione& a);
+	bool operator==(const Posizione& a);
 	void operator+=(const Posizione& a);
 	void operator-=(const Posizione& a);
 };
