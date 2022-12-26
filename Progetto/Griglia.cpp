@@ -1,3 +1,5 @@
+// autore: 
+
 #include "Griglia.h"
 
 Griglia::Griglia()
@@ -14,8 +16,10 @@ Griglia::Griglia()
 	matrix[4][10] = 'O';
 }
 
-Griglia::~Griglia()
+
+bool Griglia::is_valid(const Posizione& pos) const
 {
+	return !(pos.row<0 && pos.col<0 && pos.row>rows && pos.col>cols);
 }
 
 void Griglia::print(const Griglia& a)

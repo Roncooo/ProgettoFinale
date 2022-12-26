@@ -1,19 +1,24 @@
+// autore: 
+
 #ifndef GRIGLIA_H
 #define GRIGLIA_H
 
 #include <iostream>
+#include "Posizione.h"
 
 class Griglia
 {
 public:
 	Griglia();
-	~Griglia();
+//	~Griglia();
 	// interne così accedono tranquillamente a matrix
 	// statiche così passiamo gli argomenti tra parentesi
-	// la prima versione stampa una sola griglia
-	// l'altra ne stampa due affiancate
-	static void print(const Griglia& a);
-	static void print(const Griglia& a, const Griglia& b);
+	static void print(const Griglia& a);	// stampa una sola griglia
+	static void print(const Griglia& a, const Griglia& b);	// stampa due griglie affiancate
+	virtual void update()=0;	// virtuale pura perché avviene diversamente per la difesa e l'attacco
+	
+	virtual bool is_valid(const Posizione& pos) const;
+	
 private:
 	static constexpr int cols {12};
 	static constexpr int rows {12};

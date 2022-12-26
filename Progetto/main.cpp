@@ -1,9 +1,12 @@
-#include "Griglia.h"
+// autore: 
+
+#include "GrigliaDifesa.h"
+#include "GrigliaAttacco.h"
 
 int main(void)
 {
-	Griglia difesa;
-	Griglia attacco;
+	GrigliaDifesa difesa;
+	GrigliaAttacco attacco;
 	Griglia::print(attacco, difesa);
 	return 0;
 }
