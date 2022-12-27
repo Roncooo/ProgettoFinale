@@ -3,6 +3,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="Grid.cpp"/>
     <File Name="Ship.cpp"/>
     <File Name="Ship.h"/>
     <File Name="Support.h"/>
@@ -20,7 +21,6 @@
     <File Name="Battleship.h"/>
     <File Name="Player.h"/>
     <File Name="Player.cpp"/>
-    <File Name="Griglia.cpp"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">

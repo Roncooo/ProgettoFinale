@@ -22,6 +22,16 @@ bool Grid::is_valid(const Position& pos) const
 	return !(pos.row<0 && pos.col<0 && pos.row>rows && pos.col>cols);
 }
 
+char Grid::get_char(const Position& pos) const
+{
+	return matrix[pos.row][pos.col];
+}
+
+void Grid::set_char(const Position& pos, char c)		// non const
+{
+	matrix[pos.row][pos.col] = c;
+}
+
 void Grid::print(const Grid& a)
 {
 	// formato in uso:

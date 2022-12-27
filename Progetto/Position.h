@@ -3,6 +3,8 @@
 #ifndef Position_H
 #define Position_H
 
+#include <cmath>
+
 class Position
 {
 public:
@@ -13,6 +15,7 @@ public:
 	bool operator==(const Position& a);
 	void operator+=(const Position& a);
 	void operator-=(const Position& a);
+	double abs() const;
 };
 
 Position operator-(const Position& a, const Position& b);

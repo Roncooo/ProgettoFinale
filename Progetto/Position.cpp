@@ -34,3 +34,8 @@ Position operator+(const Position& a, const Position& b)
 {
 	return Position(a.row+b.row, a.col+b.col);
 }
+
+double Position::abs() const
+{
+	return std::sqrt(std::pow(row,2)+std::pow(col,2));
+}

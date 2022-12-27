@@ -6,6 +6,8 @@ Ship::Ship(const Position& prow, const Position& prune, DefenceGrid& grid)
 {
 	// MANCANO CONTROLLI DI VALIDITA' DELLA Position CON LE ALTRE NAVI
 	
+	grid.is_valid(prow, prune);
+	
 //	if(griglia.is_valid(poppa) && griglia.is_valid(prua))
 	
 }

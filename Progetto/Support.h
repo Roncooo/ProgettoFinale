@@ -5,7 +5,7 @@
 
 #include "Ship.h"
 
-class Support : public Nave
+class Support : public Ship
 {
 public:
 	void cure(const Position& pos);		// non è const perché muove e poi cura

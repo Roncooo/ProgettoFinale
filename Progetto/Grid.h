@@ -17,7 +17,10 @@ public:
 	static void print(const Grid& a, const Grid& b);	// stampa due griglie affiancate
 	virtual void update()=0;	// virtuale pura perché avviene diversamente per la difesa e l'attacco
 	
-	virtual bool is_valid(const Position& pos) const;
+	bool is_valid(const Position& pos) const;
+	
+	char get_char(const Position& pos) const;
+	void set_char(const Position& pos, char c);		// non const
 	
 private:
 	static constexpr int cols {12};
