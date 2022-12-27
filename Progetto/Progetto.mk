@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Francesco
-Date                   :=26/12/2022
+Date                   :=27/12/2022
 CodeLitePath           :="C:/Program Files/CodeLite"
 MakeDirCommand         :=mkdir
 LinkerName             :=C:/mingw64/bin/g++.exe
@@ -64,7 +64,8 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Supporto.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sottomarino.cpp$(ObjectSuffix) $(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Nave.cpp$(ObjectSuffix) $(IntermediateDirectory)/GrigliaDifesa.cpp$(ObjectSuffix) $(IntermediateDirectory)/GrigliaAttacco.cpp$(ObjectSuffix) $(IntermediateDirectory)/Corazzata.cpp$(ObjectSuffix) $(IntermediateDirectory)/Posizione.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) $(IntermediateDirectory)/Nave.cpp$(ObjectSuffix) $(IntermediateDirectory)/Giocatore.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sottomarino.cpp$(ObjectSuffix) $(IntermediateDirectory)/Supporto.cpp$(ObjectSuffix) $(IntermediateDirectory)/GrigliaAttacco.cpp$(ObjectSuffix) $(IntermediateDirectory)/Corazzata.cpp$(ObjectSuffix) $(IntermediateDirectory)/Posizione.cpp$(ObjectSuffix) $(IntermediateDirectory)/GrigliaDifesa.cpp$(ObjectSuffix) \
+	
 
 
 
@@ -95,21 +96,13 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/Supporto.cpp$(ObjectSuffix): Supporto.cpp $(IntermediateDirectory)/Supporto.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Supporto.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Supporto.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Supporto.cpp$(DependSuffix): Supporto.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Supporto.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Supporto.cpp$(DependSuffix) -MM Supporto.cpp
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 
-$(IntermediateDirectory)/Supporto.cpp$(PreprocessSuffix): Supporto.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Supporto.cpp$(PreprocessSuffix) Supporto.cpp
-
-$(IntermediateDirectory)/Sottomarino.cpp$(ObjectSuffix): Sottomarino.cpp $(IntermediateDirectory)/Sottomarino.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Sottomarino.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Sottomarino.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Sottomarino.cpp$(DependSuffix): Sottomarino.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Sottomarino.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Sottomarino.cpp$(DependSuffix) -MM Sottomarino.cpp
-
-$(IntermediateDirectory)/Sottomarino.cpp$(PreprocessSuffix): Sottomarino.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Sottomarino.cpp$(PreprocessSuffix) Sottomarino.cpp
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
 $(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix): Griglia.cpp $(IntermediateDirectory)/Griglia.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Griglia.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Griglia.cpp$(ObjectSuffix) $(IncludePath)
@@ -119,14 +112,6 @@ $(IntermediateDirectory)/Griglia.cpp$(DependSuffix): Griglia.cpp
 $(IntermediateDirectory)/Griglia.cpp$(PreprocessSuffix): Griglia.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Griglia.cpp$(PreprocessSuffix) Griglia.cpp
 
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
-
 $(IntermediateDirectory)/Nave.cpp$(ObjectSuffix): Nave.cpp $(IntermediateDirectory)/Nave.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Nave.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Nave.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Nave.cpp$(DependSuffix): Nave.cpp
@@ -135,13 +120,29 @@ $(IntermediateDirectory)/Nave.cpp$(DependSuffix): Nave.cpp
 $(IntermediateDirectory)/Nave.cpp$(PreprocessSuffix): Nave.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Nave.cpp$(PreprocessSuffix) Nave.cpp
 
-$(IntermediateDirectory)/GrigliaDifesa.cpp$(ObjectSuffix): GrigliaDifesa.cpp $(IntermediateDirectory)/GrigliaDifesa.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/GrigliaDifesa.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GrigliaDifesa.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/GrigliaDifesa.cpp$(DependSuffix): GrigliaDifesa.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GrigliaDifesa.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GrigliaDifesa.cpp$(DependSuffix) -MM GrigliaDifesa.cpp
+$(IntermediateDirectory)/Giocatore.cpp$(ObjectSuffix): Giocatore.cpp $(IntermediateDirectory)/Giocatore.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Giocatore.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Giocatore.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Giocatore.cpp$(DependSuffix): Giocatore.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Giocatore.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Giocatore.cpp$(DependSuffix) -MM Giocatore.cpp
 
-$(IntermediateDirectory)/GrigliaDifesa.cpp$(PreprocessSuffix): GrigliaDifesa.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GrigliaDifesa.cpp$(PreprocessSuffix) GrigliaDifesa.cpp
+$(IntermediateDirectory)/Giocatore.cpp$(PreprocessSuffix): Giocatore.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Giocatore.cpp$(PreprocessSuffix) Giocatore.cpp
+
+$(IntermediateDirectory)/Sottomarino.cpp$(ObjectSuffix): Sottomarino.cpp $(IntermediateDirectory)/Sottomarino.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Sottomarino.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Sottomarino.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Sottomarino.cpp$(DependSuffix): Sottomarino.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Sottomarino.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Sottomarino.cpp$(DependSuffix) -MM Sottomarino.cpp
+
+$(IntermediateDirectory)/Sottomarino.cpp$(PreprocessSuffix): Sottomarino.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Sottomarino.cpp$(PreprocessSuffix) Sottomarino.cpp
+
+$(IntermediateDirectory)/Supporto.cpp$(ObjectSuffix): Supporto.cpp $(IntermediateDirectory)/Supporto.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/Supporto.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Supporto.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Supporto.cpp$(DependSuffix): Supporto.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Supporto.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Supporto.cpp$(DependSuffix) -MM Supporto.cpp
+
+$(IntermediateDirectory)/Supporto.cpp$(PreprocessSuffix): Supporto.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Supporto.cpp$(PreprocessSuffix) Supporto.cpp
 
 $(IntermediateDirectory)/GrigliaAttacco.cpp$(ObjectSuffix): GrigliaAttacco.cpp $(IntermediateDirectory)/GrigliaAttacco.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/GrigliaAttacco.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GrigliaAttacco.cpp$(ObjectSuffix) $(IncludePath)
@@ -166,6 +167,14 @@ $(IntermediateDirectory)/Posizione.cpp$(DependSuffix): Posizione.cpp
 
 $(IntermediateDirectory)/Posizione.cpp$(PreprocessSuffix): Posizione.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Posizione.cpp$(PreprocessSuffix) Posizione.cpp
+
+$(IntermediateDirectory)/GrigliaDifesa.cpp$(ObjectSuffix): GrigliaDifesa.cpp $(IntermediateDirectory)/GrigliaDifesa.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/franc/Desktop/ProgettoFinale/Progetto/GrigliaDifesa.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GrigliaDifesa.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/GrigliaDifesa.cpp$(DependSuffix): GrigliaDifesa.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GrigliaDifesa.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GrigliaDifesa.cpp$(DependSuffix) -MM GrigliaDifesa.cpp
+
+$(IntermediateDirectory)/GrigliaDifesa.cpp$(PreprocessSuffix): GrigliaDifesa.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GrigliaDifesa.cpp$(PreprocessSuffix) GrigliaDifesa.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

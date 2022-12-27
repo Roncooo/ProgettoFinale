@@ -12,7 +12,7 @@ public:
 	Giocatore(std::string n = "Player");
 	
 	GrigliaAttacco attack;
-	GirgliaDifesa defence;
+	GrigliaDifesa defence;
 	std::string name;
 	
 	~Giocatore();
