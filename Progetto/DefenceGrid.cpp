@@ -6,6 +6,23 @@ DefenceGrid::DefenceGrid()
 {
 }
 
+void DefenceGrid::update()
+{
+	reset_matrix();
+	for(int i = 0; i < SHIP_NUMBER; i++)
+	{
+		if(ships[i]->sunk == true) continue; // se la nave e'affondata vado alla prossima
+		
+		for(int j = 0; j < ships[i]->dimension; j++)
+		{
+			if(ships[i]->armor[j] == false) // corazza a 1 se non e'stata colpita
+				set_char(ships[i]->pos[j], ships[i]->hit);
+			else
+				set_char(ships[i]->pos[j], ships[i]->not_hit);
+		}
+	}
+}
+
 bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 {
 	Position ordered_prow;		// è la Position più vicina all'origine

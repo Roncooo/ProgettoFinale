@@ -18,7 +18,8 @@ public:
 									// dimensione (e una Ship generica non ha dimensione specifica)
 									// si potrebbe aggirare rendendo Ship una classe template ma è solo un casino credo
 	std::vector<bool> armor;		// corazza, memorizza quali pezzi della Ship sono stati colpiti
-	
+	char hit;
+	char not_hit;
 	void move(const Position& new_pos);
 	int get_armor() const;
 	
