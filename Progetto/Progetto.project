@@ -3,24 +3,24 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="Giocatore.cpp"/>
-    <File Name="Giocatore.h"/>
-    <File Name="Supporto.cpp"/>
-    <File Name="Supporto.h"/>
-    <File Name="Sottomarino.cpp"/>
-    <File Name="Sottomarino.h"/>
-    <File Name="Corazzata.cpp"/>
-    <File Name="Corazzata.h"/>
-    <File Name="Posizione.cpp"/>
-    <File Name="Posizione.h"/>
-    <File Name="GrigliaAttacco.cpp"/>
-    <File Name="GrigliaAttacco.h"/>
-    <File Name="GrigliaDifesa.cpp"/>
-    <File Name="GrigliaDifesa.h"/>
-    <File Name="Nave.cpp"/>
-    <File Name="Nave.h"/>
-    <File Name="Griglia.cpp"/>
-    <File Name="Griglia.h"/>
+    <File Name="Grid.cpp"/>
+    <File Name="Ship.cpp"/>
+    <File Name="Ship.h"/>
+    <File Name="Support.h"/>
+    <File Name="Support.cpp"/>
+    <File Name="Submarine.h"/>
+    <File Name="Submarine.cpp"/>
+    <File Name="Position.cpp"/>
+    <File Name="Position.h"/>
+    <File Name="DefenceGrid.cpp"/>
+    <File Name="DefenceGrid.h"/>
+    <File Name="AttackGrid.h"/>
+    <File Name="AttackGrid.cpp"/>
+    <File Name="Grid.h"/>
+    <File Name="Battleship.cpp"/>
+    <File Name="Battleship.h"/>
+    <File Name="Player.h"/>
+    <File Name="Player.cpp"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">

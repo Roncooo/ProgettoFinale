@@ -1,8 +1,8 @@
 // autore: 
 
-#include "Griglia.h"
+#include "Grid.h"
 
-Griglia::Griglia()
+Grid::Grid()
 {
 	for(int i=0; i<rows; i++)
 		for(int j=0; j<cols; j++)
@@ -17,12 +17,22 @@ Griglia::Griglia()
 }
 
 
-bool Griglia::is_valid(const Posizione& pos) const
+bool Grid::is_valid(const Position& pos) const
 {
 	return !(pos.row<0 && pos.col<0 && pos.row>rows && pos.col>cols);
 }
 
-void Griglia::print(const Griglia& a)
+char Grid::get_char(const Position& pos) const
+{
+	return matrix[pos.row][pos.col];
+}
+
+void Grid::set_char(const Position& pos, char c)		// non const
+{
+	matrix[pos.row][pos.col] = c;
+}
+
+void Grid::print(const Grid& a)
 {
 	// formato in uso:
 	//  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10| 11| 12|
@@ -81,7 +91,7 @@ void Griglia::print(const Griglia& a)
 }
 
 // stampa due griglie affiancate
-void Griglia::print(const Griglia& a, const Griglia& b)
+void Grid::print(const Grid& a, const Grid& b)
 {
 	std::string margin = "\t";
 	

@@ -3,13 +3,13 @@
 #ifndef CORAZZATA_H
 #define CORAZZATA_H
 
-#include "Nave.h"
+#include "Ship.h"
 
-class Corazzata : public Nave
+class Battleship : public Ship
 {
 public:
 	void move() = delete;
-	void shoot(const Posizione& pos) const;
+	void shoot(const Position& pos) const;
 };
 
 #endif // CORAZZATA_H
