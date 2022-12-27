@@ -59,6 +59,5 @@ bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 				return false;
 		}
 	}
-	
 	return true;
 }

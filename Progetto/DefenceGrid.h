@@ -17,4 +17,6 @@ public:
 	bool is_valid(const Position& prow, const Position& prune) const;
 };
 
+#include "Ship.h"
+
 #endif // DefenceGrid_H
