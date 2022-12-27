@@ -1,4 +1,0 @@
-// autore: 
-
-#include "Sottomarino.h"
-

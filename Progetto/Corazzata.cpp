@@ -1,4 +1,0 @@
-// autore: 
-
-#include "Corazzata.h"
-
