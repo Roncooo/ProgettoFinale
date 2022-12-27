@@ -16,6 +16,14 @@ Grid::Grid()
 	matrix[4][10] = 'O';
 }
 
+void Grid::reset_matrix()
+{
+	for(int r=0; r<rows; r++)
+	{
+		for(int c=0; c<cols; c++)
+			matrix[r][c] = ' ';
+	}
+}
 
 bool Grid::is_valid(const Position& pos) const
 {

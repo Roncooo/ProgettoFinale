@@ -16,6 +16,7 @@ public:
 	static void print(const Grid& a);	// stampa una sola Grid
 	static void print(const Grid& a, const Grid& b);	// stampa due griglie affiancate
 	virtual void update()=0;	// virtuale pura perché avviene diversamente per la difesa e l'attacco
+	void reset_matrix();
 	
 	bool is_valid(const Position& pos) const;
 	
