@@ -4,9 +4,7 @@
 
 Grid::Grid()
 {
-	for(int i=0; i<rows; i++)
-		for(int j=0; j<cols; j++)
-			matrix[i][j] = ' ';
+	reset_matrix();
 	matrix[4][3] = 'C';
 	matrix[4][4] = 'I';
 	matrix[4][5] = 'A';
@@ -16,6 +14,14 @@ Grid::Grid()
 	matrix[4][10] = 'O';
 }
 
+void Grid::reset_matrix()
+{
+	for(int r=0; r<rows; r++)
+	{
+		for(int c=0; c<cols; c++)
+			matrix[r][c] = ' ';
+	}
+}
 
 bool Grid::is_valid(const Position& pos) const
 {
