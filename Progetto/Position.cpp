@@ -2,6 +2,11 @@
 
 #include "Position.h"
 
+bool Position::operator!=(const Position& pos)
+{
+	return this->row != pos.row || this->col != pos.col;
+}
+
 bool Position::operator==(const Position& pos)
 {
 	return this->row == pos.row && this->col == pos.col;

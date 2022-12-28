@@ -13,6 +13,7 @@ public:
 	int col;
 	void operator= (const Position& a);
 	bool operator==(const Position& a);
+	bool operator!=(const Position& a);
 	void operator+=(const Position& a);
 	void operator-=(const Position& a);
 	double abs() const;
