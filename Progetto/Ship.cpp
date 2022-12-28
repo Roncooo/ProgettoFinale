@@ -32,3 +32,11 @@ int Ship::get_armor() const
 	}
 	return c;
 }
+
+void Ship::restore_armor()
+{
+	if(sunk) return;
+	
+	for(int i=0; i<dimension; i++)
+		armor[i] = true;
+}
