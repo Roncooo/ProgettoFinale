@@ -12,8 +12,8 @@ public:
 	int row;
 	int col;
 	void operator= (const Position& a);
-	bool operator==(const Position& a);
-	bool operator!=(const Position& a);
+	bool operator==(const Position& a) const;
+	bool operator!=(const Position& a) const;
 	void operator+=(const Position& a);
 	void operator-=(const Position& a);
 	double abs() const;

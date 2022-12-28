@@ -10,6 +10,7 @@ class Battleship : public Ship
 public:
 	void move() = delete;
 	void shoot(const Position& pos) const;
+	~Battleship() override;
 };
 
 #endif // CORAZZATA_H

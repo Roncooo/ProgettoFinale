@@ -2,7 +2,7 @@
 
 #include "Support.h"
 
-/*bool Support::check_pos(Position& p)
+bool Support::check_pos(const Position& p)
 {
 	// nave di supporto cura le navi nel raggio di 3x3 dal centro, non puo' autocurarsi
 	for(int i = 0; i < this->dimension; i++)
@@ -11,20 +11,21 @@
 			return false;			// falso perche' non puo' autocurarsi
 	}
 	
-	if( p != this->center+Position(-1,-1) && 	// top left
-		p != this->center+Position(-1, 0) &&	// top
-		p != this->center+Position(-1,+1) &&	// top right
-		p != this->center+Position(0, +1) &&	// right
-		p != this->center+Position(+1,+1) &&	// bottom right
-		p != this->center+Position(+1, 0) &&	// bottom
-		p != this->center+Position(+1,-1) &&	// bottom left
-		p != this->center+Position(0, -1)  	)	// left
+	if( p != (this->center)+Position(-1,-1) && 	// top left
+		p != (this->center)+Position(-1, 0) &&	// top
+		p != (this->center)+Position(-1,+1) &&	// top right
+		p != (this->center)+Position(0, +1) &&	// right
+		p != (this->center)+Position(+1,+1) &&	// bottom right
+		p != (this->center)+Position(+1, 0) &&	// bottom
+		p != (this->center)+Position(+1,-1) &&	// bottom left
+		p != (this->center)+Position(0, -1)  	)	// left
 		return false;
 	
 	return true;
-}*/
+}
 
-Support::Support(const Position& prune, const Position& stern, DefenceGrid& grid) : Ship(prune, stern, grid)
+Support::Support(const Position& prune, const Position& stern, DefenceGrid& grid) 
+	: Ship(prune, stern, grid)
 {
 	this->dimension = 3;
 	this->not_hit = 'S';
@@ -59,6 +60,9 @@ Support::Support(const Position& prune, const Position& stern, DefenceGrid& grid
 			pos[i] += Position(1, 0);
 	}
 }
+
+Support::~Support(){}
+
 void Support::cure(const Position& pos)
 {
 	this->move(pos);

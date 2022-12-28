@@ -12,6 +12,8 @@ Ship::Ship(const Position& prow, const Position& prune, DefenceGrid& grid)
 	
 }
 
+Ship::~Ship(){}
+
 void Ship::move(const Position& new_center)
 {
 	Position dislocation = new_center - center;

@@ -2,12 +2,12 @@
 
 #include "Position.h"
 
-bool Position::operator!=(const Position& pos)
+bool Position::operator!=(const Position& pos) const
 {
 	return this->row != pos.row || this->col != pos.col;
 }
 
-bool Position::operator==(const Position& pos)
+bool Position::operator==(const Position& pos) const
 {
 	return this->row == pos.row && this->col == pos.col;
 }

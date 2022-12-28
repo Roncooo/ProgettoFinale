@@ -2,3 +2,4 @@
 
 #include "Battleship.h"
 
+Battleship::~Battleship(){}
