@@ -2,31 +2,6 @@
 
 #include "Support.h"
 
-
-
-// controlla se, rispetto al center di support, la nave da curare è nella posizione giusta
-bool Support::check_pos(const Position& p)
-{
-	// nave di supporto cura le navi nel raggio di 3x3 dal centro, non puo' autocurarsi
-	for(int i = 0; i < this->dimension; i++)
-	{
-		if(this->pos[i] == p)		// se p è presente nel vector di posizioni di this ritorno
-			return false;			// falso perche' non puo' autocurarsi
-	}
-	
-	if( p != (this->center)+Position(-1,-1) && 	// top left
-		p != (this->center)+Position(-1, 0) &&	// top
-		p != (this->center)+Position(-1,+1) &&	// top right
-		p != (this->center)+Position(0, +1) &&	// right
-		p != (this->center)+Position(+1,+1) &&	// bottom right
-		p != (this->center)+Position(+1, 0) &&	// bottom
-		p != (this->center)+Position(+1,-1) &&	// bottom left
-		p != (this->center)+Position(0, -1)  	)	// left
-		return false;
-	
-	return true;
-}
-
 Support::Support(const Position& prune, const Position& stern, DefenceGrid& grid) 
 	: Ship(prune, stern, grid)
 {
@@ -34,12 +9,49 @@ Support::Support(const Position& prune, const Position& stern, DefenceGrid& grid
 
 Support::~Support(){}
 
-void Support::cure(const Position& pos, Ship& s)
+// controlla se, rispetto al center di support, la nave da curare è nella posizione giusta
+// dice se la posizione passata è curabile dalla nave di supporto che invoca la funzione
+// quindi deve essere sufficentemente vicina e non può essere la nave stessa
+bool Support::is_curable(const Position& p)
 {
-	this->move(pos);	// mi muovo dove chiede l'utente
-	for(int j = 0; j < 8; j++)	// nella seconda condizione della for ci va this->my_grid.ships.size() ma non mi compila
+	for(int i = 0; i < dimension; i++)
+	{
+		if(p == pos[i])			// se p è presente nel vector di posizioni di this ritorno
+			return false;		// falso perche' non puo' autocurarsi
+	}
+	
+	if( p != center+Position(-1,-1) && 	// top left
+		p != center+Position(-1, 0) &&	// top
+		p != center+Position(-1,+1) &&	// top right
+		p != center+Position( 0,+1) &&	// right
+		p != center+Position(+1,+1) &&	// bottom right
+		p != center+Position(+1, 0) &&	// bottom
+		p != center+Position(+1,-1) &&	// bottom left
+		p != center+Position( 0,-1)  	)	// left
+		return false;
+	
+	// al posto di tutta la if scriverei così ma è da controllare
+//	return (p-center).abs()<2;
+	
+	return true;
+}
+
+void Support::cure(const Position& pos)
+{
+	// mi muovo dove chiede l'utente
+	move(pos);
+	// nella seconda condizione della for ci va this->my_grid.ships.size() ma non mi compila
+	for(int j = 0; j < DefenceGrid::SHIP_NUMBER; j++)	// per ogni nave
+	{
 		for(int x = 0; x < my_grid.ships[j]->dimension; x++)
-			if(!check_pos(my_grid.ships[j]->pos[x]))	continue;
+		{	
+			if(!is_curable(my_grid.ships[j]->pos[x]))
+				continue;
 			else
 				my_grid.ships[j]->restore_armor();
+		}
+	}
+	
+	// in alternativa si potrebbe controllare in oguna delle 6 posizioni adiacenti alla nave di supporto
+	// se c'è una nave da curare, in tal caso la curo (così non serve check_pos)
 }

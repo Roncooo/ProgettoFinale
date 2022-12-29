@@ -19,7 +19,7 @@ public:
 	Match(const Player& p1, const Player& p2);
 	Player player1;
 	Player player2;
-	void ship_placement(const Player& p);
+	void ship_placement(Player& p);
 };
 
 #endif // MATCH_H
