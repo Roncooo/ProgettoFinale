@@ -23,10 +23,13 @@ Ship::Ship(const Position& prow, const Position& prune, DefenceGrid& grid)
 	if(ordered_prow.row == ordered_prune.row)
 	{
 		dimension = (ordered_prune.col - ordered_prow.col)+1;
+		//già qui, in entrambi i blocchi, dovremmo controllare che la dimensione non sia maggiore di 5? (perchè minore di 1 è not possible)
+		
 		pos = std::vector<Position>(dimension);
 		for(int i = 0; i < dimension; i++)
 			pos[i] = (ordered_prow + Position(0, i));		
-		Position center = ordered_prow + Position(0, (dimension/2));
+		/*Position*/ center = ordered_prow + Position(0, (dimension/2));
+		//qui ↑ senza Position
 	}
 	else	// altrimenti hanno per forza colonna uguale
 	{
@@ -34,7 +37,7 @@ Ship::Ship(const Position& prow, const Position& prune, DefenceGrid& grid)
 		pos = std::vector<Position>(dimension);
 		for(int i = 0; i < dimension; i++)
 			pos[i] = (ordered_prow + Position(i, 0));
-		Position center = ordered_prow + Position((dimension/2), 0);
+		/*Position*/ center = ordered_prow + Position((dimension/2), 0);
 	}
 	
 	armor = std::vector<bool>(dimension);
