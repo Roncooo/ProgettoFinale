@@ -30,6 +30,8 @@ public:
 	DefenceGrid& my_grid;
 	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
 	
+//	bool control(DefenceGrid& enemy);
+	
 	virtual ~Ship()=0;	// stratagemma per rendere Ship virtuale pura
 };
 

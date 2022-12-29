@@ -53,7 +53,20 @@ void Ship::move(const Position& new_center)
 	for(int i=0; i<dimension; i++)
 		pos[i] += dislocation;
 	// manca controllo sulla nuova Position
+	
+	// è necessaria una funzione che abbia come parametro la griglia di difesa dell'avversario, tipo quella commentata qui sotto
+	// p.s. non so nemmeno se compila, è solo un'idea
+	
+	
 }
+
+//bool Ship::control(DefenceGrid& enemy){
+//	for(int i=0; i<dimension; i++){
+//		if (pos[i] == enemy.ship[i]->pos[i])
+//			return false
+//	}
+//	return true;
+//}
 
 int Ship::get_armor() const
 {
