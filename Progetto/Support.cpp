@@ -2,6 +2,7 @@
 
 #include "Support.h"
 
+// controlla se, rispetto al center di support, la nave da curare è nella posizione giusta
 bool Support::check_pos(const Position& p)
 {
 	// nave di supporto cura le navi nel raggio di 3x3 dal centro, non puo' autocurarsi
@@ -63,7 +64,21 @@ Support::Support(const Position& prune, const Position& stern, DefenceGrid& grid
 
 Support::~Support(){}
 
-void Support::cure(const Position& pos)
+void Support::cure(const Position& pos, Ship& s)
 {
-	this->move(pos);
+	this->move(pos);	// mi muovo dove chiede l'utente
+	/*for(int i = 0; i < s.dimension; i++)
+	{
+		if(!check_pos(s.pos[i]))	continue;	// se la posizione non è valida passo alla prossima
+		else
+			s.restore_armor();
+	}*/
+	for(int i = -1; i < 2; i++)
+	{	
+		for(int j = 0; j < 8; j++)	// nella seconda condizione della for ci va this->my_grid.ships.size() ma non mi compila
+			for(int x = 0; x < my_grid.ships[j]->dimension; x++)
+				if(this->center+Position(-1, i) != my_grid.ships[j]->pos[x])	continue;
+				else
+					my_grid.ships[j]->restore_armor();
+	}
 }

@@ -11,7 +11,8 @@ class Support : public Ship
 	bool check_pos(const Position& p);
 public:
 	Support(const Position& prow, const Position& stern, DefenceGrid& grid); // il controllo lo fara' is_valid di DefenceGrid
-	void cure(const Position& pos);		// non è const perché muove e poi cura
+	// cure riceve la posizione dove andare e una nave da analizzare
+	void cure(const Position& pos, Ship& s);		// non è const perché muove e poi cura
 	~Support() override;
 };
 #endif // Support_H

@@ -1,4 +1,4 @@
-// autore: 
+// autore: clTabCtrl
 
 #ifndef Grid_H
 #define Grid_H

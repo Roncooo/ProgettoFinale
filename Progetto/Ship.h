@@ -23,6 +23,7 @@ public:
 	char not_hit;
 	void move(const Position& new_pos);
 	int get_armor() const;
+	DefenceGrid& my_grid;
 	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
 	
 	virtual ~Ship()=0;	// stratagemma per rendere Ship virtuale pura
