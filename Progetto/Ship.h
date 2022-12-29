@@ -7,9 +7,13 @@
 #include "Position.h"
 #include "DefenceGrid.h"
 
+using std::invalid_argument;
+
 class Ship
 {
 public:
+
+	// throws std::invalid_argument se la griglia non è valida
 	Ship(const Position& prow, const Position& stern, DefenceGrid& grid);
 	bool sunk = false;
 	int dimension;
