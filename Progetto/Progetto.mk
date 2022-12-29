@@ -64,8 +64,8 @@ AS       := "C:/Program Files/mingw64/bin/as.exe"
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/Battleship.cpp$(ObjectSuffix) $(IntermediateDirectory)/Grid.cpp$(ObjectSuffix) $(IntermediateDirectory)/Ship.cpp$(ObjectSuffix) $(IntermediateDirectory)/Support.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submarine.cpp$(ObjectSuffix) $(IntermediateDirectory)/DefenceGrid.cpp$(ObjectSuffix) $(IntermediateDirectory)/Position.cpp$(ObjectSuffix) $(IntermediateDirectory)/AttackGrid.cpp$(ObjectSuffix) \
-	
+Objects0=$(IntermediateDirectory)/Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/Battleship.cpp$(ObjectSuffix) $(IntermediateDirectory)/AttackGrid.cpp$(ObjectSuffix) $(IntermediateDirectory)/Match.cpp$(ObjectSuffix) $(IntermediateDirectory)/Ship.cpp$(ObjectSuffix) $(IntermediateDirectory)/Grid.cpp$(ObjectSuffix) $(IntermediateDirectory)/Support.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submarine.cpp$(ObjectSuffix) $(IntermediateDirectory)/DefenceGrid.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Position.cpp$(ObjectSuffix) 
 
 
 
@@ -112,13 +112,21 @@ $(IntermediateDirectory)/Battleship.cpp$(DependSuffix): Battleship.cpp
 $(IntermediateDirectory)/Battleship.cpp$(PreprocessSuffix): Battleship.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Battleship.cpp$(PreprocessSuffix) Battleship.cpp
 
-$(IntermediateDirectory)/Grid.cpp$(ObjectSuffix): Grid.cpp $(IntermediateDirectory)/Grid.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Beatrice/OneDrive/Desktop/ProgettoFinale/Progetto/Grid.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Grid.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Grid.cpp$(DependSuffix): Grid.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Grid.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Grid.cpp$(DependSuffix) -MM Grid.cpp
+$(IntermediateDirectory)/AttackGrid.cpp$(ObjectSuffix): AttackGrid.cpp $(IntermediateDirectory)/AttackGrid.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Beatrice/OneDrive/Desktop/ProgettoFinale/Progetto/AttackGrid.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/AttackGrid.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/AttackGrid.cpp$(DependSuffix): AttackGrid.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/AttackGrid.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/AttackGrid.cpp$(DependSuffix) -MM AttackGrid.cpp
 
-$(IntermediateDirectory)/Grid.cpp$(PreprocessSuffix): Grid.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Grid.cpp$(PreprocessSuffix) Grid.cpp
+$(IntermediateDirectory)/AttackGrid.cpp$(PreprocessSuffix): AttackGrid.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/AttackGrid.cpp$(PreprocessSuffix) AttackGrid.cpp
+
+$(IntermediateDirectory)/Match.cpp$(ObjectSuffix): Match.cpp $(IntermediateDirectory)/Match.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Beatrice/OneDrive/Desktop/ProgettoFinale/Progetto/Match.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Match.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Match.cpp$(DependSuffix): Match.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Match.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Match.cpp$(DependSuffix) -MM Match.cpp
+
+$(IntermediateDirectory)/Match.cpp$(PreprocessSuffix): Match.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Match.cpp$(PreprocessSuffix) Match.cpp
 
 $(IntermediateDirectory)/Ship.cpp$(ObjectSuffix): Ship.cpp $(IntermediateDirectory)/Ship.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Beatrice/OneDrive/Desktop/ProgettoFinale/Progetto/Ship.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Ship.cpp$(ObjectSuffix) $(IncludePath)
@@ -127,6 +135,14 @@ $(IntermediateDirectory)/Ship.cpp$(DependSuffix): Ship.cpp
 
 $(IntermediateDirectory)/Ship.cpp$(PreprocessSuffix): Ship.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Ship.cpp$(PreprocessSuffix) Ship.cpp
+
+$(IntermediateDirectory)/Grid.cpp$(ObjectSuffix): Grid.cpp $(IntermediateDirectory)/Grid.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Beatrice/OneDrive/Desktop/ProgettoFinale/Progetto/Grid.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Grid.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Grid.cpp$(DependSuffix): Grid.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Grid.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Grid.cpp$(DependSuffix) -MM Grid.cpp
+
+$(IntermediateDirectory)/Grid.cpp$(PreprocessSuffix): Grid.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Grid.cpp$(PreprocessSuffix) Grid.cpp
 
 $(IntermediateDirectory)/Support.cpp$(ObjectSuffix): Support.cpp $(IntermediateDirectory)/Support.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Beatrice/OneDrive/Desktop/ProgettoFinale/Progetto/Support.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Support.cpp$(ObjectSuffix) $(IncludePath)
@@ -167,14 +183,6 @@ $(IntermediateDirectory)/Position.cpp$(DependSuffix): Position.cpp
 
 $(IntermediateDirectory)/Position.cpp$(PreprocessSuffix): Position.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Position.cpp$(PreprocessSuffix) Position.cpp
-
-$(IntermediateDirectory)/AttackGrid.cpp$(ObjectSuffix): AttackGrid.cpp $(IntermediateDirectory)/AttackGrid.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Beatrice/OneDrive/Desktop/ProgettoFinale/Progetto/AttackGrid.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/AttackGrid.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/AttackGrid.cpp$(DependSuffix): AttackGrid.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/AttackGrid.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/AttackGrid.cpp$(DependSuffix) -MM AttackGrid.cpp
-
-$(IntermediateDirectory)/AttackGrid.cpp$(PreprocessSuffix): AttackGrid.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/AttackGrid.cpp$(PreprocessSuffix) AttackGrid.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

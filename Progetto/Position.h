@@ -4,11 +4,14 @@
 #define Position_H
 
 #include <cmath>
+#include <string>
+#include <stdexcept>
 
 class Position
 {
 public:
 	Position(int r=-1, int c=-1) : row{r}, col{c} {};
+	Position(std::string s);
 	int row;
 	int col;
 	void operator= (const Position& a);

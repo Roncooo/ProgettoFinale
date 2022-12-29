@@ -17,6 +17,7 @@ public:
 	AttackGrid attack;
 	DefenceGrid defence;
 	std::string name;
+	bool is_cpu;
 	
 	~Player();
 };

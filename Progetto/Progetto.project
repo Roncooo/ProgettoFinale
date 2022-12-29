@@ -3,6 +3,8 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="Match.cpp"/>
+    <File Name="Match.h"/>
     <File Name="Grid.cpp"/>
     <File Name="Ship.cpp"/>
     <File Name="Ship.h"/>
