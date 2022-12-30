@@ -49,7 +49,12 @@ void user_placement_helper(const Player& p, int n_coordinates, Position& prow, P
 		// la Regular Expression così impostata descrive una qualsiasi coppia di coordinate formata da
 		// una lettera maiuscola nell'intervallo A-I oppure L M N
 		// e un numero nell'intervallo 1-9 oppure 1 seguito da 0 o 1 o 2, in altre parole un numero da 1 a 12
-		std::regex reg_position("[A-ILMN]([1-9]|1[012])");
+//		std::regex reg_position("[A-ILMN]([1-9]|1[012])");
+		std::string reg_rule = "[";
+		for(int i=0; i<Grid::rows; i++)
+			reg_rule += Grid::letters[i];
+		reg_rule+="]([1-9]|1[012])";
+		std::regex reg_position(reg_rule);
 		
 		if(n_coordinates==2)
 			std::cout << ">> Quali sono le coordinate per la "+ship_name+":\n";

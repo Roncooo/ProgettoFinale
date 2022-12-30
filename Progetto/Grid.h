@@ -23,11 +23,11 @@ public:
 	char get_char(const Position& pos) const;
 	void set_char(const Position& pos, char c);		// non const
 	
-private:
 	static constexpr int cols {12};
 	static constexpr int rows {12};
+	static constexpr char letters[rows] = {'A','B','C','D','E','F','G','H','I','L','M','N'};
+private:
 	char matrix[rows][cols];
-	char letters[rows] = {'A','B','C','D','E','F','G','H','I','L','M','N'};
 };
 
 
