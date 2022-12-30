@@ -9,8 +9,8 @@ class AttackGrid : public Grid
 {
 public:
 	AttackGrid();
-	void set_shot(Position& pos);
-	void missed_shot(Position& pos);
+	void set_shot(const Position& pos);
+	void missed_shot(const Position& pos);
 	void update() override {}
 };
 
