@@ -6,7 +6,8 @@ Match::Match(const Player& p1, const Player& p2)
 	// altro?
 }
 
-void user_placement_helper(const Player& p, Position& prow, Position& prune, std::string ship_name, int ship_size, int ship_number);
+void user_placement_helper(const Player& p, int n_coordinates, Position& prow, Position& prune, 
+							std::string ship_name, int ship_size, int ship_number);
 void user_placement(Player& p);
 void bot_placement(Player& p);
 
@@ -22,20 +23,25 @@ void user_placement(Player& p)
 {
 	std::cout << p.name + " inserisci le tue navi\n";
 	Position prow, prune;
+	
 	for(int i=0; i<3; i++)
 	{
-		user_placement_helper(p, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
+		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
 		p.defence.ships[i] = new Battleship(prow, prune, p.defence); 
 	}
-	for(int i=0; i<3; i++)
+	for(int i=3; i<6; i++)
 	{
-		user_placement_helper(p, prow, prune, "supporto "+std::to_string(i+1), 3, i);
+		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i);
 		p.defence.ships[i] = new Support(prow, prune, p.defence); 
 	}
-	// manca inserimento dei sottomarini che richiede un solo parametro quindi una funzione modificata
+	for(int i=6; i<8; i++)
+	{
+		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i);
+		p.defence.ships[i] = new Submarine(prow, p.defence); 
+	}
 }
 
-void user_placement_helper(const Player& p, Position& prow, Position& prune, std::string ship_name, int ship_size, int ship_number)
+void user_placement_helper(const Player& p, int n_coordinates, Position& prow, Position& prune, std::string ship_name, int ship_size, int ship_number)
 {
 	bool ok = false;
 	while(!ok)
@@ -44,11 +50,21 @@ void user_placement_helper(const Player& p, Position& prow, Position& prune, std
 		// una lettera maiuscola nell'intervallo A-I oppure L M N
 		// e un numero nell'intervallo 1-9 oppure 1 seguito da 0 o 1 o 2, in altre parole un numero da 1 a 12
 		std::regex reg_position("[A-ILMN]([1-9]|1[012])");
-		std::cout << ">> Quali sono le coordinate per la "+ship_name+":\n";
+		
+		if(n_coordinates==2)
+			std::cout << ">> Quali sono le coordinate per la "+ship_name+":\n";
+		else
+			std::cout << ">> Qual e' la coordinata per il "+ship_name+":\n";
+			
 		std::string prow_str, prune_str;
-		std::cin >> prow_str;	// memorizza la prima coppia di coordinate
-		std::cin >> prune_str;	// e la seconda, saltando lo spazio
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');	// pulisce eventuali residui nell'input
+		std::cin >> prow_str;		// memorizza la prima coppia di coordinate
+		if(n_coordinates==2)
+			std::cin >> prune_str;	// e la seconda, saltando lo spazio
+		else
+			prune_str = prow_str;	// nel caso del sottomarino chiedo all'utente una sola coordinata 
+									// ma la tratto come due uguali così il resto del codice non cambia
+		// pulisce eventuali residui nell'input
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		// trasformo in uppercase le due stringhe
 		std::transform(prow_str.begin(), prow_str.end(), prow_str.begin(), ::toupper);
 		std::transform(prune_str.begin(), prune_str.end(), prune_str.begin(), ::toupper);
@@ -61,16 +77,24 @@ void user_placement_helper(const Player& p, Position& prow, Position& prune, std
 		
 		prow = (prow_str);
 		prune = (prune_str);
-		if(!p.defence.is_valid(prow, prune))
+		if(!p.defence.is_valid(prow,prune))
 		{
-			std::cout << "Le posizioni inserite non sono valide\n";
+			if(n_coordinates==2)
+				std::cout << "Le posizioni inserite non sono valide\n";
+			else
+				std::cout << "La posizione inserita non e' valida\n";
+				
 			continue;
 		}
 		
 		// il +1 compensa abs che non considera la cella finale
 		if((prow-prune).abs()+1 != ship_size)
 		{
-			std::cout << "La "+ship_name+" deve essere lunga "+std::to_string(ship_size)+" caselle\n";
+			if(n_coordinates==2)
+				std::cout << "La "+ship_name+" deve essere lunga "+std::to_string(ship_size)+" caselle\n";
+			else
+				std::cout << "Il "+ship_name+" deve occupare una casella\n";
+			
 			continue;
 		}
 		
