@@ -7,6 +7,8 @@ Battleship::Battleship(const Position& prow, const Position& stern, DefenceGrid&
 	//^^^^^ chiamata al costruttore di Ship che fa i vari controlli e setta posizioni e armor
 {
 	// credo non ci vada nient'altro
+	hit = 'c';
+	not_hit = 'C';
 }
 
 void Battleship::shoot(const Position& pos) const

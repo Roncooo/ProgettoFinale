@@ -5,6 +5,8 @@
 Support::Support(const Position& prune, const Position& stern, DefenceGrid& grid) 
 	: Ship(prune, stern, grid)
 {
+	hit = 's';
+	not_hit = 'S';
 }
 
 Support::~Support(){}
@@ -41,7 +43,6 @@ void Support::cure(const Position& pos)
 {
 	// mi muovo dove chiede l'utente
 	move(pos);
-	// nella seconda condizione della for ci va this->my_grid.ships.size() ma non mi compila
 	for(int j = 0; j < DefenceGrid::SHIP_NUMBER; j++)	// per ogni nave
 	{
 		for(int x = 0; x < my_grid.ships[j]->dimension; x++)

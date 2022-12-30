@@ -11,8 +11,6 @@ public:
 	void search(const Position& pos);		// non è const perché muove e poi cerca
 	Submarine(const Position& pos, DefenceGrid& grid);
 //	int dimension = 1;
-	char hit = 'e';
-	char not_hit = 'E';
 	~Submarine() override;
 };
 
