@@ -30,6 +30,10 @@ void DefenceGrid::update()
 
 bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 {
+	// controllo <0 e >12
+	if(!Grid::is_valid(prune) || !Grid::is_valid(prow))
+		return false;
+		
 	Position ordered_prow;		// è la Position più vicina all'origine
 	Position ordered_prune;
 	if(prow.abs()<prune.abs())
@@ -43,26 +47,40 @@ bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 		ordered_prune = prow;
 	}
 	
-	// controllo <0 e >12
-	if(!Grid::is_valid(ordered_prune) || !Grid::is_valid(ordered_prow))
+	// la nave deve essere orizzontale o verticale
+	if(ordered_prow.row != ordered_prune.row && ordered_prow.col != ordered_prune.col)
 		return false;
 	
-	if(ordered_prow.row != ordered_prune.row && ordered_prow.col != ordered_prune.col)	// nè orizzontale nè verticale
-		return false;
-	
-	for(int i=0; i<(ordered_prow-ordered_prune).abs(); i++)
+	// controllo che non ci siano già navi nelle posizioni tra prua e poppa (comprese)
+	Position vec = (ordered_prune-ordered_prow).norm();
+			// se funziona tutto non dovrebbe essere un ciclo infinito
+			// "ma diciamocelo, il rischio c'è"
+	for(Position current=ordered_prow; current!=ordered_prune; current+=vec)		// per ogni posizione tra prua e poppa
 	{
-		if(ordered_prow.row == ordered_prune.row)	// se sono in riga
+		for(int s=0; s<currently_placed_ships; s++)				// per ogni nave nella griglia
 		{
-			if(get_char(ordered_prune+(i,0)) != ' ')	// scorro verso destra
-				return false;
-		}
-		
-		if(ordered_prow.col == ordered_prune.col)	// se sono in colonna
-		{
-			if(get_char(ordered_prune+(0,i)) != ' ')	// scorro verso il basso
-				return false;
+			for(int p=0; p<ships[s]->dimension; p++)		// per ogni posizione della nave
+			{
+				if(ships[s]->pos[p] == current)
+					return false;
+			}
 		}
 	}
+	
+	// questa versione controlla attraverso la matrice che quindi dovrebbe essere sempre aggiornata ma non lo è
+//	for(int i=0; i<(ordered_prow-ordered_prune).abs(); i++)
+//	{
+//		if(ordered_prow.row == ordered_prune.row)	// se sono in riga
+//		{
+//			if(get_char(ordered_prune+(i,0)) != ' ')	// scorro verso destra
+//				return false;
+//		}
+//		
+//		if(ordered_prow.col == ordered_prune.col)	// se sono in colonna
+//		{
+//			if(get_char(ordered_prune+(0,i)) != ' ')	// scorro verso il basso
+//				return false;
+//		}
+//	}
 	return true;
 }

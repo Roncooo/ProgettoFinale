@@ -20,6 +20,7 @@ public:
 	void operator+=(const Position& a);
 	void operator-=(const Position& a);
 	double abs() const;
+	Position norm() const;
 };
 
 Position operator-(const Position& a, const Position& b);

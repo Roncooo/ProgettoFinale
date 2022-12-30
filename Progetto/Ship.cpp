@@ -45,7 +45,9 @@ Ship::Ship(const Position& prow, const Position& prune, DefenceGrid& grid)
 		armor[i] = true;
 	
 	//	my_grid = grid; // deve essere inizializzata con un'init list altrimenti essendo
-	//	una reference il compilatore si incazza	
+	//	una reference il compilatore si incazza
+	
+	my_grid.currently_placed_ships++;
 }
 
 Ship::~Ship(){}
