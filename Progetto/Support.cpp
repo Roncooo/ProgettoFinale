@@ -32,6 +32,7 @@ bool Support::is_curable(const Position& p)
 	
 	// al posto di tutta la if scriverei così ma è da controllare
 //	return (p-center).abs()<2;
+	// ci sta, esce più compatto
 	
 	return true;
 }
@@ -54,4 +55,6 @@ void Support::cure(const Position& pos)
 	
 	// in alternativa si potrebbe controllare in oguna delle 6 posizioni adiacenti alla nave di supporto
 	// se c'è una nave da curare, in tal caso la curo (così non serve check_pos)
+	
+//	ha più senso l'alternativa
 }

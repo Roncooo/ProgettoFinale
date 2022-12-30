@@ -9,4 +9,30 @@ Battleship::Battleship(const Position& prow, const Position& stern, DefenceGrid&
 	// credo non ci vada nient'altro
 }
 
+void Battleship::shoot(const Position& pos) const
+{
+	//controllo che la posizione sia valida??
+	
+	// necessito della griglia di difesa dell'avversario
+	// (per ora abbozzo così)
+	DefenceGrid enemy;
+	char target = enemy.get_char(pos);
+	
+	if (target == ' ')
+	{
+		//chiamo la funzione di AttackGrid che segnerà O
+	}
+	else
+	{
+		switch(target)
+		{
+			case 'C':	enemy.set_char(pos, 'c');	break;
+			case 'S':	enemy.set_char(pos, 's');	break;
+			case 'E':	enemy.set_char(pos, 'e');	break;
+		}
+		
+		//chiamo la funzione di AttackGrid che segnerà X
+	}
+}
+
 Battleship::~Battleship(){}
