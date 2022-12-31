@@ -27,7 +27,7 @@ void user_placement(Player& p)
 	for(int i=0; i<3; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
-		p.defence.ships[i] = new Battleship(prow, prune, p.defence); 
+		p.defence.ships[i] = new Battleship(prow, prune, p.defence);	// qui manca la griglia di attacco
 	}
 	for(int i=3; i<6; i++)
 	{
