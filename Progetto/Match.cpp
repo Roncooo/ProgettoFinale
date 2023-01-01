@@ -1,15 +1,85 @@
 #include "Match.h"
 
-Match::Match(const Player& p1, const Player& p2)
-	: player1{p1}, player2{p2}
-{
-	// altro?
-}
-
 void user_placement_helper(const Player& p, int n_coordinates, Position& prow, Position& prune, 
 							std::string ship_name, int ship_size, int ship_number);
 void user_placement(Player& p);
 void bot_placement(Player& p);
+
+
+Match::Match(const Player& p1, const Player& p2)
+	: player1{p1}, player2{p2}
+{
+
+	// altro?
+}
+
+std::vector<std::string> split(std::string str, char delimiter);
+
+int Match::command(Position& a, Position& b)
+{
+	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
+	// ma non so bene come fare
+	std::string reg_rule = "[";
+	for(int i=0; i<Grid::rows; i++)
+		reg_rule += Grid::letters[i];
+	reg_rule+="]([1-9]|1[012])";
+	std::regex reg_position = std::regex(reg_rule);
+	
+	std::string input_string;	// tutto l'input (cin invece si ferma allo spazio)
+	std::getline(std::cin, input_string);
+	// trasformo in uppercase l'input
+	std::transform(input_string.begin(), input_string.end(), input_string.begin(), ::toupper);
+//	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');	// pulisce residui nell'input, non so se serva
+	
+	
+	// COMANDI SPECIALI
+	if(input_string == "XX XX")
+		return 0;
+	
+	if(input_string == "YY YY")
+		return 3;
+	
+	
+	// COMANDI CON COORDINATE
+	
+	std::vector<std::string> vec = split(input_string, ' ');
+	std::string in1, in2;
+	
+	// se non c'è neanche un comando o più di due comandi, errore
+	if(vec.size()==0 || vec.size()>2)
+		return -1;
+	
+	// memorizzo il primo comando che a questo punto c'è per forza
+	in1 = vec.at(0);
+	
+	// se non c'è un secondo comando, il primo deve essere la coordinata di inserimento di un sottomarino
+	if(vec.size()==1)
+	{
+		if(!std::regex_match(in1, reg_position))
+		{
+			return -1;
+		}
+		else	// inserimento di un sottomarino
+		{
+			a = in1;
+			b = in1;
+			return 1;
+		}
+	}
+	
+	// a questo punto i comandi sono necessariamente 2 quindi o 2 coordinate o altro
+	in1 = vec.at(0);
+	if(std::regex_match(in1, reg_position) && std::regex_match(in2, reg_position))
+	{
+		a = in1;
+		b = in2;
+		return 2;
+	}
+	
+	// se fin'ora non è stato riconosciuto un comando valido, è invalido
+	return -1;
+}
+
 
 void Match::ship_placement(Player& p)
 {
@@ -46,42 +116,38 @@ void user_placement_helper(const Player& p, int n_coordinates, Position& prow, P
 	bool ok = false;
 	while(!ok)
 	{
-		// la Regular Expression così impostata descrive una qualsiasi coppia di coordinate formata da
-		// una lettera maiuscola nell'intervallo A-I oppure L M N
-		// e un numero nell'intervallo 1-9 oppure 1 seguito da 0 o 1 o 2, in altre parole un numero da 1 a 12
-//		std::regex reg_position("[A-ILMN]([1-9]|1[012])");
-		std::string reg_rule = "[";
-		for(int i=0; i<Grid::rows; i++)
-			reg_rule += Grid::letters[i];
-		reg_rule+="]([1-9]|1[012])";
-		std::regex reg_position(reg_rule);
-		
 		if(n_coordinates==2)
 			std::cout << ">> Quali sono le coordinate per la "+ship_name+":\n";
 		else
 			std::cout << ">> Qual e' la coordinata per il "+ship_name+":\n";
 			
 		std::string prow_str, prune_str;
-		std::cin >> prow_str;		// memorizza la prima coppia di coordinate
-		if(n_coordinates==2)
-			std::cin >> prune_str;	// e la seconda, saltando lo spazio
-		else
-			prune_str = prow_str;	// nel caso del sottomarino chiedo all'utente una sola coordinata 
-									// ma la tratto come due uguali così il resto del codice non cambia
-		// pulisce eventuali residui nell'input
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		// trasformo in uppercase le due stringhe
-		std::transform(prow_str.begin(), prow_str.end(), prow_str.begin(), ::toupper);
-		std::transform(prune_str.begin(), prune_str.end(), prune_str.begin(), ::toupper);
-		// confronto con il pattern di riferimento
-		if(!std::regex_match(prow_str, reg_position) || !std::regex_match(prune_str, reg_position))
+		
+		int code = command(prow, prune);
+		if(code==-1)
 		{
 			std::cout << "Il comando inserito non e' valido\n";
 			continue;
 		}
+		if(code==0)
+		{
+			Grid::print(p.defence);
+			continue;
+		}
+		if(code==3)
+		{
+			// boh tipo reset della griglia di attacco ma non so neanche se abbia senso in fase di inserimento
+			continue;
+		}
+		if(code!=n_coordinates)
+		{
+			if(n_coordinates==2)
+				std::cout << "Sono necessarie due posizioni";
+			else
+				std::cout << "E' necessaria una posizione";
+			continue;
+		}
 		
-		prow = (prow_str);
-		prune = (prune_str);
 		if(!p.defence.is_valid(prow,prune))
 		{
 			if(n_coordinates==2)
@@ -111,4 +177,23 @@ void user_placement_helper(const Player& p, int n_coordinates, Position& prow, P
 void bot_placement(Player& p)
 {
 	std::cout << "bot";
+}
+
+std::vector<std::string> split(std::string str, char delimiter)
+{
+	std::vector<std::string> vec;
+	std::string temp;
+	for(int i=0; i<str.size(); i++)
+	{
+		if(str[i]==delimiter)
+		{
+			vec.push_back(temp);
+			temp="";
+		}
+		else
+		{
+			temp += str[i];
+		}
+	}
+	vec.push_back(temp);
 }
