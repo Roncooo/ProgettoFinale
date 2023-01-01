@@ -15,7 +15,9 @@ Match::Match(const Player& p1, const Player& p2)
 
 std::vector<std::string> split(std::string str, char delimiter);
 
-int Match::command(Position& a, Position& b)
+//	non ho capito, così facendo il compilatore non considera una funzione diversa da quella
+//	dichiarata nella classe?
+int command(Position& a, Position& b)
 {
 	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
 	// ma non so bene come fare
@@ -29,7 +31,7 @@ int Match::command(Position& a, Position& b)
 	std::getline(std::cin, input_string);
 	// trasformo in uppercase l'input
 	std::transform(input_string.begin(), input_string.end(), input_string.begin(), ::toupper);
-//	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');	// pulisce residui nell'input, non so se serva
+	// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');	// pulisce residui nell'input, non so se serva
 	
 	
 	// COMANDI SPECIALI

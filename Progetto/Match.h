@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <regex>
-#include <algorithm>	// per uppercase
+#include <algorithm>		// per uppercase
 //#include <limits> 		// per il flush del cin
 //#include <ios> 			// per il flush del cin
 #include "Player.h"
@@ -24,7 +24,7 @@ public:
 	Player player2;
 	void ship_placement(Player& p);
 	
-	int command(Position& a, Position& b);
+	static int command(Position& a, Position& b);
 	/* Command restituisce un exit code che identifica il comando inserito da tastiera
 	 * Se l'input è compatibile con due posizioni, modifica i parametri
 	 * -1: comando non valido
