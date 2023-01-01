@@ -11,24 +11,24 @@ Position::Position(std::string s)
 	// è orribile ma per il momento funziona, si può certamente migliorare
 	switch(s[0])
 	{
-		case 'A':	row = 1;	break;
-		case 'B':	row = 2;	break;
-		case 'C':	row = 3;	break;
-		case 'D':	row = 4;	break;
-		case 'E':	row = 5;	break;
-		case 'F':	row = 6;	break;
-		case 'G':	row = 7;	break;
-		case 'H':	row = 8;	break;
-		case 'I':	row = 9;	break;
-		case 'L':	row = 10;	break;
-		case 'M':	row = 11;	break;
-		case 'N':	row = 12;	break;
+		case 'A':	row = 0;	break;
+		case 'B':	row = 1;	break;
+		case 'C':	row = 2;	break;
+		case 'D':	row = 3;	break;
+		case 'E':	row = 4;	break;
+		case 'F':	row = 5;	break;
+		case 'G':	row = 6;	break;
+		case 'H':	row = 7;	break;
+		case 'I':	row = 8;	break;
+		case 'L':	row = 9;	break;
+		case 'M':	row = 10;	break;
+		case 'N':	row = 11;	break;
 		default:
 			throw std::invalid_argument("Invalid char for Position(std::string)");
 	}
 	
 	// Non faccio ulteriori controlli perché in teoria sono già fatti dalla regex
-	col = std::stoi(s.substr(1));
+	col = std::stoi(s.substr(1)) -1;
 	
 }
 

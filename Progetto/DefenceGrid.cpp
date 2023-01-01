@@ -14,7 +14,7 @@ DefenceGrid::~DefenceGrid()
 void DefenceGrid::update()
 {
 	reset_matrix();
-	for(int i = 0; i < SHIP_NUMBER; i++)
+	for(int i = 0; i < currently_placed_ships; i++)
 	{
 		if(ships[i]->sunk == true) continue;	// se la nave è affondata vado alla prossima
 		

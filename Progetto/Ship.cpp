@@ -21,7 +21,7 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p)
 		ordered_prune = prow;
 	}
 	
-	dimension = ordered_prune.abs() - ordered_prow.abs();
+	dimension = ordered_prune.abs() - ordered_prow.abs() +1;
 	pos = std::vector<Position>(dimension);
 	armor = std::vector<bool>(dimension);
 	for(int i = 0; i < dimension; i++)

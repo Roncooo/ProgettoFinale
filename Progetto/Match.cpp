@@ -1,6 +1,6 @@
 #include "Match.h"
 
-void user_placement_helper(const Player& p, int n_coordinates, Position& prow, Position& prune, 
+void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
 							std::string ship_name, int ship_size, int ship_number);
 void user_placement(Player& p);
 void bot_placement(Player& p);
@@ -31,7 +31,6 @@ int command(Position& a, Position& b)
 	std::getline(std::cin, input_string);
 	// trasformo in uppercase l'input
 	std::transform(input_string.begin(), input_string.end(), input_string.begin(), ::toupper);
-	// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');	// pulisce residui nell'input, non so se serva
 	
 	
 	// COMANDI SPECIALI
@@ -70,7 +69,7 @@ int command(Position& a, Position& b)
 	}
 	
 	// a questo punto i comandi sono necessariamente 2 quindi o 2 coordinate o altro
-	in1 = vec.at(0);
+	in2 = vec.at(1);
 	if(std::regex_match(in1, reg_position) && std::regex_match(in2, reg_position))
 	{
 		a = in1;
@@ -96,6 +95,9 @@ void user_placement(Player& p)
 	std::cout << p.name + " inserisci le tue navi\n";
 	Position prow, prune;
 	
+	// pulisce residui nell'input
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	
 	for(int i=0; i<3; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
@@ -113,7 +115,7 @@ void user_placement(Player& p)
 	}
 }
 
-void user_placement_helper(const Player& p, int n_coordinates, Position& prow, Position& prune, std::string ship_name, int ship_size, int ship_number)
+void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, std::string ship_name, int ship_size, int ship_number)
 {
 	bool ok = false;
 	while(!ok)
@@ -133,6 +135,7 @@ void user_placement_helper(const Player& p, int n_coordinates, Position& prow, P
 		}
 		if(code==0)
 		{
+			p.defence.update();
 			Grid::print(p.defence);
 			continue;
 		}
@@ -198,4 +201,5 @@ std::vector<std::string> split(std::string str, char delimiter)
 		}
 	}
 	vec.push_back(temp);
+	return vec;
 }
