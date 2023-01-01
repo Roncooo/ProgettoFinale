@@ -9,6 +9,12 @@ int main(void)
 //	DefenceGrid difesa;
 //	AttackGrid attacco;
 //	Grid::print(attacco, difesa);
+	cout <<
+" | _ ) __ _| |_| |_ __ _ __ _| (_)__ _    _ _  __ ___ ____ _| |___ \n"<<
+" | _ \\/ _` |  _|  _/ _` / _` | | / _` |  | ' \\/ _` \ V / _` | / -_)\n"<<
+" |___/\\__,_|\\__|\\__\\__,_\\__, |_|_\\__,_|  |_||_\\__,_|\\_/\\__,_|_\\___|\n"<<
+"                        |___/                                      \n";
+
 	cout << "Inserire i nomi dei giocatori";
 //	cout << ", per far giocare il computer dare il nome CPU...";
 	cout << "\nPer visualizzare la tua griglia, inserisci il comando XX XX";
