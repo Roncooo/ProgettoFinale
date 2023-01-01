@@ -2,10 +2,10 @@
 
 #include "Ship.h"
 
-Ship::Ship(const Position& prow, const Position& prune, DefenceGrid& grid) 
-	: my_grid{grid}
+Ship::Ship(const Position& prow, const Position& prune, Player& p) 
+	: player{p}
 {	
-	if(!grid.is_valid(prow, prune))
+	if(!p.defence.is_valid(prow, prune))
 		throw std::invalid_argument("Posizioni non valide");	// non dovrebbe essere lanciata dato che facciamo
 																// il controllo nella funzione di inserimento
 	Position ordered_prow;
@@ -23,6 +23,10 @@ Ship::Ship(const Position& prow, const Position& prune, DefenceGrid& grid)
 	
 	dimension = ordered_prune.abs() - ordered_prow.abs();
 	pos = std::vector<Position>(dimension);
+	armor = std::vector<bool>(dimension);
+	for(int i = 0; i < dimension; i++)
+		armor[i] = true;
+		
 	for(int i = 0; i < dimension; i++)
 	{
 		if(ordered_prow.row == ordered_prune.row)
@@ -37,11 +41,7 @@ Ship::Ship(const Position& prow, const Position& prune, DefenceGrid& grid)
 		}
 	}
 	
-	armor = std::vector<bool>(dimension);
-	for(int i = 0; i < dimension; i++)
-		armor[i] = true;
-	
-	my_grid.currently_placed_ships++;
+	p.defence.currently_placed_ships++;
 }
 
 Ship::~Ship(){}

@@ -8,16 +8,20 @@ AttackGrid::AttackGrid()
 
 void AttackGrid::set_shot(const Position& pos)
 {
-	set_char(pos, 'X');
+	set_char(pos, hit);
 }
 
 void AttackGrid::missed_shot(const Position& pos)
 {
-	set_char(pos, 'O');
+	set_char(pos, water);
 }
 
 void AttackGrid::update()
 {
+/*	temporaneamente commentato perché dobbiamo prima capire/decidere come passare la griglia del nemico
+ * (se lo facciamo), e per il momento non compila
+ * Inoltre così è sbagliato perché vediamo "in diretta" le navi nemiche ma se si spostano non dovremmo
+ * essere in grado di vedere le nuove posizioni ma solo quelle vecchie che abbiamo colpito o visualizzato con il sonar
 
 	reset_matrix();
 	DefenceGrid enemy;
@@ -25,6 +29,8 @@ void AttackGrid::update()
 	{
 		for(int j = 0; j < enemy.ships[i]->armor.size(); j++)
 			if(enemy.ships[i]->armor[j] == false)		// se all'indice j armor = 0
-				set_char(enemy.ships->pos[j], 'X');		// in quella "posizione" setto X
+				set_char(enemy.ships[i]->pos[j], AttackGrid::hit);		// in quella "posizione" setto X
+			// poi ^^^ questo non è quello che fa set_shot?
 	}
+*/
 }

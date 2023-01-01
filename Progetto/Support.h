@@ -10,7 +10,7 @@ class Support : public Ship
 {
 	bool is_curable(const Position& p);
 public:
-	Support(const Position& prow, const Position& stern, DefenceGrid& grid); 
+	Support(const Position& prow, const Position& stern, Player& p); 
 	//	int dimension = 3;
 	// cure riceve la posizione dove andare e curare
 	void cure(const Position& pos);		// non è const perché muove e poi cura

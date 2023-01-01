@@ -2,8 +2,8 @@
 
 #include "Support.h"
 
-Support::Support(const Position& prune, const Position& stern, DefenceGrid& grid) 
-	: Ship(prune, stern, grid)
+Support::Support(const Position& prune, const Position& stern, Player& p) 
+	: Ship(prune, stern, p)
 {
 	hit = 's';
 	not_hit = 'S';
@@ -45,12 +45,12 @@ void Support::cure(const Position& pos)
 	move(pos);
 	for(int j = 0; j < DefenceGrid::SHIP_NUMBER; j++)	// per ogni nave
 	{
-		for(int x = 0; x < my_grid.ships[j]->dimension; x++)
+		for(int x = 0; x < player.defence.ships[j]->dimension; x++)
 		{	
-			if(!is_curable(my_grid.ships[j]->pos[x]))
+			if(!is_curable(player.defence.ships[j]->pos[x]))
 				continue;
 			else
-				my_grid.ships[j]->restore_armor();
+				player.defence.ships[j]->restore_armor();
 		}
 	}
 	

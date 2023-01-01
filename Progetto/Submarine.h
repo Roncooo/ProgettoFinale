@@ -9,7 +9,7 @@ class Submarine : public Ship
 {
 public:
 	void search(const Position& pos);		// non è const perché muove e poi cerca
-	Submarine(const Position& pos, DefenceGrid& grid);
+	Submarine(const Position& pos, Player& p);
 //	int dimension = 1;
 	~Submarine() override;
 };

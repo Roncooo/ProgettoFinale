@@ -6,12 +6,13 @@
 #include <algorithm>	// per uppercase
 //#include <limits> 		// per il flush del cin
 //#include <ios> 			// per il flush del cin
+#include "Player.h"
 #include "DefenceGrid.h"
 #include "AttackGrid.h"
+// basterebbero anche solo queste sotto ma è più chiaro anche con le altre direi
 #include "Battleship.h"
 #include "Submarine.h"
 #include "Support.h"
-#include "Player.h"
 
 class Match
 {
