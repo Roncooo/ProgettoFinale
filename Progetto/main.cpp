@@ -9,7 +9,9 @@ int main(void)
 //	DefenceGrid difesa;
 //	AttackGrid attacco;
 //	Grid::print(attacco, difesa);
-	cout << "Inserire i nomi dei giocatori, per far giocare il computer dare il nome CPU...";
+	cout << "Inserire i nomi dei giocatori";
+//	cout << ", per far giocare il computer dare il nome CPU...";
+	cout << "\nPer visualizzare la tua griglia, inserisci il comando XX XX";
 	cout << "\nNome giocatore 1: ";
 	string player1_name;
 	cin >> player1_name;
@@ -18,6 +20,9 @@ int main(void)
 	string player2_name;
 	cin >> player2_name;
 	Player player2(player2_name);
+	
+	// pulisce residui nell'input
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	
 	Match partita(player1, player2);
 	partita.ship_placement(player1);

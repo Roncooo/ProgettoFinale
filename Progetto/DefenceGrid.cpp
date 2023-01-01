@@ -11,6 +11,12 @@ DefenceGrid::~DefenceGrid()
 	delete[] ships;
 }
 
+void DefenceGrid::print()
+{
+	update();
+	Grid::print(*this);
+}
+
 void DefenceGrid::update()
 {
 	reset_matrix();

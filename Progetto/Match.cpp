@@ -92,11 +92,8 @@ void Match::ship_placement(Player& p)
 
 void user_placement(Player& p)
 {
-	std::cout << p.name + " inserisci le tue navi\n";
+	std::cout << "\n" + p.name + " inserisci le tue navi\n\n";
 	Position prow, prune;
-	
-	// pulisce residui nell'input
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	
 	for(int i=0; i<3; i++)
 	{
@@ -113,9 +110,13 @@ void user_placement(Player& p)
 		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i);
 		p.defence.ships[i] = new Submarine(prow, p); 
 	}
+	
+	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
+	p.defence.print();
 }
 
-void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, std::string ship_name, int ship_size, int ship_number)
+void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
+							std::string ship_name, int ship_size, int ship_number)
 {
 	bool ok = false;
 	while(!ok)
@@ -135,8 +136,7 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		}
 		if(code==0)
 		{
-			p.defence.update();
-			Grid::print(p.defence);
+			p.defence.print();
 			continue;
 		}
 		if(code==3)
@@ -147,9 +147,9 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		if(code!=n_coordinates)
 		{
 			if(n_coordinates==2)
-				std::cout << "Sono necessarie due posizioni";
+				std::cout << "Sono necessarie due posizioni\n";
 			else
-				std::cout << "E' necessaria una posizione";
+				std::cout << "E' necessaria una posizione\n";
 			continue;
 		}
 		
