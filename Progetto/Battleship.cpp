@@ -1,5 +1,4 @@
 // autore: 
-
 #include "Battleship.h"
 
 Battleship::Battleship(const Position& prow, const Position& stern, Player& player)
