@@ -20,7 +20,7 @@ public:
 	DefenceGrid defence;
 	const std::string name;
 	bool is_cpu;
-	
+	bool operator==(const Player& p) const;
 	~Player();
 };
 

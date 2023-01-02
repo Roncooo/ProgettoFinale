@@ -17,18 +17,22 @@ Submarine::Submarine(const Position& pos, Player& p)
 	not_hit = 'E';
 }
 
-void Submarine::search(const Position& pos, Player& enemy)
+int Submarine::search(const Position& pos, Player& enemy)
 {
-	move(pos);
+	// muovo dove chiede l'utente, se questo è possibile
+	// altrimenti termina
+	if(move(pos)==-1)
+		return -1;
+		
 	//	for per le navi
 	for(int i = 0; i < DefenceGrid::SHIP_NUMBER; i++)
+	{
+		for(int j = 0; j < enemy.defence.ships[i]->dimension; j++)
 		{
-			for(int j = 0; j < enemy.defence.ships[i]->dimension; j++)
-			{
-				if(!sub_area(enemy.defence.ships[i]->pos[j])) continue;
-				else
-					player.attack.set_char(enemy.defence.ships[i]->pos[j], AttackGrid::sonar);
-			}
+			if(!sub_area(enemy.defence.ships[i]->pos[j])) continue;
+			else
+				player.attack.set_char(enemy.defence.ships[i]->pos[j], AttackGrid::sonar);
 		}
+	}
 }
 Submarine::~Submarine(){}

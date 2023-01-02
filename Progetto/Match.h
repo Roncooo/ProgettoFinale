@@ -24,7 +24,9 @@ public:
 	Player& player2;
 	void ship_placement(Player& p);
 	
-	static int command(Position& a, Position& b);
+	static constexpr int MAX_ROUNDS = 1000;	// boh a caso raga
+	void play();
+	
 	/* Command restituisce un exit code che identifica il comando inserito da tastiera
 	 * Se l'input è compatibile con due posizioni, modifica i parametri
 	 * -1: comando non valido
@@ -37,5 +39,6 @@ public:
 	 */
 	// gli exit code servono perché così chi chiama comando sa se è andato a buon fine
 };
+int command(Position& a, Position& b);
 
 #endif // MATCH_H

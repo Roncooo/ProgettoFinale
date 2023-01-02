@@ -10,6 +10,11 @@ Player::Player(std::string n)
 		is_cpu = false;
 }
 
+bool Player::operator==(const Player& p) const
+{
+	return p.name==this->name;
+}
+
 Player::~Player()
 {
 }

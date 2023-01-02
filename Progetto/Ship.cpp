@@ -46,17 +46,18 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p)
 
 Ship::~Ship(){}
 
-void Ship::move(const Position& new_center)
+int Ship::move(const Position& new_center)
 {
 	Position dislocation = new_center - center;
-	for(int i=0; i<dimension; i++)
-		pos[i] += dislocation;
-	// manca controllo sulla nuova Position
 	
-	// è necessaria una funzione che abbia come parametro la griglia di difesa dell'avversario, tipo quella commentata qui sotto
-	// p.s. non so nemmeno se compila, è solo un'idea
-	
-	
+	// controlla sia che la nave sia completamente dentro alla griglia, sia che non sormonti altre navi
+	if(player.defence.is_valid(pos[0]+dislocation,pos[dimension-1]+dislocation))
+	{
+		for(int i=0; i<dimension; i++)
+			pos[i] += dislocation;
+	}
+	else
+		return -1;	// non è possibile spostare la nave nella nuova posizione
 }
 
 //bool Ship::control(DefenceGrid& enemy){
@@ -84,4 +85,17 @@ void Ship::restore_armor()
 	
 	for(int i=0; i<dimension; i++)
 		armor[i] = true;
+}
+
+bool Ship::is_battleship()
+{ 
+	return dimension == 5;
+}
+bool Ship::is_support()
+{ 
+	return dimension == 3;
+}
+bool Ship::is_submarine()
+{
+	return dimension == 1;
 }

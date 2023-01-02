@@ -7,6 +7,7 @@ void bot_placement_helper(Player& p, int ship_size, Position& start, Position& e
 void bot_placement(Player& p);
 Position random_position();
 Position ortogonal_position(const Position& start, int dim, int direction);
+int execute(Player& player, Player& enemy, int code, const Position& origin, const Position& target);	// usata solo durante il gioco, non nell'inserimento
 
 Match::Match(Player& p1, Player& p2)
 	: player1{p1}, player2{p2}
@@ -86,6 +87,78 @@ int command(Position& a, Position& b)
 	return -1;
 }
 
+/* non chiama command così è valida anche per il robot
+ * prende un codice ed esegue l'istruzione associata
+ * poi restituisce nuovamente un codice per dire se è andato tutto bene
+*/
+int execute(Player& player, Player& enemy, int code, const Position& origin, const Position& target)
+{	
+	if(code == -1)
+		return -1;	// comando non valido
+	
+	if(code == 1)	// codice riservato all'inserimento del sottomarino
+		return -1;
+	
+	if(code == 3)	// stampa della griglia di difesa
+	{
+		player.defence.print();
+		return 3;
+	}
+	
+	if(code == 4)	// stampa della griglia di difesa e di attacco
+	{
+		Grid::print(player.defence, player.attack);
+		return 3;
+	}
+	
+	if(code == 5)
+	{
+		player.attack.reset_sonar();
+		return 5;
+	}
+	
+	
+	if(code == 2)	// due posizioni valide inserite
+	{
+		int selected_ship_index = -1;
+		for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+		{
+			if(origin==player.defence.ships[i]->center)
+			{
+				selected_ship_index = i;
+				break;
+			}
+		}
+		
+		if(selected_ship_index == -1)
+			return 6;		// la prima coordinata non è il centro di una nave
+		
+		if(player.defence.ships[selected_ship_index]->is_battleship())
+		{
+			Battleship* selected = dynamic_cast<Battleship*>(&*(player.defence.ships[selected_ship_index]));
+			selected->shoot(target, enemy);	// va sempre a buon fine (credo) perché le posizioni sono già valide
+		}
+			
+		if(player.defence.ships[selected_ship_index]->is_support())
+		{
+			Support* selected = dynamic_cast<Support*>(&*(player.defence.ships[selected_ship_index]));
+			// muove (e cura) se è possibile, altrimenti interrompe
+			if(selected->cure(target)==-1)
+				return -1;
+		}
+			
+		if(player.defence.ships[selected_ship_index]->is_submarine())
+		{
+			Submarine* selected = dynamic_cast<Submarine*>(&*(player.defence.ships[selected_ship_index]));
+			// muove (e cerca) se è possibile, altrimenti interrompe
+			if(selected->search(target, enemy)==-1)
+				return -1;
+		}
+		
+		// tutto è andato a buon fine
+		return 2;
+	}
+}
 
 void Match::ship_placement(Player& p)
 {
@@ -227,7 +300,6 @@ void bot_placement(Player& p)
 	p.defence.print();
 }
 
-
 std::vector<std::string> split(std::string str, char delimiter)
 {
 	std::vector<std::string> vec;
@@ -247,7 +319,6 @@ std::vector<std::string> split(std::string str, char delimiter)
 	vec.push_back(temp);
 	return vec;
 }
-
 
 Position random_position()
 {
@@ -275,3 +346,66 @@ Position ortogonal_position(const Position& start, int dim, int direction)
 			break;
 	}
 }
+
+bool has_lost(const Player& player)
+{
+	// per ciascuna nave nemica, se è una Corazzata e non è affondata, p non ha ancora vinto
+	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+	{
+		if(player.defence.ships[i]->is_battleship() && !player.defence.ships[i]->sunk)
+			return false;
+	}
+	return true;
+}
+
+void Match::play()
+{
+	int n_rounds = 0;
+	int code;
+	Position origin, target;
+	
+	while(n_rounds<MAX_ROUNDS)
+	{
+		// turno giocatore 1
+		std::cout << player1.name + " e' il tuo turno\n";
+		code = command(origin, target);
+		execute(player1, player2, code, origin, target);
+		
+		while(code != 2)	// si possono differenziare gli errori con comandi specifici
+		{
+			std::cout << "Qualcosa e' andato storto, riprova\n";
+			code = command(origin, target);
+			execute(player1, player1, code, origin, target);
+		}
+		
+		std::cout << "Comando eseguito\n";
+		
+		if(has_lost(player2))
+		{
+			std::cout << "\n-----------------------------\n" + player1.name + " hai vinto!";
+			break;
+		}
+		
+		
+		// turno giocatore 2
+		std::cout << player2.name + " e' il tuo turno\n";
+		code = command(origin, target);
+		execute(player2, player1, code, origin, target);
+		
+		while(code != 2)	// si possono differenziare gli errori con comandi specifici
+		{
+			std::cout << "Qualcosa e' andato storto, riprova\n";
+			code = command(origin, target);
+			execute(player2, player1, code, origin, target);
+		}
+		
+		std::cout << "Comando eseguito\n";
+		
+		if(has_lost(player1))
+		{
+			std::cout << "\n-----------------------------\n" + player2.name + " hai vinto!";
+			break;
+		}
+	}
+}
+

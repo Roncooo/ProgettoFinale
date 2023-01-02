@@ -39,10 +39,12 @@ bool Support::is_curable(const Position& p)
 	return true;
 }
 
-void Support::cure(const Position& pos)
+int Support::cure(const Position& pos)
 {
-	// mi muovo dove chiede l'utente
-	move(pos);
+	// mi muovo dove chiede l'utente se questo è possibile, altrimenti termina
+	if(move(pos)==-1)
+		return -1;
+	
 	for(int j = 0; j < DefenceGrid::SHIP_NUMBER; j++)	// per ogni nave
 	{
 		for(int x = 0; x < player.defence.ships[j]->dimension; x++)

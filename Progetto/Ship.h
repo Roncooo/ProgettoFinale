@@ -17,6 +17,7 @@ public:
 	// throws std::invalid_argument se la griglia non è valida
 		// ^^ no
 	Ship(const Position& prow, const Position& stern, Player& p);
+	Ship(Player& p):player{p}{};
 	Player& player;
 	bool sunk = false;
 	int dimension;
@@ -28,11 +29,16 @@ public:
 									// armor[i] è true se il pezzo di corazza è integro (non colpito)
 	char hit;
 	char not_hit;
-	void move(const Position& new_pos);
+	int move(const Position& new_pos);
 	int get_armor() const;
 	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
 	
 //	bool control(DefenceGrid& enemy);
+	
+	// tre funzioni comode ma che denotano un errore di design secondo me
+	bool is_battleship();
+	bool is_support();
+	bool is_submarine();
 	
 	virtual ~Ship()=0;	// stratagemma per rendere Ship virtuale pura
 };

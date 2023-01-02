@@ -43,7 +43,7 @@ void Battleship::shoot(const Position& pos, Player& enemy)
 			for (int j = 0; j < enemy.defence.ships[i]->dimension; j++)
 			{
 				if (enemy.defence.ships[i]->pos[j] == pos)
-					enemy.defence.ships[i]->armor[j] == false;
+					enemy.defence.ships[i]->armor[j] = false;
 			}
 		}
 		

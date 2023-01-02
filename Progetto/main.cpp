@@ -18,19 +18,27 @@ int main(void)
 	cout << "Inserire i nomi dei giocatori";
 //	cout << ", per far giocare il computer dare il nome CPU...";
 	cout << "\nPer visualizzare la tua griglia di difesa, inserisci il comando XX";
+	
 	cout << "\nNome giocatore 1: ";
 	string player1_name;
 	std::getline(std::cin, player1_name);
-	Player player1(player1_name);
+	
 	cout << "Nome giocatore 2: ";
 	string player2_name;
 	std::getline(std::cin, player2_name);
+	while(player2_name == player1_name)
+	{
+		cout << "Per favore inserisci un nome diverso da " + player1_name + "\n"; 
+		std::getline(std::cin, player2_name);
+		if(player2_name != player1_name)
+			cout << "\"" + player2_name + "\" va bene, grazie\n";
+	}
+	Player player1(player1_name);
 	Player player2(player2_name);
-	// pulisce residui nell'input
-//	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	
 	Match partita(player1, player2);
 	partita.ship_placement(player1);
 	partita.ship_placement(player2);
+	partita.play();
 	return 0;
 }
