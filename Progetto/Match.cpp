@@ -3,8 +3,10 @@
 void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
 							std::string ship_name, int ship_size, int ship_number);
 void user_placement(Player& p);
+void bot_placement_helper(Player& p, int ship_size, Position& start, Position& end);
 void bot_placement(Player& p);
-
+Position random_position();
+Position ortogonal_position(const Position& start, int dim, int direction);
 
 Match::Match(const Player& p1, const Player& p2)
 	: player1{p1}, player2{p2}
@@ -183,10 +185,48 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 	}
 }
 
+void bot_placement_helper(Player& p, int ship_size, Position& start, Position& end)
+{
+	bool ok = false;
+	while(!ok)
+	{
+		start = random_position();
+		for(int i=1; i<=4; i++)
+		{
+			end = ortogonal_position(start, ship_size, i);
+			if(p.defence.is_valid(start, end))
+			{
+				ok = true;
+				break;
+			}
+		}
+	}
+}
+
 void bot_placement(Player& p)
 {
-	std::cout << "bot";
+	Position prow, prune;
+	for(int i=0; i<3; i++)
+	{
+		bot_placement_helper(p, 5, prow, prune);
+		p.defence.ships[i] = new Battleship(prow, prune, p);
+	}
+	for(int i=3; i<6; i++)
+	{
+		bot_placement_helper(p, 3, prow, prune);
+		p.defence.ships[i] = new Support(prow, prune, p); 
+	}
+	for(int i=6; i<8; i++)
+	{
+		bot_placement_helper(p, 1, prow, prune);
+		p.defence.ships[i] = new Submarine(prow, p); 
+	}
+	
+	
+	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
+	p.defence.print();
 }
+
 
 std::vector<std::string> split(std::string str, char delimiter)
 {
@@ -206,4 +246,28 @@ std::vector<std::string> split(std::string str, char delimiter)
 	}
 	vec.push_back(temp);
 	return vec;
+}
+
+
+Position random_position()
+{
+	int r = 1 + rand()%Grid::rows;	// numero tra 1 e rows compresi
+	int c = 1 + rand()%Grid::cols;	// numero tra 1 e cols compresi
+	return Position(r,c);
+}
+
+Position ortogonal_position(const Position& start, int dim, int direction)
+{
+	dim-=1;
+	switch(direction)
+	{
+		case 1:
+		return start+Position(0,dim);	// destra
+		case 2:
+		return start+Position(0,-dim);	// sinstra
+		case 3:
+		return start+Position(dim,0);	// sotto
+		case 4:
+		return start+Position(-dim,0);	// sopra
+	}
 }

@@ -3,6 +3,8 @@
 #ifndef Player_H
 #define Player_H
 
+#include <ctime>
+#include <cstdlib>	// per la randomicità del giocatore computer
 #include "AttackGrid.h"
 #include "DefenceGrid.h"
 //#include "Battleship.h"
