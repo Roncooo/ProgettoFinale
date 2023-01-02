@@ -20,15 +20,14 @@ int main(void)
 	cout << "\nPer visualizzare la tua griglia, inserisci il comando XX XX";
 	cout << "\nNome giocatore 1: ";
 	string player1_name;
-	cin >> player1_name;
+	std::getline(std::cin, player1_name);
 	Player player1(player1_name);
 	cout << "Nome giocatore 2: ";
 	string player2_name;
-	cin >> player2_name;
+	std::getline(std::cin, player2_name);
 	Player player2(player2_name);
-	
 	// pulisce residui nell'input
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+//	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	
 	Match partita(player1, player2);
 	partita.ship_placement(player1);
