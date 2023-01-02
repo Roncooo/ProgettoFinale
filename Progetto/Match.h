@@ -28,10 +28,11 @@ public:
 	/* Command restituisce un exit code che identifica il comando inserito da tastiera
 	 * Se l'input è compatibile con due posizioni, modifica i parametri
 	 * -1: comando non valido
-	 *  0: stampa della matrice
 	 *  1: una posizione inserita (inserimento del sottomarino), posizioni modificate
 	 *  2: due posizioni inserite, posizioni modificate
-	 * 3?: cancella i sonar
+	 *  3: stampa della matrice di difesa
+	 *  4: stampa delle matrice di difesa e attacco
+	 *  5: cancella i sonar
 	 * altro...?
 	 */
 	// gli exit code servono perché così chi chiama comando sa se è andato a buon fine

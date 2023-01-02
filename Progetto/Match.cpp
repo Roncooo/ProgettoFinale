@@ -34,11 +34,14 @@ int command(Position& a, Position& b)
 	
 	
 	// COMANDI SPECIALI
-	if(input_string == "XX XX")
-		return 0;
-	
-	if(input_string == "YY YY")
+	if(input_string == "XX")
 		return 3;
+		
+	if(input_string == "XX XX")
+		return 4;
+	
+	if(input_string == "AA AA")
+		return 5;
 	
 	
 	// COMANDI CON COORDINATE
@@ -134,16 +137,17 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 			std::cout << "Il comando inserito non e' valido\n";
 			continue;
 		}
-		if(code==0)
+		if(code==3)
 		{
 			p.defence.print();
 			continue;
 		}
-		if(code==3)
+		if(code==4 || code==5)
 		{
-			// boh tipo reset della griglia di attacco ma non so neanche se abbia senso in fase di inserimento
+			std::cout << "La funzione inserita non e' disponibile in fase di inserimento delle navi\n";
 			continue;
 		}
+		
 		if(code!=n_coordinates)
 		{
 			if(n_coordinates==2)
