@@ -185,16 +185,16 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 	}
 }
 
-void bot_placement_helper(Player& p, int ship_size, Position& start, Position& end)
+void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& prune)
 {
 	bool ok = false;
 	while(!ok)
 	{
-		start = random_position();
+		prow = random_position();
 		for(int i=1; i<=4; i++)
 		{
-			end = ortogonal_position(start, ship_size, i);
-			if(p.defence.is_valid(start, end))
+			prune = ortogonal_position(prow, ship_size, i);
+			if(p.defence.is_valid(prow, prune))
 			{
 				ok = true;
 				break;
@@ -262,12 +262,16 @@ Position ortogonal_position(const Position& start, int dim, int direction)
 	switch(direction)
 	{
 		case 1:
-		return start+Position(0,dim);	// destra
+			return start+Position(0,dim);	// destra
+			break;
 		case 2:
-		return start+Position(0,-dim);	// sinstra
+			return start+Position(0,-dim);	// sinstra
+			break;
 		case 3:
-		return start+Position(dim,0);	// sotto
+			return start+Position(dim,0);	// sotto
+			break;
 		case 4:
-		return start+Position(-dim,0);	// sopra
+			return start+Position(-dim,0);	// sopra
+			break;
 	}
 }

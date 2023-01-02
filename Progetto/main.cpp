@@ -12,7 +12,8 @@ int main(void)
 
 	// da quello che ho capito su stackOverflow, è meglio mettere nel main lo srand
 	// così l'eseguibile è anche riproducibile settando lo stesso seed (non con time NULL)
-	std::srand(std::time(NULL));
+	std::srand(123456);
+	//  al posto di 123456 std::time(NULL)
 
 	cout << "Inserire i nomi dei giocatori";
 //	cout << ", per far giocare il computer dare il nome CPU...";

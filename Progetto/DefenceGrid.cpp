@@ -8,7 +8,11 @@ DefenceGrid::DefenceGrid()
 
 DefenceGrid::~DefenceGrid()
 {
-	delete[] ships;
+//	delete[] ships;
+	for(int i=0; i<SHIP_NUMBER; i++)
+	{
+		delete ships[i];
+	}
 }
 
 void DefenceGrid::print()
