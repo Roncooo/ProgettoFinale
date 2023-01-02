@@ -11,14 +11,15 @@ Battleship::Battleship(const Position& prow, const Position& stern, Player& play
 	not_hit = 'C';
 }
 
-void Battleship::shoot(const Position& pos) 
+void Battleship::shoot(const Position& pos, Player& enemy) 
 {
 	//controllo che la posizione sia valida??
 	
 	// necessito della griglia di difesa dell'avversario
 	// (per ora abbozzo così)
-	DefenceGrid enemy;
-	char target = enemy.get_char(pos);
+	//	DefenceGrid enemy;
+	//	** ora con l'inclusione di Player posso accedere alla griglia del mio avversario
+	char target = (enemy.defence).get_char(pos);
 	
 	if (target == ' ')
 	{
@@ -29,20 +30,20 @@ void Battleship::shoot(const Position& pos)
 	{
 		switch(target)
 		{
-			case 'C':	enemy.set_char(pos, 'c');	break;
-			case 'S':	enemy.set_char(pos, 's');	break;
-			case 'E':	enemy.set_char(pos, 'e');	break;
+			case 'C':	enemy.defence.set_char(pos, 'c');	break;
+			case 'S':	enemy.defence.set_char(pos, 's');	break;
+			case 'E':	enemy.defence.set_char(pos, 'e');	break;
 		}
 		//chiamo la funzione di AttackGrid che segnerà X
 		player.attack.set_shot(pos);
 		
 		//diminuisco l'armatura della nave
-		for (int i = 0; i < enemy.SHIP_NUMBER; i++)
+		for (int i = 0; i < DefenceGrid::SHIP_NUMBER; i++)
 		{
-			for (int j = 0; j < enemy.ships[i]->dimension; j++)
+			for (int j = 0; j < enemy.defence.ships[i]->dimension; j++)
 			{
-				if (enemy.ships[i]->pos[j] == pos)
-					enemy.ships[i]->armor[j] == false;
+				if (enemy.defence.ships[i]->pos[j] == pos)
+					enemy.defence.ships[i]->armor[j] == false;
 			}
 		}
 		

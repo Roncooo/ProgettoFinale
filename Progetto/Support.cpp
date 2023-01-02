@@ -32,9 +32,9 @@ bool Support::is_curable(const Position& p)
 		p != center+Position( 0,-1)  	)	// left
 		return false;
 	
-	// al posto di tutta la if scriverei così ma è da controllare
-//	return (p-center).abs()<2;
-	// ci sta, esce più compatto
+	//	al posto di tutta la if scriverei così ma è da controllare
+	//	return (p-center).abs()<2;
+	//	ci sta, esce più compatto
 	
 	return true;
 }
