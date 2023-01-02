@@ -11,7 +11,8 @@ class Battleship : public Ship
 public:
 	Battleship(const Position& prow, const Position& stern, Player& p);
 	void move() = delete;
-	void shoot(const Position& pos) ;
+	//	shoot ha come parametro la posizione su cui sparare e l'avversario da colpire
+	void shoot(const Position& pos, Player& enemy);
 //	int dimension = 5;		// settata dal costruttore di Ship
 	~Battleship() override;
 };
