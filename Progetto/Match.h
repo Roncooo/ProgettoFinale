@@ -19,9 +19,9 @@ class Match
 private:
 	static std::regex reg_position;	// inizializzata nel costruttore per comodità, riconosce il comando relativo ad una posizione valida
 public:
-	Match(const Player& p1, const Player& p2);
-	Player player1;
-	Player player2;
+	Match(Player& p1, Player& p2);
+	Player& player1;
+	Player& player2;
 	void ship_placement(Player& p);
 	
 	static int command(Position& a, Position& b);

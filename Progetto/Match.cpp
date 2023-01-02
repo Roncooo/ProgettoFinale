@@ -8,7 +8,7 @@ void bot_placement(Player& p);
 Position random_position();
 Position ortogonal_position(const Position& start, int dim, int direction);
 
-Match::Match(const Player& p1, const Player& p2)
+Match::Match(Player& p1, Player& p2)
 	: player1{p1}, player2{p2}
 {
 
@@ -103,17 +103,17 @@ void user_placement(Player& p)
 	for(int i=0; i<3; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
-		p.defence.ships[i] = new Battleship(prow, prune, p);	// qui manca la griglia di attacco
+		p.defence.ships[i] = std::make_unique<Battleship>(Battleship(prow, prune, p));	// qui manca la griglia di attacco
 	}
 	for(int i=3; i<6; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i);
-		p.defence.ships[i] = new Support(prow, prune, p); 
+		p.defence.ships[i] = std::make_unique<Support>(Support(prow, prune, p)); 
 	}
 	for(int i=6; i<8; i++)
 	{
 		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i);
-		p.defence.ships[i] = new Submarine(prow, p); 
+		p.defence.ships[i] = std::make_unique<Submarine>(Submarine(prow, p)); 
 	}
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
@@ -209,17 +209,17 @@ void bot_placement(Player& p)
 	for(int i=0; i<3; i++)
 	{
 		bot_placement_helper(p, 5, prow, prune);
-		p.defence.ships[i] = new Battleship(prow, prune, p);
+		p.defence.ships[i] = std::make_unique<Battleship>(Battleship(prow, prune, p));
 	}
 	for(int i=3; i<6; i++)
 	{
 		bot_placement_helper(p, 3, prow, prune);
-		p.defence.ships[i] = new Support(prow, prune, p); 
+		p.defence.ships[i] = std::make_unique<Support>(Support(prow, prune, p)); 
 	}
 	for(int i=6; i<8; i++)
 	{
 		bot_placement_helper(p, 1, prow, prune);
-		p.defence.ships[i] = new Submarine(prow, p); 
+		p.defence.ships[i] = std::make_unique<Submarine>(Submarine(prow, p)); 
 	}
 	
 	
