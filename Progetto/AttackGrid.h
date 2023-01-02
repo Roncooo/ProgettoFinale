@@ -12,6 +12,7 @@ public:
 	void set_shot(const Position& pos);
 	void missed_shot(const Position& pos);
 	void update() override;
+	void reset_sonar();
 	static constexpr char hit = 'X';	// forse sarebbe meglio un altro nome
 	static constexpr char water = 'O';
 	static constexpr char sonar = 'Y';

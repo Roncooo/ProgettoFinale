@@ -13,7 +13,11 @@ OutDir                 :=$(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
+<<<<<<< HEAD
 User                   :=Beatrice
+=======
+User                   :=Francesco
+>>>>>>> 9eb08ca3c025daa5eb32dd250c3237bb9b04f70b
 Date                   :=02/01/2023
 CodeLitePath           :="C:/Program Files/CodeLite"
 MakeDirCommand         :=mkdir

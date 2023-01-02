@@ -34,3 +34,16 @@ void AttackGrid::update()
 	}
 */
 }
+
+void AttackGrid::reset_sonar()
+{
+	for(int r=0; r<rows; r++)
+	{
+		for(int c=0; c<cols; c++)
+		{
+			Position pos(r,c);
+			if(get_char(pos) == sonar)
+				set_char(pos,' ');
+		}
+	}
+}
