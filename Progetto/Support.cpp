@@ -22,6 +22,7 @@ bool Support::is_curable(const Position& p)
 			return false;		// falso perche' non puo' autocurarsi
 	}
 	
+	Position center = pos[dimension/2];
 	if( p != center+Position(-1,-1) && 	// top left
 		p != center+Position(-1, 0) &&	// top
 		p != center+Position(-1,+1) &&	// top right

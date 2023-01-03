@@ -4,7 +4,9 @@ Player::Player(std::string n)
 	: name{n}
 {
 	// attack e defence inizializzate di default
-	if(n.substr(0,3) == "CPU")
+	std::string temp_name = name;
+	std::transform(name.begin(), name.end(), temp_name.begin(), ::toupper);
+	if(temp_name.substr(0,3) == "CPU")
 		is_cpu = true;
 	else
 		is_cpu = false;
@@ -34,6 +36,22 @@ bool Player::receive_shot(const Position& shot_position)
 		}
 	}
 	// dico al nemico che non ha colpito
+	return false;
+}
+
+
+bool Player::is_there_ship(const Position& sonar_request) const
+{
+	for(int ship_index=0; ship_index<DefenceGrid::SHIP_NUMBER; ship_index++)
+	{
+		for(int pos_index=0; pos_index<defence.ships[ship_index]->dimension; pos_index++)
+		{
+			if(defence.ships[ship_index]->pos[pos_index] == sonar_request)
+			{
+				return true;
+			}
+		}
+	}
 	return false;
 }
 

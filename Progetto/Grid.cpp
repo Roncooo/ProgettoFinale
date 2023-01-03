@@ -16,7 +16,7 @@ void Grid::reset_matrix()
 	}
 }
 
-bool Grid::is_valid(const Position& pos) const
+bool Grid::is_valid(const Position& pos)
 {
 	return !(pos.row<0 || pos.col<0 || pos.row>=rows || pos.col>=cols);
 }

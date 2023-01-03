@@ -5,6 +5,7 @@
 
 #include <ctime>
 #include <cstdlib>	// per la randomicità del giocatore computer
+#include <algorithm>	// per uppercase
 #include "AttackGrid.h"
 #include "DefenceGrid.h"
 //#include "Battleship.h"
@@ -22,6 +23,7 @@ public:
 	bool is_cpu;
 	bool operator==(const Player& p) const;
 	bool receive_shot(const Position& pos);
+	bool is_there_ship(const Position& pos) const;
 	~Player();
 };
 

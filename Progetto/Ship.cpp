@@ -32,12 +32,12 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p)
 		if(ordered_prow.row == ordered_prune.row)
 		{
 			pos[i] = (ordered_prow + Position(0, i));		
-			center = ordered_prow + Position(0, (dimension/2));
+//			center = ordered_prow + Position(0, (dimension/2));
 		}
 		else	// altrimenti hanno per forza colonna uguale
 		{
 			pos[i] = (ordered_prow + Position(i, 0));
-			center = ordered_prow + Position((dimension/2), 0);
+//			center = ordered_prow + Position((dimension/2), 0);
 		}
 	}
 	
@@ -48,6 +48,7 @@ Ship::~Ship(){}
 
 int Ship::move(const Position& new_center)
 {
+	Position center = pos[dimension/2];
 	Position dislocation = new_center - center;
 	
 	// controlla sia che la nave sia completamente dentro alla griglia, sia che non sormonti altre navi

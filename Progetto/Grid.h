@@ -18,7 +18,7 @@ public:
 	virtual void update()=0;	// virtuale pura perché avviene diversamente per la difesa e l'attacco
 	void reset_matrix();
 	
-	bool is_valid(const Position& pos) const;
+	static bool is_valid(const Position& pos);
 	
 	char get_char(const Position& pos) const;
 	void set_char(const Position& pos, char c);		// non const

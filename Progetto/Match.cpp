@@ -124,7 +124,9 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 		int selected_ship_index = -1;
 		for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
 		{
-			if(origin==player.defence.ships[i]->center)
+			int ship_dimension = player.defence.ships[i]->dimension;
+			Position ship_center = player.defence.ships[i]->pos[ship_dimension/2];
+			if(origin==ship_center)
 			{
 				selected_ship_index = i;
 				break;

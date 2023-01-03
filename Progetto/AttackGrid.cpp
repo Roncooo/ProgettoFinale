@@ -34,7 +34,7 @@ void AttackGrid::update()
 	}
 */
 	
-	reset_matrix();
+//	reset_matrix();
 	
 	
 }

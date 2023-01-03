@@ -21,7 +21,6 @@ public:
 	Player& player;
 	bool sunk = false;
 	int dimension;
-	Position center;
 	std::vector<Position> pos;		// sono vector e non array perché a priori (compilazione) non conosco la loro 
 									// dimensione (e una Ship generica non ha dimensione specifica)
 									// si potrebbe aggirare rendendo Ship una classe template ma è solo un casino credo
