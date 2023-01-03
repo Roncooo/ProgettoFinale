@@ -8,6 +8,7 @@ void bot_placement(Player& p);
 Position random_position();
 Position ortogonal_position(const Position& start, int dim, int direction);
 int execute(Player& player, Player& enemy, int code, const Position& origin, const Position& target);	// usata solo durante il gioco, non nell'inserimento
+void print_code(int code, const Position& origin, const Position& target);
 
 Match::Match(Player& p1, Player& p2)
 	: player1{p1}, player2{p2}
@@ -68,8 +69,8 @@ int command(Position& a, Position& b)
 		}
 		else	// inserimento di un sottomarino
 		{
-			a = in1;
-			b = in1;
+			a = Position(in1);
+			b = Position(in1);
 			return 1;
 		}
 	}
@@ -78,8 +79,8 @@ int command(Position& a, Position& b)
 	in2 = vec.at(1);
 	if(std::regex_match(in1, reg_position) && std::regex_match(in2, reg_position))
 	{
-		a = in1;
-		b = in2;
+		a = Position(in1);
+		b = Position(in2);
 		return 2;
 	}
 	
@@ -108,7 +109,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	if(code == 4)	// stampa della griglia di difesa e di attacco
 	{
 		Grid::print(player.defence, player.attack);
-		return 3;
+		return 4;
 	}
 	
 	if(code == 5)
@@ -131,7 +132,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 		}
 		
 		if(selected_ship_index == -1)
-			return 6;		// la prima coordinata non è il centro di una nave
+			return -4;		// la prima coordinata non è il centro di una nave
 		
 		if(player.defence.ships[selected_ship_index]->is_battleship())
 		{
@@ -144,7 +145,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 			Support* selected = dynamic_cast<Support*>(&*(player.defence.ships[selected_ship_index]));
 			// muove (e cura) se è possibile, altrimenti interrompe
 			if(selected->cure(target)==-1)
-				return -1;
+				return -2;
 		}
 			
 		if(player.defence.ships[selected_ship_index]->is_submarine())
@@ -152,7 +153,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 			Submarine* selected = dynamic_cast<Submarine*>(&*(player.defence.ships[selected_ship_index]));
 			// muove (e cerca) se è possibile, altrimenti interrompe
 			if(selected->search(target, enemy)==-1)
-				return -1;
+				return -3;
 		}
 		
 		// tutto è andato a buon fine
@@ -360,6 +361,33 @@ bool has_lost(const Player& player)
 	return true;
 }
 
+void print_code(int code, const Position& origin, const Position& target)
+{
+	switch(code)
+	{
+	case -1:
+		std::cout << "Comando non valido\n";
+		break;
+	case -2:
+		std::cout << "Non e' possibile spostare la nave di supporto nella posizione " << target << "\n";
+		break;
+	case -3:
+		std::cout << "Non e' possibile spostare il sottomarino nella posizione " << target << "\n";
+		break;
+	case -4:
+		std::cout << origin << " non e' il centro di una nave\n";
+	case 3:
+		// stampa della griglia di difesa
+		break;
+	case 4:
+		// stampa di difesa e attacco
+		break;
+	case 5:
+		std::cout << "Avvistamenti sonar resettati\n";
+		break;
+	}
+}
+
 void Match::play()
 {
 	int n_rounds = 0;
@@ -375,9 +403,9 @@ void Match::play()
 		
 		while(code != 2)	// si possono differenziare gli errori con comandi specifici
 		{
-			std::cout << "Qualcosa e' andato storto, riprova\n";
+			print_code(code, origin, target);
 			code = command(origin, target);
-			execute(player1, player1, code, origin, target);
+			code = execute(player1, player1, code, origin, target);
 		}
 		
 		std::cout << "Comando eseguito\n";
@@ -392,13 +420,13 @@ void Match::play()
 		// turno giocatore 2
 		std::cout << player2.name + " e' il tuo turno\n";
 		code = command(origin, target);
-		execute(player2, player1, code, origin, target);
+		code = execute(player2, player1, code, origin, target);
 		
 		while(code != 2)	// si possono differenziare gli errori con comandi specifici
 		{
 			std::cout << "Qualcosa e' andato storto, riprova\n";
 			code = command(origin, target);
-			execute(player2, player1, code, origin, target);
+			code = execute(player2, player1, code, origin, target);
 		}
 		
 		std::cout << "Comando eseguito\n";
