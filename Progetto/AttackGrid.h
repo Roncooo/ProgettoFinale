@@ -5,6 +5,8 @@
 
 #include "Grid.h"
 
+class Ship;	//forward declaration
+
 class AttackGrid : public Grid
 {
 public:
@@ -17,5 +19,7 @@ public:
 	static constexpr char water = 'O';
 	static constexpr char sonar = 'Y';
 };
+
+#include "Ship.h"
 
 #endif // AttackGrid_H

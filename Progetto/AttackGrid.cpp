@@ -33,6 +33,10 @@ void AttackGrid::update()
 			// poi ^^^ questo non è quello che fa set_shot?
 	}
 */
+	
+	reset_matrix();
+	
+	
 }
 
 void AttackGrid::reset_sonar()

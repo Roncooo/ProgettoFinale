@@ -101,3 +101,15 @@ bool Ship::is_submarine()
 {
 	return dimension == 1;
 }
+
+bool Ship::is_sunk()
+{
+	for (int i = 0; i < armor.size(); i++){
+		if (armor[i] == true)	//se almeno un armatura è intatta, la nave non è affondata
+			return false;
+	}
+	
+	//se arrivo qui, tutte le armature == false
+	sunk = true;
+	return true;
+}

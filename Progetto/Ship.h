@@ -32,7 +32,7 @@ public:
 	int move(const Position& new_pos);
 	int get_armor() const;
 	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
-	
+	bool is_sunk();
 //	bool control(DefenceGrid& enemy);
 	
 	// tre funzioni comode ma che denotano un errore di design secondo me
