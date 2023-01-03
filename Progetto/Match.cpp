@@ -264,14 +264,16 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 	while(!ok)
 	{
 		prow = random_position();
-		for(int i=1; i<=4; i++)
+		int direction = rand()%4;
+		for(int i=1; i<=4; i++)	// ciclo sulle 4 direzioni partendo da una randomica
 		{
-			prune = ortogonal_position(prow, ship_size, i);
+			prune = ortogonal_position(prow, ship_size, direction);
 			if(p.defence.is_valid(prow, prune))
 			{
 				ok = true;
 				break;
 			}
+			direction=(direction+1)%4;
 		}
 	}
 }
@@ -332,16 +334,16 @@ Position ortogonal_position(const Position& start, int dim, int direction)
 	dim-=1;
 	switch(direction)
 	{
-		case 1:
+		case 0:
 			return start+Position(0,dim);	// destra
 			break;
-		case 2:
+		case 1:
 			return start+Position(0,-dim);	// sinstra
 			break;
-		case 3:
+		case 2:
 			return start+Position(dim,0);	// sotto
 			break;
-		case 4:
+		case 3:
 			return start+Position(-dim,0);	// sopra
 			break;
 	}
