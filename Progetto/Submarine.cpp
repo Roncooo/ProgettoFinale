@@ -35,5 +35,6 @@ int Submarine::search(const Position& pos, Player& enemy)
 				player.attack.set_char(enemy.defence.ships[i]->pos[j], AttackGrid::sonar);
 		}
 	}
+	return 2;	//tutto è andato a buon fine
 }
 Submarine::~Submarine(){}

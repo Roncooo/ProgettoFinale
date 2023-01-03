@@ -59,5 +59,6 @@ int Support::cure(const Position& pos)
 	// in alternativa si potrebbe controllare in oguna delle 6 posizioni adiacenti alla nave di supporto
 	// se c'è una nave da curare, in tal caso la curo (così non serve check_pos)
 	
+	return 2;	//tutto è andato a buon fine
 //	ha più senso l'alternativa
 }

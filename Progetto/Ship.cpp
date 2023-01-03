@@ -55,6 +55,8 @@ int Ship::move(const Position& new_center)
 	{
 		for(int i=0; i<dimension; i++)
 			pos[i] += dislocation;
+		
+		return 2;	//tutto è andato a buon fine
 	}
 	else
 		return -1;	// non è possibile spostare la nave nella nuova posizione
