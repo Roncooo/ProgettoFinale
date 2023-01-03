@@ -60,6 +60,29 @@ void Position::operator-=(const Position& pos)
 	this->col -= pos.col;
 }
 
+std::ostream& operator<<(std::ostream& os, const Position& a)
+{
+	std::string letter;
+	switch(a.row)
+	{
+		case 0:		letter = "A";	break;
+		case 1:		letter = "B";	break;
+		case 2:		letter = "C";	break;
+		case 3:		letter = "D";	break;
+		case 4:		letter = "E";	break;
+		case 5:		letter = "F";	break;
+		case 6:		letter = "G";	break;
+		case 7:		letter = "H";	break;
+		case 8:		letter = "I";	break;
+		case 9:		letter = "L";	break;
+		case 10:	letter = "M";	break;
+		case 11:	letter = "N";	break;
+		
+	}
+	os << letter << std::to_string(a.col+1);
+	return os;
+}
+
 Position operator-(const Position& a, const Position& b)
 {
 	return Position(a.row-b.row, a.col-b.col);
