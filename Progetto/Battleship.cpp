@@ -13,41 +13,15 @@ Battleship::Battleship(const Position& prow, const Position& stern, Player& play
 
 void Battleship::shoot(const Position& pos, Player& enemy) 
 {
-	//controllo che la posizione sia valida??
+	// la versione precedente era sbagliata perché si basava sulla griglia del nemico che non per forza era aggiornata
+	// con receive shot invece, chiedo al nemico se ho colpito (senza accedere direttamente alla sua griglia di difesa)
+	// ed è lui ad arrangiarsi per sistemare la sua armatura e le sue navi, io giocatore devo solo segnarmi se ho colpito o no
 	
-	// necessito della griglia di difesa dell'avversario
-	// (per ora abbozzo così)
-	//	DefenceGrid enemy;
-	//	** ora con l'inclusione di Player posso accedere alla griglia del mio avversario
-	char target = (enemy.defence).get_char(pos);
-	
-	if (target == ' ')
-	{
-		//chiamo la funzione di AttackGrid che segnerà O
-		player.attack.missed_shot(pos);
-	}
-	else
-	{
-		switch(target)
-		{
-			case 'C':	enemy.defence.set_char(pos, 'c');	break;
-			case 'S':	enemy.defence.set_char(pos, 's');	break;
-			case 'E':	enemy.defence.set_char(pos, 'e');	break;
-		}
-		//chiamo la funzione di AttackGrid che segnerà X
+	// dice se ho colpito nella griglia nemica o no	
+	if(enemy.receive_shot(pos))
 		player.attack.set_shot(pos);
-		
-		//diminuisco l'armatura della nave
-		for (int i = 0; i < DefenceGrid::SHIP_NUMBER; i++)
-		{
-			for (int j = 0; j < enemy.defence.ships[i]->dimension; j++)
-			{
-				if (enemy.defence.ships[i]->pos[j] == pos)
-					enemy.defence.ships[i]->armor[j] = false;
-			}
-		}
-		
-	}
+	else
+		player.attack.missed_shot(pos);
 }
 
 Battleship::~Battleship(){}

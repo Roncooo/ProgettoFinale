@@ -21,6 +21,7 @@ public:
 	const std::string name;
 	bool is_cpu;
 	bool operator==(const Player& p) const;
+	bool receive_shot(const Position& pos);
 	~Player();
 };
 

@@ -55,7 +55,7 @@ bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 	if(ordered_prow.row != ordered_prune.row && ordered_prow.col != ordered_prune.col)
 		return false;
 	
-	// controllo che non ci siano già navi nelle posizioni tra prua e poppa (comprese)
+	// controllo che non ci siano già navi NON AFFONDATE nelle posizioni tra prua e poppa (comprese)
 	Position vec = (ordered_prune-ordered_prow).norm();
 			// se funziona tutto non dovrebbe essere un ciclo infinito
 			// "ma diciamocelo, il rischio c'è"
@@ -63,13 +63,20 @@ bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 	{
 		for(int s=0; s<currently_placed_ships; s++)				// per ogni nave nella griglia
 		{
-			for(int p=0; p<ships[s]->dimension; p++)		// per ogni posizione della nave
+			// se la nave è affondata non crea problemi e ci si può passare sopra quindi passo alla prossima nave
+			if(ships[s]->sunk)
+				continue;
+			
+			// per ogni posizione della nave
+			for(int p=0; p<ships[s]->dimension; p++)
 			{
+				// se la posizione che voglio controllare appartiene ad una nave
 				if(ships[s]->pos[p] == current)
 					return false;
 			}
 		}
 	}
+	return true;
 	
 	// questa versione controlla attraverso la matrice che quindi dovrebbe essere sempre aggiornata ma non lo è
 //	for(int i=0; i<(ordered_prow-ordered_prune).abs(); i++)
@@ -86,5 +93,4 @@ bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 //				return false;
 //		}
 //	}
-	return true;
 }

@@ -405,7 +405,7 @@ void Match::play()
 		{
 			print_code(code, origin, target);
 			code = command(origin, target);
-			code = execute(player1, player1, code, origin, target);
+			code = execute(player1, player2, code, origin, target);
 		}
 		
 		std::cout << "Comando eseguito\n";
@@ -424,7 +424,7 @@ void Match::play()
 		
 		while(code != 2)	// si possono differenziare gli errori con comandi specifici
 		{
-			std::cout << "Qualcosa e' andato storto, riprova\n";
+			print_code(code, origin, target);
 			code = command(origin, target);
 			code = execute(player2, player1, code, origin, target);
 		}
