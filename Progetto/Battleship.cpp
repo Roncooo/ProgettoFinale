@@ -42,10 +42,20 @@ void Battleship::shoot(const Position& pos, Player& enemy)
 		{
 			for (int j = 0; j < enemy.defence.ships[i]->dimension; j++)
 			{
-				if (enemy.defence.ships[i]->pos[j] == pos)
+				if (enemy.defence.ships[i]->pos[j] == pos){
 					enemy.defence.ships[i]->armor[j] = false;
+					
+					//controllo se la nave è affondata
+					if (enemy.defence.ships[i]->is_sunk()){
+						currently_placed_ships--;
+					}
+					
+				}
+				}
 			}
 		}
+		
+		/
 		
 	}
 }
