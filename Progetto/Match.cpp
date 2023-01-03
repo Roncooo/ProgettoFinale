@@ -369,7 +369,7 @@ void Match::play()
 		// turno giocatore 1
 		std::cout << player1.name + " e' il tuo turno\n";
 		code = command(origin, target);
-		execute(player1, player2, code, origin, target);
+		code = execute(player1, player2, code, origin, target);
 		
 		while(code != 2)	// si possono differenziare gli errori con comandi specifici
 		{
