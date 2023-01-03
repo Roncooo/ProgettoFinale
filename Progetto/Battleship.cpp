@@ -47,15 +47,11 @@ void Battleship::shoot(const Position& pos, Player& enemy)
 					
 					//controllo se la nave è affondata
 					if (enemy.defence.ships[i]->is_sunk()){
-						currently_placed_ships--;
+						enemy.defence.currently_placed_ships--;
 					}
-					
-				}
 				}
 			}
 		}
-		
-		/
 		
 	}
 }
