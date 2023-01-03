@@ -42,13 +42,21 @@ void Battleship::shoot(const Position& pos, Player& enemy)
 		{
 			for (int j = 0; j < enemy.defence.ships[i]->dimension; j++)
 			{
-				if (enemy.defence.ships[i]->pos[j] == pos){
+				if (enemy.defence.ships[i]->pos[j] == pos)
+				{
 					enemy.defence.ships[i]->armor[j] = false;
-					
-					//controllo se la nave è affondata
-					if (enemy.defence.ships[i]->is_sunk()){
-						enemy.defence.currently_placed_ships--;
-					}
+				}
+			}
+			
+			//controllo se la nave è affondata
+			if (enemy.defence.ships[i]->is_sunk())
+			{
+				enemy.defence.currently_placed_ships--;		//diminuisco il numero di navi corrente
+				for (int j = 0; j < enemy.defence.ships[i]->dimension; j++)
+				{
+					enemy.defence.set_char(enemy.defence.ships[i]->pos[j], ' ');	//metto ' ' nella posizione pos[j]
+					enemy.defence.ships[i]->pos[j].row = -1;					//rendo la posizione pos[j] irraggiungibile
+					enemy.defence.ships[i]->pos[j].col = -1;
 				}
 			}
 		}
