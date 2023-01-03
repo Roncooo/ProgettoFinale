@@ -5,13 +5,6 @@
 Grid::Grid()
 {
 	reset_matrix();
-	matrix[4][3] = 'C';
-	matrix[4][4] = 'I';
-	matrix[4][5] = 'A';
-	matrix[4][6] = 'O';
-	matrix[4][8] = 'B';
-	matrix[4][9] = 'R';
-	matrix[4][10] = 'O';
 }
 
 void Grid::reset_matrix()
