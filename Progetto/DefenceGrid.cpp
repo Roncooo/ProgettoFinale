@@ -20,7 +20,7 @@ void DefenceGrid::update()
 	reset_matrix();
 	for(int i = 0; i < currently_placed_ships; i++)
 	{
-		if(ships[i]->sunk == true) continue;	// se la nave è affondata vado alla prossima
+		if(ships[i]->is_sunk() == true) continue;	// se la nave è affondata vado alla prossima
 		
 		for(int j = 0; j < ships[i]->dimension; j++)
 		{

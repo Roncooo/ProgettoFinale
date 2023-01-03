@@ -357,7 +357,7 @@ bool has_lost(const Player& player)
 	// per ciascuna nave nemica, se è una Corazzata e non è affondata, p non ha ancora vinto
 	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
 	{
-		if(player.defence.ships[i]->is_battleship() && !player.defence.ships[i]->sunk)
+		if(player.defence.ships[i]->is_battleship() && !player.defence.ships[i]->is_sunk())
 			return false;
 	}
 	return true;

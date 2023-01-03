@@ -27,9 +27,8 @@ bool Player::receive_shot(const Position& shot_position)
 			{
 				// segno che è stato colpito il pezzo
 				defence.ships[ship_index]->armor[pos_index] = false;
-				// controllo se è affondata
-				if(defence.ships[ship_index]->get_armor() == 0)
-					defence.ships[ship_index]->sunk = true;
+				// controllo se sono rimaste armature (e in caso affonda)
+				defence.ships[ship_index]->is_sunk();
 				// dico al nemico che ha colpito
 				return true;
 			}
