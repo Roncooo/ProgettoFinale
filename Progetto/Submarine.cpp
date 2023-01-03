@@ -23,7 +23,8 @@ int Submarine::search(const Position& pos, Player& enemy)
 	// altrimenti termina
 	if(move(pos)==-1)
 		return -1;
-		
+	
+	player.attack.reset_sonar();
 	//	for per le navi
 	for(int i = 0; i < DefenceGrid::SHIP_NUMBER; i++)
 	{

@@ -12,7 +12,6 @@ class DefenceGrid : public Grid
 public:
 	DefenceGrid();
 	void update() override;
-	void print();				// non è const perché invoca update
 	static constexpr int SHIP_NUMBER = 8;
 	int currently_placed_ships = 0;	// deve essere aggiornata ogni volta che si costruisce una nuova nave
 											// e si potrebbe anche controllare che non superi mai SHIP_NUMBER

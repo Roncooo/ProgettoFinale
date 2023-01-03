@@ -38,7 +38,7 @@ void Grid::set_char(const Position& pos, char c)		// non const
 	matrix[pos.row][pos.col] = c;
 }
 
-void Grid::print(const Grid& a)
+void Grid::print(Grid& a)
 {
 	// formato in uso:
 	//  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10| 11| 12|
@@ -67,6 +67,8 @@ void Grid::print(const Grid& a)
 	//  +---+---+---+---+---+---+---+---+---+---+---+---+
 	//N |   |   |   |   |   |   |   |   |   |   |   |   | 
 	//  +---+---+---+---+---+---+---+---+---+---+---+---+
+	
+	a.update();
 	
 	std::string delimiter_line = "  +";
 	for(int i=0; i<cols; i++)
@@ -97,8 +99,11 @@ void Grid::print(const Grid& a)
 }
 
 // stampa due griglie affiancate
-void Grid::print(const Grid& a, const Grid& b)
+void Grid::print(Grid& a, Grid& b)
 {
+	a.update();
+	b.update();
+	
 	std::string margin = "\t";
 	
 	std::string delimiter_line = "  +";

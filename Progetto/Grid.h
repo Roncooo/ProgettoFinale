@@ -13,8 +13,8 @@ public:
 //	~Grid();
 	// interne così accedono tranquillamente a matrix
 	// statiche così passiamo gli argomenti tra parentesi
-	static void print(const Grid& a);	// stampa una sola Grid
-	static void print(const Grid& a, const Grid& b);	// stampa due griglie affiancate
+	static void print(Grid& a);	// stampa una sola Grid
+	static void print(Grid& a, Grid& b);	// stampa due griglie affiancate
 	virtual void update()=0;	// virtuale pura perché avviene diversamente per la difesa e l'attacco
 	void reset_matrix();
 	

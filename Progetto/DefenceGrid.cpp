@@ -15,12 +15,6 @@ DefenceGrid::~DefenceGrid()
 //	}
 }
 
-void DefenceGrid::print()
-{
-	update();
-	Grid::print(*this);
-}
-
 void DefenceGrid::update()
 {
 	reset_matrix();

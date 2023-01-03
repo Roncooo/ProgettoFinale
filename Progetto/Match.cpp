@@ -101,7 +101,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	
 	if(code == 3)	// stampa della griglia di difesa
 	{
-		player.defence.print();
+		Grid::print(player.defence);
 		return 3;
 	}
 	
@@ -190,7 +190,7 @@ void user_placement(Player& p)
 	}
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
-	p.defence.print();
+	Grid::print(p.defence);
 }
 
 void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
@@ -214,7 +214,7 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		}
 		if(code==3)
 		{
-			p.defence.print();
+			Grid::print(p.defence);
 			continue;
 		}
 		if(code==4 || code==5)
@@ -297,7 +297,7 @@ void bot_placement(Player& p)
 	
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
-	p.defence.print();
+	Grid::print(p.defence);
 }
 
 std::vector<std::string> split(std::string str, char delimiter)
