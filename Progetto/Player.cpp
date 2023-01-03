@@ -43,6 +43,10 @@ bool Player::is_there_ship(const Position& sonar_request) const
 {
 	for(int ship_index=0; ship_index<DefenceGrid::SHIP_NUMBER; ship_index++)
 	{
+		// se la nave è affondata completamente, non verrà vista dal sonar
+		if(defence.ships[ship_index]->is_sunk())
+			continue;
+		
 		for(int pos_index=0; pos_index<defence.ships[ship_index]->dimension; pos_index++)
 		{
 			if(defence.ships[ship_index]->pos[pos_index] == sonar_request)

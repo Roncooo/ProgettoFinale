@@ -48,8 +48,7 @@ Ship::~Ship(){}
 
 int Ship::move(const Position& new_center)
 {
-	Position center = pos[dimension/2];
-	Position dislocation = new_center - center;
+	Position dislocation = new_center - get_center();
 	
 	// controlla sia che la nave sia completamente dentro alla griglia, sia che non sormonti altre navi
 	if(player.defence.is_valid(pos[0]+dislocation,pos[dimension-1]+dislocation))
@@ -80,6 +79,13 @@ int Ship::get_armor() const
 			c++;
 	}
 	return c;
+}
+
+Position Ship::get_center() const
+{
+	// funziona perché usiamo solo dimensioni dispari
+	// altrimenti sarebbe anche difficile individuare un centro
+	return pos[dimension/2];
 }
 
 void Ship::restore_armor()

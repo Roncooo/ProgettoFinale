@@ -9,6 +9,7 @@ Position random_position();
 Position ortogonal_position(const Position& start, int dim, int direction);
 int execute(Player& player, Player& enemy, int code, const Position& origin, const Position& target);	// usata solo durante il gioco, non nell'inserimento
 void print_code(int code, const Position& origin, const Position& target);
+int random_command(Player& player, Position& origin, Position& target);
 
 Match::Match(Player& p1, Player& p2)
 	: player1{p1}, player2{p2}
@@ -87,6 +88,27 @@ int command(Position& a, Position& b)
 	// se fin'ora non è stato riconosciuto un comando valido, è invalido
 	return -1;
 }
+
+int random_command(Player& player, Position& origin, Position& target)
+{
+	// parto da una nave randomica, se questa è affondata passo alla successiva
+	int ship_number = rand()%DefenceGrid::SHIP_NUMBER;
+	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+	{
+		if(player.defence.ships[ship_number]->is_sunk())
+		{
+			ship_number = (ship_number+1)%DefenceGrid::SHIP_NUMBER;
+			continue;
+		}
+		origin = player.defence.ships[ship_number]->get_center();
+	}
+	// in teoria il ciclo va sempre a buon fine perché random_command viene chiamata dopo aver controllato
+	// che il giocatore non abbia perso, e quindi ci sarà almeno una nave non affondata (in particolare una corazzata)
+	
+	target = random_position();
+	return 2;	// per uniformarsi alle altre funzioni, indica che il comando prevede 2 posizioni valide
+}
+
 
 /* non chiama command così è valida anche per il robot
  * prende un codice ed esegue l'istruzione associata
@@ -400,13 +422,21 @@ void Match::play()
 	{
 		// turno giocatore 1
 		std::cout << player1.name + " e' il tuo turno\n";
-		code = command(origin, target);
+		if(player1.is_cpu)
+			code = random_command(player1,origin, target);
+		else
+			code = command(origin, target);
 		code = execute(player1, player2, code, origin, target);
 		
-		while(code != 2)	// si possono differenziare gli errori con comandi specifici
+		while(code != 2)
 		{
-			print_code(code, origin, target);
-			code = command(origin, target);
+			if(player1.is_cpu)
+				code = random_command(player1,origin, target);
+			else
+			{
+				print_code(code, origin, target);
+				code = command(origin, target);
+			}
 			code = execute(player1, player2, code, origin, target);
 		}
 		
@@ -424,7 +454,7 @@ void Match::play()
 		code = command(origin, target);
 		code = execute(player2, player1, code, origin, target);
 		
-		while(code != 2)	// si possono differenziare gli errori con comandi specifici
+		while(code != 2)
 		{
 			print_code(code, origin, target);
 			code = command(origin, target);
@@ -438,6 +468,8 @@ void Match::play()
 			std::cout << "\n-----------------------------\n" + player2.name + " hai vinto!";
 			break;
 		}
+		
+		n_rounds++;
 	}
 }
 

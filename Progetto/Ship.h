@@ -30,6 +30,7 @@ public:
 	char not_hit;
 	int move(const Position& new_pos);
 	int get_armor() const;
+	Position get_center() const;
 	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
 	bool is_sunk();
 //	bool control(DefenceGrid& enemy);
