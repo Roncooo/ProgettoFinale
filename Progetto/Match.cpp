@@ -160,6 +160,8 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 		
 		if(player.defence.ships[selected_ship_index]->is_battleship())
 		{
+			// per ora funziona ma è assolutamente orribile e va sistemato
+			// potenzialmente pericoloso perché non so se causa memory leak
 			Battleship* selected = dynamic_cast<Battleship*>(&*(player.defence.ships[selected_ship_index]));
 			selected->shoot(target, enemy);	// va sempre a buon fine (credo) perché le posizioni sono già valide
 		}
@@ -379,7 +381,7 @@ bool has_lost(const Player& player)
 	// per ciascuna nave nemica, se è una Corazzata e non è affondata, p non ha ancora vinto
 	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
 	{
-		if(player.defence.ships[i]->is_battleship() && !player.defence.ships[i]->is_sunk())
+		if(!player.defence.ships[i]->is_sunk())
 			return false;
 	}
 	return true;
