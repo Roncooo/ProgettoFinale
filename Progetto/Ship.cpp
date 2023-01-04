@@ -30,7 +30,7 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, c
 	
 	for(int i = 0; i < dimension; i++)
 	{
-		if(ordered_prow.row == ordered_prune.row)
+		if(ordered_prow.get_row() == ordered_prune.get_row())
 			pos[i] = (ordered_prow + Position(0, i));		
 		else	// altrimenti hanno per forza colonna uguale
 			pos[i] = (ordered_prow + Position(i, 0));

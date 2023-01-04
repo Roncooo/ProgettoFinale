@@ -52,7 +52,7 @@ bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 	}
 	
 	// la nave deve essere orizzontale o verticale
-	if(ordered_prow.row != ordered_prune.row && ordered_prow.col != ordered_prune.col)
+	if(ordered_prow.get_row() != ordered_prune.get_row() && ordered_prow.get_col() != ordered_prune.get_col())
 		return false;
 	
 	// controllo che non ci siano già navi NON AFFONDATE nelle posizioni tra prua e poppa (comprese)

@@ -4,8 +4,8 @@
 
 bool Submarine::sub_area(Position& p)
 {
-	if(	this->pos[0].row - p.row <= 2 && this->pos[0].row - p.row >= -2 &&
-		this->pos[0].col - p.col <= 2 && this->pos[0].col - p.col >= -2 	) 
+	if(	this->pos[0].get_row() - p.get_row() <= 2 && this->pos[0].get_row() - p.get_row() >= -2 &&
+		this->pos[0].get_col() - p.get_col() <= 2 && this->pos[0].get_col() - p.get_col() >= -2 	) 
 			return true;
 	return false;
 }

@@ -63,7 +63,7 @@ void Position::operator-=(const Position& pos)
 std::ostream& operator<<(std::ostream& os, const Position& a)
 {
 	std::string letter;
-	switch(a.row)
+	switch(a.get_row())
 	{
 		case 0:		letter = "A";	break;
 		case 1:		letter = "B";	break;
@@ -79,18 +79,18 @@ std::ostream& operator<<(std::ostream& os, const Position& a)
 		case 11:	letter = "N";	break;
 		
 	}
-	os << letter << std::to_string(a.col+1);
+	os << letter << std::to_string(a.get_col()+1);
 	return os;
 }
 
 Position operator-(const Position& a, const Position& b)
 {
-	return Position(a.row-b.row, a.col-b.col);
+	return Position(a.get_row()-b.get_row(), a.get_col()-b.get_col());
 }
 
 Position operator+(const Position& a, const Position& b)
 {
-	return Position(a.row+b.row, a.col+b.col);
+	return Position(a.get_row()+b.get_row(), a.get_col()+b.get_col());
 }
 
 // attenzione che (A1-A5).abs() ritorna 4 e non 5
@@ -105,3 +105,7 @@ Position Position::norm() const
 {
 	return Position(row/abs(), col/abs());
 }
+
+int Position::get_row() const { return row; }
+
+int Position::get_col() const { return col; }

@@ -18,17 +18,17 @@ void Grid::reset_matrix()
 
 bool Grid::is_valid(const Position& pos)
 {
-	return !(pos.row<0 || pos.col<0 || pos.row>=rows || pos.col>=cols);
+	return !(pos.get_row()<0 || pos.get_col()<0 || pos.get_row()>=rows || pos.get_col()>=cols);
 }
 
 char Grid::get_char(const Position& pos) const
 {
-	return matrix[pos.row][pos.col];
+	return matrix[pos.get_row()][pos.get_col()];
 }
 
 void Grid::set_char(const Position& pos, char c)		// non const
 {
-	matrix[pos.row][pos.col] = c;
+	matrix[pos.get_row()][pos.get_col()] = c;
 }
 
 void Grid::print(Grid& a)
