@@ -1,4 +1,4 @@
-// autore: 
+// author: FRANCESCO RONCOLATO
 
 #ifndef Position_H
 #define Position_H

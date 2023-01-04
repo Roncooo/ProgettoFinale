@@ -1,4 +1,4 @@
-// autore: 
+//	author: BEATRICE BELLESSO
 
 #include "Ship.h"
 

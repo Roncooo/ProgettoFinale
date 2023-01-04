@@ -1,3 +1,5 @@
+//	author: FRANCESCO RONCOLATO
+
 #include "Match.h"
 
 void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 

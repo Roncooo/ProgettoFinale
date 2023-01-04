@@ -1,4 +1,5 @@
-// autore: clTabCtrl
+// author: FRANCESCO RONCOLATO
+
 
 #ifndef Grid_H
 #define Grid_H

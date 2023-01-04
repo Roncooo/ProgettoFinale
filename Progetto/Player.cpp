@@ -1,3 +1,5 @@
+// author: FRANCESCO RONCOLATO
+
 #include "Player.h"
 
 Player::Player(std::string n)

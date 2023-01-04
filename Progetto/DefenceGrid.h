@@ -1,4 +1,4 @@
-// autore: 
+//	author: BEATRICE BELLESSO
 
 #ifndef DefenceGrid_H
 #define DefenceGrid_H

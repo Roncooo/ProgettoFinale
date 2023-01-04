@@ -1,4 +1,4 @@
-// autore: 
+//	author: BEATRICE BELLESSO
 
 #ifndef Ship_H
 #define Ship_H

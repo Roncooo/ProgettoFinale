@@ -1,4 +1,4 @@
-// autore: 
+//	author: BEATRICE BELLESSO
 
 #ifndef AttackGrid_H
 #define AttackGrid_H
@@ -12,7 +12,7 @@ class AttackGrid : public Grid
 public:
 	AttackGrid();
 	void set_shot(const Position& pos);
-	void missed_shot(const Position& pos);
+	void set_missed(const Position& pos);
 	void update() override;
 	void reset_sonar();
 	static constexpr char hit = 'X';	// forse sarebbe meglio un altro nome
