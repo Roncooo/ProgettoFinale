@@ -206,7 +206,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 
 void Match::ship_placement(Player& p)
 {
-	if(p.is_cpu)
+	if(p.auto_placement)
 		bot_placement(p);
 	else
 		user_placement(p);

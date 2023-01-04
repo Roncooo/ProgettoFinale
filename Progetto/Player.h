@@ -21,6 +21,7 @@ public:
 	DefenceGrid defence;
 	const std::string name;
 	bool is_cpu;
+	bool auto_placement = false;
 	bool operator==(const Player& p) const;
 	bool receive_shot(const Position& pos);
 	bool is_there_ship(const Position& pos) const;
