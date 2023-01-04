@@ -26,19 +26,10 @@ std::vector<std::string> split(std::string str, char delimiter);
 //	dichiarata nella classe?
 int command(Position& a, Position& b)
 {
-	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
-	// ma non so bene come fare
-	std::string reg_rule = "[";
-	for(int i=0; i<Grid::rows; i++)
-		reg_rule += Grid::letters[i];
-	reg_rule+="]([1-9]|1[012])";
-	std::regex reg_position = std::regex(reg_rule);
-	
 	std::string input_string;	// tutto l'input (cin invece si ferma allo spazio)
 	std::getline(std::cin, input_string);
 	// trasformo in uppercase l'input
 	std::transform(input_string.begin(), input_string.end(), input_string.begin(), ::toupper);
-	
 	
 	// COMANDI SPECIALI
 	if(input_string == "XX")
@@ -50,6 +41,19 @@ int command(Position& a, Position& b)
 	if(input_string == "AA AA")
 		return 5;
 	
+	if(input_string == "BB BB")
+		return 6;
+	
+	if(input_string == "CHEAT")
+		return 10;
+	
+	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
+	// ma non so bene come fare
+	std::string reg_rule = "[";
+	for(int i=0; i<Grid::rows; i++)
+		reg_rule += Grid::letters[i];
+	reg_rule+="]([1-9]|1[012])";
+	std::regex reg_position = std::regex(reg_rule);
 	
 	// COMANDI CON COORDINATE
 	
@@ -142,6 +146,17 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 		return 5;
 	}
 	
+	if(code == 6)
+	{
+		player.attack.reset_matrix();
+		return 5;
+	}
+	
+	if(code == 10)	// comando "cheat", utile per il debugging
+	{
+		Grid::print(enemy.defence);
+		return 10;
+	}
 	
 	if(code == 2)	// due posizioni valide inserite
 	{
