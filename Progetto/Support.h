@@ -6,6 +6,7 @@
 #include "Ship.h"
 #include "DefenceGrid.h"
 
+
 class Support : public Ship
 {
 	bool is_curable(const Position& p);

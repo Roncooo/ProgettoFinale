@@ -3,10 +3,8 @@
 #include "Support.h"
 
 Support::Support(const Position& prune, const Position& stern, Player& p) 
-	: Ship(prune, stern, p)
+	: Ship(prune, stern, p, 'S', 's')
 {
-	hit = 's';
-	not_hit = 'S';
 }
 
 Support::~Support(){}
@@ -16,7 +14,7 @@ Support::~Support(){}
 // quindi deve essere sufficentemente vicina e non può essere la nave stessa
 bool Support::is_curable(const Position& p)
 {
-	for(int i = 0; i < dimension; i++)
+	for(int i = 0; i < get_dimension(); i++)
 	{
 		if(p == pos[i])			// se p è presente nel vector di posizioni di this ritorno
 			return false;		// falso perche' non puo' autocurarsi
@@ -48,7 +46,7 @@ int Support::cure(const Position& pos)
 	
 	for(int j = 0; j < DefenceGrid::SHIP_NUMBER; j++)	// per ogni nave
 	{
-		for(int x = 0; x < player.defence.ships[j]->dimension; x++)
+		for(int x = 0; x < player.defence.ships[j]->get_dimension(); x++)
 		{	
 			if(!is_curable(player.defence.ships[j]->pos[x]))
 				continue;
