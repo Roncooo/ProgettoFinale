@@ -112,3 +112,17 @@ bool Ship::is_sunk()
 	sunk = true;
 	return true;
 }
+
+void Ship::sinking()
+{
+	std::cout << " ++ LA TUA NAVE E' AFFONDATA ++\n";
+	player.defence.currently_placed_ships--;
+	
+	Position temp = Position();
+	for (int i = 0; i < pos.size(); i++) 
+	{	
+		player.defence.set_char(pos[i], ' ');
+		pos[i] = temp;
+	}
+	
+}
