@@ -1,4 +1,4 @@
-// autore: 
+//	author: BEATRICE BELLESSO
 
 #include "DefenceGrid.h"
 
@@ -22,7 +22,7 @@ void DefenceGrid::update()
 	{
 		if(ships[i]->is_sunk() == true) continue;	// se la nave è affondata vado alla prossima
 		
-		for(int j = 0; j < ships[i]->dimension; j++)
+		for(int j = 0; j < ships[i]->get_dimension(); j++)
 		{
 			if(ships[i]->armor[j] == true)		// armor[i] è true se il pezzo è integro (non colpito)
 				set_char(ships[i]->pos[j], ships[i]->not_hit);
@@ -64,11 +64,11 @@ bool DefenceGrid::is_valid(const Position& prow, const Position& prune) const
 		for(int s=0; s<currently_placed_ships; s++)				// per ogni nave nella griglia
 		{
 			// se la nave è affondata non crea problemi e ci si può passare sopra quindi passo alla prossima nave
-			if(ships[s]->sunk)
+			if(ships[s]->is_sunk())
 				continue;
 			
 			// per ogni posizione della nave
-			for(int p=0; p<ships[s]->dimension; p++)
+			for(int p=0; p<ships[s]->get_dimension(); p++)
 			{
 				// se la posizione che voglio controllare appartiene ad una nave
 				if(ships[s]->pos[p] == current)

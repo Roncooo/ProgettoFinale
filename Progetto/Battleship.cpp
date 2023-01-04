@@ -1,14 +1,10 @@
-// autore: 
+// author: FRANCESCO RONCOLATO
 #include "Battleship.h"
 
 Battleship::Battleship(const Position& prow, const Position& stern, Player& player)
-	: Ship(prow, stern, player)
-	//^^^^^ chiamata al costruttore di Ship che fa i vari controlli e setta posizioni e armor
+	: Ship(prow, stern, player, 'C', 'c')
+	// chiamata al costruttore di Ship che fa i vari controlli e setta posizioni, armor e char
 {
-	// credo non ci vada nient'altro
-	
-	hit = 'c';
-	not_hit = 'C';
 }
 
 void Battleship::shoot(const Position& pos, Player& enemy) 
@@ -21,7 +17,7 @@ void Battleship::shoot(const Position& pos, Player& enemy)
 	if(enemy.receive_shot(pos))
 		player.attack.set_shot(pos);
 	else
-		player.attack.missed_shot(pos);
+		player.attack.set_missed(pos);
 }
 
 Battleship::~Battleship(){}

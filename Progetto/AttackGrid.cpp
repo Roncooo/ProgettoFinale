@@ -1,4 +1,4 @@
-// autore: 
+//	author: BEATRICE BELLESSO 
 
 #include "AttackGrid.h"
 
@@ -11,7 +11,7 @@ void AttackGrid::set_shot(const Position& pos)
 	set_char(pos, hit);
 }
 
-void AttackGrid::missed_shot(const Position& pos)
+void AttackGrid::set_missed(const Position& pos)
 {
 	set_char(pos, water);
 }

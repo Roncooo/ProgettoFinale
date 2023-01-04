@@ -1,3 +1,5 @@
+// author: FRANCESCO RONCOLATO
+
 #include "Player.h"
 
 Player::Player(std::string n)
@@ -21,7 +23,7 @@ bool Player::receive_shot(const Position& shot_position)
 {
 	for(int ship_index=0; ship_index<DefenceGrid::SHIP_NUMBER; ship_index++)
 	{
-		for(int pos_index=0; pos_index<defence.ships[ship_index]->dimension; pos_index++)
+		for(int pos_index=0; pos_index<defence.ships[ship_index]->get_dimension(); pos_index++)
 		{
 			if(defence.ships[ship_index]->pos[pos_index] == shot_position)
 			{
@@ -47,7 +49,7 @@ bool Player::is_there_ship(const Position& sonar_request) const
 		if(defence.ships[ship_index]->is_sunk())
 			continue;
 		
-		for(int pos_index=0; pos_index<defence.ships[ship_index]->dimension; pos_index++)
+		for(int pos_index=0; pos_index<defence.ships[ship_index]->get_dimension(); pos_index++)
 		{
 			if(defence.ships[ship_index]->pos[pos_index] == sonar_request)
 			{

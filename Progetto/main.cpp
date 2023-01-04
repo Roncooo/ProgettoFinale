@@ -1,4 +1,4 @@
-// autore: 
+// author: FRANCESCO RONCOLATO
 
 #include "Match.h"
 

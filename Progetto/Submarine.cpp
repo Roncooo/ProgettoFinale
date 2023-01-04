@@ -11,10 +11,8 @@ bool Submarine::sub_area(Position& p)
 }
 
 Submarine::Submarine(const Position& pos, Player& p) 
-	: Ship(pos, pos, p)
+	: Ship(pos, pos, p, 'E', 'e')
 {
-	hit = 'e';
-	not_hit = 'E';
 }
 
 int Submarine::search(const Position& pos, const Player& enemy)

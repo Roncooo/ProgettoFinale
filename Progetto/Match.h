@@ -1,11 +1,12 @@
+// author: FRANCESCO RONCOLATO
+
 #ifndef MATCH_H
 #define MATCH_H
 
 #include <iostream>
 #include <regex>
 #include <algorithm>		// per uppercase
-//#include <limits> 		// per il flush del cin
-//#include <ios> 			// per il flush del cin
+
 #include "Player.h"
 #include "DefenceGrid.h"
 #include "AttackGrid.h"

@@ -1,10 +1,11 @@
-// autore: 
+//	author: BEATRICE BELLESSO
 
 #ifndef Support_H
 #define Support_H
 
 #include "Ship.h"
 #include "DefenceGrid.h"
+
 
 class Support : public Ship
 {
