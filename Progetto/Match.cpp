@@ -455,17 +455,25 @@ void Match::play()
 		
 		// turno giocatore 2
 		std::cout << player2.name + " e' il tuo turno\n";
-		code = command(origin, target);
+		if(player2.is_cpu)
+			code = random_command(player2,origin, target);
+		else
+			code = command(origin, target);
 		code = execute(player2, player1, code, origin, target);
 		
 		while(code != 2)
 		{
-			print_code(code, origin, target);
-			code = command(origin, target);
+			if(player2.is_cpu)
+				code = random_command(player2,origin, target);
+			else
+			{
+				print_code(code, origin, target);
+				code = command(origin, target);
+			}
 			code = execute(player2, player1, code, origin, target);
 		}
 		
-		std::cout << "Comando eseguito\n";
+		std::cout << "Comando eseguito " + std::to_string(n_rounds) +"\n";
 		
 		if(has_lost(player1))
 		{

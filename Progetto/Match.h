@@ -25,7 +25,7 @@ public:
 	Player& player2;
 	void ship_placement(Player& p);
 	
-	static constexpr int MAX_ROUNDS = 1000;	// boh a caso raga
+	static constexpr int MAX_ROUNDS = 2000;	// boh a caso raga
 	void play();
 	
 	/* Command restituisce un exit code che identifica il comando inserito da tastiera
