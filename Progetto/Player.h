@@ -26,6 +26,12 @@ public:
 	~Player();
 	AttackGrid attack;
 	DefenceGrid defence;
+	// per il momento sono solo idee di risoluzioni per poter mettere almeno defence grid privata
+	// resta un problema l'inserimento delle navi che non può funzionare con get_ship
+	Ship* get_ship(int index); 
+	void print_defence() const;
+	void print_defence_attack() const;
+private:
 };
 
 #endif // Player_H

@@ -71,3 +71,18 @@ Player::~Player()
 {
 }
 
+Ship* Player::get_ship(int index)
+{
+	// occhio a possibili dangling pointers
+	return defence.ships[index].get();
+} 
+
+void Player::print_defence() const
+{
+	Grid::print(defence);
+}
+
+void Player::print_defence_attack() const
+{
+	Grid::print(defence, attack);
+}
