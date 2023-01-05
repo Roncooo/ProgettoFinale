@@ -17,14 +17,14 @@ class Player
 public:
 	Player(std::string n = "Player");
 	// si può mettere una variabile statica per dare nomi di default Player1 Player2
-	AttackGrid attack;
-	DefenceGrid defence;
 	const std::string name;
 	bool is_cpu;
 	bool operator==(const Player& p) const;
 	bool receive_shot(const Position& pos);
 	bool is_there_ship(const Position& pos) const;
 	~Player();
+	AttackGrid attack;
+	DefenceGrid defence;
 };
 
 #endif // Player_H
