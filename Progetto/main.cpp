@@ -33,8 +33,27 @@ int main(void)
 		if(player2_name != player1_name)
 			cout << "\"" + player2_name + "\" va bene, grazie\n";
 	}
+	
 	Player player1(player1_name);
 	Player player2(player2_name);
+	
+	if(!player1.is_cpu)
+	{
+		cout << player1_name << " vuoi che siano inserite automaticamente le tue navi? (Y/N)";
+		std::string auto_placement;
+		std::getline(std::cin, auto_placement);
+		if(auto_placement=="Y")
+			player1.auto_placement = true;
+	}
+	if(!player2.is_cpu)
+	{
+		cout << player2_name << " vuoi che siano inserite automaticamente le tue navi? (Y/N)";
+		std::string auto_placement;
+		std::getline(std::cin, auto_placement);
+		if(auto_placement=="Y")
+			player2.auto_placement = true;
+	}
+	
 	
 	Match partita(player1, player2);
 	partita.ship_placement(player1);

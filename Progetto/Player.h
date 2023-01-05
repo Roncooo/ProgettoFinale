@@ -19,6 +19,7 @@ public:
 	// si può mettere una variabile statica per dare nomi di default Player1 Player2
 	const std::string name;
 	bool is_cpu;
+	bool auto_placement = false;
 	bool operator==(const Player& p) const;
 	bool receive_shot(const Position& pos);
 	bool is_there_ship(const Position& pos) const;
