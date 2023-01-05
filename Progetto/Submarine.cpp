@@ -33,8 +33,12 @@ int Submarine::search(const Position& pos, const Player& enemy)
 			if(!Grid::is_valid(pos+Position(r,c)))
 				continue;
 			// chiedo al nemico se nella posizione c'è una nave
-			if(enemy.is_there_ship(pos+Position(r,c)))
-				player.attack.set_char(pos+Position(r,c), AttackGrid::sonar);
+			int code = enemy.is_there_ship(pos+Position(r,c));
+			if(code == -1) continue; // non c'è nessuna nave nella casella in esame
+			else if(code == 1)
+				player.attack.set_char(pos+Position(r,c), AttackGrid::sonar_damaged);
+			else if(code == 2)
+				player.attack.set_char(pos+Position(r,c), AttackGrid::sonar_undamaged);
 		}
 	}
 	

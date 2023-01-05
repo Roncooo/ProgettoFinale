@@ -13,7 +13,8 @@ public:
 	// variabili costanti statiche che descrivono la classe
 	static constexpr char hit = 'X';
 	static constexpr char water = 'O';
-	static constexpr char sonar = 'Y';
+	static constexpr char sonar_undamaged = 'Y';
+	static constexpr char sonar_damaged = 'y';
 	
 	AttackGrid();
 	void set_shot(const Position& pos);

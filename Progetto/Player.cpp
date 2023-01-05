@@ -33,10 +33,11 @@ bool Player::receive_shot(const Position& shot_position)
 				// segno che è stato colpito il pezzo
 				defence.ships[ship_index]->armor[pos_index] = false;
 				// controllo se sono rimaste armature (e in caso affonda)
-				if (defence.ships[ship_index]->is_sunk())
+				// commentato perché non serve
+				/*if (defence.ships[ship_index]->is_sunk())
 					{
 						defence.ships[ship_index]->sinking();
-					}
+					}*/
 				// dico al nemico che ha colpito
 				return true;
 			}
@@ -47,7 +48,7 @@ bool Player::receive_shot(const Position& shot_position)
 }
 
 
-bool Player::is_there_ship(const Position& sonar_request) const
+int Player::is_there_ship(const Position& sonar_request) const
 {
 	for(int ship_index=0; ship_index<DefenceGrid::SHIP_NUMBER; ship_index++)
 	{
@@ -59,11 +60,14 @@ bool Player::is_there_ship(const Position& sonar_request) const
 		{
 			if(defence.ships[ship_index]->pos[pos_index] == sonar_request)
 			{
-				return true;
+				if(defence.ships[ship_index]->armor[pos_index] == true)
+					return 2;	// se l'armatura della nave risulta intatta ritorno un codice valido 2
+				else
+					return 1;	// pezzo di nave colpito
 			}
 		}
 	}
-	return false;
+	return -1;	// nella posizione richiesta non c'è una nave
 }
 
 Player::~Player()

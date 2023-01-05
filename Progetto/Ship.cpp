@@ -121,7 +121,8 @@ bool Ship::is_sunk()
 	return true;
 }
 
-void Ship::sinking()
+// commentata intanto, secondo me può essere direttamente cancellata
+/*void Ship::sinking()
 {
 	std::cout << " ++ LA TUA NAVE E' AFFONDATA ++\n";
 	player.defence.currently_placed_ships--;
@@ -132,5 +133,4 @@ void Ship::sinking()
 		player.defence.set_char(pos[i], ' ');
 		pos[i] = temp;
 	}
-	
-}
+*/

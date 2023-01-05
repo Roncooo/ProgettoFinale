@@ -46,7 +46,8 @@ void AttackGrid::reset_sonar()
 		for(int c=0; c<cols; c++)
 		{
 			Position pos(r,c);
-			if(get_char(pos) == sonar)
+			if( get_char(pos) == sonar_undamaged ||
+				get_char(pos) == sonar_damaged		)
 				set_char(pos,' ');
 		}
 	}
