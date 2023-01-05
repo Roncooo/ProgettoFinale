@@ -177,15 +177,16 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 		
 		if(player.defence.ships[selected_ship_index]->is_battleship())
 		{
-			// per ora funziona ma è assolutamente orribile e va sistemato
-			// potenzialmente pericoloso perché non so se causa memory leak
-			Battleship* selected = dynamic_cast<Battleship*>(&*(player.defence.ships[selected_ship_index]));
+			// migliorato, resta ancora brutto e forse pericoloso per potenziali memory leak
+			// accedo allo unique_ptr contenuto in ships che contiene un puntatore a una nave derivata
+			// get() ritorna il puntatore alla nave derivata, questo può essere castato a puntatore del tipo derivato
+			Battleship* selected = dynamic_cast<Battleship*>(player.defence.ships[selected_ship_index].get());
 			selected->shoot(target, enemy);	// va sempre a buon fine (credo) perché le posizioni sono già valide
 		}
 			
 		if(player.defence.ships[selected_ship_index]->is_support())
 		{
-			Support* selected = dynamic_cast<Support*>(&*(player.defence.ships[selected_ship_index]));
+			Support* selected = dynamic_cast<Support*>(player.defence.ships[selected_ship_index].get());
 			// muove (e cura) se è possibile, altrimenti interrompe
 			if(selected->cure(target)==-1)
 				return -2;
@@ -193,7 +194,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 			
 		if(player.defence.ships[selected_ship_index]->is_submarine())
 		{
-			Submarine* selected = dynamic_cast<Submarine*>(&*(player.defence.ships[selected_ship_index]));
+			Submarine* selected = dynamic_cast<Submarine*>(player.defence.ships[selected_ship_index].get());
 			// muove (e cerca) se è possibile, altrimenti interrompe
 			if(selected->search(target, enemy)==-1)
 				return -3;
@@ -428,6 +429,12 @@ void print_code(int code, const Position& origin, const Position& target)
 	case 5:
 		std::cout << "Avvistamenti sonar resettati\n";
 		break;
+	case 6:
+		std::cout << "Griglia di attacco resettata\n";
+		break;
+	case 10:
+		std::cout << "Ecco la griglia dell'avversario, shhh!\n";
+		break;
 	}
 }
 
@@ -463,7 +470,7 @@ void Match::play()
 		
 		if(has_lost(player2))
 		{
-			std::cout << "\n-----------------------------\n" + player1.name + " hai vinto!";
+			std::cout << "\n-----------------------------\n" + player1.name + " hai vinto!\n";
 			break;
 		}
 		
@@ -492,7 +499,7 @@ void Match::play()
 		
 		if(has_lost(player1))
 		{
-			std::cout << "\n-----------------------------\n" + player2.name + " hai vinto!";
+			std::cout << "\n-----------------------------\n" + player2.name + " hai vinto!\n";
 			break;
 		}
 		

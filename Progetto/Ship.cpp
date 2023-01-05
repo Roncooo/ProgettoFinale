@@ -111,13 +111,26 @@ bool Ship::is_submarine() const
 
 bool Ship::is_sunk()
 {
+	// se so già che è affondata non devo calcolare niente
+	if(sunk == true)
+		return true;
+	
 	for (int i = 0; i < armor.size(); i++){
 		if (armor[i] == true)	//se almeno un armatura è intatta, la nave non è affondata
 			return false;
 	}
 	
-	//se arrivo qui, tutte le armature == false
+	// se arrivo qui, tutte le armature == false
+	// e la nave è affondata ora
 	sunk = true;
+	std::cout << "~~~Hai affondato ";
+	if(is_battleship())
+		std::cout << "una corazzata";
+	if(is_support())
+		std::cout << "una nave di supporto";
+	if(is_submarine())
+		std::cout << "un sottomarino";
+	std::cout << "~~~\n";
 	return true;
 }
 

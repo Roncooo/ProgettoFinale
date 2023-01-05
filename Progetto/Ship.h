@@ -37,7 +37,6 @@ public:
 	Position get_center() const;
 	
 	int move(const Position& new_pos);
-	void sinking();
 	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
 	bool is_sunk();
 	
