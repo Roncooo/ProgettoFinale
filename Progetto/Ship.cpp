@@ -66,16 +66,18 @@ int Ship::move(const Position& new_center)
 {
 	// copio le posizioni in un vector temporaneo
 	std::vector<Position> temp = pos;
-	Position center = get_center();
+	Position dislocation = new_center - get_center();
 	// rendo invalide le posizioni attuali della nave così non intralciano is_valid
 	for(int i=0; i<dimension; i++)
 		pos[i] = Position();
-		
-	Position dislocation = new_center - center;
 	
 	// controlla sia che la nave sia completamente dentro alla griglia, sia che non sormonti altre navi
 	if(!player.defence.is_valid(temp[0]+dislocation,temp[dimension-1]+dislocation))
+	{
+		// ripristino le posizioni salvate
+		pos = temp;
 		return -1;	// non è possibile spostare la nave nella nuova posizione
+	}
 	
 	// se è possibile fare lo spostamento, riscrivo le posizioni giuste in pos
 	for(int i=0; i<dimension; i++)
