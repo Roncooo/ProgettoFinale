@@ -6,7 +6,7 @@ using std::cout, std::cin, std::string;
 
 void standard_match()
 {
-	std::srand(std::time(NULL));
+	std::srand(123456);
 
 	cout << "Inserire i nomi dei giocatori";
 	cout << "\nPer visualizzare la tua griglia di difesa, inserisci il comando XX";

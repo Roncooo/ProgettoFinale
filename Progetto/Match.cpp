@@ -427,71 +427,67 @@ void print_code(int code, const Position& origin, const Position& target)
 	}
 }
 
-void Match::play()
+void round(Player& player, Player& enemy)
 {
-	int n_rounds = 0;
 	int code;
 	Position origin, target;
 	
+	if(player.is_cpu)
+	{
+		std::cout << player.name + " svolge il suo turno\n";
+		code = random_command(player, origin, target);
+	}
+	else
+	{
+		std::cout << player.name + " e' il tuo turno\n";
+		code = command(origin, target);
+	}
+	code = execute(player, enemy, code, origin, target);
+	
+	while(code != 2)
+	{
+		if(player.is_cpu)
+			code = random_command(player, origin, target);
+		else
+		{
+			print_code(code, origin, target);
+			code = command(origin, target);
+		}
+		code = execute(player, enemy, code, origin, target);
+	}
+	
+	std::cout << "Comando eseguito\n\n";
+}
+
+void print_winner(Player& player)
+{
+	std::string str = player.name + " hai vinto!";
+	std::cout << "+" + std::string(str.length()+2, '~') + "+\n";
+	std::cout << "| " + str + " |\n";
+	std::cout << "+" + std::string(str.length()+2, '~') + "+\n";
+}
+
+void Match::play()
+{
+	int n_rounds = 1;
+	
 	while(n_rounds<MAX_ROUNDS)
 	{
-		// turno giocatore 1
-		std::cout << player1.name + " e' il tuo turno\n";
-		if(player1.is_cpu)
-			code = random_command(player1,origin, target);
-		else
-			code = command(origin, target);
-		code = execute(player1, player2, code, origin, target);
-		
-		while(code != 2)
-		{
-			if(player1.is_cpu)
-				code = random_command(player1,origin, target);
-			else
-			{
-				print_code(code, origin, target);
-				code = command(origin, target);
-			}
-			code = execute(player1, player2, code, origin, target);
-		}
-		
-		std::cout << "Comando eseguito\n";
-		
+		std::cout << "Turno: " << n_rounds << "\n";
+		round(player1, player2);
 		if(player2.has_lost())
 		{
-			std::cout << "\n-----------------------------\n" + player1.name + " hai vinto!\n";
+			print_winner(player1);
 			break;
 		}
+		n_rounds++;
 		
-		
-		// turno giocatore 2
-		std::cout << player2.name + " e' il tuo turno\n";
-		if(player2.is_cpu)
-			code = random_command(player2,origin, target);
-		else
-			code = command(origin, target);
-		code = execute(player2, player1, code, origin, target);
-		
-		while(code != 2)
-		{
-			if(player2.is_cpu)
-				code = random_command(player2,origin, target);
-			else
-			{
-				print_code(code, origin, target);
-				code = command(origin, target);
-			}
-			code = execute(player2, player1, code, origin, target);
-		}
-		
-		std::cout << "Comando eseguito " + std::to_string(n_rounds) +"\n";
-		
+		round(player2, player1);
 		if(player1.has_lost())
 		{
-			std::cout << "\n-----------------------------\n" + player2.name + " hai vinto!\n";
+			print_winner(player2);
 			break;
 		}
-		
 		n_rounds++;
 	}
 }
