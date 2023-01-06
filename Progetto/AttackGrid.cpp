@@ -48,7 +48,7 @@ void AttackGrid::reset_sonar()
 			Position pos(r,c);
 			if( get_char(pos) == sonar_undamaged ||
 				get_char(pos) == sonar_damaged		)
-				set_char(pos,' ');
+				set_char(pos,empty_char);
 		}
 	}
 }

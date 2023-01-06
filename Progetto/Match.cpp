@@ -394,17 +394,6 @@ Position ortogonal_position(const Position& start, int dim, int direction)
 	}
 }
 
-bool has_lost(const Player& player)
-{
-	// per ciascuna nave nemica, se è una Corazzata e non è affondata, p non ha ancora vinto
-	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
-	{
-		if(!player.defence.ships[i]->is_sunk())
-			return false;
-	}
-	return true;
-}
-
 void print_code(int code, const Position& origin, const Position& target)
 {
 	switch(code)
@@ -468,7 +457,7 @@ void Match::play()
 		
 		std::cout << "Comando eseguito\n";
 		
-		if(has_lost(player2))
+		if(player2.has_lost())
 		{
 			std::cout << "\n-----------------------------\n" + player1.name + " hai vinto!\n";
 			break;
@@ -497,7 +486,7 @@ void Match::play()
 		
 		std::cout << "Comando eseguito " + std::to_string(n_rounds) +"\n";
 		
-		if(has_lost(player1))
+		if(player1.has_lost())
 		{
 			std::cout << "\n-----------------------------\n" + player2.name + " hai vinto!\n";
 			break;

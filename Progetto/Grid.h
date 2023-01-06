@@ -14,6 +14,7 @@ public:
 	static constexpr int cols {12};
 	static constexpr int rows {12};
 	static constexpr char letters[rows] = {'A','B','C','D','E','F','G','H','I','L','M','N'};
+	static constexpr char empty_char = ' ';
 	
 	Grid();
 	//	~Grid();

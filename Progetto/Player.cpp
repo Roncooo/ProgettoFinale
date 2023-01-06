@@ -77,12 +77,49 @@ Ship* Player::get_ship(int index)
 	return defence.ships[index].get();
 } 
 
-void Player::print_defence() const
+void Player::print_defence()
 {
 	Grid::print(defence);
 }
 
-void Player::print_defence_attack() const
+void Player::print_defence_attack()
 {
 	Grid::print(defence, attack);
+}
+
+// questa è la più rognosetta
+//int Player::add_ship(std::unique_ptr<Ship> to_add)
+//{
+//	defence.ships[defence.currently_placed_ships] = to_add;
+//}
+
+int Player::act_ship(const Position& origin, const Position& target)
+{
+	// al momento bisogna differenziare le navi attraverso la dimensione
+	// se action fosse overloaddata da tutti non sarebbe più necessario
+	
+}
+
+bool Player::has_lost()
+{
+	// per ciascuna nave nemica, se è una Corazzata e non è affondata, p non ha ancora vinto
+	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+	{
+		if(!defence.ships[i]->is_sunk())
+			return false;
+	}
+	return true;
+}
+
+int Player::get_ship_index(const Position& pos) const
+{
+	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+	{
+		Position ship_center = defence.ships[i]->get_center();
+		// come da consegna, una nave si individua dalla sua posizione centrale
+		// si potrebbe individuare una nave da una sua qualsiasi posizione modificando questa if
+		if(pos==ship_center)
+			return i;
+	}
+	return -1;
 }

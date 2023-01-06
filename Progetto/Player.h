@@ -29,9 +29,15 @@ public:
 	// per il momento sono solo idee di risoluzioni per poter mettere almeno defence grid privata
 	// resta un problema l'inserimento delle navi che non può funzionare con get_ship
 	Ship* get_ship(int index); 
-	void print_defence() const;
-	void print_defence_attack() const;
+	void print_defence();	// non const perché le griglie sono aggiornate prima di essere stampate
+	void print_defence_attack();
+	int add_ship(Ship* to_add);
+	int act_ship(const Position& origin, const Position& target);
+	bool has_lost();	// può essere resa const se non deve più usare is_sunk quindi per esempio se usiamo il vector
+						// oppure se siamo sicuri che bool sunk sia sempre correttamente aggiornato
 private:
+	int get_ship_index(const Position& pos) const;
+	
 };
 
 #endif // Player_H

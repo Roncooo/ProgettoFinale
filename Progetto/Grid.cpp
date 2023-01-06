@@ -12,7 +12,7 @@ void Grid::reset_matrix()
 	for(int r=0; r<rows; r++)
 	{
 		for(int c=0; c<cols; c++)
-			matrix[r][c] = ' ';
+			matrix[r][c] = empty_char;
 	}
 }
 
