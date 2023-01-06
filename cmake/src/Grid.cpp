@@ -1,24 +1,37 @@
-#include "Griglia.h"
+// autore: 
 
-Griglia::Griglia()
+#include "Grid.h"
+
+Grid::Grid()
 {
-	for(int i=0; i<rows; i++)
-		for(int j=0; j<cols; j++)
-			matrix[i][j] = '\0';
-	matrix[4][3] = 'C';
-	matrix[4][4] = 'I';
-	matrix[4][5] = 'A';
-	matrix[4][6] = 'O';
-	matrix[4][8] = 'B';
-	matrix[4][9] = 'R';
-	matrix[4][10] = 'O';
+	reset_matrix();
 }
 
-Griglia::~Griglia()
+void Grid::reset_matrix()
 {
+	for(int r=0; r<rows; r++)
+	{
+		for(int c=0; c<cols; c++)
+			matrix[r][c] = empty_char;
+	}
 }
 
-void Griglia::print(const Griglia& a)
+bool Grid::is_valid(const Position& pos)
+{
+	return !(pos.get_row()<0 || pos.get_col()<0 || pos.get_row()>=rows || pos.get_col()>=cols);
+}
+
+char Grid::get_char(const Position& pos) const
+{
+	return matrix[pos.get_row()][pos.get_col()];
+}
+
+void Grid::set_char(const Position& pos, char c)		// non const
+{
+	matrix[pos.get_row()][pos.get_col()] = c;
+}
+
+void Grid::print(Grid& a)
 {
 	// formato in uso:
 	//  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10| 11| 12|
@@ -48,6 +61,8 @@ void Griglia::print(const Griglia& a)
 	//N |   |   |   |   |   |   |   |   |   |   |   |   | 
 	//  +---+---+---+---+---+---+---+---+---+---+---+---+
 	
+	a.update();
+	
 	std::string delimiter_line = "  +";
 	for(int i=0; i<cols; i++)
 		delimiter_line += "---+";
@@ -70,18 +85,18 @@ void Griglia::print(const Griglia& a)
 		std::cout << a.letters[r] << " |";
 		for(int c=0; c<cols; c++)
 		{
-			std::cout << " " << a.matrix[r][c];
-			if(a.matrix[r][c] == '\0')
-				std::cout << " ";
-			std::cout << " |";
+			std::cout << " " << a.matrix[r][c] << " |";
 		}
 		std::cout << "\n" << delimiter_line << "\n";
 	}
 }
 
 // stampa due griglie affiancate
-void Griglia::print(const Griglia& a, const Griglia& b)
+void Grid::print(Grid& a, Grid& b)
 {
+	a.update();
+	b.update();
+	
 	std::string margin = "\t";
 	
 	std::string delimiter_line = "  +";
@@ -120,10 +135,7 @@ void Griglia::print(const Griglia& a, const Griglia& b)
 		std::cout << a.letters[r] << " |";
 		for(int c=0; c<cols; c++)
 		{
-			std::cout << " " << a.matrix[r][c];
-			if(a.matrix[r][c] == '\0')
-				std::cout << " ";
-			std::cout << " |";
+			std::cout << " " << a.matrix[r][c] << " |";
 		}
 		
 		std::cout << margin;
@@ -132,10 +144,7 @@ void Griglia::print(const Griglia& a, const Griglia& b)
 		std::cout << a.letters[r] << " |";
 		for(int c=0; c<cols; c++)
 		{
-			std::cout << " " << a.matrix[r][c];
-			if(a.matrix[r][c] == '\0')
-				std::cout << " ";
-			std::cout << " |";
+			std::cout << " " << b.matrix[r][c] << " |";
 		}
 		
 		std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";

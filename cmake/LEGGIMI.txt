@@ -1,0 +1,28 @@
+Eora
+Scopiazzando dai progetti intermedi seri ho capito così
+
+	cartella include	contiene i .h
+	cartella src		contiene i .cpp
+	cartella buil		contiene le robe di CMake
+
+	CMakeLists.txt
+	README.md
+
+
+POI, per usare cmake
+ - Creare file CMakeLists
+	- per farlo da riga di comando
+		type nul > CMakeLists.txt
+	- scriverci dentro come minimo
+		- cmake_minimum_required(VERSION 3.0)
+		- project(nome)
+		- add_executable(NomeEseguibile nome_file.cpp)
+ - Creare una cartella build (se c'è già cancella tutto) e lasciare CMakeLists fuori
+	- per farlo da riga di comando
+		mkdir build
+		cd build
+ - Per generare le robe di cmake
+	cmake .. -G "MinGW Makefiles"
+	potrebbe non essere necessario "..." ma da me non funziona senza rip
+ - Per compilare
+	cmake --build .
