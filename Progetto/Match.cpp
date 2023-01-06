@@ -44,7 +44,7 @@ int command(Position& a, Position& b)
 	if(input_string == "BB BB")
 		return 6;
 	
-	if(input_string == "CHEAT")
+	if(input_string == "CC CC")
 		return 10;
 	
 	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
@@ -149,7 +149,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	if(code == 6)
 	{
 		player.attack.reset_matrix();
-		return 5;
+		return 6;
 	}
 	
 	if(code == 10)	// comando "cheat", utile per il debugging
