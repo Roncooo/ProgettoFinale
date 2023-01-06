@@ -3,6 +3,10 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="Log.h"/>
+    <File Name="Log.cpp"/>
+    <File Name="log.txt"/>
+    <File Name="replay.cpp"/>
     <File Name="Match.cpp"/>
     <File Name="Match.h"/>
     <File Name="Grid.cpp"/>

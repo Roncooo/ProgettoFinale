@@ -7,6 +7,7 @@
 #include <regex>
 #include <algorithm>		// per uppercase
 
+#include "Log.h"
 #include "Player.h"
 #include "DefenceGrid.h"
 #include "AttackGrid.h"
