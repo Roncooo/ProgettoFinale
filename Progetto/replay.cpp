@@ -5,8 +5,8 @@
 
 using std::cout, std::cin, std::ofstream, std::ifstream;
 
-
-int main(void){
+// rinominata perché crea interferenza con l'altro main
+int main_function(void){
 	
 	ifstream input_file("log.txt");
 	

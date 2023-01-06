@@ -4,19 +4,11 @@
 
 using std::cout, std::cin, std::string;
 
-int main(void)
+void standard_match()
 {
-//	DefenceGrid difesa;
-//	AttackGrid attacco;
-//	Grid::print(attacco, difesa);
-
-	// da quello che ho capito su stackOverflow, è meglio mettere nel main lo srand
-	// così l'eseguibile è anche riproducibile settando lo stesso seed (non con time NULL)
 	std::srand(std::time(NULL));
-	//  al posto di 123456 std::time(NULL)
 
 	cout << "Inserire i nomi dei giocatori";
-//	cout << ", per far giocare il computer dare il nome CPU...";
 	cout << "\nPer visualizzare la tua griglia di difesa, inserisci il comando XX";
 	
 	cout << "\nNome giocatore 1: ";
@@ -59,5 +51,25 @@ int main(void)
 	partita.ship_placement(player1);
 	partita.ship_placement(player2);
 	partita.play();
+}
+
+void cpu_vs_cpu(int n)
+{
+	std::srand(std::time(NULL));
+	for(int i=0; i<n; i++)
+	{
+		Player player1("cpu1");
+		Player player2("cpu2");	
+		Match partita(player1, player2);
+		partita.ship_placement(player1);
+		partita.ship_placement(player2);
+		partita.play();
+	}
+}
+
+int main(void)
+{
+//	cpu_vs_cpu(100);
+	standard_match();
 	return 0;
 }
