@@ -1,7 +1,14 @@
+//	author: FULVIO BRUZZESE
 
 #include "Log.h"
 
-void Log::write(const string& s)
+Log::Log() 
+	: actions{""}, output_file{"log.txt"} 
+{
+	
+};
+
+void Log::write(const std::string& s)
 {
 	output_file << s;
 }
