@@ -6,45 +6,41 @@ project(ProgettoFinale)
 
 include_directories(include)
 
-add_executable(BattagliaNavale 
+add_executable(battaglia_navale 
 	src/main.cpp
 )
 
-add_library(Grid
+set(HEADERS
 	include/Grid.h
-	src/Grid.cpp
 	include/DefenceGrid.h
-	src/DefenceGrid.cpp
 	include/AttackGrid.h
-	src/AttackGrid.cpp
 	include/Position.h
-	src/Position.cpp
+	include/Ship.h
+	include/Battleship.h
+	include/Support.h
+	include/Submarine.h
+	include/Match.h
+	include/Player.h
 )
 
-add_library(Ship
-	include/Ship.h
+set(SOURCES
+	src/Match.cpp
+	src/Player.cpp
+	src/Position.cpp
+	src/Grid.cpp
+	src/AttackGrid.cpp
+	src/DefenceGrid.cpp
 	src/Ship.cpp
-	include/Battleship.h
 	src/Battleship.cpp
-	include/Support.h
 	src/Support.cpp
-	include/Submarine.h
 	src/Submarine.cpp
 )
 
-add_library(Match
-	include/Match.h
-	src/Match.cpp
+add_library(battaglia_navale_lib
+	${SOURCES}
+	${HEADERS}
 )
 
-add_library(Player
-	include/Player.h
-	src/Player.cpp
-)
-
-target_link_libraries(BattagliaNavale 
-	Grid
-	Ship
-	Match
-	Player
+target_link_libraries(battaglia_navale 
+	battaglia_navale_lib
 )
