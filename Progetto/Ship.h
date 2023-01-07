@@ -38,14 +38,10 @@ public:
 	
 	int move(const Position& new_pos);
 	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
-	bool is_sunk();
+	virtual int is_sunk()=0;
 	
 	// non è const perché può muovere e poi agire
 	virtual int action(const Position& target, Player& enemy)=0;
-	
-	bool is_battleship() const;
-	bool is_support() const;
-	bool is_submarine() const;
 	
 //	virtual ~Ship()=0;	 stratagemma per rendere Ship virtuale pura
 private:

@@ -60,3 +60,15 @@ int Submarine::action(const Position& pos, Player& enemy)
 
 //Submarine::~Submarine(){}
 
+
+int Submarine::is_sunk()
+{
+	int code = Ship::is_sunk();
+	if(code == 2)	// la nave è affondata ora
+	{
+		std::cout << "~~~Hai affondato un sottomarino!~~~\n";
+		return 1;	// è affondata (codice compatibile con true)
+	}
+	return code;
+}
+

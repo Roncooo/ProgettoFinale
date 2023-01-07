@@ -52,3 +52,4 @@ void AttackGrid::reset_sonar()
 		}
 	}
 }
+

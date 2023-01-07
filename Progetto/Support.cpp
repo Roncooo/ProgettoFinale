@@ -57,3 +57,14 @@ int Support::action(const Position& pos, Player& enemy)
 	
 	return 2;	//tutto è andato a buon fine
 }
+
+int Support::is_sunk()
+{
+	int code = Ship::is_sunk();
+	if(code == 2)	// la nave è affondata ora
+	{
+		std::cout << "~~~Hai affondato una nave di supporto!~~~\n";
+		return 1;	// è affondata (codice compatibile con true)
+	}
+	return code;
+}
