@@ -7,7 +7,7 @@ Support::Support(const Position& prune, const Position& stern, Player& p)
 {
 }
 
-Support::~Support(){}
+//Support::~Support(){}
 
 // controlla se, rispetto al center di support, la nave da curare è nella posizione giusta
 // dice se la posizione passata è curabile dalla nave di supporto che invoca la funzione
@@ -38,11 +38,11 @@ bool Support::is_curable(const Position& p)
 	return true;
 }
 
-int Support::cure(const Position& pos)
+int Support::action(const Position& pos, Player& enemy)
 {
 	// mi muovo dove chiede l'utente se questo è possibile, altrimenti termina
 	if(move(pos)==-1)
-		return -1;
+		return -2;		// non è possibile spostare la nave di supporto
 	
 	for(int j = 0; j < DefenceGrid::SHIP_NUMBER; j++)	// per ogni nave
 	{

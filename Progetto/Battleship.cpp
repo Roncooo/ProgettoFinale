@@ -7,7 +7,7 @@ Battleship::Battleship(const Position& prow, const Position& stern, Player& play
 {
 }
 
-void Battleship::shoot(const Position& pos, Player& enemy) 
+int Battleship::action(const Position& pos, Player& enemy) 
 {
 	// la versione precedente era sbagliata perché si basava sulla griglia del nemico che non per forza era aggiornata
 	// con receive shot invece, chiedo al nemico se ho colpito (senza accedere direttamente alla sua griglia di difesa)
@@ -18,6 +18,8 @@ void Battleship::shoot(const Position& pos, Player& enemy)
 		player.attack.set_shot(pos);
 	else
 		player.attack.set_missed(pos);
+		
+	return 2;	// va sempre a buon fine
 }
 
-Battleship::~Battleship(){}
+//Battleship::~Battleship(){}

@@ -38,7 +38,7 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, c
 	p.defence.currently_placed_ships++;
 }
 
-Ship::~Ship(){}
+//Ship::~Ship(){}
 
 int Ship::get_dimension() const
 { 

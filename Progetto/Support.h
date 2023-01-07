@@ -14,7 +14,8 @@ public:
 	Support(const Position& prow, const Position& stern, Player& p); 
 	//	int dimension = 3;
 	// cure riceve la posizione dove andare e curare
-	int cure(const Position& pos);		// non è const perché muove e poi cura
-	~Support() override;
+	// il parametro enemy serve solo per uniformità con Ship::action virtuale pura
+	int action(const Position& pos, Player& enemy) override;
+//	~Support() override;
 };
 #endif // Support_H

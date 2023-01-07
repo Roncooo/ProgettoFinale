@@ -15,12 +15,12 @@ Submarine::Submarine(const Position& pos, Player& p)
 {
 }
 
-int Submarine::search(const Position& pos, const Player& enemy)
+int Submarine::action(const Position& pos, Player& enemy)
 {
 	// muovo dove chiede l'utente, se questo è possibile
 	// altrimenti termina
 	if(move(pos)==-1)
-		return -1;
+		return -3;		// non è possibile spostare il sottomarino
 	
 	player.attack.reset_sonar();
 	
@@ -57,4 +57,6 @@ int Submarine::search(const Position& pos, const Player& enemy)
 //	}
 	return 2;	//tutto è andato a buon fine
 }
-Submarine::~Submarine(){}
+
+//Submarine::~Submarine(){}
+

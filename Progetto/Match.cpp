@@ -152,7 +152,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 		return 6;
 	}
 	
-	if(code == 10)	// comando "cheat", utile per il debugging
+	if(code == 10)	// comando "cc cc", utile per il debugging
 	{
 		Grid::print(enemy.defence);
 		return 10;
@@ -160,48 +160,11 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	
 	if(code == 2)	// due posizioni valide inserite
 	{
-		int selected_ship_index = -1;
-		for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
-		{
-			int ship_dimension = player.defence.ships[i]->get_dimension();
-			Position ship_center = player.defence.ships[i]->pos[ship_dimension/2];
-			if(origin==ship_center)
-			{
-				selected_ship_index = i;
-				break;
-			}
-		}
-		
-		if(selected_ship_index == -1)
-			return -4;		// la prima coordinata non è il centro di una nave
-		
-		if(player.defence.ships[selected_ship_index]->is_battleship())
-		{
-			// migliorato, resta ancora brutto e forse pericoloso per potenziali memory leak
-			// accedo allo unique_ptr contenuto in ships che contiene un puntatore a una nave derivata
-			// get() ritorna il puntatore alla nave derivata, questo può essere castato a puntatore del tipo derivato
-			Battleship* selected = dynamic_cast<Battleship*>(player.defence.ships[selected_ship_index].get());
-			selected->shoot(target, enemy);	// va sempre a buon fine (credo) perché le posizioni sono già valide
-		}
-			
-		if(player.defence.ships[selected_ship_index]->is_support())
-		{
-			Support* selected = dynamic_cast<Support*>(player.defence.ships[selected_ship_index].get());
-			// muove (e cura) se è possibile, altrimenti interrompe
-			if(selected->cure(target)==-1)
-				return -2;
-		}
-			
-		if(player.defence.ships[selected_ship_index]->is_submarine())
-		{
-			Submarine* selected = dynamic_cast<Submarine*>(player.defence.ships[selected_ship_index].get());
-			// muove (e cerca) se è possibile, altrimenti interrompe
-			if(selected->search(target, enemy)==-1)
-				return -3;
-		}
-		
-		// tutto è andato a buon fine
-		return 2;
+		return player.act_ship(player.get_ship_index(origin), target, enemy);
+				// -4 se origin non è il centro di una nave
+				// -2 se non è stato possibile spostare la nave di supporto
+				// -3 se non è stato possibile spostare il sottomarino
+				// +2 se tutto ok
 	}
 }
 

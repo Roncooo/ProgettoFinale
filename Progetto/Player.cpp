@@ -71,11 +71,11 @@ Player::~Player()
 {
 }
 
-Ship* Player::get_ship(int index)
-{
-	// occhio a possibili dangling pointers
-	return defence.ships[index].get();
-} 
+//Ship* Player::get_ship(int index)
+//{
+//	// occhio a possibili dangling pointers
+//	return defence.ships[index].get();
+//} 
 
 void Player::print_defence()
 {
@@ -93,11 +93,11 @@ void Player::print_defence_attack()
 //	defence.ships[defence.currently_placed_ships] = to_add;
 //}
 
-int Player::act_ship(const Position& origin, const Position& target)
+int Player::act_ship(int index, const Position& target, Player& enemy)
 {
-	// al momento bisogna differenziare le navi attraverso la dimensione
-	// se action fosse overloaddata da tutti non sarebbe più necessario
-	
+	if(index==-1)	// get_ship_index non ha trovato il centro della nave
+		return -4;
+	return defence.ships[index]->action(target, enemy);
 }
 
 bool Player::has_lost()
