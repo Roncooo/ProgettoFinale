@@ -3,7 +3,7 @@ Scopiazzando dai progetti intermedi seri ho capito così
 
 	cartella include	contiene i .h
 	cartella src		contiene i .cpp
-	cartella buil		contiene le robe di CMake
+	cartella build		contiene le robe di CMake -> NON VA CONSEGNATA
 
 	CMakeLists.txt
 	README.md
