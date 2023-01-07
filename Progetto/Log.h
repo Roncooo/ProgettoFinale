@@ -6,8 +6,6 @@
 #include <iostream>
 #include <fstream>
 
-// MAI USING NEGLI HEADER
-//using std::string, std::cin, std::ofstream;
 
 class Log
 {

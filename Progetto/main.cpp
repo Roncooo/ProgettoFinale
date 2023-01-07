@@ -8,6 +8,8 @@ void standard_match()
 {
 	std::srand(123456);
 
+	Log file_log = Log();
+
 	cout << "Inserire i nomi dei giocatori";
 	cout << "\nPer visualizzare la tua griglia di difesa, inserisci il comando XX";
 	
@@ -47,7 +49,7 @@ void standard_match()
 	}
 	
 	
-	Match partita(player1, player2);
+	Match partita(player1, player2, file_log);
 	partita.ship_placement(player1);
 	partita.ship_placement(player2);
 	partita.play();

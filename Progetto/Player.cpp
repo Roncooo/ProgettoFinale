@@ -17,6 +17,11 @@ Player::Player(std::string n)
 		is_cpu = false;
 }
 
+Player& Player::operator=(const Player& p)
+{
+	this->name = p.name;
+}
+
 bool Player::operator==(const Player& p) const
 {
 	return p.name==this->name;

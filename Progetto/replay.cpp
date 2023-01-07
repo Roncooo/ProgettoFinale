@@ -10,8 +10,12 @@ int main_function(void){
 	
 	ifstream input_file("log.txt");
 	
-	while(input_file.eof())		//restituisce false quando arriva alla fine del file
-		//fai qualcosa
+//	while(input_file.eof())		//restituisce false quando arriva alla fine del file
+//		//fai qualcosa
+	
+	Player p1, p2; 
+	Match partita(p1, p2);
+	partita.replay(input_file);
 	
 	input_file.close();
 	return 0;

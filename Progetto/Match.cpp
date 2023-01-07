@@ -13,10 +13,11 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 void print_code(int code, const Position& origin, const Position& target);
 int random_command(Player& player, Position& origin, Position& target);
 
-Match::Match(Player& p1, Player& p2)
-	: player1{p1}, player2{p2}
+Match::Match(Player& p1, Player& p2, Log& input)
+	: player1{p1}, player2{p2}, file_log{input}
 {
-
+	
+	
 	// altro?
 }
 
@@ -453,5 +454,10 @@ void Match::play()
 		}
 		n_rounds++;
 	}
+}
+
+void Match::re_play(std::ifstream input)		//lol
+{
+	
 }
 
