@@ -20,6 +20,7 @@ void standard_match()
 	cout << "Nome giocatore 2: ";
 	string player2_name;
 	std::getline(std::cin, player2_name);
+	
 	while(player2_name == player1_name)
 	{
 		cout << "Per favore inserisci un nome diverso da " + player1_name + "\n"; 
@@ -30,6 +31,8 @@ void standard_match()
 	
 	Player player1(player1_name);
 	Player player2(player2_name);
+	file_log.write(player1_name + " " +player2_name);
+	file_log.write("\n");
 	
 	if(!player1.is_cpu)
 	{
@@ -62,7 +65,8 @@ void cpu_vs_cpu(int n)
 	{
 		Player player1("cpu1");
 		Player player2("cpu2");	
-		Match partita(player1, player2);
+		Log file_log = Log();
+		Match partita(player1, player2, file_log);
 		partita.ship_placement(player1);
 		partita.ship_placement(player2);
 		partita.play();
