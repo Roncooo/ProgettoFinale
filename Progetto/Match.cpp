@@ -130,13 +130,13 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	
 	if(code == 3)	// stampa della griglia di difesa
 	{
-		Grid::print(player.defence);
+		player.print_defence();
 		return 3;
 	}
 	
 	if(code == 4)	// stampa della griglia di difesa e di attacco
 	{
-		Grid::print(player.defence, player.attack);
+		player.print_defence_attack();
 		return 4;
 	}
 	
@@ -154,7 +154,7 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	
 	if(code == 10)	// comando "cc cc", utile per il debugging
 	{
-		Grid::print(enemy.defence);
+		enemy.print_defence();
 		return 10;
 	}
 	
@@ -198,7 +198,7 @@ void user_placement(Player& p)
 	}
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
-	Grid::print(p.defence);
+	p.print_defence();
 }
 
 void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
@@ -222,7 +222,7 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		}
 		if(code==3)
 		{
-			Grid::print(p.defence);
+			p.print_defence();
 			continue;
 		}
 		if(code==4 || code==5)
@@ -240,7 +240,7 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 			continue;
 		}
 		
-		if(!p.defence.is_valid(prow,prune))
+		if(!p.is_valid(prow,prune))
 		{
 			if(n_coordinates==2)
 				std::cout << "Le posizioni inserite non sono valide\n";
@@ -276,7 +276,7 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 		for(int i=1; i<=4; i++)	// ciclo sulle 4 direzioni partendo da una randomica
 		{
 			prune = ortogonal_position(prow, ship_size, direction);
-			if(p.defence.is_valid(prow, prune))
+			if(p.is_valid(prow, prune))
 			{
 				ok = true;
 				break;
@@ -307,7 +307,7 @@ void bot_placement(Player& p)
 	
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
-	Grid::print(p.defence);
+	p.print_defence();
 }
 
 std::vector<std::string> split(std::string str, char delimiter)

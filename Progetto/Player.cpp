@@ -88,9 +88,17 @@ void Player::print_defence_attack()
 }
 
 // questa è la più rognosetta
-//int Player::add_ship(std::unique_ptr<Ship> to_add)
+//int Player::add_ship(Battleship& to_add)
 //{
-//	defence.ships[defence.currently_placed_ships] = to_add;
+//	defence.ships[defence.currently_placed_ships++] = std::make_unique<Battleship>(&to_add);
+//}
+//int Player::add_ship(Support& to_add)
+//{
+//	defence.ships[defence.currently_placed_ships++] = std::make_unique<Support>(&to_add);
+//}
+//int Player::add_ship(Sumbarine& to_add)
+//{
+//	defence.ships[defence.currently_placed_ships++] = std::make_unique<Sumbarine>(&to_add);
 //}
 
 int Player::act_ship(int index, const Position& target, Player& enemy)
@@ -123,3 +131,68 @@ int Player::get_ship_index(const Position& pos) const
 	}
 	return -1;
 }
+
+
+bool Player::is_valid(const Position& prow, const Position& prune) const
+{
+	// controllo <0 e >12
+	if(!Grid::is_valid(prune) || !Grid::is_valid(prow))
+		return false;
+		
+	Position ordered_prow;		// è la Position più vicina all'origine
+	Position ordered_prune;
+	if(prow.abs()<prune.abs())
+	{
+		ordered_prow = prow;
+		ordered_prune = prune;
+	}
+	else
+	{
+		ordered_prow = prune;
+		ordered_prune = prow;
+	}
+	
+	// la nave deve essere orizzontale o verticale
+	if(ordered_prow.get_row() != ordered_prune.get_row() && ordered_prow.get_col() != ordered_prune.get_col())
+		return false;
+	
+	// controllo che non ci siano già navi NON AFFONDATE nelle posizioni tra prua e poppa (comprese)
+	Position vec = (ordered_prune-ordered_prow).norm();
+			// se funziona tutto non dovrebbe essere un ciclo infinito
+			// "ma diciamocelo, il rischio c'è"
+	for(Position current=ordered_prow; current!=ordered_prune+vec; current+=vec)		// per ogni posizione tra prua e poppa
+	{
+		for(int s=0; s<defence.currently_placed_ships; s++)				// per ogni nave nella griglia
+		{
+			// se la nave è affondata non crea problemi e ci si può passare sopra quindi passo alla prossima nave
+			if(defence.ships[s]->is_sunk())
+				continue;
+			
+			// per ogni posizione della nave
+			for(int p=0; p<defence.ships[s]->get_dimension(); p++)
+			{
+				// se la posizione che voglio controllare appartiene ad una nave
+				if(defence.ships[s]->pos[p] == current)
+					return false;
+			}
+		}
+	}
+	return true;
+	
+	// questa versione controlla attraverso la matrice che quindi dovrebbe essere sempre aggiornata ma non lo è
+//	for(int i=0; i<(ordered_prow-ordered_prune).abs(); i++)
+//	{
+//		if(ordered_prow.row == ordered_prune.row)	// se sono in riga
+//		{
+//			if(get_char(ordered_prune+(i,0)) != ' ')	// scorro verso destra
+//				return false;
+//		}
+//		
+//		if(ordered_prow.col == ordered_prune.col)	// se sono in colonna
+//		{
+//			if(get_char(ordered_prune+(0,i)) != ' ')	// scorro verso il basso
+//				return false;
+//		}
+//	}
+}
+

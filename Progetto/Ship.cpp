@@ -5,7 +5,7 @@
 Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, char lower) 
 	: player{p}, not_hit{upper}, hit{lower}
 {	
-	if(!p.defence.is_valid(prow, prune))
+	if(!p.is_valid(prow, prune))
 		throw std::invalid_argument("Posizioni non valide");
 		
 	Position ordered_prow;
@@ -72,7 +72,7 @@ int Ship::move(const Position& new_center)
 		pos[i] = Position();
 	
 	// controlla sia che la nave sia completamente dentro alla griglia, sia che non sormonti altre navi
-	if(!player.defence.is_valid(temp[0]+dislocation,temp[dimension-1]+dislocation))
+	if(!player.is_valid(temp[0]+dislocation,temp[dimension-1]+dislocation))
 	{
 		// ripristino le posizioni salvate
 		pos = temp;
