@@ -7,7 +7,7 @@
 
 class Submarine : public Ship
 {
-	bool sub_area(Position& p);
+//	bool sub_area(Position& p);
 public:
 	Submarine(const Position& pos, Player& p);
 	// enemy potrebbe essere anche const ma non lo è per uniformità con Ships::action virtuale pura

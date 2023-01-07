@@ -2,13 +2,13 @@
 
 #include "Submarine.h"
 
-bool Submarine::sub_area(Position& p)
-{
-	if(	this->pos[0].get_row() - p.get_row() <= 2 && this->pos[0].get_row() - p.get_row() >= -2 &&
-		this->pos[0].get_col() - p.get_col() <= 2 && this->pos[0].get_col() - p.get_col() >= -2 	) 
-			return true;
-	return false;
-}
+//bool Submarine::sub_area(Position& p)
+//{
+//	if(	this->pos[0].get_row() - p.get_row() <= 2 && this->pos[0].get_row() - p.get_row() >= -2 &&
+//		this->pos[0].get_col() - p.get_col() <= 2 && this->pos[0].get_col() - p.get_col() >= -2 	) 
+//			return true;
+//	return false;
+//}
 
 Submarine::Submarine(const Position& pos, Player& p) 
 	: Ship(pos, pos, p, 'E', 'e')
@@ -27,7 +27,7 @@ int Submarine::action(const Position& pos, Player& enemy)
 	// ciclo sulle 25 posizioni attorno al sottomarino
 	for(int r=-2; r<=2; r++)
 	{
-		for(int c=-1; c<=2; c++)
+		for(int c=-2; c<=2; c++)
 		{
 			// se la posizione è fuori dalla matrice, vado avanti con la posizione successiva
 			if(!Grid::is_valid(pos+Position(r,c)))
