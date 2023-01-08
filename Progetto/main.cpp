@@ -8,7 +8,7 @@ void standard_match()
 {
 	std::srand(123456);
 
-	Log file_log = Log();
+	//Log file_log = Log();
 
 	cout << "Inserire i nomi dei giocatori";
 	cout << "\nPer visualizzare la tua griglia di difesa, inserisci il comando XX";
@@ -52,10 +52,11 @@ void standard_match()
 	}
 	
 	
-	Match partita(player1, player2, file_log);
+	Match partita(player1, player2/*, file_log*/);
 	partita.ship_placement(player1);
 	partita.ship_placement(player2);
 	partita.play();
+	file_log.close();
 }
 
 void cpu_vs_cpu(int n)
@@ -66,10 +67,11 @@ void cpu_vs_cpu(int n)
 		Player player1("cpu1");
 		Player player2("cpu2");	
 		Log file_log = Log();
-		Match partita(player1, player2, file_log);
+		Match partita(player1, player2/*, file_log*/);
 		partita.ship_placement(player1);
 		partita.ship_placement(player2);
 		partita.play();
+		file_log.close();
 	}
 }
 

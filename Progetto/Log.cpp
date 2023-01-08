@@ -3,14 +3,14 @@
 #include "Log.h"
 
 Log::Log() 
-	: actions{""}, output_file{"log.txt"} 
+	: actions{""}, output{"log.txt"} 
 {
 	
 };
 
 void Log::write(const std::string& s)
 {
-	output_file << s;
+	output << s;
 }
 
-void Log::close() { output_file.close(); }
+void Log::close() { output.close(); }

@@ -21,6 +21,7 @@ public:
 	bool is_cpu;
 	bool auto_placement = false;
 	bool operator==(const Player& p) const;
+//	Player& operator=(const Player& p);
 	bool receive_shot(const Position& pos);
 	int is_there_ship(const Position& pos) const;
 	~Player();

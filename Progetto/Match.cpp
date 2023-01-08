@@ -13,8 +13,8 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 void print_code(int code, const Position& origin, const Position& target);
 int random_command(Player& player, Position& origin, Position& target);
 
-Match::Match(Player& p1, Player& p2, Log& input)
-	: player1{p1}, player2{p2}, file_log{input}
+Match::Match(Player& p1, Player& p2/*, Log& input*/)
+	: player1{p1}, player2{p2}/*, file_log{input}*/
 {
 	
 	
@@ -213,7 +213,7 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		else
 			std::cout << ">> Qual e' la coordinata per il "+ship_name+":\n";
 			
-		std::string prow_str, prune_str;
+		//std::string prow_str, prune_str;		non è usato da nessuna parte
 		
 		int code = command(prow, prune);
 		if(code==-1)
@@ -264,6 +264,8 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		
 		// tutti i controlli sono andati a buon fine
 		ok = true;
+		//scrivo la posizione delle navi sul file di log
+		file_log.write(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
 	}
 }
 
@@ -280,6 +282,8 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 			if(p.is_valid(prow, prune))
 			{
 				ok = true;
+				file_log.write(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
+				
 				break;
 			}
 			direction=(direction+1)%4;

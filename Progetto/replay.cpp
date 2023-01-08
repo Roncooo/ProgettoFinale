@@ -13,9 +13,9 @@ int main_function(void){
 //	while(input_file.eof())		//restituisce false quando arriva alla fine del file
 //		//fai qualcosa
 	
-	Player p1, p2; 
-	Match partita(p1, p2);
-	partita.replay(input_file);
+//	Player p1, p2; 
+//	Match partita(p1, p2);
+//	partita.re_play(input_file);
 	
 	input_file.close();
 	return 0;

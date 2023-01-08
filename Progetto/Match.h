@@ -22,8 +22,8 @@ class Match
 private:
 	static std::regex reg_position;	// inizializzata nel costruttore per comodità, riconosce il comando relativo ad una posizione valida
 public:
-	Match(Player& p1, Player& p2, Log& input);
-	Log& file_log;
+	Match(Player& p1, Player& p2/*, Log& input*/);
+//	Log& file_log;
 	Player& player1;
 	Player& player2;
 	void ship_placement(Player& p);
@@ -45,5 +45,6 @@ public:
 	// gli exit code servono perché così chi chiama comando sa se è andato a buon fine
 };
 int command(Position& a, Position& b);
+static Log file_log = Log();
 
 #endif // MATCH_H
