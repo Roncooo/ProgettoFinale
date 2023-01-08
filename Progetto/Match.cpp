@@ -446,7 +446,7 @@ void Match::play()
 		if(player2.has_lost())
 		{
 			print_winner(player1);
-			break;
+			return;
 		}
 		n_rounds++;
 		
@@ -454,10 +454,12 @@ void Match::play()
 		if(player1.has_lost())
 		{
 			print_winner(player2);
-			break;
+			return;
 		}
 		n_rounds++;
 	}
+	std::cout << "*** Numero di turni massimo raggiunto ***\n";
+	std::cout << "*** La partita e' finita con un pareggio ***\n";
 }
 
 void Match::re_play(std::ifstream input)		//lol
