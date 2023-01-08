@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 o
 
  non valido
@@ -2695,3 +2696,10 @@ o
 ' possibile spostare la nave di supporto nella posizione 
 
 
+=======
+' possibile spostare la nave di supporto nella posizione on e' possibile spostare la nave di supporto nella posizione do non valido
+ e' possibile spostare la nave di supporto nella posizione alido
+on e' possibile spostare la nave di supporto nella posizione o
+ valido
+' possibile spostare la nave di supporto nella posizione  e' possibile spostare la nave di supporto nella posizione ile spostare la nave di supporto nella posizione ' possibile spostare la nave di supporto nella posizione on e' possibile spostare la nave di supporto nella posizione 
+>>>>>>> c6e2c95398700e625452ab51965ebb9e62f40147
