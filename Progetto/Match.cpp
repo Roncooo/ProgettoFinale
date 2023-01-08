@@ -266,6 +266,7 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		ok = true;
 		//scrivo la posizione delle navi sul file di log
 		file_log.write(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
+		file_log.write("\n");
 	}
 }
 
@@ -283,7 +284,7 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 			{
 				ok = true;
 				file_log.write(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
-				
+				file_log.write("\n");
 				break;
 			}
 			direction=(direction+1)%4;
@@ -423,7 +424,10 @@ void round(Player& player, Player& enemy)
 		}
 		code = execute(player, enemy, code, origin, target);
 	}
-	
+	//a questo punto è stato eseguito un comando non speciale
+	//scrivo nel file
+	file_log.write(origin.get_row() + origin.get_col() + " " + target.get_row() + target.get_col());
+	file_log.write("\n");
 	std::cout << "Comando eseguito\n\n";
 }
 
@@ -446,7 +450,7 @@ void Match::play()
 		if(player2.has_lost())
 		{
 			print_winner(player1);
-			break;
+			return;
 		}
 		n_rounds++;
 		
@@ -454,10 +458,12 @@ void Match::play()
 		if(player1.has_lost())
 		{
 			print_winner(player2);
-			break;
+			return;
 		}
 		n_rounds++;
 	}
+	std::cout << "*** Numero di turni massimo raggiunto ***\n";
+	std::cout << "*** La partita e' finita con un pareggio ***\n";
 }
 
 void Match::re_play(std::ifstream input)		//lol

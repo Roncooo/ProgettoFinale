@@ -10,7 +10,7 @@ int main_function(void){
 	
 	ifstream input_file("log.txt");
 	
-//	while(input_file.eof())		//restituisce false quando arriva alla fine del file
+//	while(!input_file.eof())		//restituisce true quando arriva alla fine del file
 //		//fai qualcosa
 	
 //	Player p1, p2; 

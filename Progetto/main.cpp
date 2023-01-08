@@ -39,7 +39,7 @@ void standard_match()
 		cout << player1_name << " vuoi che siano inserite automaticamente le tue navi? (Y/N)";
 		std::string auto_placement;
 		std::getline(std::cin, auto_placement);
-		if(auto_placement=="Y")
+		if(auto_placement=="Y" || auto_placement=="y")
 			player1.auto_placement = true;
 	}
 	if(!player2.is_cpu)
@@ -47,7 +47,7 @@ void standard_match()
 		cout << player2_name << " vuoi che siano inserite automaticamente le tue navi? (Y/N)";
 		std::string auto_placement;
 		std::getline(std::cin, auto_placement);
-		if(auto_placement=="Y")
+		if(auto_placement=="Y" || auto_placement=="y")
 			player2.auto_placement = true;
 	}
 	
@@ -77,7 +77,7 @@ void cpu_vs_cpu(int n)
 
 int main(void)
 {
-//	cpu_vs_cpu(100);
-	standard_match();
+	cpu_vs_cpu(1);
+//	standard_match();
 	return 0;
 }
