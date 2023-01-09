@@ -15,6 +15,11 @@ Submarine::Submarine(const Position& pos, Player& p)
 {
 }
 
+std::string Submarine::ship_type() const
+{
+	return "submarine";
+}
+
 int Submarine::action(const Position& pos, Player& enemy)
 {
 	// muovo dove chiede l'utente, se questo è possibile

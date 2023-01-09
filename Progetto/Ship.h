@@ -39,7 +39,7 @@ public:
 	int move(const Position& new_pos);
 	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
 	virtual int is_sunk()=0;
-	
+	virtual std::string ship_type() const =0;	// si può ritornare altro, anche non stringa
 	// non è const perché può muovere e poi agire
 	virtual int action(const Position& target, Player& enemy)=0;
 	

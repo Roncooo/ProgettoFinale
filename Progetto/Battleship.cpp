@@ -7,6 +7,11 @@ Battleship::Battleship(const Position& prow, const Position& stern, Player& play
 {
 }
 
+std::string Battleship::ship_type() const
+{
+	return "battleship";
+}
+
 int Battleship::action(const Position& pos, Player& enemy) 
 {
 	// la versione precedente era sbagliata perché si basava sulla griglia del nemico che non per forza era aggiornata

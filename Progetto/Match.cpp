@@ -21,6 +21,47 @@ Match::Match(Player& p1, Player& p2/*, Log& input*/)
 	// altro?
 }
 
+void Match::recap() const
+{
+	std::vector<std::string> ship_names{"Battleship", "Support", "Submarine"};
+	std::vector<int> ship_count1{	player1.how_many_battleships(),
+									player1.how_many_supports(),
+									player1.how_many_submarines()	};
+	std::vector<int> ship_count2{	player2.how_many_battleships(),
+									player2.how_many_supports(),
+									player2.how_many_submarines()	};
+	
+	int width_0 ([&ship_names]()->int{
+			int max=0;
+			for(int i=0; i<ship_names.size(); i++)
+			{
+				if(ship_names[i].length()>max)
+					max = ship_names[i].length();
+			}
+			return max+2;	// +2 per il padding
+		}()	// fine della lambda e chiamata alla stessa
+		);
+	int width_1 = player1.name.length()+2;
+	int width_2 = player2.name.length()+2;
+	std::string border = "+"+std::string(width_0, '-')+"+"+std::string(width_2, '-')+"+"+std::string(width_2, '-')+"+";
+	std::string first_row = "|"+std::string(width_0, ' ')+"| "+player1.name+" | "+player2.name+" |";
+	std::cout << border << "\n";
+	std::cout << first_row << "\n";
+	std::cout << border << "\n";
+	
+	for(int i=0; i<ship_names.size(); i++)
+	{
+		// le operazioni con il logaritmo permettono di formattare correttamente anche se le navi fossero 10 o 1000
+		// manca solo un controllo che il nome sia più lungo della larghezza, lo farò magari stasera
+		int number_width = (ship_count1[i]==0 ? 1 : std::log10(ship_count1[i])+1);
+		std::cout << "| " << ship_names[i] << std::string(width_0-ship_names[i].length()-2, ' ') << " |";
+		std::cout << std::string(width_1-number_width-1, ' ') << ship_count1[i] << " |";
+		number_width = (ship_count2[i]==0 ? 1 : std::log10(ship_count2[i])+1);
+		std::cout << std::string(width_2-number_width-1, ' ') << ship_count2[i] << " |\n";
+	}
+	std::cout << border << "\n";
+}
+
 std::vector<std::string> split(std::string str, char delimiter);
 
 //	non ho capito, così facendo il compilatore non considera una funzione diversa da quella
@@ -436,7 +477,7 @@ void print_winner(Player& player)
 	std::string str = player.name + " hai vinto!";
 	std::cout << "+" + std::string(str.length()+2, '~') + "+\n";
 	std::cout << "| " + str + " |\n";
-	std::cout << "+" + std::string(str.length()+2, '~') + "+\n";
+	std::cout << "+" + std::string(str.length()+2, '~') + "+\n\n";
 }
 
 void Match::play()
@@ -450,6 +491,7 @@ void Match::play()
 		if(player2.has_lost())
 		{
 			print_winner(player1);
+			recap();
 			return;
 		}
 		n_rounds++;
@@ -458,12 +500,14 @@ void Match::play()
 		if(player1.has_lost())
 		{
 			print_winner(player2);
+			recap();
 			return;
 		}
 		n_rounds++;
 	}
 	std::cout << "*** Numero di turni massimo raggiunto ***\n";
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
+	recap();
 }
 
 void Match::re_play(std::ifstream input)		//lol

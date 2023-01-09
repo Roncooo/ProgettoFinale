@@ -17,11 +17,38 @@ Player::Player(std::string n)
 		is_cpu = false;
 }
 
-//SBAGLIATO
-//Player& Player::operator=(const Player& p)
-//{
-//	this->name = p.name;
-//}
+int Player::how_many_battleships() const
+{
+	int count=0;
+	for(int i=0; i<defence.SHIP_NUMBER; i++)
+	{
+		if(defence.ships[i]->is_sunk()==false && defence.ships[i]->ship_type()=="battleship")
+			count++;
+	}
+	return count++;
+}
+
+int Player::how_many_supports() const
+{
+	int count=0;
+	for(int i=0; i<defence.SHIP_NUMBER; i++)
+	{
+		if(defence.ships[i]->is_sunk()==false && defence.ships[i]->ship_type()=="support")
+			count++;
+	}
+	return count++;
+}
+
+int Player::how_many_submarines() const
+{
+	int count=0;
+	for(int i=0; i<defence.SHIP_NUMBER; i++)
+	{
+		if(defence.ships[i]->is_sunk()==false && defence.ships[i]->ship_type()=="submarine")
+			count++;
+	}
+	return count++;
+}
 
 bool Player::operator==(const Player& p) const
 {

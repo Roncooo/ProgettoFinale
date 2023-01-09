@@ -7,6 +7,11 @@ Support::Support(const Position& prune, const Position& stern, Player& p)
 {
 }
 
+std::string Support::ship_type() const
+{
+	return "support";
+}
+
 //Support::~Support(){}
 
 // controlla se, rispetto al center di support, la nave da curare è nella posizione giusta

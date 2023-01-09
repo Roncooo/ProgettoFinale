@@ -40,6 +40,10 @@ public:
 	int get_ship_index(const Position& pos) const;
 	bool is_valid(const Position& prow, const Position& prune) const;
 	DefenceGrid defence;
+	// si poteva fare anche un unica funzione che ritorna un vector lungo 3 magari ma vabb nsomma
+	int how_many_battleships() const;
+	int how_many_supports() const;
+	int how_many_submarines() const;
 private:
 	
 };

@@ -13,6 +13,7 @@ public:
 	// enemy potrebbe essere anche const ma non lo è per uniformità con Ships::action virtuale pura
 	int action(const Position& pos, Player& enemy) override;
 	int is_sunk() override;		// l'override permette di stampare il messaggio con le informazioni della nave
+	std::string ship_type() const override;
 //	int dimension = 1;
 //	~Submarine() override;
 };
