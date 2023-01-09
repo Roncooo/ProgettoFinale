@@ -24,40 +24,52 @@ Match::Match(Player& p1, Player& p2/*, Log& input*/)
 void Match::recap() const
 {
 	std::vector<std::string> ship_names{"Battleship", "Support", "Submarine"};
-	std::vector<int> ship_count1{	player1.how_many_battleships(),
-									player1.how_many_supports(),
-									player1.how_many_submarines()	};
-	std::vector<int> ship_count2{	player2.how_many_battleships(),
-									player2.how_many_supports(),
-									player2.how_many_submarines()	};
+	// gli interi vengono direttamente convertiti in stringhe, rende più agevole le operazioni di stampa
+	std::vector<std::string> ship_count1{	std::to_string(player1.how_many_battleships()	),
+											std::to_string(player1.how_many_supports()		),
+											std::to_string(player1.how_many_submarines()	)
+										};
+	std::vector<std::string> ship_count2{	std::to_string(player2.how_many_battleships()	),
+											std::to_string(player2.how_many_supports()		),
+											std::to_string(player2.how_many_submarines()	)
+										};
+									
+	// larghezza interna di ogni colonna, senza contare il padding di uno spazio a destra e uno a sinistra
+	int width_0 = 0;
+	int width_1 = player1.name.length();
+	int width_2 = player2.name.length();
+	for(int i=0; i<ship_names.size(); i++)
+	{
+		if(ship_names[i].length()>width_0)
+			width_0 = ship_names[i].length();
+		// controllo gli spazi occupati dai numeri per formattare correttamente anche il caso
+		// in cui il nome del giocatore sia più corto del numero (nel nostro caso non succede mai)
+		if(ship_count1[i].length()>width_1)
+			width_1 = ship_count1[i].length();
+		if(ship_count2[i].length()>width_2)
+			width_2 = ship_count2[i].length();
+	}
 	
-	int width_0 ([&ship_names]()->int{
-			int max=0;
-			for(int i=0; i<ship_names.size(); i++)
-			{
-				if(ship_names[i].length()>max)
-					max = ship_names[i].length();
-			}
-			return max+2;	// +2 per il padding
-		}()	// fine della lambda e chiamata alla stessa
-		);
-	int width_1 = player1.name.length()+2;
-	int width_2 = player2.name.length()+2;
-	std::string border = "+"+std::string(width_0, '-')+"+"+std::string(width_2, '-')+"+"+std::string(width_2, '-')+"+";
-	std::string first_row = "|"+std::string(width_0, ' ')+"| "+player1.name+" | "+player2.name+" |";
+	std::string border = 	"+"+std::string(width_0+2, '-')+
+							"+"+std::string(width_1+2, '-')+
+							"+"+std::string(width_2+2, '-')+"+";
+							
+	std::string first_row = "|"+std::string(width_0+2, ' ');
+	// se un numero è più largo del nome dell'utente, aggiungo degli spazi prima del nome
+	first_row += "| "+std::string(width_1-player1.name.length(), ' ')+player1.name+" ";
+	first_row += "| "+std::string(width_2-player2.name.length(), ' ')+player2.name+" |";
+	
 	std::cout << border << "\n";
 	std::cout << first_row << "\n";
 	std::cout << border << "\n";
 	
 	for(int i=0; i<ship_names.size(); i++)
 	{
-		// le operazioni con il logaritmo permettono di formattare correttamente anche se le navi fossero 10 o 1000
-		// manca solo un controllo che il nome sia più lungo della larghezza, lo farò magari stasera
-		int number_width = (ship_count1[i]==0 ? 1 : std::log10(ship_count1[i])+1);
-		std::cout << "| " << ship_names[i] << std::string(width_0-ship_names[i].length()-2, ' ') << " |";
-		std::cout << std::string(width_1-number_width-1, ' ') << ship_count1[i] << " |";
-		number_width = (ship_count2[i]==0 ? 1 : std::log10(ship_count2[i])+1);
-		std::cout << std::string(width_2-number_width-1, ' ') << ship_count2[i] << " |\n";
+		std::string row;
+		row += "| " + ship_names[i] + std::string(width_0-ship_names[i].length(), ' ') + " ";
+		row += "| " + std::string(width_1-ship_count1[i].length(), ' ') + ship_count1[i] + " ";
+		row += "| " + std::string(width_2-ship_count2[i].length(), ' ') + ship_count2[i] + " |";
+		std::cout << row << "\n";
 	}
 	std::cout << border << "\n";
 }
