@@ -27,7 +27,6 @@ public:
 	Player& player1;
 	Player& player2;
 	void ship_placement(Player& p);
-	void recap() const;
 	
 	static constexpr int MAX_ROUNDS = 2000;	// boh a caso raga
 	void play();

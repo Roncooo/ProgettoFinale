@@ -21,7 +21,7 @@ Match::Match(Player& p1, Player& p2/*, Log& input*/)
 	// altro?
 }
 
-void Match::recap() const
+void recap(const Player& player1, const Player& player2)
 {
 	std::vector<std::string> ship_names{"Battleship", "Support", "Submarine"};
 	// gli interi vengono direttamente convertiti in stringhe, rende più agevole le operazioni di stampa
@@ -100,6 +100,9 @@ int command(Position& a, Position& b)
 	
 	if(input_string == "CC CC")
 		return 10;
+		
+	if(input_string == "RR RR")
+		return 7;
 	
 	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
 	// ma non so bene come fare
@@ -204,6 +207,11 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	{
 		player.attack.reset_matrix();
 		return 6;
+	}
+	
+	if(code == 7)
+	{
+		recap(player, enemy);
 	}
 	
 	if(code == 10)	// comando "cc cc", utile per il debugging
@@ -503,7 +511,7 @@ void Match::play()
 		if(player2.has_lost())
 		{
 			print_winner(player1);
-			recap();
+			recap(player1, player2);
 			return;
 		}
 		n_rounds++;
@@ -512,14 +520,14 @@ void Match::play()
 		if(player1.has_lost())
 		{
 			print_winner(player2);
-			recap();
+			recap(player2, player1);
 			return;
 		}
 		n_rounds++;
 	}
 	std::cout << "*** Numero di turni massimo raggiunto ***\n";
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
-	recap();
+	recap(player1, player2);
 }
 
 void Match::re_play(std::ifstream input)		//lol
