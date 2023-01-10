@@ -31,8 +31,8 @@ void standard_match()
 	
 	Player player1(player1_name);
 	Player player2(player2_name);
-	file_log.write(player1_name + " " +player2_name);
-	file_log.write("\n");
+	file_log.add(player1_name + " " +player2_name);
+	file_log.add("\n");
 	
 	if(!player1.is_cpu)
 	{
@@ -71,13 +71,15 @@ void cpu_vs_cpu(int n)
 		partita.ship_placement(player1);
 		partita.ship_placement(player2);
 		partita.play();
+		std::string azioni = file_log.getActions();
+		cout << "\n" + azioni;
 		file_log.close();
 	}
 }
 
 int main(void)
 {
-//	cpu_vs_cpu(1);
-	standard_match();
+	cpu_vs_cpu(1);
+//	standard_match();
 	return 0;
 }

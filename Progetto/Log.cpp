@@ -8,10 +8,11 @@ Log::Log()
 	
 };
 
-void Log::write(const std::string& s)
-{
-	output << s;
-}
+void Log::add(const std::string& s) { actions += s; }
+
+void Log::write() { output << actions; }
+
+std::string Log::getActions() { return actions; }
 
 std::string Log::getInput()
 {
