@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 cpu1 cpu2
 
 B
@@ -12,7 +11,7 @@ A
 X
  CC
 CC CC
-R
+[1-9]|1[012])
  CC
 B
 B BB
@@ -48,1074 +47,1074 @@ CC CC
 
  AA
 B BB
+]|1[012])
+ AA
+
+
+C
+
+
+BB
+
+B BB
+CC CC
+B
+
+C
+CC CC
+A
+BB
+CC CC
+B
+BB BB
+ CC
+AA
+ AA
+
+ CC
+A
+BB
+BB BB
+AA
+CC CC
+BB BB
+C
+XX
+CC
+A AA
+[
+BB BB
+B
+A
+
+ BB
+BB
+BB
+
+ XX
+BB
+C CC
+A
+BB
+AA AA
+
+ AA
+AA
+AA
+
+CC CC
+AA
+
+XX
+XX
+A
+B
+ AA
+
+ AA
+[
+
+CC
+C CC
+CC CC
+ CC
+C
+C CC
+
+
+
+ CC
+
+ BB
+B
+
+C
+ CC
+CC CC
+B BB
+CC CC
+AA
+BB BB
+AA
+ AA
+ BB
+
+CC CC
+CC CC
+
+BB
+ BB
+B BB
+X XX
+CC CC
+ CC
+XX
+X
+B BB
+B BB
+
+A
+
+
+
+CC CC
+B BB
+ AA
+
+AA AA
+CC CC
+BB BB
+[1-9]|1[012])
+B
+B BB
+
+BB BB
+
+BB
+AA AA
+B
+AA AA
+ CC
+B
+BB BB
+
+C CC
+CC
+AA AA
+C CC
+B BB
+A
+BB
+CC CC
+ AA
+CC
+
+CC CC
+ XX
+A
+AA AA
+CC CC
+ AA
+B
+
+X XX
+ BB
+
+
+A
+ BB
+X XX
+ BB
+A AA
+1-9]|1[012])
+CC CC
+[
+ BB
+C
+X
+ XX
+
+
+
+C CC
+X
+
+AA
+BB
+XX
+B BB
+BB BB
+ CC
+BB BB
+
+ XX
+
+B
+AA AA
+
+ CC
+
+A AA
+CC
+B
+BB
+C
+BB
+
+ AA
+A
+CC
+ CC
+ CC
+BB
+CC CC
+
+
+C CC
+C
+[
+A AA
+X
+CC CC
+X
+
+ BB
+B BB
+B BB
+C
+BB BB
+ BB
+A
+BB BB
+BB BB
+
+B BB
+A AA
+AA
+CC CC
+BB
+CC
+BB
+BB BB
+BB
+BB
+
+AA
+CC CC
+B BB
+
+ XX
+
+BB
+AA
+B
+C CC
+
+ CC
+ CC
+ BB
+A
+BB
+
+CC
+AA
+
+ BB
+BB
+C CC
+AA AA
+BB BB
+
+C
+B BB
+AA
+X XX
+C
+BB
+CC CC
+BB BB
+
+B
+C
+C
+ BB
+
+]([1-9]|1[012])
+[
+ CC
+AA
+BB BB
+
+
+]([1-9]|1[012])
+C
+BB
+BB BB
+AA
+CC CC
+ BB
+A
+BB
+C CC
+A
+A
+ AA
+
+A
+C CC
+ BB
+C
+BB
+CC CC
+B
+B
+AA
+BB
+ CC
+
+BB
+
+A
+
+CC CC
+AA
+
+AA
+ BB
+C
+B
+ CC
+BB
+ XX
+BB BB
+B
+AA
+ XX
+([1-9]|1[012])
+B BB
+ AA
+BB
+ AA
+B BB
+A
+C CC
+
+
+CC CC
+C CC
+ BB
+ BB
+XX XX
+A
+ BB
+
+AA
+ BB
+
+
+C CC
+A
+A
+BB
+A AA
+
+BB
+B BB
+
+ BB
+ CC
+CC
+[1-9]|1[012])
+
+A
+ BB
+A AA
+
+AA AA
+A AA
+CC CC
+C CC
+
+
+B BB
+
+ CC
+
+B
+BB BB
+BB BB
+ AA
+A AA
+
+C CC
+B
+ CC
+CC CC
+CC CC
+ CC
+AA AA
+B
+B
+
+B
+BB BB
+ BB
+ BB
+CC
+A
+BB
+B
+C
+
+C CC
+
+
+
+A
+
+BB BB
+CC
+X
+BB
+C CC
+
+ BB
+C
+
+[
+BB
+B BB
+B BB
+XX
+ CC
+BB
+CC
+AA AA
+
+ AA
+ BB
+CC CC
+B BB
+AA AA
+CC
+CC
+BB
+
+BB
+C CC
+C CC
+
+([1-9]|1[012])
+AA
+
+BB
+ CC
+C
+B BB
+CC
+C
+A
+]([1-9]|1[012])
+CC CC
+ AA
+B BB
+[1-9]|1[012])
+AA AA
+B
+BB BB
+
+CC CC
+ AA
+A AA
+
+
+AA
+ AA
+C CC
+X XX
+BB
+C CC
+ BB
+B BB
+
+[
+B
+BB BB
+BB BB
+A
+CC CC
+
+ BB
+C
+X
+C
+B
+A
+[
+BB
+
+
+X
+B
+BB BB
+ CC
+ CC
+ AA
+ BB
+A
+ CC
+
+AA
+B
+AA
+AA
+CC
+
+AA
+ BB
+A AA
+
+B
+
+CC CC
+
+
+B BB
+CC
+ XX
+[
+
+
+C
+BB
+BB
+B
+
+A
+AA
+
+B BB
+ CC
+ BB
+
+CC
+ BB
+
+AA
+
+CC CC
+B BB
+CC
+B
+B BB
+A
+CC CC
+
+
+ CC
+A
+ CC
+C
+
+C CC
+BB
+[
+
+BB
+C CC
+B BB
+[
+AA
+X XX
+ CC
+B BB
+C
+
+C CC
+A AA
+ AA
+CC CC
+
+A
+
+BB BB
+C CC
+
+B BB
+C CC
+ CC
+CC CC
+ XX
+C CC
+[
+
+[1-9]|1[012])
+
+ AA
+CC CC
+B BB
+AA AA
+]([1-9]|1[012])
+CC CC
+
+CC
+AA
+BB
+BB BB
+A
+CC CC
+BB
+B
+B BB
+C CC
+BB
+A AA
+ BB
+BB
+
+B BB
+ BB
+[1-9]|1[012])
+
+
+ AA
+ BB
+BB BB
+BB
+ CC
+XX XX
+[
+[
+B
+
+BB BB
+B
+CC CC
+X
+B
+CC
+ CC
+X
+ BB
+C CC
+
+[1-9]|1[012])
+
+ AA
+CC
+XX
+ BB
+XX
+CC
+BB
+B BB
+([1-9]|1[012])
+B
+BB BB
+C
+B BB
+
+B
+
+X XX
+B
+
+CC
+BB BB
+
+AA
+B BB
+BB
+
+CC CC
+
+ AA
+BB BB
+]([1-9]|1[012])
+CC CC
+C CC
+CC CC
+
+
+CC
+ CC
+ BB
+
+CC CC
+B
+C CC
+
+
+ CC
+ AA
+C CC
+
+CC CC
+X
+B BB
+CC CC
+[
+CC CC
+B
+BB BB
+ CC
+CC
+B
+AA
+A AA
+BB
+CC CC
+[1-9]|1[012])
+CC
+ AA
+CC CC
+CC
+B BB
+BB BB
+CC
+B BB
+B
+[
+AA AA
+]([1-9]|1[012])
+BB BB
+ BB
+]([1-9]|1[012])
+CC CC
+AA
+C CC
+
+
+C
+CC
+B
+B BB
+
+
+
+B
+
+
+
+
+ BB
+AA AA
+ CC
+]([1-9]|1[012])
+B
+
+BB
+B BB
+ AA
+C CC
+BB
+BB BB
+BB BB
+B
+C
+C CC
+CC
+C CC
+C CC
+B
+
+C CC
+C CC
+
+A AA
+B
+AA AA
+CC
+A AA
+C CC
+CC CC
+
+AA AA
+ BB
+
+C CC
+
+CC CC
+
+B BB
+A AA
+A
+C CC
+
+A AA
+
+B BB
+AA
+B
+BB BB
+ BB
+AA AA
+
+A
+B
+A AA
+
+([1-9]|1[012])
+ CC
+B
+
+CC
+X
+
+AA
+B BB
+
+
+BB
+ BB
+ BB
+ CC
+CC CC
+BB BB
+X
+A
+ AA
+B BB
+CC
+BB
+CC
+CC
+ AA
+ CC
+ BB
+
+BB
+BB
+[
+
+ AA
+CC
+CC CC
+A AA
+X
+B
+BB
+B BB
+ AA
+BB
+BB BB
+B
+ BB
+X XX
+ CC
+ AA
+[
+ AA
+AA
+XX
+A AA
+CC
+C
+C CC
+ AA
+XX
+BB
+C
+ AA
+BB
+BB
+AA
+A
+
+A
+
+ BB
+([1-9]|1[012])
+C CC
+B
+
+
+
+([1-9]|1[012])
+C
+
+C CC
+C
+BB
+BB BB
+C CC
+
+
+
+B
+ CC
+
+
+ CC
+CC CC
+CC CC
+A AA
+BB
+CC
+
+B BB
+ CC
+1-9]|1[012])
+B BB
+
+C CC
+CC CC
+ AA
+ BB
+
+CC CC
+BB BB
+B
+
+C
+ BB
+B
+BB BB
+BB
+C CC
+C
+C CC
+BB
+A AA
+BB
+B BB
+CC CC
+
+C CC
+B BB
+CC
+B BB
+
+
+BB
+ BB
+ BB
+CC
+
+
+ AA
+CC CC
+C CC
+CC CC
+
+
+ BB
+BB BB
+ CC
+B BB
+
+BB BB
+C
+
+B BB
+[
+ AA
+AA
+AA
+A AA
+
+ CC
+C CC
+ BB
+BB BB
+
+BB BB
+AA AA
+B
+A AA
+
+AA
+BB
+
+ BB
+ AA
+
+BB
+CC CC
+A
+AA
+
+([1-9]|1[012])
+]([1-9]|1[012])
+[1-9]|1[012])
+B
+AA
+
+A
+ BB
+
+AA AA
+A
+ BB
+BB BB
+
+CC
+BB
+C CC
+B
+[1-9]|1[012])
+ AA
+CC
+
+A
+B BB
+CC
+C
+AA
+
+C
+AA AA
+
+CC CC
+1-9]|1[012])
+B
+ AA
+B BB
+
+C CC
+B BB
+BB
+[1-9]|1[012])
+BB
+ BB
+[
+ BB
+BB BB
+ BB
+X
+ BB
+ BB
+CC
+XX
+BB
+A AA
+ AA
+
+AA
+
+
+B
+C CC
+BB BB
+B
+
+CC CC
+[
+
+CC
+A AA
+B
+C
+C CC
+A
+AA AA
+BB
+
+
+CC CC
+C CC
+ BB
+B
+CC CC
+AA
+B
+]([1-9]|1[012])
+A
+BB
+B BB
+ BB
+ AA
+ BB
+BB BB
+B
+ BB
+CC CC
+ BB
+B BB
+B
 ]([1-9]|1[012])
  AA
-
-
-C
-R RR
-
-BB
-
-B BB
-CC CC
-B
-
-C
-CC CC
-A
-BB
-CC CC
-B
-BB BB
- CC
-AA
- AA
-
- CC
-A
-BB
-BB BB
-AA
-CC CC
-BB BB
-C
-XX
-CC
-A AA
-RR RR
-BB BB
-B
-A
-
- BB
-BB
-BB
-
- XX
-BB
-C CC
-A
-BB
-AA AA
-
- AA
-AA
-AA
-
-CC CC
-AA
-
-XX
-XX
-A
-B
- AA
-
- AA
-RR RR
-
-CC
-C CC
-CC CC
- CC
-C
-C CC
-
-
-
- CC
-
- BB
-B
-
-C
- CC
-CC CC
-B BB
-CC CC
-AA
-BB BB
-AA
- AA
- BB
-R RR
-CC CC
-CC CC
-
-BB
- BB
-B BB
-X XX
-CC CC
- CC
-XX
-X
-B BB
-B BB
-
-A
-
-
-
-CC CC
-B BB
- AA
-
-AA AA
-CC CC
-BB BB
-R
-B
-B BB
-
-BB BB
-
-BB
-AA AA
-B
-AA AA
- CC
-B
-BB BB
-
-C CC
-CC
-AA AA
-C CC
-B BB
-A
-BB
-CC CC
- AA
-CC
-
-CC CC
- XX
-A
-AA AA
-CC CC
- AA
-B
-
-X XX
- BB
-
-
-A
- BB
-X XX
- BB
-A AA
-
-CC CC
-RR RR
- BB
-C
-X
- XX
-
-
-
-C CC
-X
-R RR
-AA
-BB
-XX
-B BB
-BB BB
- CC
-BB BB
-
- XX
-
-B
-AA AA
-
- CC
-
-A AA
-CC
-B
-BB
-C
-BB
-
- AA
-A
-CC
- CC
- CC
-BB
-CC CC
-
-
-C CC
-C
-RR RR
-A AA
-X
-CC CC
-X
-
- BB
-B BB
-B BB
-C
-BB BB
- BB
-A
-BB BB
-BB BB
-
-B BB
-A AA
-AA
-CC CC
-BB
-CC
-BB
-BB BB
-BB
-BB
-
-AA
-CC CC
-B BB
-
- XX
-
-BB
-AA
-B
-C CC
-
- CC
- CC
- BB
-A
-BB
-
-CC
-AA
-R RR
- BB
-BB
-C CC
-AA AA
-BB BB
-
-C
-B BB
-AA
-X XX
-C
-BB
-CC CC
-BB BB
-
-B
-C
-C
- BB
-
- RR
-RR RR
- CC
-AA
-BB BB
-
-
- RR
-C
-BB
-BB BB
-AA
-CC CC
- BB
-A
-BB
-C CC
-A
-A
- AA
-
-A
-C CC
- BB
-C
-BB
-CC CC
-B
-B
-AA
-BB
- CC
-
-BB
-
-A
-
-CC CC
-AA
-
-AA
- BB
-C
-B
- CC
-BB
- XX
-BB BB
-B
-AA
- XX
-RR
-B BB
- AA
-BB
- AA
-B BB
-A
-C CC
-
-
-CC CC
-C CC
- BB
- BB
-XX XX
-A
- BB
-
-AA
- BB
-
-
-C CC
-A
-A
-BB
-A AA
-
-BB
-B BB
-
- BB
- CC
-CC
-R
-
-A
- BB
-A AA
-
-AA AA
-A AA
-CC CC
-C CC
-
-
-B BB
-
- CC
-
-B
-BB BB
-BB BB
- AA
-A AA
-R RR
-C CC
-B
- CC
-CC CC
-CC CC
- CC
-AA AA
-B
-B
-
-B
-BB BB
- BB
- BB
-CC
-A
-BB
-B
-C
-
-C CC
-
-
-
-A
-
-BB BB
-CC
-X
-BB
-C CC
-
- BB
-C
-R RR
-RR RR
-BB
-B BB
-B BB
-XX
- CC
-BB
-CC
-AA AA
-
- AA
- BB
-CC CC
-B BB
-AA AA
-CC
-CC
-BB
-
-BB
-C CC
-C CC
-R RR
-RR
-AA
-
-BB
- CC
-C
-B BB
-CC
-C
-A
- RR
-CC CC
- AA
-B BB
-R
-AA AA
-B
-BB BB
-
-CC CC
- AA
-A AA
-
-R RR
-AA
- AA
-C CC
-X XX
-BB
-C CC
- BB
-B BB
-
-RR RR
-B
-BB BB
-BB BB
-A
-CC CC
-
- BB
-C
-X
-C
-B
-A
-RR RR
-BB
-
-
-X
-B
-BB BB
- CC
- CC
- AA
- BB
-A
- CC
-
-AA
-B
-AA
-AA
-CC
-
-AA
- BB
-A AA
-
-B
-
-CC CC
-
-
-B BB
-CC
- XX
-RR RR
-
-R RR
-C
-BB
-BB
-B
-
-A
-AA
-
-B BB
- CC
- BB
-
-CC
- BB
-
-AA
-
-CC CC
-B BB
-CC
-B
-B BB
-A
-CC CC
-
-
- CC
-A
- CC
-C
-
-C CC
-BB
-RR RR
-
-BB
-C CC
-B BB
-RR RR
-AA
-X XX
- CC
-B BB
-C
-R RR
-C CC
-A AA
- AA
-CC CC
-
-A
-
-BB BB
-C CC
-
-B BB
-C CC
- CC
-CC CC
- XX
-C CC
-RR RR
-
-R
-
- AA
-CC CC
-B BB
-AA AA
- RR
-CC CC
-
-CC
-AA
-BB
-BB BB
-A
-CC CC
-BB
-B
-B BB
-C CC
-BB
-A AA
- BB
-BB
-
-B BB
- BB
-R
-
-
- AA
- BB
-BB BB
-BB
- CC
-XX XX
-RR RR
-RR RR
-B
-
-BB BB
-B
-CC CC
-X
-B
-CC
- CC
-X
- BB
-C CC
-
-R
-
- AA
-CC
-XX
- BB
-XX
-CC
-BB
-B BB
-RR
-B
-BB BB
-C
-B BB
-
-B
-
-X XX
-B
-
-CC
-BB BB
-R RR
-AA
-B BB
-BB
-
-CC CC
-
- AA
-BB BB
- RR
-CC CC
-C CC
-CC CC
-
-
-CC
- CC
- BB
-
-CC CC
-B
-C CC
-
-R RR
- CC
- AA
-C CC
-
-CC CC
-X
-B BB
-CC CC
-RR RR
-CC CC
-B
-BB BB
- CC
-CC
-B
-AA
-A AA
-BB
-CC CC
-R
-CC
- AA
-CC CC
-CC
-B BB
-BB BB
-CC
-B BB
-B
-RR RR
-AA AA
- RR
-BB BB
- BB
- RR
-CC CC
-AA
-C CC
-
-
-C
-CC
-B
-B BB
-
-
-
-B
-
-R RR
-
-
- BB
-AA AA
- CC
- RR
-B
-R RR
-BB
-B BB
- AA
-C CC
-BB
-BB BB
-BB BB
-B
-C
-C CC
-CC
-C CC
-C CC
-B
-
-C CC
-C CC
-
-A AA
-B
-AA AA
-CC
-A AA
-C CC
-CC CC
-
-AA AA
- BB
-
-C CC
-
-CC CC
-
-B BB
-A AA
-A
-C CC
-
-A AA
-
-B BB
-AA
-B
-BB BB
- BB
-AA AA
-
-A
-B
-A AA
-
-RR
- CC
-B
-
-CC
-X
-
-AA
-B BB
-
-
-BB
- BB
- BB
- CC
-CC CC
-BB BB
-X
-A
- AA
-B BB
-CC
-BB
-CC
-CC
- AA
- CC
- BB
-
-BB
-BB
-RR RR
-
- AA
-CC
-CC CC
-A AA
-X
-B
-BB
-B BB
- AA
-BB
-BB BB
-B
- BB
-X XX
- CC
- AA
-RR RR
- AA
-AA
-XX
-A AA
-CC
-C
-C CC
- AA
-XX
-BB
-C
- AA
-BB
-BB
-AA
-A
-R RR
-A
-
- BB
-RR
-C CC
-B
-
-
-
-RR
-C
-
-C CC
-C
-BB
-BB BB
-C CC
-
-
-
-B
- CC
-
-R RR
- CC
-CC CC
-CC CC
-A AA
-BB
-CC
-
-B BB
- CC
-
-B BB
-
-C CC
-CC CC
- AA
- BB
-R RR
-CC CC
-BB BB
-B
-
-C
- BB
-B
-BB BB
-BB
-C CC
-C
-C CC
-BB
-A AA
-BB
-B BB
-CC CC
-R RR
-C CC
-B BB
-CC
-B BB
-
-
-BB
- BB
- BB
-CC
-
-
- AA
-CC CC
-C CC
-CC CC
-
-
- BB
-BB BB
- CC
-B BB
-R RR
-BB BB
-C
-R RR
-B BB
-RR RR
- AA
-AA
-AA
-A AA
-
- CC
-C CC
- BB
-BB BB
-
-BB BB
-AA AA
-B
-A AA
-
-AA
-BB
-
- BB
- AA
-
-BB
-CC CC
-A
-AA
-
-RR
- RR
-R
-B
-AA
-
-A
- BB
-
-AA AA
-A
- BB
-BB BB
-
-CC
-BB
-C CC
-B
-R
- AA
-CC
-
-A
-B BB
-CC
-C
-AA
-R RR
-C
-AA AA
-
-CC CC
-
-B
- AA
-B BB
-
-C CC
-B BB
-BB
-R
-BB
- BB
-RR RR
- BB
-BB BB
- BB
-X
- BB
- BB
-CC
-XX
-BB
-A AA
- AA
-
-AA
-
-
-B
-C CC
-BB BB
-B
-
-CC CC
-RR RR
-
-CC
-A AA
-B
-C
-C CC
-A
-AA AA
-BB
-R RR
-
-CC CC
-C CC
- BB
-B
-CC CC
-AA
-B
- RR
-A
-BB
-B BB
- BB
- AA
- BB
-BB BB
-B
- BB
-CC CC
- BB
-B BB
-B
- RR
- AA
-R
+[1-9]|1[012])
  AA
 
 
@@ -1124,11 +1123,11 @@ CC CC
 CC CC
 C CC
 BB
-RR RR
+[
 BB
 AA AA
 B BB
-RR RR
+[
 B
 AA
  CC
@@ -1198,7 +1197,7 @@ B BB
 BB
 
  BB
-R RR
+
 
 A
 BB BB
@@ -1245,7 +1244,7 @@ CC CC
 A AA
 
 A
-R RR
+
 C
 AA
  BB
@@ -1265,7 +1264,7 @@ B
 AA AA
 BB
 CC
-RR RR
+[
  BB
 BB
 CC
@@ -1303,17 +1302,17 @@ BB
 BB BB
  AA
 B
-RR RR
+[
 
-RR RR
+[
 XX
 B BB
 BB
 
 BB BB
 BB BB
-RR RR
-R RR
+[
+
 BB
 B
 A
@@ -1345,7 +1344,7 @@ C CC
 CC CC
  BB
 A
-RR RR
+[
 B
 C CC
 C
@@ -1486,7 +1485,7 @@ A AA
 A
 B
 
-R RR
+
 CC CC
 BB BB
 
@@ -1496,7 +1495,7 @@ BB BB
 
 CC CC
 AA AA
-RR
+([1-9]|1[012])
 B
 
 A
@@ -1527,7 +1526,7 @@ CC
  AA
 C
 
-R RR
+
 XX
 C CC
 
@@ -1541,7 +1540,7 @@ CC CC
 AA
 BB BB
 BB
-RR RR
+[
 
 
 C
@@ -1568,7 +1567,7 @@ BB
 BB BB
  AA
 B BB
-RR RR
+[
 XX
 C
 BB
@@ -1650,13 +1649,13 @@ C CC
 AA
  AA
 A AA
-R RR
+
 A
 B BB
 CC
  BB
  BB
-R RR
+
 
 BB
 A
@@ -1706,7 +1705,7 @@ B BB
 BB BB
 XX
 B BB
-RR RR
+[
 C
 CC
 BB BB
@@ -1714,9 +1713,9 @@ AA AA
 B BB
 B
  CC
-RR RR
+[
 BB BB
- RR
+]([1-9]|1[012])
 BB BB
  CC
  BB
@@ -1753,13 +1752,13 @@ A AA
 AA AA
 BB BB
  AA
-RR RR
+[
 BB BB
 B
 
  CC
  AA
-RR RR
+[
  CC
 C CC
  BB
@@ -1771,7 +1770,7 @@ C
  BB
  BB
 B
-R RR
+
 BB BB
 
 X
@@ -1786,7 +1785,7 @@ BB
 AA
 B BB
  BB
-R RR
+
 
 C CC
 B BB
@@ -1796,7 +1795,7 @@ C
  BB
  CC
 X
-RR RR
+[
  BB
 A
 C CC
@@ -1814,7 +1813,7 @@ AA
 XX
 A AA
 B
-RR RR
+[
 
 
 CC CC
@@ -1826,7 +1825,7 @@ C CC
 A AA
 BB BB
 C
-RR RR
+[
 A AA
  AA
 C CC
@@ -1849,7 +1848,7 @@ AA AA
 A
 B
 A
-RR RR
+[
 
 BB BB
 CC CC
@@ -1876,7 +1875,7 @@ B BB
 
 BB
 CC CC
-R RR
+
 CC CC
 
 
@@ -1906,7 +1905,7 @@ BB BB
 C CC
  CC
 BB
- RR
+]([1-9]|1[012])
 BB
 C CC
 
@@ -1922,7 +1921,7 @@ AA
 C CC
 
 B BB
-RR RR
+[
 C CC
 B
  BB
@@ -1945,14 +1944,14 @@ C CC
 CC CC
 
  AA
-R RR
- RR
+
+]([1-9]|1[012])
  BB
  CC
 BB
 BB
 C
-R RR
+
 BB BB
 B BB
 CC
@@ -1978,7 +1977,7 @@ CC
 
 AA AA
 A
- RR
+]([1-9]|1[012])
 
 B BB
 BB
@@ -2000,7 +1999,7 @@ A
 
 B
 
-RR RR
+[
  BB
 AA
 A
@@ -2015,5 +2014,3 @@ B
 
 A AA
  BB
-=======
->>>>>>> b55bae34cbe2ca0ad41cc9cda303272f5a093e70
