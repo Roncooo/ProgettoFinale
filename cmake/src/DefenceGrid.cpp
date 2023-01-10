@@ -2,8 +2,6 @@
 
 #include "DefenceGrid.h"
 
-
-
 DefenceGrid::DefenceGrid()
 {
 }

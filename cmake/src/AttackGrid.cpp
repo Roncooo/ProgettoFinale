@@ -2,9 +2,6 @@
 
 #include "AttackGrid.h"
 
-using game_board::Position;
-using game_board::Grid;
-
 AttackGrid::AttackGrid()
 {
 }

@@ -2,12 +2,22 @@
 
 #include "Match.h"
 
-using game_board::Position;
-using game_board::Grid;
+void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
+							std::string ship_name, int ship_size, int ship_number);
+void user_placement(Player& p);
+void bot_placement_helper(Player& p, int ship_size, Position& start, Position& end);
+void bot_placement(Player& p);
+Position random_position();
+Position ortogonal_position(const Position& start, int dim, int direction);
+int execute(Player& player, Player& enemy, int code, const Position& origin, const Position& target);	// usata solo durante il gioco, non nell'inserimento
+void print_code(int code, const Position& origin, const Position& target);
+int random_command(Player& player, Position& origin, Position& target);
 
 Match::Match(Player& p1, Player& p2/*, Log& input*/)
 	: player1{p1}, player2{p2}/*, file_log{input}*/
 {
+	
+	
 	// altro?
 }
 
@@ -64,6 +74,8 @@ void recap(const Player& player1, const Player& player2)
 	std::cout << border << "\n";
 }
 
+std::vector<std::string> split(std::string str, char delimiter);
+
 //	non ho capito, così facendo il compilatore non considera una funzione diversa da quella
 //	dichiarata nella classe?
 int command(Position& a, Position& b)
@@ -88,6 +100,9 @@ int command(Position& a, Position& b)
 	
 	if(input_string == "CC CC")
 		return 10;
+		
+	if(input_string == "RR RR")
+		return 7;
 	
 	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
 	// ma non so bene come fare
@@ -192,6 +207,11 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	{
 		player.attack.reset_matrix();
 		return 6;
+	}
+	
+	if(code == 7)
+	{
+		recap(player, enemy);
 	}
 	
 	if(code == 10)	// comando "cc cc", utile per il debugging
@@ -306,8 +326,8 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		// tutti i controlli sono andati a buon fine
 		ok = true;
 		//scrivo la posizione delle navi sul file di log
-		file_log.add(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
-		file_log.add("\n");
+		file_log.write(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
+		file_log.write("\n");
 	}
 }
 
@@ -324,8 +344,8 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 			if(p.is_valid(prow, prune))
 			{
 				ok = true;
-				file_log.add(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
-				file_log.add("\n");
+				file_log.write(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
+				file_log.write("\n");
 				break;
 			}
 			direction=(direction+1)%4;
@@ -467,8 +487,8 @@ void round(Player& player, Player& enemy)
 	}
 	//a questo punto è stato eseguito un comando non speciale
 	//scrivo nel file
-	file_log.add(origin.get_row() + origin.get_col() + " " + target.get_row() + target.get_col());
-	file_log.add("\n");
+	file_log.write(origin.get_row() + origin.get_col() + " " + target.get_row() + target.get_col());
+	file_log.write("\n");
 	std::cout << "Comando eseguito\n\n";
 }
 

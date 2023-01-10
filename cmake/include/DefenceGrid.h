@@ -8,7 +8,7 @@
 
 class Ship;	// forward declaration
 
-class DefenceGrid : public game_board::Grid
+class DefenceGrid : public Grid
 {
 public:
 	static constexpr int SHIP_NUMBER = 8;

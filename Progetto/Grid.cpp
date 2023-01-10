@@ -2,151 +2,155 @@
 
 #include "Grid.h"
 
-Grid::Grid()
+namespace game_board
 {
-	reset_matrix();
-}
-
-void Grid::reset_matrix()
-{
-	for(int r=0; r<rows; r++)
+	Grid::Grid()
 	{
-		for(int c=0; c<cols; c++)
-			matrix[r][c] = empty_char;
+		reset_matrix();
 	}
-}
 
-bool Grid::is_valid(const Position& pos)
-{
-	return !(pos.get_row()<0 || pos.get_col()<0 || pos.get_row()>=rows || pos.get_col()>=cols);
-}
-
-char Grid::get_char(const Position& pos) const
-{
-	return matrix[pos.get_row()][pos.get_col()];
-}
-
-void Grid::set_char(const Position& pos, char c)		// non const
-{
-	matrix[pos.get_row()][pos.get_col()] = c;
-}
-
-void Grid::print(Grid& a)
-{
-	// formato in uso:
-	//  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10| 11| 12|
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//A |   | S | S | S |   |   |   |   |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//B |   |   |   |   |   | C | C | C | C | C |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//C |   |   |   |   |   |   |   |   |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//D |   | C |   |   |   | S | S | S |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//E |   | C |   |   |   |   |   |   |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//F |   | C |   |   |   |   |   |   |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//G |   | C |   |   |   |   |   |   |   |   | E |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//H |   | C |   |   |   |   |   |   |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//I |   |   |   |   |   | S | S | S |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//L |   | E |   |   |   |   |   |   |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//M |   |   |   |   |   |   |   |   |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	//N |   |   |   |   |   |   |   |   |   |   |   |   | 
-	//  +---+---+---+---+---+---+---+---+---+---+---+---+
-	
-	a.update();
-	
-	std::string delimiter_line = "  +";
-	for(int i=0; i<cols; i++)
-		delimiter_line += "---+";
-	
-	// riga di numeri
-	std::cout << "  ";	// identazione per le lettere
-	for(int i=1; i<=cols; i++)
+	void Grid::reset_matrix()
 	{
-		std::cout << "| "+std::to_string(i);
-		if(i<10)
-			std::cout << " ";	// padding a destra
-	}
-	std::cout << "|\n"; 	// ultimo delimitatore
-	
-	std::cout << delimiter_line << "\n";
-	
-	// inizio matrice
-	for(int r=0; r<rows; r++)
-	{
-		std::cout << a.letters[r] << " |";
-		for(int c=0; c<cols; c++)
+		for(int r=0; r<rows; r++)
 		{
-			std::cout << " " << a.matrix[r][c] << " |";
+			for(int c=0; c<cols; c++)
+				matrix[r][c] = empty_char;
 		}
-		std::cout << "\n" << delimiter_line << "\n";
 	}
-}
 
-// stampa due griglie affiancate
-void Grid::print(Grid& a, Grid& b)
-{
-	a.update();
-	b.update();
-	
-	std::string margin = "\t";
-	
-	std::string delimiter_line = "  +";
-	for(int i=0; i<cols; i++)
-		delimiter_line += "---+";
-	
-	// riga dei numeri a
-	std::cout << "  ";	// identazione per le lettere
-	for(int i=1; i<=cols; i++)
+	bool Grid::is_valid(const Position& pos)
 	{
-		std::cout << "| "+std::to_string(i);
-		if(i<10)
-			std::cout << " ";	// padding a destra
+		return !(pos.get_row()<0 || pos.get_col()<0 || pos.get_row()>=rows || pos.get_col()>=cols);
 	}
-	std::cout << "|";	// ultimo delimitatore
 
-	std::cout << margin;
-	
-	// riga di numeri 2
-	std::cout << "  ";	// identazione per le lettere
-	for(int i=1; i<=cols; i++)
+	char Grid::get_char(const Position& pos) const
 	{
-		std::cout << "| "+std::to_string(i);
-		if(i<10)
-			std::cout << " ";	// padding a destra
+		return matrix[pos.get_row()][pos.get_col()];
 	}
-	
-	std::cout << "|";	// ultimo delimitatore
-	
-	std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
-	
-	// inizio matrice
-	for(int r=0; r<rows; r++)
+
+	void Grid::set_char(const Position& pos, char c)		// non const
 	{
-		// riga matrice a
-		std::cout << a.letters[r] << " |";
-		for(int c=0; c<cols; c++)
+		matrix[pos.get_row()][pos.get_col()] = c;
+	}
+
+	void Grid::print(Grid& a)
+	{
+		// formato in uso:
+		//  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10| 11| 12|
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//A |   | S | S | S |   |   |   |   |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//B |   |   |   |   |   | C | C | C | C | C |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//C |   |   |   |   |   |   |   |   |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//D |   | C |   |   |   | S | S | S |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//E |   | C |   |   |   |   |   |   |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//F |   | C |   |   |   |   |   |   |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//G |   | C |   |   |   |   |   |   |   |   | E |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//H |   | C |   |   |   |   |   |   |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//I |   |   |   |   |   | S | S | S |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//L |   | E |   |   |   |   |   |   |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//M |   |   |   |   |   |   |   |   |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+		//N |   |   |   |   |   |   |   |   |   |   |   |   | 
+		//  +---+---+---+---+---+---+---+---+---+---+---+---+
+	
+		a.update();
+	
+		std::string delimiter_line = "  +";
+		for(int i=0; i<cols; i++)
+			delimiter_line += "---+";
+	
+		// riga di numeri
+		std::cout << "  ";	// identazione per le lettere
+		for(int i=1; i<=cols; i++)
 		{
-			std::cout << " " << a.matrix[r][c] << " |";
+			std::cout << "| "+std::to_string(i);
+			if(i<10)
+				std::cout << " ";	// padding a destra
 		}
-		
+		std::cout << "|\n"; 	// ultimo delimitatore
+	
+		std::cout << delimiter_line << "\n";
+	
+		// inizio matrice
+		for(int r=0; r<rows; r++)
+		{
+			std::cout << a.letters[r] << " |";
+			for(int c=0; c<cols; c++)
+			{
+				std::cout << " " << a.matrix[r][c] << " |";
+			}
+			std::cout << "\n" << delimiter_line << "\n";
+		}
+	}
+
+	// stampa due griglie affiancate
+	void Grid::print(Grid& a, Grid& b)
+	{
+		a.update();
+		b.update();
+	
+		std::string margin = "\t";
+	
+		std::string delimiter_line = "  +";
+		for(int i=0; i<cols; i++)
+			delimiter_line += "---+";
+	
+		// riga dei numeri a
+		std::cout << "  ";	// identazione per le lettere
+		for(int i=1; i<=cols; i++)
+		{
+			std::cout << "| "+std::to_string(i);
+			if(i<10)
+				std::cout << " ";	// padding a destra
+		}
+		std::cout << "|";	// ultimo delimitatore
+
 		std::cout << margin;
-		
-		// riga matrice b
-		std::cout << a.letters[r] << " |";
-		for(int c=0; c<cols; c++)
+	
+		// riga di numeri 2
+		std::cout << "  ";	// identazione per le lettere
+		for(int i=1; i<=cols; i++)
 		{
-			std::cout << " " << b.matrix[r][c] << " |";
+			std::cout << "| "+std::to_string(i);
+			if(i<10)
+				std::cout << " ";	// padding a destra
 		}
-		
+	
+		std::cout << "|";	// ultimo delimitatore
+	
 		std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
+	
+		// inizio matrice
+		for(int r=0; r<rows; r++)
+		{
+			// riga matrice a
+			std::cout << a.letters[r] << " |";
+			for(int c=0; c<cols; c++)
+			{
+				std::cout << " " << a.matrix[r][c] << " |";
+			}
+		
+			std::cout << margin;
+		
+			// riga matrice b
+			std::cout << a.letters[r] << " |";
+			for(int c=0; c<cols; c++)
+			{
+				std::cout << " " << b.matrix[r][c] << " |";
+			}
+		
+			std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
+		}
 	}
+	
 }
