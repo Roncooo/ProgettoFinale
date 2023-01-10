@@ -1,10 +1,4 @@
-cmake_minimum_required(VERSION 2.9)
-
-project(BattagliaNavale)
-
-include_directories(
-	include
-)
+include_directories(${PROJECT_SOURCE_DIR}/include/)
 
 set(SOURCES
 	src/Ship.cpp
@@ -21,14 +15,6 @@ set(SOURCES
 	src/replay.cpp
 )
 
-add_library(my_lib
-	${SOURCES}
-)
-
-add_executable(eseguibile 
-	src/main.cpp
-)
-
-target_link_libraries(eseguibile
-	my_lib
-)
+add_library(LibProject ${SOURCES})
+add_executable(eseguibile main.cpp)
+target_link_libraries(eseguibile LibProject)
