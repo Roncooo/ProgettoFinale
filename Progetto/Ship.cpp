@@ -2,6 +2,8 @@
 
 #include "Ship.h"
 
+using game_board::Position;
+
 Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, char lower) 
 	: player{p}, not_hit{upper}, hit{lower}
 {	

@@ -42,9 +42,9 @@ public:
 	 *  5: cancella i sonar
 	 * altro...?
 	 */
-	// gli exit code servono perché così chi chiama comando sa se è andato a buon fine
+	// gli exit code servono perché coma comando sa se è andato a buon fine
 };
-int command(Position& a, Position& b);
+int command(game_board::Position& a, game_board::Position& b);
 static Log file_log = Log();
 
 #endif // MATCH_H

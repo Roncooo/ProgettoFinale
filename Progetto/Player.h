@@ -22,8 +22,8 @@ public:
 	bool auto_placement = false;
 	bool operator==(const Player& p) const;
 //	Player& operator=(const Player& p);
-	bool receive_shot(const Position& pos);
-	int is_there_ship(const Position& pos) const;
+	bool receive_shot(const game_board::Position& pos);
+	int is_there_ship(const game_board::Position& pos) const;
 	~Player();
 	AttackGrid attack;
 	// per il momento sono solo idee di risoluzioni per poter mettere almeno defence grid privata
@@ -34,11 +34,11 @@ public:
 //	int add_ship(Battleship& to_add);
 //	int add_ship(Support& to_add);
 //	int add_ship(Sumbarine& to_add);
-	int act_ship(int index, const Position& target, Player& enemy);
+	int act_ship(int index, const game_board::Position& target, Player& enemy);
 	bool has_lost();	// può essere resa const se non deve più usare is_sunk quindi per esempio se usiamo il vector
 						// oppure se siamo sicuri che bool sunk sia sempre correttamente aggiornato
-	int get_ship_index(const Position& pos) const;
-	bool is_valid(const Position& prow, const Position& prune) const;
+	int get_ship_index(const game_board::Position& pos) const;
+	bool is_valid(const game_board::Position& prow, const game_board::Position& prune) const;
 	DefenceGrid defence;
 	// si poteva fare anche un unica funzione che ritorna un vector lungo 3 magari ma vabb nsomma
 	int how_many_battleships() const;
