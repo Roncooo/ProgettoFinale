@@ -19,9 +19,9 @@ private:
 	//- comandi NON speciali (uno per ogni riga)
 public:
 	Log();
-	void add(const std::string& s);
+	void add(const std::string s);
 	void write();
-	std::string getActions();	//solo per debug
+	std::string getActions() const; 	//solo per debug
 	std::string getInput();
 	void close();
 	
