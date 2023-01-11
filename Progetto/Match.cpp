@@ -226,17 +226,17 @@ void user_placement(Player& p)
 	for(int i=0; i<3; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
-		p.defence.ships[i] = std::make_unique<Battleship>(Battleship(prow, prune, p));	// qui manca la griglia di attacco
+		p.defence.ships[i] = std::unique_ptr<Battleship>(new Battleship(prow, prune, p));	// qui manca la griglia di attacco
 	}
 	for(int i=3; i<6; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i);
-		p.defence.ships[i] = std::make_unique<Support>(Support(prow, prune, p)); 
+		p.defence.ships[i] = std::unique_ptr<Support>(new Support(prow, prune, p)); 
 	}
 	for(int i=6; i<8; i++)
 	{
 		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i);
-		p.defence.ships[i] = std::make_unique<Submarine>(Submarine(prow, p)); 
+		p.defence.ships[i] = std::unique_ptr<Submarine>(new Submarine(prow, p)); 
 	}
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
@@ -339,17 +339,17 @@ void bot_placement(Player& p)
 	for(int i=0; i<3; i++)
 	{
 		bot_placement_helper(p, 5, prow, prune);
-		p.defence.ships[i] = std::make_unique<Battleship>(Battleship(prow, prune, p));
+		p.defence.ships[i] = std::unique_ptr<Battleship>(new Battleship(prow, prune, p));
 	}
 	for(int i=3; i<6; i++)
 	{
 		bot_placement_helper(p, 3, prow, prune);
-		p.defence.ships[i] = std::make_unique<Support>(Support(prow, prune, p)); 
+		p.defence.ships[i] = std::unique_ptr<Support>(new Support(prow, prune, p)); 
 	}
 	for(int i=6; i<8; i++)
 	{
 		bot_placement_helper(p, 1, prow, prune);
-		p.defence.ships[i] = std::make_unique<Submarine>(Submarine(prow, p)); 
+		p.defence.ships[i] = std::unique_ptr<Submarine>(new Submarine(prow, p)); 
 	}
 	
 	
