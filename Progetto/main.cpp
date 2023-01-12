@@ -8,7 +8,7 @@ void standard_match()
 {
 	std::srand(123456);
 
-	//Log file_log = Log();
+	Log file_log = Log();
 
 	cout << "Inserire i nomi dei giocatori";
 	cout << "\nPer visualizzare la tua griglia di difesa, inserisci il comando XX";
@@ -52,13 +52,12 @@ void standard_match()
 	}
 	
 	
-	Match partita(player1, player2/*, file_log*/);
+	Match partita(player1, player2, file_log);
 	partita.ship_placement(player1);
 	partita.ship_placement(player2);
 	partita.play();
 	std::string azioni = file_log.getActions();
 	cout << "\nLe mosse effettuate sono state:\n" + azioni;
-	file_log.write();
 	file_log.close();
 }
 
@@ -68,16 +67,16 @@ void cpu_vs_cpu(int n)
 	for(int i=0; i<n; i++)
 	{
 		Player player1("cpu1");
-		Player player2("cpu2");	
-		file_log.add(player1.name + " " + player2.name);
-		file_log.add("\n");
-		Match partita(player1, player2/*, file_log*/);
+		Player player2("cpu2");
+		Log file_log = Log();
+		
+		file_log.add(player1.name + " " + player2.name + "\n");
+		Match partita(player1, player2, file_log);
 		partita.ship_placement(player1);
 		partita.ship_placement(player2);
 		partita.play();
 		std::string azioni = file_log.getActions();
 		cout << "\nLe mosse effettuate sono state:\n" + azioni;
-		file_log.write();
 		file_log.close();
 	}
 }

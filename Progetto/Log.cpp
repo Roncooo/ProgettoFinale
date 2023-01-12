@@ -13,9 +13,9 @@ void Log::add(const std::string s) { actions += s; }
 
 std::string Log::getActions() const { return actions; }
 
-void Log::write() 
+void Log::write(const std::string s) 
 { 
-	output << actions; 
+	output << s; 
 }
 
 void Log::write(game_board::Position& prow, game_board::Position& prune)

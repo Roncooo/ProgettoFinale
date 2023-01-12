@@ -5,8 +5,8 @@
 using game_board::Position;
 using game_board::Grid;
 
-Match::Match(Player& p1, Player& p2/*, Log& input*/)
-	: player1{p1}, player2{p2}/*, file_log{input}*/
+Match::Match(Player& p1, Player& p2, Log& input)
+	: player1{p1}, player2{p2}, file_log{input}
 {
 	// altro?
 }
@@ -213,29 +213,29 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 void Match::ship_placement(Player& p)
 {
 	if(p.auto_placement)
-		bot_placement(p);
+		bot_placement(p, file_log);
 	else
-		user_placement(p);
+		user_placement(p, file_log);
 }
 
-void user_placement(Player& p)
+void user_placement(Player& p, Log& file_log)
 {
 	std::cout << "\n" + p.name + " inserisci le tue navi\n\n";
 	Position prow, prune;
 	
 	for(int i=0; i<3; i++)
 	{
-		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
+		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i, file_log);
 		p.defence.ships[i] = std::unique_ptr<Battleship>(new Battleship(prow, prune, p));	// qui manca la griglia di attacco
 	}
 	for(int i=3; i<6; i++)
 	{
-		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i);
+		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i, file_log);
 		p.defence.ships[i] = std::unique_ptr<Support>(new Support(prow, prune, p)); 
 	}
 	for(int i=6; i<8; i++)
 	{
-		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i);
+		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i, file_log);
 		p.defence.ships[i] = std::unique_ptr<Submarine>(new Submarine(prow, p)); 
 	}
 	
@@ -244,7 +244,7 @@ void user_placement(Player& p)
 }
 
 void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
-							std::string ship_name, int ship_size, int ship_number)
+							std::string ship_name, int ship_size, int ship_number, Log& file_log)
 {
 	bool ok = false;
 	while(!ok)
@@ -311,7 +311,7 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 	}
 }
 
-void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& prune)
+void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& prune, Log& file_log)
 {
 	bool ok = false;
 	while(!ok)
@@ -333,22 +333,22 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 	}
 }
 
-void bot_placement(Player& p)
+void bot_placement(Player& p, Log& file_log)
 {
 	Position prow, prune;
 	for(int i=0; i<3; i++)
 	{
-		bot_placement_helper(p, 5, prow, prune);
+		bot_placement_helper(p, 5, prow, prune, file_log);
 		p.defence.ships[i] = std::unique_ptr<Battleship>(new Battleship(prow, prune, p));
 	}
 	for(int i=3; i<6; i++)
 	{
-		bot_placement_helper(p, 3, prow, prune);
+		bot_placement_helper(p, 3, prow, prune, file_log);
 		p.defence.ships[i] = std::unique_ptr<Support>(new Support(prow, prune, p)); 
 	}
 	for(int i=6; i<8; i++)
 	{
-		bot_placement_helper(p, 1, prow, prune);
+		bot_placement_helper(p, 1, prow, prune, file_log);
 		p.defence.ships[i] = std::unique_ptr<Submarine>(new Submarine(prow, p)); 
 	}
 	
@@ -437,7 +437,7 @@ void print_code(int code, const Position& origin, const Position& target)
 	}
 }
 
-void round(Player& player, Player& enemy)
+void round(Player& player, Player& enemy, Log& file_log)
 {
 	int code;
 	Position origin, target;
@@ -487,20 +487,32 @@ void Match::play()
 	while(n_rounds<MAX_ROUNDS)
 	{
 		std::cout << "Turno: " << n_rounds << "\n";
-		round(player1, player2);
+		round(player1, player2, file_log);
 		if(player2.has_lost())
 		{
 			print_winner(player1);
 			recap(player1, player2);
+			
+			file_log.add(player1.name);
+			file_log.add("\n");
+			file_log.write(player1.name);
+			file_log.write("\n");
+			
 			return;
 		}
 		n_rounds++;
 		
-		round(player2, player1);
+		round(player2, player1, file_log);
 		if(player1.has_lost())
 		{
 			print_winner(player2);
 			recap(player2, player1);
+			
+			file_log.add(player2.name);
+			file_log.add("\n");
+			file_log.write(player2.name);
+			file_log.write("\n");
+			
 			return;
 		}
 		n_rounds++;
@@ -508,6 +520,9 @@ void Match::play()
 	std::cout << "*** Numero di turni massimo raggiunto ***\n";
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
 	recap(player1, player2);
+	
+	file_log.add("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
+	file_log.write("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
 void Match::re_play(std::ifstream input)		//lol

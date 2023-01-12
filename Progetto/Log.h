@@ -21,7 +21,7 @@ private:
 public:
 	Log();
 	void add(const std::string s);		//solo per il debug
-	void write();
+	void write(const std::string s);
 	void write(game_board::Position& prow, game_board::Position& prune);
 	std::string getActions() const; 	//solo per debug
 //	std::string getInput();
