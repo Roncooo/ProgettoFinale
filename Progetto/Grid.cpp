@@ -2,6 +2,11 @@
 
 #include "Grid.h"
 
+using game_board::cols;
+using game_board::rows;
+using game_board::letters;
+using game_board::empty_char;
+
 namespace game_board
 {
 	Grid::Grid()
@@ -84,7 +89,7 @@ namespace game_board
 		// inizio matrice
 		for(int r=0; r<rows; r++)
 		{
-			std::cout << a.letters[r] << " |";
+			std::cout << letters[r] << " |";
 			for(int c=0; c<cols; c++)
 			{
 				std::cout << " " << a.matrix[r][c] << " |";
@@ -134,7 +139,7 @@ namespace game_board
 		for(int r=0; r<rows; r++)
 		{
 			// riga matrice a
-			std::cout << a.letters[r] << " |";
+			std::cout << letters[r] << " |";
 			for(int c=0; c<cols; c++)
 			{
 				std::cout << " " << a.matrix[r][c] << " |";
@@ -143,7 +148,7 @@ namespace game_board
 			std::cout << margin;
 		
 			// riga matrice b
-			std::cout << a.letters[r] << " |";
+			std::cout << letters[r] << " |";
 			for(int c=0; c<cols; c++)
 			{
 				std::cout << " " << b.matrix[r][c] << " |";

@@ -8,15 +8,14 @@
 #include "Position.h"
 namespace game_board
 {
+	static constexpr int cols {12};
+	static constexpr int rows {12};
+	static constexpr char letters[rows] = {'A','B','C','D','E','F','G','H','I','L','M','N'};
+	static constexpr char empty_char = ' ';
+	
 	class Grid
 	{
 	public:
-		//	essendo statiche e costanti quest'ultime possono essere anche pubbliche
-		static constexpr int cols {12};
-		static constexpr int rows {12};
-		static constexpr char letters[rows] = {'A','B','C','D','E','F','G','H','I','L','M','N'};
-		static constexpr char empty_char = ' ';
-	
 		Grid();
 		//	~Grid();
 	

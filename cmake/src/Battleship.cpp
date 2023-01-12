@@ -1,6 +1,8 @@
 // author: FRANCESCO RONCOLATO
 #include "Battleship.h"
 
+using game_board::Position;
+
 Battleship::Battleship(const Position& prow, const Position& stern, Player& player)
 	: Ship(prow, stern, player, 'C', 'c')
 	// chiamata al costruttore di Ship che fa i vari controlli e setta posizioni, armor e char

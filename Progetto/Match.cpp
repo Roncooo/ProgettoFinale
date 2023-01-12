@@ -92,8 +92,8 @@ int command(Position& a, Position& b)
 	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
 	// ma non so bene come fare
 	std::string reg_rule = "[";
-	for(int i=0; i<Grid::rows; i++)
-		reg_rule += Grid::letters[i];
+	for(int i=0; i<game_board::rows; i++)
+		reg_rule += game_board::letters[i];
 	reg_rule+="]([1-9]|1[012])";
 	std::regex reg_position = std::regex(reg_rule);
 	
@@ -379,8 +379,8 @@ std::vector<std::string> split(std::string str, char delimiter)
 
 Position random_position()
 {
-	int r = 1 + rand()%Grid::rows;	// numero tra 1 e rows compresi
-	int c = 1 + rand()%Grid::cols;	// numero tra 1 e cols compresi
+	int r = 1 + rand()%game_board::rows;	// numero tra 1 e rows compresi
+	int c = 1 + rand()%game_board::cols;	// numero tra 1 e cols compresi
 	return Position(r,c);
 }
 

@@ -3,25 +3,38 @@
 #include "Log.h"
 
 Log::Log() 
-	: actions{""}, output{"log.txt"}, input{"log.txt"} 
+	: actions{""}
 {
-	
+	output.open("log.txt", std::ios::out);
+	input.open("log.txt", std::ios::in);
 };
 
-void Log::write(const std::string& s)
-{
-	output << s;
+void Log::add(const std::string s) { actions += s; }
+
+std::string Log::getActions() const { return actions; }
+
+void Log::write(const std::string s) 
+{ 
+	output << s; 
 }
 
-std::string Log::getInput()
+void Log::write(game_board::Position& prow, game_board::Position& prune)
 {
-	actions = "";
-	while(!input.eof())
-	{
-		std::getline(input, actions);
-		actions += "\n";
-	}
-	return actions;
+	output << prow << " " << prune << "\n";
 }
+
+//std::string Log::getInput()
+//{
+////	actions = "";
+////	while(!input.eof())
+////	{
+////		std::getline(input, actions);
+////		actions += "\n";
+////	}
+////	return actions;
+//}
 
 void Log::close() { output.close(); }
+
+//#include <windows.h>
+//Sleep(1000);

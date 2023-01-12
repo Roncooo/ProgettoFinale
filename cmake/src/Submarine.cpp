@@ -2,6 +2,8 @@
 
 #include "Submarine.h"
 
+using game_board::Position;
+
 //bool Submarine::sub_area(Position& p)
 //{
 //	if(	this->pos[0].get_row() - p.get_row() <= 2 && this->pos[0].get_row() - p.get_row() >= -2 &&
@@ -35,7 +37,7 @@ int Submarine::action(const Position& pos, Player& enemy)
 		for(int c=-2; c<=2; c++)
 		{
 			// se la posizione è fuori dalla matrice, vado avanti con la posizione successiva
-			if(!Grid::is_valid(pos+Position(r,c)))
+			if(!game_board::Grid::is_valid(pos+Position(r,c)))
 				continue;
 			// chiedo al nemico se nella posizione c'è una nave
 			int code = enemy.is_there_ship(pos+Position(r,c));
