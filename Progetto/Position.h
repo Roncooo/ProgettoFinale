@@ -24,6 +24,7 @@ namespace game_board
 		Position norm() const;
 		int get_row() const;
 		int get_col() const;
+		std::string toString();
 	
 	private:
 		int row;

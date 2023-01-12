@@ -110,4 +110,26 @@ namespace game_board
 
 	int Position::get_col() const { return col; }
 
+	std::string Position::toString()
+	{
+		std::string letter;
+		switch(this->row)
+		{
+			case 0:		letter = "A";	break;
+			case 1:		letter = "B";	break;
+			case 2:		letter = "C";	break;
+			case 3:		letter = "D";	break;
+			case 4:		letter = "E";	break;
+			case 5:		letter = "F";	break;
+			case 6:		letter = "G";	break;
+			case 7:		letter = "H";	break;
+			case 8:		letter = "I";	break;
+			case 9:		letter = "L";	break;
+			case 10:	letter = "M";	break;
+			case 11:	letter = "N";	break;
+		}
+		letter += std::to_string(this->col+1);
+		return letter;
+	}
+
 }

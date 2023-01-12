@@ -306,8 +306,8 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		// tutti i controlli sono andati a buon fine
 		ok = true;
 		//scrivo la posizione delle navi sul file di log
-		file_log.add(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
-		file_log.add("\n");
+		file_log.add(prow.toString() + " " + prune.toString() + "\n");
+		file_log.write(prow, prune);
 	}
 }
 
@@ -324,8 +324,8 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 			if(p.is_valid(prow, prune))
 			{
 				ok = true;
-				file_log.add(prow.get_row() + prow.get_col() + " " + prune.get_row() + prune.get_col());
-				file_log.add("\n");
+				file_log.add(prow.toString() + " " + prune.toString() + "\n");
+				file_log.write(prow, prune);
 				break;
 			}
 			direction=(direction+1)%4;
@@ -467,8 +467,8 @@ void round(Player& player, Player& enemy)
 	}
 	//a questo punto è stato eseguito un comando non speciale
 	//scrivo nel file
-	file_log.add(origin.get_row() + origin.get_col() + " " + target.get_row() + target.get_col());
-	file_log.add("\n");
+	file_log.add(origin.toString() + " " + target.toString() + "\n");
+	file_log.write(origin, target);
 	std::cout << "Comando eseguito\n\n";
 }
 

@@ -18,16 +18,21 @@ void Log::write()
 	output << actions; 
 }
 
-std::string Log::getInput()
+void Log::write(game_board::Position& prow, game_board::Position& prune)
 {
-//	actions = "";
-//	while(!input.eof())
-//	{
-//		std::getline(input, actions);
-//		actions += "\n";
-//	}
-//	return actions;
+	output << prow << " " << prune << "\n";
 }
+
+//std::string Log::getInput()
+//{
+////	actions = "";
+////	while(!input.eof())
+////	{
+////		std::getline(input, actions);
+////		actions += "\n";
+////	}
+////	return actions;
+//}
 
 void Log::close() { output.close(); }
 
