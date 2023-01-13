@@ -16,7 +16,7 @@ private:
 	std::ifstream input;
 	//nel file saranno inseriti:
 	//- nomi dei giocatori (1° riga)
-	//- posizioni delle navi (dalla 2° alla 17° riga)
+	//- posizioni delle navi (dalla 3° alla 18° riga)
 	//- comandi NON speciali (uno per ogni riga)
 public:
 	Log();

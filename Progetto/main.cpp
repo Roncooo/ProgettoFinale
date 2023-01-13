@@ -31,8 +31,8 @@ void standard_match()
 	
 	Player player1(player1_name);
 	Player player2(player2_name);
-	file_log.add(player1_name + " " + player2_name);
-	file_log.add("\n");
+//	file_log.add(player1_name + " " + player2_name);
+//	file_log.add("\n");
 	
 	if(!player1.is_cpu)
 	{
@@ -53,8 +53,8 @@ void standard_match()
 	
 	
 	Match partita(player1, player2, file_log);
-	partita.ship_placement(player1);
-	partita.ship_placement(player2);
+//	partita.ship_placement(player1);
+//	partita.ship_placement(player2);
 	partita.play();
 	std::string azioni = file_log.getActions();
 	cout << "\nLe mosse effettuate sono state:\n" + azioni;
@@ -70,10 +70,10 @@ void cpu_vs_cpu(int n)
 		Player player2("cpu2");
 		Log file_log = Log();
 		
-		file_log.add(player1.name + " " + player2.name + "\n");
+//		file_log.add(player1.name + " " + player2.name + "\n");
 		Match partita(player1, player2, file_log);
-		partita.ship_placement(player1);
-		partita.ship_placement(player2);
+//		partita.ship_placement(player1);
+//		partita.ship_placement(player2);
 		partita.play();
 		std::string azioni = file_log.getActions();
 		cout << "\nLe mosse effettuate sono state:\n" + azioni;

@@ -5,8 +5,8 @@
 Log::Log() 
 	: actions{""}
 {
-	output.open("log.txt", std::ios::out);
-	input.open("log.txt", std::ios::in);
+	output.open("Progetto\\log.txt", std::ios::out);
+	input.open("Progetto\\log.txt", std::ios::in);
 };
 
 void Log::add(const std::string s) { actions += s; }

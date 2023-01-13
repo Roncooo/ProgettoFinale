@@ -8,7 +8,10 @@ using game_board::Grid;
 Match::Match(Player& p1, Player& p2, Log& input)
 	: player1{p1}, player2{p2}, file_log{input}
 {
-	// altro?
+	file_log.add(player1.name + " " + player2.name + "\n\n");
+	file_log.write(player1.name + " " + player2.name + "\n\n");
+	ship_placement(player1);
+	ship_placement(player2);
 }
 
 void recap(const Player& player1, const Player& player2)
@@ -487,6 +490,9 @@ void Match::play()
 	while(n_rounds<MAX_ROUNDS)
 	{
 		std::cout << "Turno: " << n_rounds << "\n";
+		file_log.add("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
+		file_log.write("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
+		
 		round(player1, player2, file_log);
 		if(player2.has_lost())
 		{
@@ -494,13 +500,14 @@ void Match::play()
 			recap(player1, player2);
 			
 			file_log.add(player1.name);
-			file_log.add("\n");
 			file_log.write(player1.name);
-			file_log.write("\n");
 			
 			return;
 		}
 		n_rounds++;
+		
+		file_log.add(">>" + player2.name + "\n");
+		file_log.write(">>" + player2.name + "\n");
 		
 		round(player2, player1, file_log);
 		if(player1.has_lost())
@@ -509,9 +516,7 @@ void Match::play()
 			recap(player2, player1);
 			
 			file_log.add(player2.name);
-			file_log.add("\n");
 			file_log.write(player2.name);
-			file_log.write("\n");
 			
 			return;
 		}
