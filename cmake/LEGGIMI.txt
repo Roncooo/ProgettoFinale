@@ -7,7 +7,7 @@ su linux non mettere ' -G"MinGW Makefiles" '
 Eora
 Scopiazzando dai progetti intermedi seri ho capito così
 
-	cartella include	contiene i .h
+	cartella include		contiene i .h
 	cartella src		contiene i .cpp
 	cartella build		contiene le robe di CMake -> NON VA CONSEGNATA
 
