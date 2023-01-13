@@ -31,8 +31,6 @@ void standard_match()
 	
 	Player player1(player1_name);
 	Player player2(player2_name);
-//	file_log.add(player1_name + " " + player2_name);
-//	file_log.add("\n");
 	
 	if(!player1.is_cpu)
 	{

@@ -5,11 +5,11 @@
 using game_board::Position;
 using game_board::Grid;
 
-Match::Match(Player& p1, Player& p2, Log& input)
-	: player1{p1}, player2{p2}, file_log{input}
+Match::Match(Player& p1, Player& p2, Log& file)
+	: player1{p1}, player2{p2}, file_log{file}
 {
-	file_log.add(player1.name + " " + player2.name + "\n\n");
-	file_log.write(player1.name + " " + player2.name + "\n\n");
+	file_log.add(player1.name + "\n" + player2.name + "\n\n");
+	file_log.write(player1.name + "\n" + player2.name + "\n\n");
 	ship_placement(player1);
 	ship_placement(player2);
 }
@@ -499,8 +499,8 @@ void Match::play()
 			print_winner(player1);
 			recap(player1, player2);
 			
-			file_log.add(player1.name);
-			file_log.write(player1.name);
+			file_log.add("\n" + player1.name);
+			file_log.write("\n" + player1.name);
 			
 			return;
 		}
@@ -515,8 +515,8 @@ void Match::play()
 			print_winner(player2);
 			recap(player2, player1);
 			
-			file_log.add(player2.name);
-			file_log.write(player2.name);
+			file_log.add("\n" + player2.name);
+			file_log.write("\n" + player2.name);
 			
 			return;
 		}
@@ -530,8 +530,9 @@ void Match::play()
 	file_log.write("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
-void Match::re_play(std::ifstream input)		//lol
+void re_play(Player& p1, Player& p2, Log& file)		//lol
 {
-	
+	file.read(p1.name);
+	file.read(p2.name);
 }
 
