@@ -62,7 +62,7 @@ int Support::action(const Position& pos, Player& enemy)
 		}
 	}
 	
-	return 2;	//tutto è andato a buon fine
+	return 33;	//tutto è andato a buon fine
 }
 
 int Support::is_sunk()
