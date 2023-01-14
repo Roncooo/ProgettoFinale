@@ -149,12 +149,12 @@ int random_command(Player& player, Position& origin, Position& target)
 	int ship_number = rand()%DefenceGrid::SHIP_NUMBER;
 	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
 	{
-		if(player.defence.ships[ship_number]->is_sunk())
+		if(player.get_ship(ship_number).is_sunk())
 		{
 			ship_number = (ship_number+1)%DefenceGrid::SHIP_NUMBER;
 			continue;
 		}
-		origin = player.defence.ships[ship_number]->get_center();
+		origin = player.get_ship(ship_number).get_center();
 	}
 	// in teoria il ciclo va sempre a buon fine perché random_command viene chiamata dopo aver controllato
 	// che il giocatore non abbia perso, e quindi ci sarà almeno una nave non affondata (in particolare una corazzata)
@@ -238,7 +238,7 @@ void user_placement(Player& p, Log& file_log)
 	for(int i=0; i<3; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i, file_log);
-		p.defence.ships[i] = std::unique_ptr<Battleship>(new Battleship(prow, prune, p));	// qui manca la griglia di attacco
+		p.defence.ships[i] = std::unique_ptr<Battleship>(new Battleship(prow, prune, p)); 
 	}
 	for(int i=3; i<6; i++)
 	{

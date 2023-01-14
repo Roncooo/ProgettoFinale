@@ -4,13 +4,10 @@
 #define Ship_H
 
 #include <vector>
+//#include "Player.h"
 #include "Position.h"
 #include "DefenceGrid.h"
-
-//#include "Player.h"			 occhio a possibili circular dipendencies
 class Player;	// forward declaration
-
-
 
 class Ship
 {

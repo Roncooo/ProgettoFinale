@@ -53,12 +53,12 @@ int Support::action(const Position& pos, Player& enemy)
 	
 	for(int j = 0; j < DefenceGrid::SHIP_NUMBER; j++)	// per ogni nave
 	{
-		for(int x = 0; x < player.defence.ships[j]->get_dimension(); x++)
+		for(int x = 0; x < player.get_ship(j).get_dimension(); x++)
 		{	
-			if(!is_curable(player.defence.ships[j]->pos[x]))
+			if(!is_curable(player.get_ship(j).pos[x]))
 				continue;
 			else
-				player.defence.ships[j]->restore_armor();
+				player.restore_ship(j);
 		}
 	}
 	

@@ -20,6 +20,16 @@ Player::Player(std::string n)
 		is_cpu = false;
 }
 
+Ship& Player::get_ship(int index)
+{
+	return *(defence.ships[index]);
+}
+
+void Player::restore_ship(int index)
+{
+	defence.ships[index]->restore_armor();
+}
+
 int Player::how_many_battleships() const
 {
 	int count=0;
@@ -107,12 +117,6 @@ Player::~Player()
 {
 }
 
-//Ship* Player::get_ship(int index)
-//{
-//	// occhio a possibili dangling pointers
-//	return defence.ships[index].get();
-//} 
-
 void Player::print_defence()
 {
 	Grid::print(defence);
@@ -123,16 +127,17 @@ void Player::print_defence_attack()
 	Grid::print(defence, attack);
 }
 
-// questa è la più rognosetta
-//int Player::add_ship(Battleship& to_add)
+//void Player::add_ship(Battleship& to_add)
 //{
 //	defence.ships[defence.currently_placed_ships++] = std::make_unique<Battleship>(&to_add);
 //}
-//int Player::add_ship(Support& to_add)
+//
+//void Player::add_ship(Support& to_add)
 //{
 //	defence.ships[defence.currently_placed_ships++] = std::make_unique<Support>(&to_add);
 //}
-//int Player::add_ship(Sumbarine& to_add)
+//
+//void Player::add_ship(Sumbarine& to_add)
 //{
 //	defence.ships[defence.currently_placed_ships++] = std::make_unique<Sumbarine>(&to_add);
 //}
