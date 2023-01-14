@@ -89,6 +89,9 @@ int command(Position& a, Position& b)
 	if(input_string == "BB BB")
 		return 6;
 	
+	if(input_string == "TT TT")
+		return 7;
+	
 	if(input_string == "CC CC")
 		return 10;
 	
@@ -173,31 +176,37 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	if(code == 1)	// codice riservato all'inserimento del sottomarino
 		return -1;
 	
-	if(code == 3)	// stampa della griglia di difesa
+	if(code == 3)	// xx stampa della griglia di difesa
 	{
 		player.print_defence();
 		return 3;
 	}
 	
-	if(code == 4)	// stampa della griglia di difesa e di attacco
+	if(code == 4)	// xx xx stampa della griglia di difesa e di attacco
 	{
 		player.print_defence_attack();
 		return 4;
 	}
 	
-	if(code == 5)
+	if(code == 5)	// aa aa
 	{
 		player.attack.reset_sonar();
 		return 5;
 	}
 	
-	if(code == 6)
+	if(code == 6)	// bb bb
 	{
 		player.attack.reset_matrix();
 		return 6;
 	}
 	
-	if(code == 10)	// comando "cc cc", utile per il debugging
+	if(code == 7)	//	tt tt per vedere la tabella
+	{
+		recap(player, enemy);
+		return 7;
+	}
+	
+	if(code == 10)	//	cc cc per vedere la griglia nemica utile per il debugging
 	{
 		enemy.print_defence();
 		return 10;
