@@ -29,6 +29,7 @@ public:
 	// per la privatizzazione di defence
 	Ship& get_ship(int index);
 	void restore_ship(int index);
+	void add_ship(Ship* to_add);
 //	void add_ship(Battleship& to_add);
 //	void add_ship(Support& to_add);
 //	void add_ship(Sumbarine& to_add);
@@ -49,8 +50,8 @@ public:
 	int how_many_battleships() const;
 	int how_many_supports() const;
 	int how_many_submarines() const;
-	DefenceGrid defence;
 private:
+	DefenceGrid defence;
 	
 };
 

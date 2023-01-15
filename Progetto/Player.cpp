@@ -25,6 +25,11 @@ Ship& Player::get_ship(int index)
 	return *(defence.ships[index]);
 }
 
+void Player::add_ship(Ship* to_add)
+{
+	defence.ships[defence.currently_placed_ships++] = std::unique_ptr<Ship>(to_add);
+}
+
 void Player::restore_ship(int index)
 {
 	defence.ships[index]->restore_armor();
