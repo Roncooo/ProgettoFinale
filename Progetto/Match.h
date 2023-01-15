@@ -29,7 +29,7 @@ public:
 	// discerne l'utente umano/robotico
 	void ship_placement(Player& p);
 	
-	static constexpr int MAX_ROUNDS = 3000;	// boh a caso raga
+	static constexpr int MAX_ROUNDS = 4000;	// boh a caso raga
 	void play();
 	
 	/* Command restituisce un exit code che identifica il comando inserito da tastiera
@@ -57,10 +57,10 @@ int execute(Player& player, Player& enemy, int code, const game_board::Position&
 // interagisce con l'utente per fargli inserire tutte le navi, si serve della funzione ausiliaria user_placement_helper
 void user_placement(Player& p, Log& file_log);
 void user_placement_helper(Player& p, int n_coordinates, game_board::Position& prow, game_board::Position& prune, 
-							std::string ship_name, int ship_size, int ship_number, Log& file_log);
+							std::string ship_name, int ship_size, int ship_number);
 // richiede l'inserimento randomico delle navi
 void bot_placement(Player& p, Log& file_log);
-void bot_placement_helper(Player& p, int ship_size, game_board::Position& start, game_board::Position& end, Log& file_log);
+void bot_placement_helper(Player& p, int ship_size, game_board::Position& start, game_board::Position& end);
 game_board::Position random_position();
 // funzione ausiliaria che ritorna la posizione distante dim da start in direzione direction
 game_board::Position ortogonal_position(const game_board::Position& start, int dim, int direction);

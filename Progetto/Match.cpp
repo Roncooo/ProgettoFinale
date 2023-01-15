@@ -234,18 +234,21 @@ void user_placement(Player& p, Log& file_log)
 	
 	for(int i=0; i<3; i++)
 	{
-		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i, file_log);
+		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
 		p.add_ship(new Battleship(prow, prune, p)); 
+		file_log.write(prow, prune);
 	}
 	for(int i=3; i<6; i++)
 	{
-		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i, file_log);
+		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i);
 		p.add_ship(new Support(prow, prune, p)); 
+		file_log.write(prow, prune);
 	}
 	for(int i=6; i<8; i++)
 	{
-		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i, file_log);
+		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i);
 		p.add_ship(new Submarine(prow, p)); 
+		file_log.write(prow, prune);
 	}
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
@@ -253,7 +256,7 @@ void user_placement(Player& p, Log& file_log)
 }
 
 void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
-							std::string ship_name, int ship_size, int ship_number, Log& file_log)
+							std::string ship_name, int ship_size, int ship_number)
 {
 	bool ok = false;
 	while(!ok)
@@ -323,11 +326,11 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		ok = true;
 		//scrivo la posizione delle navi sul file di log
 //		file_log.add(prow.toString() + " " + prune.toString() + "\n");
-		file_log.write(prow, prune);
+//		file_log.write(prow, prune);
 	}
 }
 
-void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& prune, Log& file_log)
+void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& prune)
 {
 	bool ok = false;
 	while(!ok)
@@ -341,7 +344,7 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 			{
 				ok = true;
 //				file_log.add(prow.toString() + " " + prune.toString() + "\n");
-				file_log.write(prow, prune);
+//				file_log.write(prow, prune);
 				break;
 			}
 			direction=(direction+1)%4;
@@ -354,18 +357,21 @@ void bot_placement(Player& p, Log& file_log)
 	Position prow, prune;
 	for(int i=0; i<3; i++)
 	{
-		bot_placement_helper(p, 5, prow, prune, file_log);
+		bot_placement_helper(p, 5, prow, prune);
 		p.add_ship(new Battleship(prow, prune, p));
+		file_log.write(prow, prune);
 	}
 	for(int i=3; i<6; i++)
 	{
-		bot_placement_helper(p, 3, prow, prune, file_log);
-		p.add_ship(new Support(prow, prune, p)); 
+		bot_placement_helper(p, 3, prow, prune);
+		p.add_ship(new Support(prow, prune, p));
+		file_log.write(prow, prune);
 	}
 	for(int i=6; i<8; i++)
 	{
-		bot_placement_helper(p, 1, prow, prune, file_log);
+		bot_placement_helper(p, 1, prow, prune);
 		p.add_ship(new Submarine(prow, p)); 
+		file_log.write(prow, prune);
 	}
 	
 	

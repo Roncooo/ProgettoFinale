@@ -119,7 +119,13 @@ void cpu_vs_cpu(int n)
 		Player player2("cpu2");
 		Log file_log = Log();
 		
-//		file_log.add(player1.name + " " + player2.name + "\n");
+		//setto le impostazioni CPU
+		player1.is_cpu = true;
+		player1.auto_placement = true;
+		
+		player2.is_cpu = true;
+		player2.auto_placement = true;
+		
 		Match partita(player1, player2, file_log);
 //		partita.ship_placement(player1);
 //		partita.ship_placement(player2);
@@ -132,7 +138,7 @@ void cpu_vs_cpu(int n)
 
 int main(void)
 {
-//	cpu_vs_cpu(1);
-	standard_match();
+	cpu_vs_cpu(1);
+//	standard_match();
 	return 0;
 }

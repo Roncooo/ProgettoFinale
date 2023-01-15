@@ -20,7 +20,10 @@ void Log::write(const std::string s)
 
 void Log::write(game_board::Position& prow, game_board::Position& prune)
 {
-	output << prow << " " << prune << "\n";
+	if(prow != prune)
+		output << prow << " " << prune << "\n";
+	else
+		output << prow << "\n";
 }
 
 void Log::read(std::string s)
