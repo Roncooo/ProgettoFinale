@@ -5,10 +5,13 @@
 using game_board::Position;
 using game_board::Grid;
 
-Match::Match(Player& p1, Player& p2, Log& input)
-	: player1{p1}, player2{p2}, file_log{input}
+Match::Match(Player& p1, Player& p2, Log& file)
+	: player1{p1}, player2{p2}, file_log{file}
 {
-	// altro?
+//	file_log.add(player1.name + "\n" + player2.name + "\n\n");
+	file_log.write(player1.name + "\n" + player2.name + "\n\n");
+	ship_placement(player1);
+	ship_placement(player2);
 }
 
 void recap(const Player& player1, const Player& player2)
@@ -64,8 +67,6 @@ void recap(const Player& player1, const Player& player2)
 	std::cout << border << "\n";
 }
 
-//	non ho capito, così facendo il compilatore non considera una funzione diversa da quella
-//	dichiarata nella classe?
 int command(Position& a, Position& b)
 {
 	std::string input_string;	// tutto l'input (cin invece si ferma allo spazio)
@@ -75,19 +76,23 @@ int command(Position& a, Position& b)
 	
 	// COMANDI SPECIALI
 	if(input_string == "XX")
-		return 3;
+		return 1;
 		
 	if(input_string == "XX XX")
-		return 4;
+		return 2;
 	
 	if(input_string == "AA AA")
-		return 5;
+		return 3;
 	
 	if(input_string == "BB BB")
-		return 6;
+		return 4;
 	
 	if(input_string == "CC CC")
-		return 10;
+		return 5;
+	
+	if(input_string == "TT TT")
+		return 5;
+	
 	
 	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
 	// ma non so bene come fare
@@ -95,7 +100,7 @@ int command(Position& a, Position& b)
 	for(int i=0; i<game_board::rows; i++)
 		reg_rule += game_board::letters[i];
 	reg_rule+="]([1-9]|1[012])";
-	std::regex reg_position = std::regex(reg_rule);
+	std::regex reg_position(reg_rule);
 	
 	// COMANDI CON COORDINATE
 	
@@ -120,17 +125,17 @@ int command(Position& a, Position& b)
 		{
 			a = Position(in1);
 			b = Position(in1);
-			return 1;
+			return 10;
 		}
 	}
 	
-	// a questo punto i comandi sono necessariamente 2 quindi o 2 coordinate o altro
+	// a questo punto i comandi sono necessariamente 2 quindi o 2 coordinate o errore
 	in2 = vec.at(1);
 	if(std::regex_match(in1, reg_position) && std::regex_match(in2, reg_position))
 	{
 		a = Position(in1);
 		b = Position(in2);
-		return 2;
+		return 20;
 	}
 	
 	// se fin'ora non è stato riconosciuto un comando valido, è invalido
@@ -143,18 +148,18 @@ int random_command(Player& player, Position& origin, Position& target)
 	int ship_number = rand()%DefenceGrid::SHIP_NUMBER;
 	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
 	{
-		if(player.defence.ships[ship_number]->is_sunk())
+		if(player.get_ship(ship_number).is_sunk())
 		{
 			ship_number = (ship_number+1)%DefenceGrid::SHIP_NUMBER;
 			continue;
 		}
-		origin = player.defence.ships[ship_number]->get_center();
+		origin = player.get_ship(ship_number).get_center();
 	}
 	// in teoria il ciclo va sempre a buon fine perché random_command viene chiamata dopo aver controllato
-	// che il giocatore non abbia perso, e quindi ci sarà almeno una nave non affondata (in particolare una corazzata)
+	// che il giocatore non abbia perso, e quindi ci sarà almeno una nave non affondata
 	
 	target = random_position();
-	return 2;	// per uniformarsi alle altre funzioni, indica che il comando prevede 2 posizioni valide
+	return 20;	// per uniformarsi alle altre funzioni, indica che il comando prevede 2 posizioni valide
 }
 
 
@@ -167,46 +172,49 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	if(code == -1)
 		return -1;	// comando non valido
 	
-	if(code == 1)	// codice riservato all'inserimento del sottomarino
+	if(code == 10)	// codice riservato all'inserimento del sottomarino
 		return -1;
 	
-	if(code == 3)	// stampa della griglia di difesa
+	if(code == 1)	// xx stampa della griglia di difesa
 	{
 		player.print_defence();
+		return 1;
+	}
+	
+	if(code == 2)	// xx xx stampa della griglia di difesa e di attacco
+	{
+		player.print_defence_attack();
+		return 2;
+	}
+	
+	if(code == 3)	// aa aa
+	{
+		player.attack.reset_sonar();
 		return 3;
 	}
 	
-	if(code == 4)	// stampa della griglia di difesa e di attacco
+	if(code == 4)	// bb bb
 	{
-		player.print_defence_attack();
+		player.attack.reset_matrix();
 		return 4;
 	}
 	
-	if(code == 5)
+	
+	if(code == 5)	//	cc cc per vedere la griglia nemica utile per il debugging
 	{
-		player.attack.reset_sonar();
+		enemy.print_defence();
 		return 5;
 	}
 	
-	if(code == 6)
+	if(code == 6)	//	tt tt per vedere la tabella
 	{
-		player.attack.reset_matrix();
+		recap(player, enemy);
 		return 6;
 	}
 	
-	if(code == 10)	// comando "cc cc", utile per il debugging
-	{
-		enemy.print_defence();
-		return 10;
-	}
-	
-	if(code == 2)	// due posizioni valide inserite
+	if(code == 20)	// due posizioni valide inserite
 	{
 		return player.act_ship(player.get_ship_index(origin), target, enemy);
-				// -4 se origin non è il centro di una nave
-				// -2 se non è stato possibile spostare la nave di supporto
-				// -3 se non è stato possibile spostare il sottomarino
-				// +2 se tutto ok
 	}
 }
 
@@ -226,17 +234,17 @@ void user_placement(Player& p, Log& file_log)
 	for(int i=0; i<3; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i, file_log);
-		p.defence.ships[i] = std::unique_ptr<Battleship>(new Battleship(prow, prune, p));	// qui manca la griglia di attacco
+		p.add_ship(new Battleship(prow, prune, p)); 
 	}
 	for(int i=3; i<6; i++)
 	{
 		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i, file_log);
-		p.defence.ships[i] = std::unique_ptr<Support>(new Support(prow, prune, p)); 
+		p.add_ship(new Support(prow, prune, p)); 
 	}
 	for(int i=6; i<8; i++)
 	{
 		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i, file_log);
-		p.defence.ships[i] = std::unique_ptr<Submarine>(new Submarine(prow, p)); 
+		p.add_ship(new Submarine(prow, p)); 
 	}
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
@@ -306,7 +314,7 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		// tutti i controlli sono andati a buon fine
 		ok = true;
 		//scrivo la posizione delle navi sul file di log
-		file_log.add(prow.toString() + " " + prune.toString() + "\n");
+//		file_log.add(prow.toString() + " " + prune.toString() + "\n");
 		file_log.write(prow, prune);
 	}
 }
@@ -324,7 +332,7 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 			if(p.is_valid(prow, prune))
 			{
 				ok = true;
-				file_log.add(prow.toString() + " " + prune.toString() + "\n");
+//				file_log.add(prow.toString() + " " + prune.toString() + "\n");
 				file_log.write(prow, prune);
 				break;
 			}
@@ -339,17 +347,17 @@ void bot_placement(Player& p, Log& file_log)
 	for(int i=0; i<3; i++)
 	{
 		bot_placement_helper(p, 5, prow, prune, file_log);
-		p.defence.ships[i] = std::unique_ptr<Battleship>(new Battleship(prow, prune, p));
+		p.add_ship(new Battleship(prow, prune, p));
 	}
 	for(int i=3; i<6; i++)
 	{
 		bot_placement_helper(p, 3, prow, prune, file_log);
-		p.defence.ships[i] = std::unique_ptr<Support>(new Support(prow, prune, p)); 
+		p.add_ship(new Support(prow, prune, p)); 
 	}
 	for(int i=6; i<8; i++)
 	{
 		bot_placement_helper(p, 1, prow, prune, file_log);
-		p.defence.ships[i] = std::unique_ptr<Submarine>(new Submarine(prow, p)); 
+		p.add_ship(new Submarine(prow, p)); 
 	}
 	
 	
@@ -419,57 +427,62 @@ void print_code(int code, const Position& origin, const Position& target)
 		break;
 	case -4:
 		std::cout << origin << " non e' il centro di una nave\n";
-	case 3:
+	case 1:
 		// stampa della griglia di difesa
 		break;
-	case 4:
+	case 2:
 		// stampa di difesa e attacco
 		break;
-	case 5:
+	case 3:
 		std::cout << "Avvistamenti sonar resettati\n";
 		break;
-	case 6:
+	case 4:
 		std::cout << "Griglia di attacco resettata\n";
 		break;
-	case 10:
+	case 5:
 		std::cout << "Ecco la griglia dell'avversario, shhh!\n";
+		break;
+	case 6:
+		std::cout << "Ecco le navi ancora a galla\n";
+		break;
+	case 30:
+		std::cout << "Acqua\n";
+		break;
+	case 31:
+		std::cout << "Colpito\n";
 		break;
 	}
 }
 
 void round(Player& player, Player& enemy, Log& file_log)
 {
-	int code;
+	int code = -1;
 	Position origin, target;
 	
 	if(player.is_cpu)
-	{
 		std::cout << player.name + " svolge il suo turno\n";
-		code = random_command(player, origin, target);
-	}
 	else
-	{
 		std::cout << player.name + " e' il tuo turno\n";
-		code = command(origin, target);
-	}
-	code = execute(player, enemy, code, origin, target);
 	
-	while(code != 2)
+	// un turno è valido solo quando sono inserite due posizioni
+	while(code < 30)
 	{
 		if(player.is_cpu)
 			code = random_command(player, origin, target);
 		else
-		{
-			print_code(code, origin, target);
 			code = command(origin, target);
-		}
 		code = execute(player, enemy, code, origin, target);
+		
+		// solo agli umani comunico il messaggio 
+		if(!player.is_cpu)
+			print_code(code, origin, target);
 	}
-	//a questo punto è stato eseguito un comando non speciale
-	//scrivo nel file
-	file_log.add(origin.toString() + " " + target.toString() + "\n");
+	
+	// a questo punto è stato eseguito un comando non speciale
+	// scrivo nel file
+//	file_log.add(origin.toString() + " " + target.toString() + "\n");
 	file_log.write(origin, target);
-	std::cout << "Comando eseguito\n\n";
+//	std::cout << "Comando eseguito\n\n";
 }
 
 void print_winner(Player& player)
@@ -487,20 +500,24 @@ void Match::play()
 	while(n_rounds<MAX_ROUNDS)
 	{
 		std::cout << "Turno: " << n_rounds << "\n";
+//		file_log.add("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
+		file_log.write("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
+		
 		round(player1, player2, file_log);
 		if(player2.has_lost())
 		{
 			print_winner(player1);
 			recap(player1, player2);
 			
-			file_log.add(player1.name);
-			file_log.add("\n");
-			file_log.write(player1.name);
-			file_log.write("\n");
+//			file_log.add("\n" + player1.name);
+			file_log.write("\n" + player1.name);
 			
 			return;
 		}
 		n_rounds++;
+		
+//		file_log.add(">>" + player2.name + "\n");
+		file_log.write(">>" + player2.name + "\n");
 		
 		round(player2, player1, file_log);
 		if(player1.has_lost())
@@ -508,10 +525,8 @@ void Match::play()
 			print_winner(player2);
 			recap(player2, player1);
 			
-			file_log.add(player2.name);
-			file_log.add("\n");
-			file_log.write(player2.name);
-			file_log.write("\n");
+//			file_log.add("\n" + player2.name);
+			file_log.write("\n" + player2.name);
 			
 			return;
 		}
@@ -521,12 +536,13 @@ void Match::play()
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
 	recap(player1, player2);
 	
-	file_log.add("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
+//	file_log.add("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 	file_log.write("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
-void Match::re_play(std::ifstream input)		//lol
+void re_play(Player& p1, Player& p2, Log& file)		//lol
 {
-	
+	file.read(p1.name);
+	file.read(p2.name);
 }
 

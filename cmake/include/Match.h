@@ -12,7 +12,6 @@
 #include "Player.h"
 #include "DefenceGrid.h"
 #include "AttackGrid.h"
-// basterebbero anche solo queste sotto ma è più chiaro anche con le altre direi
 #include "Battleship.h"
 #include "Submarine.h"
 #include "Support.h"
@@ -22,7 +21,7 @@ class Match
 private:
 	static std::regex reg_position;	// inizializzata nel costruttore per comodità, riconosce il comando relativo ad una posizione valida
 public:
-	Match(Player& p1, Player& p2, Log& input);
+	Match(Player& p1, Player& p2, Log& file);
 	Log& file_log;
 	Player& player1;
 	Player& player2;
@@ -30,9 +29,8 @@ public:
 	// discerne l'utente umano/robotico
 	void ship_placement(Player& p);
 	
-	static constexpr int MAX_ROUNDS = 2000;	// boh a caso raga
+	static constexpr int MAX_ROUNDS = 3000;	// boh a caso raga
 	void play();
-	void re_play(std::ifstream input);
 	
 	/* Command restituisce un exit code che identifica il comando inserito da tastiera
 	 * Se l'input è compatibile con due posizioni, modifica i parametri
@@ -47,7 +45,6 @@ public:
 	// gli exit code servono perché coma comando sa se è andato a buon fine
 };
 
-//static Log file_log = Log();
 //
 // --- HELPER FUNCTIONS ---
 
@@ -73,4 +70,6 @@ void print_code(int code, const game_board::Position& origin, const game_board::
 void recap(const Player& player1, const Player& player2);
 // serve per l'inserimento umano
 std::vector<std::string> split(std::string str, char delimiter);
+//esegue il replay dell'ultima partita giocata
+void re_play(Player& p1, Player& p2, Log& file);
 #endif // MATCH_H

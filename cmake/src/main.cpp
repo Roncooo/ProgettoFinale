@@ -6,7 +6,7 @@ using std::cout, std::cin, std::string;
 
 void standard_match()
 {
-	std::srand(123456);
+	std::srand(std::time(NULL));
 
 	Log file_log = Log();
 
@@ -31,33 +31,38 @@ void standard_match()
 	
 	Player player1(player1_name);
 	Player player2(player2_name);
-	file_log.add(player1_name + " " + player2_name);
-	file_log.add("\n");
 	
+	std::string input_str;
 	if(!player1.is_cpu)
 	{
-		cout << player1_name << " vuoi che siano inserite automaticamente le tue navi? (Y/N)";
-		std::string auto_placement;
-		std::getline(std::cin, auto_placement);
-		if(auto_placement=="Y" || auto_placement=="y")
-			player1.auto_placement = true;
-	}
-	if(!player2.is_cpu)
-	{
-		cout << player2_name << " vuoi che siano inserite automaticamente le tue navi? (Y/N)";
-		std::string auto_placement;
-		std::getline(std::cin, auto_placement);
-		if(auto_placement=="Y" || auto_placement=="y")
-			player2.auto_placement = true;
+		while(input_str != "Y" && input_str != "N")
+		{
+			cout << player1_name << " vuoi che siano inserite automaticamente le tue navi? (Y/N) ";
+			std::getline(std::cin, input_str);
+			std::transform(input_str.begin(), input_str.end(), input_str.begin(), ::toupper);
+			if(input_str=="Y")
+				player1.auto_placement = true;
+		}
+		input_str = "";
 	}
 	
+	if(!player2.is_cpu)
+	{	
+		while(input_str != "Y" && input_str != "N")
+		{
+			cout << player2_name << " vuoi che siano inserite automaticamente le tue navi? (Y/N) ";
+			std::getline(std::cin, input_str);
+			std::transform(input_str.begin(), input_str.end(), input_str.begin(), ::toupper);
+			if(input_str=="Y")
+				player2.auto_placement = true;
+		}
+		input_str = "";
+	}
 	
 	Match partita(player1, player2, file_log);
-	partita.ship_placement(player1);
-	partita.ship_placement(player2);
 	partita.play();
-	std::string azioni = file_log.getActions();
-	cout << "\nLe mosse effettuate sono state:\n" + azioni;
+//	std::string azioni = file_log.getActions();
+//	cout << "\nLe mosse effettuate sono state:\n" + azioni;
 	file_log.close();
 }
 
@@ -70,10 +75,10 @@ void cpu_vs_cpu(int n)
 		Player player2("cpu2");
 		Log file_log = Log();
 		
-		file_log.add(player1.name + " " + player2.name + "\n");
+//		file_log.add(player1.name + " " + player2.name + "\n");
 		Match partita(player1, player2, file_log);
-		partita.ship_placement(player1);
-		partita.ship_placement(player2);
+//		partita.ship_placement(player1);
+//		partita.ship_placement(player2);
 		partita.play();
 		std::string azioni = file_log.getActions();
 		cout << "\nLe mosse effettuate sono state:\n" + azioni;
@@ -83,7 +88,7 @@ void cpu_vs_cpu(int n)
 
 int main(void)
 {
-	cpu_vs_cpu(1);
-//	standard_match();
+//	cpu_vs_cpu(1);
+	standard_match();
 	return 0;
 }

@@ -5,8 +5,8 @@
 Log::Log() 
 	: actions{""}
 {
-	output.open("log.txt", std::ios::out);
-	input.open("log.txt", std::ios::in);
+	output.open("Progetto\\log.txt", std::ios::out);
+	input.open("Progetto\\log.txt", std::ios::in);
 };
 
 void Log::add(const std::string s) { actions += s; }
@@ -23,8 +23,14 @@ void Log::write(game_board::Position& prow, game_board::Position& prune)
 	output << prow << " " << prune << "\n";
 }
 
-//std::string Log::getInput()
+void Log::read(std::string s)
+{
+	std::getline(input, s);
+}
+
+//std::ifstream& Log::getInput()
 //{
+//	return input;
 ////	actions = "";
 ////	while(!input.eof())
 ////	{
@@ -34,7 +40,7 @@ void Log::write(game_board::Position& prow, game_board::Position& prune)
 ////	return actions;
 //}
 
-void Log::close() { output.close(); }
+void Log::close() { output.close(); input.close(); }
 
 //#include <windows.h>
 //Sleep(1000);

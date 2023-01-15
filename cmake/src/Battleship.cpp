@@ -22,11 +22,16 @@ int Battleship::action(const Position& pos, Player& enemy)
 	
 	// dice se ho colpito nella griglia nemica o no	
 	if(enemy.receive_shot(pos))
+	{
 		player.attack.set_shot(pos);
+		return 31;
+	}
 	else
+	{
 		player.attack.set_missed(pos);
-		
-	return 2;	// va sempre a buon fine
+		return 30;
+	}
+	// va sempre a buon fine
 }
 
 //Battleship::~Battleship(){}

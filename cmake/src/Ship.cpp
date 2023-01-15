@@ -37,7 +37,6 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, c
 		else	// altrimenti hanno per forza colonna uguale
 			pos[i] = (ordered_prow + Position(i, 0));
 	}
-	p.defence.currently_placed_ships++;
 }
 
 //Ship::~Ship(){}
