@@ -51,7 +51,7 @@ int Support::action(const Position& pos, Player& enemy)
 	if(move(pos)==-1)
 		return -2;		// non è possibile spostare la nave di supporto
 	
-	for(int j = 0; j < DefenceGrid::SHIP_NUMBER; j++)	// per ogni nave
+	for(int j = 0; j < player.get_placed_ships(); j++)	// per ogni nave
 	{
 		for(int x = 0; x < player.get_ship(j).get_dimension(); x++)
 		{	

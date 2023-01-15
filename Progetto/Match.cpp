@@ -145,16 +145,17 @@ int command(Position& a, Position& b)
 int random_command(Player& player, Position& origin, Position& target)
 {
 	// parto da una nave randomica, se questa è affondata passo alla successiva
-	int ship_number = rand()%DefenceGrid::SHIP_NUMBER;
-	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
-	{
-		if(player.get_ship(ship_number).is_sunk())
-		{
-			ship_number = (ship_number+1)%DefenceGrid::SHIP_NUMBER;
-			continue;
-		}
+	int ship_number = rand()%player.get_placed_ships();
+	// queste cose non serovno più dato che ora ships contiene solo navi non affondate
+//	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+//	{
+//		if(player.get_ship(ship_number).is_sunk())
+//		{
+//			ship_number = (ship_number+1)%DefenceGrid::SHIP_NUMBER;
+//			continue;
+//		}
 		origin = player.get_ship(ship_number).get_center();
-	}
+//	}
 	// in teoria il ciclo va sempre a buon fine perché random_command viene chiamata dopo aver controllato
 	// che il giocatore non abbia perso, e quindi ci sarà almeno una nave non affondata
 	

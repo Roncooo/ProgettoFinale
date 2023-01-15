@@ -109,6 +109,7 @@ int Ship::is_sunk()
 	// se arrivo qui, tutte le armature == false
 	// e la nave è affondata ora
 	sunk = true;
+	
 	return 2;	// indica che la nave è affondata ora 
 	
 }

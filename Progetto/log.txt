@@ -1,0 +1,259 @@
+PIPPO
+PLUTO
+
+F12 L12
+M5 G5
+G11 G7
+D6 F6
+D8 D10
+A11 A9
+N7 N7
+I4 I4
+I9 I5
+L3 F3
+N2 H2
+F8 H8
+M7 M9
+E10 G10
+B7 B7
+D12 D12
+
+>>Turno 1:
+>>PIPPO
+I5 H2
+>>PLUTO
+G8 D3
+
+>>Turno 3:
+>>PIPPO
+I5 I2
+>>PLUTO
+I7 L9
+
+>>Turno 5:
+>>PIPPO
+I5 L2
+>>PLUTO
+B7 E8
+
+>>Turno 7:
+>>PIPPO
+I5 M2
+>>PLUTO
+H3 G2
+
+>>Turno 9:
+>>PIPPO
+I5 N2
+>>PLUTO
+E8 N10
+
+>>Turno 11:
+>>PIPPO
+I5 F3
+>>PLUTO
+N10 M10
+
+>>Turno 13:
+>>PIPPO
+I5 G3
+>>PLUTO
+D12 L6
+
+>>Turno 15:
+>>PIPPO
+I5 H3
+>>PLUTO
+M8 A11
+
+>>Turno 17:
+>>PIPPO
+I5 I3
+>>PLUTO
+F10 F10
+
+>>Turno 19:
+>>PIPPO
+I5 L3
+>>PLUTO
+L6 G6
+
+>>Turno 21:
+>>PIPPO
+I5 G5
+>>PLUTO
+A11 B11
+
+>>Turno 23:
+>>PIPPO
+I5 H5
+>>PLUTO
+B11 H8
+
+>>Turno 25:
+>>PIPPO
+I5 I5
+>>PLUTO
+F10 E2
+
+>>Turno 27:
+>>PIPPO
+I5 L5
+>>PLUTO
+H8 H10
+
+>>Turno 29:
+>>PIPPO
+I5 M5
+>>PLUTO
+H10 I2
+
+>>Turno 31:
+>>PIPPO
+I5 I6
+>>PLUTO
+D3 E3
+
+>>Turno 33:
+>>PIPPO
+I5 I7
+>>PLUTO
+I7 I5
+
+>>Turno 35:
+>>PIPPO
+I5 I8
+>>PLUTO
+I2 N3
+
+>>Turno 37:
+>>PIPPO
+I5 I9
+>>PLUTO
+E2 H3
+
+>>Turno 39:
+>>PIPPO
+I5 I5
+>>PLUTO
+E3 B5
+
+>>Turno 41:
+>>PIPPO
+I5 G6
+>>PLUTO
+N3 E11
+
+>>Turno 43:
+>>PIPPO
+I5 M10
+>>PLUTO
+B5 C9
+
+>>Turno 45:
+>>PIPPO
+I5 B9
+>>PLUTO
+C9 E2
+
+>>Turno 47:
+>>PIPPO
+I5 C9
+>>PLUTO
+H3 I12
+
+>>Turno 49:
+>>PIPPO
+I5 E3
+>>PLUTO
+E11 D5
+
+>>Turno 51:
+>>PIPPO
+I5 E2
+>>PLUTO
+D5 C5
+
+>>Turno 53:
+>>PIPPO
+I5 C4
+>>PLUTO
+C5 I5
+
+>>Turno 55:
+>>PIPPO
+I5 C5
+>>PLUTO
+E2 D5
+
+>>Turno 57:
+>>PIPPO
+I5 I5
+>>PLUTO
+I12 E3
+
+>>Turno 59:
+>>PIPPO
+I5 I3
+>>PLUTO
+E3 B6
+
+>>Turno 61:
+>>PIPPO
+I5 D3
+>>PLUTO
+I5 H4
+
+>>Turno 63:
+>>PIPPO
+I5 C5
+>>PLUTO
+H4 H4
+
+>>Turno 65:
+>>PIPPO
+I5 D5
+>>PLUTO
+D5 G6
+
+>>Turno 67:
+>>PIPPO
+I5 H6
+>>PLUTO
+H4 H4
+
+>>Turno 69:
+>>PIPPO
+I5 A6
+>>PLUTO
+H4 B9
+
+>>Turno 71:
+>>PIPPO
+I5 B6
+>>PLUTO
+B6 D12
+
+>>Turno 73:
+>>PIPPO
+I5 B8
+>>PLUTO
+B9 M2
+
+>>Turno 75:
+>>PIPPO
+I5 M2
+>>PLUTO
+M2 A4
+
+>>Turno 77:
+>>PIPPO
+I5 A5
+>>PLUTO
+D12 F12
+
+>>Turno 79:
+>>PIPPO
+I5 G12
+
+PIPPO

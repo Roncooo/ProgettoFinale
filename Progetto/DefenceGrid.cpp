@@ -17,6 +17,11 @@ DefenceGrid::~DefenceGrid()
 //	}
 }
 
+int DefenceGrid::get_placed_ships() const
+{
+	return ships.size();
+}
+
 void DefenceGrid::update()
 {
 	reset_matrix();
@@ -24,7 +29,7 @@ void DefenceGrid::update()
 	// perché ships è ancora array e non vector, le navi non vengono eliminate dall'array
 	// quindi se per esempio sono affondate le 3 navi di supporto, currently placed ships vale 5 
 	// ma nelle posizioni 6 e 7 dell'array ci sono ancora sottomarini
-	for(int i = 0; i < currently_placed_ships; i++)
+	for(int i = 0; i < ships.size(); i++)
 	{
 		if(ships[i]->is_sunk() == true) continue;	// se la nave è affondata vado alla prossima
 		

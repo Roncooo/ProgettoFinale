@@ -18,7 +18,7 @@ Ship& Player::get_ship(int index)
 
 void Player::add_ship(Ship* to_add)
 {
-	defence.ships[defence.currently_placed_ships++] = std::unique_ptr<Ship>(to_add);
+	defence.ships.push_back(std::unique_ptr<Ship>(to_add));
 }
 
 void Player::restore_ship(int index)
@@ -29,9 +29,10 @@ void Player::restore_ship(int index)
 int Player::how_many_battleships() const
 {
 	int count=0;
-	for(int i=0; i<defence.SHIP_NUMBER; i++)
+	for(int i=0; i<get_placed_ships(); i++)
 	{
-		if(defence.ships[i]->is_sunk()==false && defence.ships[i]->ship_type()=="battleship")
+		// non serve più il controllo defence.ships[i]->is_sunk()==false perché ships contiene solo navi non affondate
+		if(defence.ships[i]->ship_type()=="battleship")
 			count++;
 	}
 	return count++;
@@ -40,7 +41,7 @@ int Player::how_many_battleships() const
 int Player::how_many_supports() const
 {
 	int count=0;
-	for(int i=0; i<defence.SHIP_NUMBER; i++)
+	for(int i=0; i<get_placed_ships(); i++)
 	{
 		if(defence.ships[i]->is_sunk()==false && defence.ships[i]->ship_type()=="support")
 			count++;
@@ -51,7 +52,7 @@ int Player::how_many_supports() const
 int Player::how_many_submarines() const
 {
 	int count=0;
-	for(int i=0; i<defence.SHIP_NUMBER; i++)
+	for(int i=0; i<get_placed_ships(); i++)
 	{
 		if(defence.ships[i]->is_sunk()==false && defence.ships[i]->ship_type()=="submarine")
 			count++;
@@ -66,7 +67,7 @@ bool Player::operator==(const Player& p) const
 
 bool Player::receive_shot(const Position& shot_position)
 {
-	for(int ship_index=0; ship_index<DefenceGrid::SHIP_NUMBER; ship_index++)
+	for(int ship_index=0; ship_index<defence.get_placed_ships(); ship_index++)
 	{
 		for(int pos_index=0; pos_index<defence.ships[ship_index]->get_dimension(); pos_index++)
 		{
@@ -76,7 +77,9 @@ bool Player::receive_shot(const Position& shot_position)
 				defence.ships[ship_index]->armor[pos_index] = false;
 				// controllo se sono rimaste armature (e in caso affonda)
 				// aggiorna lo stato di affondamento ed eventualmente lo dice
-				defence.ships[ship_index]->is_sunk();
+				if(defence.ships[ship_index]->is_sunk())
+					// la nave viene fisicamente rimossa dal vector
+					defence.ships.erase(defence.ships.begin()+ship_index);
 				// dico al nemico che ha colpito
 				return true;
 			}
@@ -89,11 +92,12 @@ bool Player::receive_shot(const Position& shot_position)
 
 int Player::is_there_ship(const Position& sonar_request) const
 {
-	for(int ship_index=0; ship_index<DefenceGrid::SHIP_NUMBER; ship_index++)
+	for(int ship_index=0; ship_index<get_placed_ships(); ship_index++)
 	{
+		// il controllo non serve più perché ships contiene solo navi non affondate
 		// se la nave è affondata completamente, non verrà vista dal sonar
-		if(defence.ships[ship_index]->is_sunk())
-			continue;
+//		if(defence.ships[ship_index]->is_sunk())
+//			continue;
 		
 		for(int pos_index=0; pos_index<defence.ships[ship_index]->get_dimension(); pos_index++)
 		{
@@ -123,21 +127,6 @@ void Player::print_defence_attack()
 	Grid::print(defence, attack);
 }
 
-//void Player::add_ship(Battleship& to_add)
-//{
-//	defence.ships[defence.currently_placed_ships++] = std::make_unique<Battleship>(&to_add);
-//}
-//
-//void Player::add_ship(Support& to_add)
-//{
-//	defence.ships[defence.currently_placed_ships++] = std::make_unique<Support>(&to_add);
-//}
-//
-//void Player::add_ship(Sumbarine& to_add)
-//{
-//	defence.ships[defence.currently_placed_ships++] = std::make_unique<Sumbarine>(&to_add);
-//}
-
 int Player::act_ship(int index, const Position& target, Player& enemy)
 {
 	if(index==-1)	// get_ship_index non ha trovato il centro della nave
@@ -148,17 +137,17 @@ int Player::act_ship(int index, const Position& target, Player& enemy)
 bool Player::has_lost()
 {
 	// per ciascuna nave nemica, se è una Corazzata e non è affondata, p non ha ancora vinto
-	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
-	{
-		if(!defence.ships[i]->is_sunk())
-			return false;
-	}
-	return true;
+//	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+//	{
+//		if(!defence.ships[i]->is_sunk())
+//			return false;
+//	}
+	return get_placed_ships()==0;
 }
 
 int Player::get_ship_index(const Position& pos) const
 {
-	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+	for(int i=0; i<get_placed_ships(); i++)
 	{
 		Position ship_center = defence.ships[i]->get_center();
 		// come da consegna, una nave si individua dalla sua posizione centrale
@@ -169,6 +158,10 @@ int Player::get_ship_index(const Position& pos) const
 	return -1;
 }
 
+int Player::get_placed_ships() const
+{
+	return defence.get_placed_ships();
+}
 
 bool Player::is_valid(const Position& prow, const Position& prune) const
 {
@@ -199,7 +192,7 @@ bool Player::is_valid(const Position& prow, const Position& prune) const
 			// "ma diciamocelo, il rischio c'è"
 	for(Position current=ordered_prow; current!=ordered_prune+vec; current+=vec)		// per ogni posizione tra prua e poppa
 	{
-		for(int s=0; s<defence.currently_placed_ships; s++)				// per ogni nave nella griglia
+		for(int s=0; s<defence.get_placed_ships(); s++)				// per ogni nave nella griglia
 		{
 			// se la nave è affondata non crea problemi e ci si può passare sopra quindi passo alla prossima nave
 			if(defence.ships[s]->is_sunk())

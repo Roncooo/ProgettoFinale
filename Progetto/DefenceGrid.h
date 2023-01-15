@@ -4,6 +4,7 @@
 #define DefenceGrid_H
 
 #include <memory>
+#include <vector>
 #include "Grid.h"
 
 class Ship;	// forward declaration
@@ -14,14 +15,13 @@ public:
 	static constexpr int SHIP_NUMBER = 8;
 	// deve essere aggiornata ogni volta che si costruisce una nuova nave, 
 	// per questo non deve per forza essere privata(?)
-	int currently_placed_ships = 0;
 	// occhio, questo DOVREBBE risolvere i memory leak ma impedisce 
 	// la copia (di qualsiasi cosa dato che è tutto intrecciato)
 	// e richiede la modifica della creazione delle navi
 	// essendo un array di dimensione fissa, non posso aggiungere navi, di conseguenza
 	// puo' rimanere pubblico(?)
-	std::unique_ptr<Ship> ships[SHIP_NUMBER];
-	
+	std::vector<std::unique_ptr<Ship>> ships;
+	int get_placed_ships() const;
 	DefenceGrid();
 	void update() override;
 //	Ship* ships[SHIP_NUMBER];	// array di puntatori a navi generiche
