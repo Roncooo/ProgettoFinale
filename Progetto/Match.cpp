@@ -488,7 +488,7 @@ void round(Player& player, Player& enemy, Log& file_log)
 void print_winner(Player& player)
 {
 	std::string str = player.name + " hai vinto!";
-	std::cout << "+" + std::string(str.length()+2, '~') + "+\n";
+	std::cout << "\n+" + std::string(str.length()+2, '~') + "+\n";
 	std::cout << "| " + str + " |\n";
 	std::cout << "+" + std::string(str.length()+2, '~') + "+\n\n";
 }
@@ -499,7 +499,7 @@ void Match::play()
 	
 	while(n_rounds<MAX_ROUNDS)
 	{
-		std::cout << "Turno: " << n_rounds << "\n";
+		std::cout << "\nTurno: " << n_rounds << "\n";
 //		file_log.add("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
 		file_log.write("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
 		
