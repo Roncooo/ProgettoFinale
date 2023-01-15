@@ -91,8 +91,7 @@ int command(Position& a, Position& b)
 		return 5;
 	
 	if(input_string == "TT TT")
-		return 5;
-	
+		return 6;
 	
 	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
 	// ma non so bene come fare

@@ -10,10 +10,21 @@ void standard_match()
 
 	Log file_log = Log();
 
-	cout << "Inserire i nomi dei giocatori";
-	cout << "\nPer visualizzare la tua griglia di difesa, inserisci il comando XX";
+	cout << "Come si gioca?\n";
+	cout << "Per prima cosa si posizionano 3 navi corazzate, 3 navi di supporto e 2 sottomarini (anche automaticamente)\n";
+	cout << "Per compiere l'azione di una nave dovrai indicare la sua cella centrale e dove vuoi compiere l'azione\n";
+	cout << "Per i giocatori umani sono disponibili anche i seguenti comandi speciali\n";
+	cout << " - XX\t\t per vedere la griglia di difesa\n";
+	cout << " - XX XX\t per vedere la griglia di difesa e quella di attacco affiancate\n";
+	cout << " - AA AA\t per cancellare gli avvistamenti sonar\n";
+	cout << " - BB BB\t per cancellare tutta la griglia di attacco\n";
+	cout << " - CC CC\t per imbrogliare\n";
+	cout << " - TT TT\t per visualizzare la tabella di resoconto attuale\n";
+	cout << "Buon divertimento\n\n";
+
+	cout << "Inserire i nomi dei giocatori\n";
 	
-	cout << "\nNome giocatore 1: ";
+	cout << "Nome giocatore 1: ";
 	string player1_name;
 	std::getline(std::cin, player1_name);
 	
