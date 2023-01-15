@@ -387,8 +387,8 @@ std::vector<std::string> split(std::string str, char delimiter)
 
 Position random_position()
 {
-	int r = 1 + rand()%game_board::rows;	// numero tra 1 e rows compresi
-	int c = 1 + rand()%game_board::cols;	// numero tra 1 e cols compresi
+	int r = rand()%game_board::rows;	// numero tra 0 compreso e rows escluso
+	int c = rand()%game_board::cols;	// numero tra 0 compreso e cols escluso
 	return Position(r,c);
 }
 
