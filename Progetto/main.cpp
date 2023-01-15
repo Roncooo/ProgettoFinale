@@ -53,7 +53,7 @@ void standard_match()
 		if(input_str=="Y")
 		{
 			player1.is_cpu = true;
-			player2.auto_placement = true;
+			player1.auto_placement = true;
 		}
 	}
 	input_str = "";
@@ -72,7 +72,7 @@ void standard_match()
 		
 		player2.is_cpu = true;
 		player2.auto_placement = true;
-		cout << "Almeno un giocatore deve essere computerizzato. " + player2_name + " il computer giochera' al posto tuo\n";
+		cout << "Almeno un giocatore deve essere computerizzato. " + player2_name + ", il computer giochera' al posto tuo\n";
 	}
 	else
 	{

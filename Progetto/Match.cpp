@@ -118,6 +118,7 @@ int command(Position& a, Position& b)
 	{
 		if(!std::regex_match(in1, reg_position))
 		{
+			// comando non valido
 			return -1;
 		}
 		else	// inserimento di un sottomarino
@@ -269,23 +270,30 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 			std::cout << "Il comando inserito non e' valido\n";
 			continue;
 		}
-		if(code==3)
+		
+		if(code==1)
 		{
 			p.print_defence();
 			continue;
 		}
-		if(code==4 || code==5)
+		
+		if(code>=2 && code<=6)
 		{
 			std::cout << "La funzione inserita non e' disponibile in fase di inserimento delle navi\n";
 			continue;
 		}
 		
-		if(code!=n_coordinates)
+		// è stata inserita una coordinata ma ne servono due
+		if(code == 10 && n_coordinates == 2)
 		{
-			if(n_coordinates==2)
-				std::cout << "Sono necessarie due posizioni\n";
-			else
-				std::cout << "E' necessaria una posizione\n";
+			std::cout << "Sono necessarie due posizioni\n";
+			continue;
+		}
+		
+		// sono state inserite due coordinate ma ne serve una
+		if(code == 20 && n_coordinates == 1)
+		{
+			std::cout << "E' necessaria una posizione\n";
 			continue;
 		}
 		
