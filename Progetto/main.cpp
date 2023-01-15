@@ -44,6 +44,20 @@ void standard_match()
 	Player player2(player2_name);
 	
 	std::string input_str;
+	
+	while(input_str != "Y" && input_str != "N")
+	{
+		cout << player1_name << " vuoi che sia il computer a giocare al posto tuo? (Y/N) ";
+		std::getline(std::cin, input_str);
+		std::transform(input_str.begin(), input_str.end(), input_str.begin(), ::toupper);
+		if(input_str=="Y")
+		{
+			player1.is_cpu = true;
+			player2.auto_placement = true;
+		}
+	}
+	input_str = "";
+	
 	if(!player1.is_cpu)
 	{
 		while(input_str != "Y" && input_str != "N")
@@ -53,6 +67,25 @@ void standard_match()
 			std::transform(input_str.begin(), input_str.end(), input_str.begin(), ::toupper);
 			if(input_str=="Y")
 				player1.auto_placement = true;
+		}
+		input_str = "";
+		
+		player2.is_cpu = true;
+		player2.auto_placement = true;
+		cout << "Almeno un giocatore deve essere computerizzato. " + player2_name + " il computer giochera' al posto tuo\n";
+	}
+	else
+	{
+		while(input_str != "Y" && input_str != "N")
+		{
+			cout << player2_name << " vuoi che sia il computer a giocare al posto tuo? (Y/N) ";
+			std::getline(std::cin, input_str);
+			std::transform(input_str.begin(), input_str.end(), input_str.begin(), ::toupper);
+			if(input_str=="Y")
+			{
+				player2.is_cpu = true;
+				player2.auto_placement = true;
+			}
 		}
 		input_str = "";
 	}

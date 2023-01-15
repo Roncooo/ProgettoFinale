@@ -19,7 +19,7 @@ public:
 	Player(std::string n = "Player");
 	// si può mettere una variabile statica per dare nomi di default Player1 Player2
 	const std::string name;
-	bool is_cpu;
+	bool is_cpu = false;
 	bool auto_placement = false;
 	bool operator==(const Player& p) const;
 //	Player& operator=(const Player& p);

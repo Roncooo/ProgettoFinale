@@ -9,15 +9,6 @@ Player::Player(std::string n)
 	: name{n}
 {
 	// attack e defence inizializzate di default
-	std::string temp_name = name;
-	std::transform(name.begin(), name.end(), temp_name.begin(), ::toupper);
-	if(temp_name.substr(0,3) == "CPU")	
-	{
-		is_cpu = true;
-		auto_placement = true;
-	}
-	else
-		is_cpu = false;
 }
 
 Ship& Player::get_ship(int index)
