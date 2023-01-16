@@ -561,10 +561,6 @@ void command_for_replay(game_board::Position& a, game_board::Position& b, std::i
 	b = Position(in2);
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f657fe278382fdc4dc80d9d5ee664a152548facd
 void replay_placement(Player& p, std::ifstream& input)
 {
 	Position prow, prune;
