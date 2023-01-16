@@ -7,14 +7,13 @@ using game_board::Position;
 Support::Support(const Position& prune, const Position& stern, Player& p) 
 	: Ship(prune, stern, p, 'S', 's')
 {
+	// intentionally left blank
 }
 
 std::string Support::ship_type() const
 {
 	return "support";
 }
-
-//Support::~Support(){}
 
 // controlla se, rispetto al center di support, la nave da curare è nella posizione giusta
 // dice se la posizione passata è curabile dalla nave di supporto che invoca la funzione
@@ -38,13 +37,11 @@ bool Support::is_curable(const Position& p)
 		p != center+Position( 0,-1)  	)	// left
 		return false;
 	
-	//	al posto di tutta la if scriverei così ma è da controllare
-	//	return (p-center).abs()<2;
-	//	ci sta, esce più compatto
-	
 	return true;
 }
 
+// mi sposto dove chiede l'utente, se la posizione non e' valida ritorno, altrimenti
+// curo
 int Support::action(const Position& pos, Player& enemy)
 {
 	// mi muovo dove chiede l'utente se questo è possibile, altrimenti termina

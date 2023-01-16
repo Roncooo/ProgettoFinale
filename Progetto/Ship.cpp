@@ -10,6 +10,8 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, c
 	if(!p.is_valid(prow, prune))
 		throw std::invalid_argument("Posizioni non valide");
 		
+	// per semplicità sistemo e se il modulo della poppa è più piccolo della prua
+	// inverto, altrimenti lascio così
 	Position ordered_prow;
 	Position ordered_prune;
 	if(prow.abs() < prune.abs())
@@ -24,22 +26,23 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, c
 	}
 	
 	dimension = (prune-prow).abs() +1;
+	// definisco pos e armor
 	pos = std::vector<Position>(dimension);
 	armor = std::vector<bool>(dimension);
 	
+	// la corazza è inizialmente integra
 	for(int i = 0; i < dimension; i++)
 		armor[i] = true;
 	
+	// inserisco nel vettore di pos le posizioni della nave
 	for(int i = 0; i < dimension; i++)
 	{
 		if(ordered_prow.get_row() == ordered_prune.get_row())
 			pos[i] = (ordered_prow + Position(0, i));		
-		else	// altrimenti hanno per forza colonna uguale
+		else // altrimenti hanno per forza colonna uguale
 			pos[i] = (ordered_prow + Position(i, 0));
 	}
 }
-
-//Ship::~Ship(){}
 
 int Ship::get_dimension() const
 { 
@@ -87,6 +90,7 @@ int Ship::move(const Position& new_center)
 	return 2;	//tutto è andato a buon fine
 }
 
+// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
 void Ship::restore_armor()
 {
 	if(sunk) return;
@@ -111,19 +115,4 @@ int Ship::is_sunk()
 	sunk = true;
 	
 	return 2;	// indica che la nave è affondata ora 
-	
 }
-
-// commentata intanto, secondo me può essere direttamente cancellata
-/*void Ship::sinking()
-{
-	std::cout << " ++ LA TUA NAVE E' AFFONDATA ++\n";
-	player.defence.currently_placed_ships--;
-	
-	Position temp = Position();
-	for (int i = 0; i < pos.size(); i++) 
-	{	
-		player.defence.set_char(pos[i], ' ');
-		pos[i] = temp;
-	}
-*/

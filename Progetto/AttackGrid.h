@@ -5,7 +5,6 @@
 
 #include "Grid.h"
 
-
 class Ship;	//forward declaration
 
 class AttackGrid : public game_board::Grid

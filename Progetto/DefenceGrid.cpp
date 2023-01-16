@@ -2,33 +2,27 @@
 
 #include "DefenceGrid.h"
 
-
-
 DefenceGrid::DefenceGrid()
 {
+	// intentionally left blank
 }
 
 DefenceGrid::~DefenceGrid()
 {
-//	delete[] ships;
-//	for(int i=0; i<SHIP_NUMBER; i++)
-//	{
-//		delete ships[i];
-//	}
+	// intentionally left blank
 }
 
+// ritorna quante navi sono presenti nella griglia di difesa
 int DefenceGrid::get_placed_ships() const
 {
 	return ships.size();
 }
 
+// aggiorna la griglia: se una nave è affondata non la riscrivo, altrimento setto
+// il carattere hit o not_hit se la corazza in quel punto è integra o no
 void DefenceGrid::update()
 {
 	reset_matrix();
-	// raga qua c'era i<currently_placed_ships ma mi pare sbagliato no?
-	// perché ships è ancora array e non vector, le navi non vengono eliminate dall'array
-	// quindi se per esempio sono affondate le 3 navi di supporto, currently placed ships vale 5 
-	// ma nelle posizioni 6 e 7 dell'array ci sono ancora sottomarini
 	for(int i = 0; i < ships.size(); i++)
 	{
 		if(ships[i]->is_sunk() == true) continue;	// se la nave è affondata vado alla prossima
