@@ -6,7 +6,9 @@
 #include <iostream>
 #include <fstream>
 #include <regex>
-#include <algorithm>		// per uppercase
+#include <algorithm>	// per uppercase
+#include <chrono>		// per le pause dopo l'interazione dell'utente
+#include <thread>
 
 #include "Log.h"
 #include "Player.h"
