@@ -473,10 +473,15 @@ void round(Player& player, Player& enemy, Log& file_log)
 	int code = -1;
 	Position origin, target;
 	
-	if(player.is_cpu)
+	if((player.is_cpu && !enemy.is_cpu) || (!player.is_cpu && enemy.is_cpu))
 	{
 		// piccola pausa prima che il computer faccia la sua mossa
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	}
+	
+	if(player.is_cpu)
+	{
+		
 		std::cout << player.name + " svolge il suo turno\n";
 	}
 	else
@@ -570,10 +575,16 @@ void re_play(std::ifstream& input)		//lol
 	
 	std::getline(input, temp);		//serve per bypassare la riga vuota
 	
-//	while(!input.eof())
-//	{
-//		command_for_replay(prow, prune, input);
-//	}
+	//posizionamento delle navi
+	replay_placement(p1, input);
+	replay_placement(p2, input);
+	
+	std::getline(input, temp);		//serve per bypassare la riga vuota
+	
+	while(!input.eof())
+	{
+		
+	}
 	
 	
 }
