@@ -554,16 +554,22 @@ void Match::play()
 	file_log.write("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
-void re_play(Player& p1, Player& p2, std::ifstream input)		//lol
+void re_play(std::ifstream& input)		//lol
 {
+	std::string temp = "";
 	
-	std::getline(input, p1.name);
-	std::getline(input, p2.name);
+	//leggo i nomi dei giocatori
+	std::getline(input, temp);
+	Player p1(temp);
+	std::getline(input, temp);
+	Player p2(temp);
 	
-	while(!input.eof())
-	{
-		command_for_replay(prow, prune, input);
-	}
+	std::getline(input, temp);
+	
+//	while(!input.eof())
+//	{
+//		command_for_replay(prow, prune, input);
+//	}
 	
 	
 }
