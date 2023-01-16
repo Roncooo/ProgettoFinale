@@ -583,7 +583,10 @@ void re_play(std::ifstream& input)		//lol
 	
 	while(!input.eof())
 	{
+		Position origin, target;
+		command_for_replay(origin, target, input);
 		
+		player.act_ship(player.get_ship_index(origin), target, enemy);
 	}
 	
 	
@@ -591,8 +594,15 @@ void re_play(std::ifstream& input)		//lol
 
 void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
 {
+	
+	std::string flag = ">>";
 	std::string input_string;
 	std::getline(input, input_string);
+	
+	if(input_string.length() < 2)				//controllo che ci siano almeno due caratteri
+		return;
+	if (input_string.substr(0, 2) == flag)		//controllo che non ci sia la flag che ho scelto
+		return;
 	
 	std::vector<std::string> vec = split(input_string, ' ');
 	std::string in1, in2;
@@ -610,7 +620,7 @@ void command_for_replay(game_board::Position& a, game_board::Position& b, std::i
 	b = Position(in2);
 }
 
-//dovrei fare anche un placement for replay??
+
 void replay_placement(Player& p, std::ifstream& input)
 {
 	Position prow, prune;
