@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pippo
 pluto
 
@@ -11485,3 +11486,5508 @@ I1 D2
 H8 G1
 
 pluto
+=======
+xd
+xc
+
+D6 H6
+A4 E4
+E7 A7
+D10 F10
+L8 N8
+E9 G9
+H10
+M6
+I11 I7
+E6 I6
+L1 F1
+F4 H4
+C11 E11
+A3 C3
+N6
+M6
+
+>>Turno 1:
+>>xd
+C4 L11
+>>xc
+I9 A2
+
+>>Turno 3:
+>>xd
+H10 A5
+>>xc
+M6 D2
+
+>>Turno 5:
+>>xd
+F6 M10
+>>xc
+I9 M10
+
+>>Turno 7:
+>>xd
+E10 I5
+>>xc
+G6 E1
+
+>>Turno 9:
+>>xd
+F9 F2
+>>xc
+D2 L9
+
+>>Turno 11:
+>>xd
+C4 B5
+>>xc
+I9 G4
+
+>>Turno 13:
+>>xd
+F2 C10
+>>xc
+G6 D11
+
+>>Turno 15:
+>>xd
+C10 G3
+>>xc
+G6 N2
+
+>>Turno 17:
+>>xd
+G3 B3
+>>xc
+D11 F8
+
+>>Turno 19:
+>>xd
+M6 C6
+>>xc
+I9 H1
+
+>>Turno 21:
+>>xd
+F6 A10
+>>xc
+B3 E5
+
+>>Turno 23:
+>>xd
+M8 G10
+>>xc
+G4 C1
+
+>>Turno 25:
+>>xd
+F6 N4
+>>xc
+L9 H4
+
+>>Turno 27:
+>>xd
+C6 F8
+>>xc
+I9 M3
+
+>>Turno 29:
+>>xd
+F6 C4
+>>xc
+C1 G11
+
+>>Turno 31:
+>>xd
+F6 F7
+>>xc
+H1 D11
+
+>>Turno 33:
+>>xd
+F8 C12
+>>xc
+I9 M4
+
+>>Turno 35:
+>>xd
+C4 L5
+>>xc
+G6 N5
+
+>>Turno 37:
+>>xd
+C4 A4
+>>xc
+I9 I7
+
+>>Turno 39:
+>>xd
+I5 L11
+>>xc
+I9 M10
+
+>>Turno 41:
+>>xd
+C12 C10
+>>xc
+G6 N9
+
+>>Turno 43:
+>>xd
+F6 I6
+>>xc
+G11 C3
+
+>>Turno 45:
+>>xd
+C7 N1
+>>xc
+I9 I2
+
+>>Turno 47:
+>>xd
+F6 I10
+>>xc
+N6 E12
+
+>>Turno 49:
+>>xd
+F6 D1
+>>xc
+H4 I5
+
+>>Turno 51:
+>>xd
+F6 L3
+>>xc
+H1 B10
+
+>>Turno 53:
+>>xd
+G10 E1
+>>xc
+H1 F1
+
+>>Turno 55:
+>>xd
+C4 E10
+>>xc
+H1 N1
+
+>>Turno 57:
+>>xd
+C7 E9
+>>xc
+G6 E6
+
+>>Turno 59:
+>>xd
+C7 N11
+>>xc
+G6
+
+>>Turno 61:
+>>xd
+A5 F2
+>>xc
+F8 C7
+
+>>Turno 63:
+>>xd
+E1 I3
+>>xc
+H1 C1
+
+>>Turno 65:
+>>xd
+C10 G5
+>>xc
+C3 B12
+
+>>Turno 67:
+>>xd
+C7 M1
+>>xc
+I5 N7
+
+>>Turno 69:
+>>xd
+C7 D9
+>>xc
+C7 B2
+
+>>Turno 71:
+>>xd
+F2 E1
+>>xc
+G6 F11
+
+>>Turno 73:
+>>xd
+I3 E12
+>>xc
+I9 B12
+
+>>Turno 75:
+>>xd
+F6 G3
+>>xc
+H1 G1
+
+>>Turno 77:
+>>xd
+E12 D12
+>>xc
+I9 B8
+
+>>Turno 79:
+>>xd
+C7 A11
+>>xc
+G6 I3
+
+>>Turno 81:
+>>xd
+E1 D10
+>>xc
+N7 A5
+
+>>Turno 83:
+>>xd
+B3 H8
+>>xc
+B2 E2
+
+>>Turno 85:
+>>xd
+C4 A3
+>>xc
+E5 D1
+
+>>Turno 87:
+>>xd
+G5 H9
+>>xc
+H1 F10
+
+>>Turno 89:
+>>xd
+C4 G3
+>>xc
+B12 B7
+
+>>Turno 91:
+>>xd
+D10 A5
+>>xc
+H1 E11
+
+>>Turno 93:
+>>xd
+C7 G8
+>>xc
+G6 L5
+
+>>Turno 95:
+>>xd
+C4 D7
+>>xc
+H1 D8
+
+>>Turno 97:
+>>xd
+C4 C1
+>>xc
+E12 N3
+
+>>Turno 99:
+>>xd
+D12 E8
+>>xc
+N3 M3
+
+>>Turno 101:
+>>xd
+H8 M1
+>>xc
+A5 F9
+
+>>Turno 103:
+>>xd
+C7 M10
+>>xc
+I9 G7
+
+>>Turno 105:
+>>xd
+C7 F11
+>>xc
+G6 L8
+
+>>Turno 107:
+>>xd
+C7 D7
+>>xc
+G6 A4
+
+>>Turno 109:
+>>xd
+F6 A6
+>>xc
+M3 F4
+
+>>Turno 111:
+>>xd
+F6 M9
+>>xc
+H1 B3
+
+>>Turno 113:
+>>xd
+F6 E5
+>>xc
+B7 C7
+
+>>Turno 115:
+>>xd
+C4 G10
+>>xc
+D1 L3
+
+>>Turno 117:
+>>xd
+C4 F8
+>>xc
+F9 N1
+
+>>Turno 119:
+>>xd
+C4 L3
+>>xc
+F4 M4
+
+>>Turno 121:
+>>xd
+H9 N6
+>>xc
+L3 H12
+
+>>Turno 123:
+>>xd
+C4 F3
+>>xc
+I9 I4
+
+>>Turno 125:
+>>xd
+C7 F3
+>>xc
+H12 G9
+
+>>Turno 127:
+>>xd
+C4 E3
+>>xc
+I9 F11
+
+>>Turno 129:
+>>xd
+E8 G11
+>>xc
+N1 I5
+
+>>Turno 131:
+>>xd
+C7 H3
+>>xc
+G6 H6
+
+>>Turno 133:
+>>xd
+M1 D5
+>>xc
+C7 C5
+
+>>Turno 135:
+>>xd
+F6 D10
+>>xc
+C5 M2
+
+>>Turno 137:
+>>xd
+A5 C12
+>>xc
+E2
+
+>>Turno 139:
+>>xd
+C7 E5
+>>xc
+I5 G10
+
+>>Turno 141:
+>>xd
+G11 L10
+>>xc
+H1 L10
+
+>>Turno 143:
+>>xd
+L10 M9
+>>xc
+M4 L4
+
+>>Turno 145:
+>>xd
+L11 G1
+>>xc
+G9 G12
+
+>>Turno 147:
+>>xd
+C12 M3
+>>xc
+M2 C5
+
+>>Turno 149:
+>>xd
+G1 C1
+>>xc
+G10 M10
+
+>>Turno 151:
+>>xd
+F6 L7
+>>xc
+E2 L12
+
+>>Turno 153:
+>>xd
+C4 E8
+>>xc
+H1 F7
+
+>>Turno 155:
+>>xd
+N6 M5
+>>xc
+L4 B2
+
+>>Turno 157:
+>>xd
+C1 F12
+>>xc
+G12 B4
+
+>>Turno 159:
+>>xd
+D5 F10
+>>xc
+H1 I5
+
+>>Turno 161:
+>>xd
+C4 L9
+>>xc
+M10 L8
+
+>>Turno 163:
+>>xd
+C7 M12
+>>xc
+I9 C6
+
+>>Turno 165:
+>>xd
+F6 N8
+>>xc
+B4 D11
+
+>>Turno 167:
+>>xd
+F6 M5
+>>xc
+L8 G9
+
+>>Turno 169:
+>>xd
+C7 H12
+>>xc
+B2 E5
+
+>>Turno 171:
+>>xd
+C7 G10
+>>xc
+C5 D1
+
+>>Turno 173:
+>>xd
+M9 C8
+>>xc
+E5 M3
+
+>>Turno 175:
+>>xd
+C7 L2
+>>xc
+L12 M12
+
+>>Turno 177:
+>>xd
+C4 D1
+>>xc
+G6 I2
+
+>>Turno 179:
+>>xd
+F12 I12
+>>xc
+I9 D10
+
+>>Turno 181:
+>>xd
+I12 H12
+>>xc
+G6 A3
+
+>>Turno 183:
+>>xd
+C8 C3
+>>xc
+H1 C7
+
+>>Turno 185:
+>>xd
+M5 L9
+>>xc
+H1 E5
+
+>>Turno 187:
+>>xd
+F6 G4
+>>xc
+G6 A4
+
+>>Turno 189:
+>>xd
+C3 I5
+>>xc
+D11 H2
+
+>>Turno 191:
+>>xd
+F6 C7
+>>xc
+M12 I3
+
+>>Turno 193:
+>>xd
+L9 H8
+>>xc
+H2 H4
+
+>>Turno 195:
+>>xd
+H12 M9
+>>xc
+H4 G11
+
+>>Turno 197:
+>>xd
+F10 H7
+>>xc
+I9 I12
+
+>>Turno 199:
+>>xd
+H8 D5
+>>xc
+M3 M4
+
+>>Turno 201:
+>>xd
+M3 D1
+>>xc
+D1 G12
+
+>>Turno 203:
+>>xd
+M9 H4
+>>xc
+I9 E2
+
+>>Turno 205:
+>>xd
+C7 G6
+>>xc
+H1 A12
+
+>>Turno 207:
+>>xd
+C4 L12
+>>xc
+G6 E3
+
+>>Turno 209:
+>>xd
+H7 F11
+>>xc
+G6 G5
+
+>>Turno 211:
+>>xd
+D5 B11
+>>xc
+H1 G11
+
+>>Turno 213:
+>>xd
+C4 L11
+>>xc
+H1 I8
+
+>>Turno 215:
+>>xd
+B11 N2
+>>xc
+G6 F2
+
+>>Turno 217:
+>>xd
+H4 G4
+>>xc
+G6 M2
+
+>>Turno 219:
+>>xd
+N2 N5
+>>xc
+G6 H11
+
+>>Turno 221:
+>>xd
+F6 N7
+>>xc
+H1 I4
+
+>>Turno 223:
+>>xd
+N5 G2
+>>xc
+I9 H12
+
+>>Turno 225:
+>>xd
+F6 M6
+>>xc
+G12 C5
+
+>>Turno 227:
+>>xd
+D1 I6
+>>xc
+I3 C3
+
+>>Turno 229:
+>>xd
+G2 C2
+>>xc
+H1 I9
+
+>>Turno 231:
+>>xd
+F11 L4
+>>xc
+H1 H9
+
+>>Turno 233:
+>>xd
+C7 F7
+>>xc
+G9 L7
+
+>>Turno 235:
+>>xd
+I6 B1
+>>xc
+G11 F5
+
+>>Turno 237:
+>>xd
+G4 M6
+>>xc
+H1 H3
+
+>>Turno 239:
+>>xd
+B1 E10
+>>xc
+L7 C1
+
+>>Turno 241:
+>>xd
+F6 I5
+>>xc
+G6 F8
+
+>>Turno 243:
+>>xd
+C4 A6
+>>xc
+I9 D11
+
+>>Turno 245:
+>>xd
+M6 G10
+>>xc
+M4 M3
+
+>>Turno 247:
+>>xd
+G10 I2
+>>xc
+G6 I1
+
+>>Turno 249:
+>>xd
+C4 D8
+>>xc
+I9 F4
+
+>>Turno 251:
+>>xd
+C7 F5
+>>xc
+I9 F7
+
+>>Turno 253:
+>>xd
+E10 L11
+>>xc
+M3 M8
+
+>>Turno 255:
+>>xd
+L4 I8
+>>xc
+M8 B10
+
+>>Turno 257:
+>>xd
+I8 C5
+>>xc
+G6 I4
+
+>>Turno 259:
+>>xd
+F6 A9
+>>xc
+H1 C8
+
+>>Turno 261:
+>>xd
+C5 H12
+>>xc
+H1 H6
+
+>>Turno 263:
+>>xd
+C2 B1
+>>xc
+I9 B5
+
+>>Turno 265:
+>>xd
+F6 N8
+>>xc
+C1 H8
+
+>>Turno 267:
+>>xd
+I5 E5
+>>xc
+C5 B7
+
+>>Turno 269:
+>>xd
+B1 D12
+>>xc
+I9 L2
+
+>>Turno 271:
+>>xd
+C7 H9
+>>xc
+B10 G10
+
+>>Turno 273:
+>>xd
+I2 H8
+>>xc
+H1 I8
+
+>>Turno 275:
+>>xd
+D12 H2
+>>xc
+G6 I7
+
+>>Turno 277:
+>>xd
+F6 A3
+>>xc
+H1 C8
+
+>>Turno 279:
+>>xd
+H8 B5
+>>xc
+H1 I7
+
+>>Turno 281:
+>>xd
+F6 L8
+>>xc
+B7 G2
+
+>>Turno 283:
+>>xd
+B5 I5
+>>xc
+F5 C1
+
+>>Turno 285:
+>>xd
+I5 D3
+>>xc
+I9 D7
+
+>>Turno 287:
+>>xd
+H12 H9
+>>xc
+H1 H4
+
+>>Turno 289:
+>>xd
+H2 G12
+>>xc
+G2 F5
+
+>>Turno 291:
+>>xd
+C7 G9
+>>xc
+H8 N12
+
+>>Turno 293:
+>>xd
+C7 B2
+>>xc
+I9 M4
+
+>>Turno 295:
+>>xd
+F6 L9
+>>xc
+H1 F3
+
+>>Turno 297:
+>>xd
+C4 A2
+>>xc
+G6 G5
+
+>>Turno 299:
+>>xd
+G12 N9
+>>xc
+G6 L4
+
+>>Turno 301:
+>>xd
+N9 L8
+>>xc
+G10 D8
+
+>>Turno 303:
+>>xd
+C7 N4
+>>xc
+N12 I3
+
+>>Turno 305:
+>>xd
+C7 E2
+>>xc
+I9 N4
+
+>>Turno 307:
+>>xd
+C7 H3
+>>xc
+I3 D10
+
+>>Turno 309:
+>>xd
+C4 A5
+>>xc
+D10 I2
+
+>>Turno 311:
+>>xd
+H9 G4
+>>xc
+F5 C4
+
+>>Turno 313:
+>>xd
+G4 H4
+>>xc
+H1 H4
+
+>>Turno 315:
+>>xd
+E5 C2
+>>xc
+G6 C9
+
+>>Turno 317:
+>>xd
+H4 I4
+>>xc
+D8 F4
+
+>>Turno 319:
+>>xd
+D3 M3
+>>xc
+G6 N8
+
+>>Turno 321:
+>>xd
+L11 G9
+>>xc
+H1 H4
+
+>>Turno 323:
+>>xd
+L8 A10
+>>xc
+C4
+
+>>Turno 325:
+>>xd
+C7 E11
+>>xc
+F4 N12
+
+>>Turno 327:
+>>xd
+I4 L5
+>>xc
+C3 I5
+
+>>Turno 329:
+>>xd
+C4 A11
+>>xc
+I9 B7
+
+>>Turno 331:
+>>xd
+C2 H10
+>>xc
+I9 I3
+
+>>Turno 333:
+>>xd
+M3 F12
+>>xc
+I9 B9
+
+>>Turno 335:
+>>xd
+H10 E11
+>>xc
+N12 D12
+
+>>Turno 337:
+>>xd
+C4 N3
+>>xc
+I2 L4
+
+>>Turno 339:
+>>xd
+E11 I7
+>>xc
+H1 A11
+
+>>Turno 341:
+>>xd
+A10 I6
+>>xc
+G6 D3
+
+>>Turno 343:
+>>xd
+C4 A3
+>>xc
+G6 G1
+
+>>Turno 345:
+>>xd
+C7 G1
+>>xc
+L4 B11
+
+>>Turno 347:
+>>xd
+F6 A9
+>>xc
+B11 E7
+
+>>Turno 349:
+>>xd
+I7 C5
+>>xc
+G6 A3
+
+>>Turno 351:
+>>xd
+L5 I12
+>>xc
+I5 B3
+
+>>Turno 353:
+>>xd
+G9 D11
+>>xc
+C1 M7
+
+>>Turno 355:
+>>xd
+D11 F1
+>>xc
+I9 C9
+
+>>Turno 357:
+>>xd
+C4 A12
+>>xc
+H1 F6
+
+>>Turno 359:
+>>xd
+F6 A9
+>>xc
+D12 H2
+
+>>Turno 361:
+>>xd
+I6 A2
+>>xc
+G6 G9
+
+>>Turno 363:
+>>xd
+F1 L2
+>>xc
+I9 M10
+
+>>Turno 365:
+>>xd
+I12 D9
+>>xc
+I9 F9
+
+>>Turno 367:
+>>xd
+C4 B2
+>>xc
+I9
+
+>>Turno 369:
+>>xd
+C4 L5
+>>xc
+I9 H12
+
+>>Turno 371:
+>>xd
+C5 C10
+>>xc
+H2 D11
+
+>>Turno 373:
+>>xd
+C10 L1
+>>xc
+I9 L10
+
+>>Turno 375:
+>>xd
+A2 N10
+>>xc
+E7 E9
+
+>>Turno 377:
+>>xd
+L1 F5
+>>xc
+G6 D4
+
+>>Turno 379:
+>>xd
+F6 C3
+>>xc
+I9 N12
+
+>>Turno 381:
+>>xd
+C7 H9
+>>xc
+G6 E5
+
+>>Turno 383:
+>>xd
+L2 B12
+>>xc
+C4 F11
+
+>>Turno 385:
+>>xd
+F12 M12
+>>xc
+E9 L12
+
+>>Turno 387:
+>>xd
+N10 G12
+>>xc
+L12 D1
+
+>>Turno 389:
+>>xd
+C4 A12
+>>xc
+G6 G9
+
+>>Turno 391:
+>>xd
+M12 M7
+>>xc
+D11 G3
+
+>>Turno 393:
+>>xd
+G12 N9
+>>xc
+D1 H2
+
+>>Turno 395:
+>>xd
+F6 H10
+>>xc
+M7 G9
+
+>>Turno 397:
+>>xd
+C4 E1
+>>xc
+H1 M7
+
+>>Turno 399:
+>>xd
+F6 C5
+>>xc
+H1 C6
+
+>>Turno 401:
+>>xd
+N9 E3
+>>xc
+H1 M4
+
+>>Turno 403:
+>>xd
+F6 N12
+>>xc
+H2 E8
+
+>>Turno 405:
+>>xd
+C4 C6
+>>xc
+G6 A3
+
+>>Turno 407:
+>>xd
+C4 H2
+>>xc
+B3 D12
+
+>>Turno 409:
+>>xd
+B12 H9
+>>xc
+G6 N7
+
+>>Turno 411:
+>>xd
+F6 L5
+>>xc
+G6 D3
+
+>>Turno 413:
+>>xd
+F5 H1
+>>xc
+E8 A6
+
+>>Turno 415:
+>>xd
+F6 M7
+>>xc
+G9 C10
+
+>>Turno 417:
+>>xd
+C7 H1
+>>xc
+G3 I3
+
+>>Turno 419:
+>>xd
+F6 A11
+>>xc
+G6 D3
+
+>>Turno 421:
+>>xd
+E3 M6
+>>xc
+I3 A5
+
+>>Turno 423:
+>>xd
+C4 G9
+>>xc
+G6 E4
+
+>>Turno 425:
+>>xd
+H9 N9
+>>xc
+D12 E5
+
+>>Turno 427:
+>>xd
+M7 C2
+>>xc
+A6 F10
+
+>>Turno 429:
+>>xd
+C7 L12
+>>xc
+G6 G1
+
+>>Turno 431:
+>>xd
+F6 G6
+>>xc
+F10 B6
+
+>>Turno 433:
+>>xd
+C2 G12
+>>xc
+G6 I4
+
+>>Turno 435:
+>>xd
+D9 D2
+>>xc
+I9 A5
+
+>>Turno 437:
+>>xd
+C7 C2
+>>xc
+E5 B3
+
+>>Turno 439:
+>>xd
+F6 E2
+>>xc
+A5 H5
+
+>>Turno 441:
+>>xd
+N9 D5
+>>xc
+B3 F4
+
+>>Turno 443:
+>>xd
+D5 B2
+>>xc
+G6 L3
+
+>>Turno 445:
+>>xd
+C7 L4
+>>xc
+H1 E6
+
+>>Turno 447:
+>>xd
+M6 M7
+>>xc
+H1 G1
+
+>>Turno 449:
+>>xd
+H1 D10
+>>xc
+B6 M9
+
+>>Turno 451:
+>>xd
+D2 I10
+>>xc
+H5 F8
+
+>>Turno 453:
+>>xd
+F6 F1
+>>xc
+F8 G5
+
+>>Turno 455:
+>>xd
+M7 M1
+>>xc
+G6 G2
+
+>>Turno 457:
+>>xd
+F6 G6
+>>xc
+M9 F7
+
+>>Turno 459:
+>>xd
+M1 L3
+>>xc
+G5 C5
+
+>>Turno 461:
+>>xd
+F6 H8
+>>xc
+G6 L10
+
+>>Turno 463:
+>>xd
+F6 D1
+>>xc
+I9 B2
+
+>>Turno 465:
+>>xd
+F6 F10
+>>xc
+C10 E9
+
+>>Turno 467:
+>>xd
+F6 I8
+>>xc
+C5 M1
+
+>>Turno 469:
+>>xd
+L3 L12
+>>xc
+M1 M4
+
+>>Turno 471:
+>>xd
+G12 L2
+>>xc
+E9 I2
+
+>>Turno 473:
+>>xd
+L2 M11
+>>xc
+I9 N10
+
+>>Turno 475:
+>>xd
+D10 L8
+>>xc
+G6
+
+>>Turno 477:
+>>xd
+F6 M12
+>>xc
+G6 A12
+
+>>Turno 479:
+>>xd
+L8 G11
+>>xc
+M4 M1
+
+>>Turno 481:
+>>xd
+C4 A3
+>>xc
+I9 M5
+
+>>Turno 483:
+>>xd
+G11 B10
+>>xc
+G6 H10
+
+>>Turno 485:
+>>xd
+M11 G5
+>>xc
+G6 N3
+
+>>Turno 487:
+>>xd
+G5 M3
+>>xc
+F11 D8
+
+>>Turno 489:
+>>xd
+C7 F4
+>>xc
+H1 H11
+
+>>Turno 491:
+>>xd
+C4 H2
+>>xc
+G6 D12
+
+>>Turno 493:
+>>xd
+M3 H8
+>>xc
+H1 I11
+
+>>Turno 495:
+>>xd
+F6 N11
+>>xc
+D8 F11
+
+>>Turno 497:
+>>xd
+C4 N7
+>>xc
+H1 L9
+
+>>Turno 499:
+>>xd
+L12 G7
+>>xc
+I2 H3
+
+>>Turno 501:
+>>xd
+F6 H11
+>>xc
+H1 A2
+
+>>Turno 503:
+>>xd
+H8 E3
+>>xc
+H3 M10
+
+>>Turno 505:
+>>xd
+G7 M11
+>>xc
+I9 E7
+
+>>Turno 507:
+>>xd
+C7 E8
+>>xc
+G6 D9
+
+>>Turno 509:
+>>xd
+C4 H7
+>>xc
+G6 B3
+
+>>Turno 511:
+>>xd
+E3 I5
+>>xc
+F4 M3
+
+>>Turno 513:
+>>xd
+C4 N3
+>>xc
+H1 L9
+
+>>Turno 515:
+>>xd
+C7 N12
+>>xc
+F7 F8
+
+>>Turno 517:
+>>xd
+I10 G11
+>>xc
+F11 I5
+
+>>Turno 519:
+>>xd
+F6 H2
+>>xc
+F8 G5
+
+>>Turno 521:
+>>xd
+M11 M2
+>>xc
+H1 H7
+
+>>Turno 523:
+>>xd
+F6 A6
+>>xc
+H1 L9
+
+>>Turno 525:
+>>xd
+F6 E6
+>>xc
+I5 D2
+
+>>Turno 527:
+>>xd
+C7 F8
+>>xc
+M3 M8
+
+>>Turno 529:
+>>xd
+M2 E10
+>>xc
+I9 D9
+
+>>Turno 531:
+>>xd
+B10 L1
+>>xc
+G6 F5
+
+>>Turno 533:
+>>xd
+E10 L2
+>>xc
+G6 H5
+
+>>Turno 535:
+>>xd
+L2
+>>xc
+H1 B12
+
+>>Turno 537:
+>>xd
+L2 M9
+>>xc
+M1 D9
+
+>>Turno 539:
+>>xd
+F6 N6
+>>xc
+G6
+
+>>Turno 541:
+>>xd
+C4 F8
+>>xc
+D2 H4
+
+>>Turno 543:
+>>xd
+C4 F3
+>>xc
+M10 D12
+
+>>Turno 545:
+>>xd
+C7 N9
+>>xc
+I9 F11
+
+>>Turno 547:
+>>xd
+C4 A10
+>>xc
+D9 G12
+
+>>Turno 549:
+>>xd
+C7 M1
+>>xc
+G12 F9
+
+>>Turno 551:
+>>xd
+G11 I11
+>>xc
+F9 D1
+
+>>Turno 553:
+>>xd
+C7 F2
+>>xc
+D12 F12
+
+>>Turno 555:
+>>xd
+F6
+>>xc
+I9 A9
+
+>>Turno 557:
+>>xd
+L1 C9
+>>xc
+G5 L4
+
+>>Turno 559:
+>>xd
+F6 G8
+>>xc
+D1 N5
+
+>>Turno 561:
+>>xd
+C9 E3
+>>xc
+H1 F2
+
+>>Turno 563:
+>>xd
+C4 M4
+>>xc
+H1 L2
+
+>>Turno 565:
+>>xd
+C7 E9
+>>xc
+I9 F4
+
+>>Turno 567:
+>>xd
+C4 B3
+>>xc
+M8 D2
+
+>>Turno 569:
+>>xd
+E3 I4
+>>xc
+H4 B7
+
+>>Turno 571:
+>>xd
+C7 N1
+>>xc
+H1 F6
+
+>>Turno 573:
+>>xd
+F6 D6
+>>xc
+H1 D2
+
+>>Turno 575:
+>>xd
+I11 D9
+>>xc
+H1 G1
+
+>>Turno 577:
+>>xd
+C4 F3
+>>xc
+I9 M11
+
+>>Turno 579:
+>>xd
+I4 D11
+>>xc
+G6 F11
+
+>>Turno 581:
+>>xd
+F6 C11
+>>xc
+H1 I7
+
+>>Turno 583:
+>>xd
+F6 I12
+>>xc
+F12 G3
+
+>>Turno 585:
+>>xd
+F6 H2
+>>xc
+B7 M6
+
+>>Turno 587:
+>>xd
+D9 B10
+>>xc
+H1 G1
+
+>>Turno 589:
+>>xd
+C7 N8
+>>xc
+H1 L5
+
+>>Turno 591:
+>>xd
+M9 D3
+>>xc
+M6 I5
+
+>>Turno 593:
+>>xd
+B10 D1
+>>xc
+G6 H10
+
+>>Turno 595:
+>>xd
+F6 E4
+>>xc
+L4 H8
+
+>>Turno 597:
+>>xd
+F6 B10
+>>xc
+I9 M10
+
+>>Turno 599:
+>>xd
+D1 H5
+>>xc
+N5 C9
+
+>>Turno 601:
+>>xd
+C4 H2
+>>xc
+I9 B7
+
+>>Turno 603:
+>>xd
+D11 H10
+>>xc
+H8 L7
+
+>>Turno 605:
+>>xd
+C4 D9
+>>xc
+I9 E5
+
+>>Turno 607:
+>>xd
+C7 C2
+>>xc
+L7 H2
+
+>>Turno 609:
+>>xd
+H5 M12
+>>xc
+I5 B3
+
+>>Turno 611:
+>>xd
+D3 M9
+>>xc
+I9 G7
+
+>>Turno 613:
+>>xd
+H10 F11
+>>xc
+G3 L12
+
+>>Turno 615:
+>>xd
+M9 L11
+>>xc
+H2 F5
+
+>>Turno 617:
+>>xd
+C4 M7
+>>xc
+L12 B8
+
+>>Turno 619:
+>>xd
+C7 C11
+>>xc
+F5 F12
+
+>>Turno 621:
+>>xd
+L11 E2
+>>xc
+H1 B8
+
+>>Turno 623:
+>>xd
+F11 C1
+>>xc
+G6 F5
+
+>>Turno 625:
+>>xd
+C1 C2
+>>xc
+C9 B12
+
+>>Turno 627:
+>>xd
+F6 A1
+>>xc
+B3 B9
+
+>>Turno 629:
+>>xd
+C7 B8
+>>xc
+B8 F9
+
+>>Turno 631:
+>>xd
+C7 N4
+>>xc
+B12 A6
+
+>>Turno 633:
+>>xd
+E2 B12
+>>xc
+G6 L1
+
+>>Turno 635:
+>>xd
+C2
+>>xc
+I9 D2
+
+>>Turno 637:
+>>xd
+C7 E6
+>>xc
+D2 E2
+
+>>Turno 639:
+>>xd
+C4 M6
+>>xc
+A6 E5
+
+>>Turno 641:
+>>xd
+C4 I5
+>>xc
+F12 L9
+
+>>Turno 643:
+>>xd
+M12 L10
+>>xc
+H1 D2
+
+>>Turno 645:
+>>xd
+F6 C6
+>>xc
+E2 C5
+
+>>Turno 647:
+>>xd
+L10 H1
+>>xc
+L9 M1
+
+>>Turno 649:
+>>xd
+B12 M1
+>>xc
+E5 E3
+
+>>Turno 651:
+>>xd
+M1 L3
+>>xc
+F9 B12
+
+>>Turno 653:
+>>xd
+C2 E1
+>>xc
+H1 D6
+
+>>Turno 655:
+>>xd
+L3 N4
+>>xc
+H1 F3
+
+>>Turno 657:
+>>xd
+H1 L6
+>>xc
+G6 I8
+
+>>Turno 659:
+>>xd
+C7 M5
+>>xc
+I9 I5
+
+>>Turno 661:
+>>xd
+C4 M7
+>>xc
+E3 G7
+
+>>Turno 663:
+>>xd
+F6 F2
+>>xc
+G7 M12
+
+>>Turno 665:
+>>xd
+L6 C10
+>>xc
+B9 M6
+
+>>Turno 667:
+>>xd
+E1 C8
+>>xc
+G6 G11
+
+>>Turno 669:
+>>xd
+C4 B12
+>>xc
+I9 L3
+
+>>Turno 671:
+>>xd
+C7 N4
+>>xc
+M1 N12
+
+>>Turno 673:
+>>xd
+C10 M2
+>>xc
+G6 H1
+
+>>Turno 675:
+>>xd
+F6 B1
+>>xc
+H1 L6
+
+>>Turno 677:
+>>xd
+C7 M2
+>>xc
+M12 L2
+
+>>Turno 679:
+>>xd
+N4 E1
+>>xc
+B12
+
+>>Turno 681:
+>>xd
+E1 C3
+>>xc
+I9 N4
+
+>>Turno 683:
+>>xd
+M2 H5
+>>xc
+B12 L12
+
+>>Turno 685:
+>>xd
+C7 H10
+>>xc
+G6 H11
+
+>>Turno 687:
+>>xd
+C7 F3
+>>xc
+M6 M9
+
+>>Turno 689:
+>>xd
+F6 B10
+>>xc
+N12 F2
+
+>>Turno 691:
+>>xd
+C3 M2
+>>xc
+C5 C11
+
+>>Turno 693:
+>>xd
+C4 A3
+>>xc
+L2 E3
+
+>>Turno 695:
+>>xd
+C8 D1
+>>xc
+E3 E9
+
+>>Turno 697:
+>>xd
+F6 E5
+>>xc
+I9 N12
+
+>>Turno 699:
+>>xd
+C7 E12
+>>xc
+G6 C7
+
+>>Turno 701:
+>>xd
+D1 C5
+>>xc
+I9 E11
+
+>>Turno 703:
+>>xd
+F6 H9
+>>xc
+H1 M8
+
+>>Turno 705:
+>>xd
+H5 L9
+>>xc
+E9 F10
+
+>>Turno 707:
+>>xd
+F6 M10
+>>xc
+H1 M9
+
+>>Turno 709:
+>>xd
+C7 E8
+>>xc
+F10 M11
+
+>>Turno 711:
+>>xd
+F6 D10
+>>xc
+C11 C5
+
+>>Turno 713:
+>>xd
+C7 M12
+>>xc
+L12 D10
+
+>>Turno 715:
+>>xd
+C5 I3
+>>xc
+G6 H7
+
+>>Turno 717:
+>>xd
+M2 C9
+>>xc
+M11 L8
+
+>>Turno 719:
+>>xd
+I3 F3
+>>xc
+L8 D12
+
+>>Turno 721:
+>>xd
+F6 I1
+>>xc
+I9 E12
+
+>>Turno 723:
+>>xd
+C7 M3
+>>xc
+G6 H9
+
+>>Turno 725:
+>>xd
+F6 E6
+>>xc
+I9 A2
+
+>>Turno 727:
+>>xd
+C7 A4
+>>xc
+D10 B6
+
+>>Turno 729:
+>>xd
+C9 H4
+>>xc
+I9 I4
+
+>>Turno 731:
+>>xd
+C4 A6
+>>xc
+D12 E1
+
+>>Turno 733:
+>>xd
+F6 D11
+>>xc
+E1 N3
+
+>>Turno 735:
+>>xd
+F6 A3
+>>xc
+C5 M5
+
+>>Turno 737:
+>>xd
+C4 A8
+>>xc
+G6 E8
+
+>>Turno 739:
+>>xd
+L9 C9
+>>xc
+M9 F9
+
+>>Turno 741:
+>>xd
+C4 B2
+>>xc
+I9 B1
+
+>>Turno 743:
+>>xd
+F6 F2
+>>xc
+H1 H12
+
+>>Turno 745:
+>>xd
+C4 E9
+>>xc
+I9 H4
+
+>>Turno 747:
+>>xd
+F3 B5
+>>xc
+F9 H4
+
+>>Turno 749:
+>>xd
+F6 B2
+>>xc
+M5 C5
+
+>>Turno 751:
+>>xd
+C7 B5
+>>xc
+H1 H2
+
+>>Turno 753:
+>>xd
+B5 C11
+>>xc
+C5 C7
+
+>>Turno 755:
+>>xd
+C9 L7
+>>xc
+H4 E4
+
+>>Turno 757:
+>>xd
+F6 F7
+>>xc
+I9 F9
+
+>>Turno 759:
+>>xd
+F6 G7
+>>xc
+G6 E4
+
+>>Turno 761:
+>>xd
+F6 N6
+>>xc
+E4 F8
+
+>>Turno 763:
+>>xd
+C4 B10
+>>xc
+G6 B1
+
+>>Turno 765:
+>>xd
+F6 M8
+>>xc
+I9 H2
+
+>>Turno 767:
+>>xd
+L7 F3
+>>xc
+N3
+
+>>Turno 769:
+>>xd
+C4 F3
+>>xc
+G6 F10
+
+>>Turno 771:
+>>xd
+F6 A12
+>>xc
+N3 H11
+
+>>Turno 773:
+>>xd
+C7 E1
+>>xc
+H11 I2
+
+>>Turno 775:
+>>xd
+C4 A2
+>>xc
+G6 M2
+
+>>Turno 777:
+>>xd
+C11 E11
+>>xc
+H1 M11
+
+>>Turno 779:
+>>xd
+F6 I4
+>>xc
+I2 B1
+
+>>Turno 781:
+>>xd
+C4 C2
+>>xc
+I9 C5
+
+>>Turno 783:
+>>xd
+F6 C7
+>>xc
+F8 G2
+
+>>Turno 785:
+>>xd
+F6 A3
+>>xc
+G2 G10
+
+>>Turno 787:
+>>xd
+C4 E5
+>>xc
+I9 I5
+
+>>Turno 789:
+>>xd
+F3 D10
+>>xc
+I9 M12
+
+>>Turno 791:
+>>xd
+F6 E12
+>>xc
+G6 E8
+
+>>Turno 793:
+>>xd
+F6 E11
+>>xc
+H1 F8
+
+>>Turno 795:
+>>xd
+C7 N4
+>>xc
+H1 E4
+
+>>Turno 797:
+>>xd
+C4 M12
+>>xc
+B1 B5
+
+>>Turno 799:
+>>xd
+C4 L4
+>>xc
+I9 G10
+
+>>Turno 801:
+>>xd
+C7 I3
+>>xc
+H1 N4
+
+>>Turno 803:
+>>xd
+D10 B12
+>>xc
+C7 F12
+
+>>Turno 805:
+>>xd
+B12 D1
+>>xc
+H1 B3
+
+>>Turno 807:
+>>xd
+E11 D12
+>>xc
+I9 C3
+
+>>Turno 809:
+>>xd
+C7 N2
+>>xc
+F12 F2
+
+>>Turno 811:
+>>xd
+C4 F4
+>>xc
+F2 M2
+
+>>Turno 813:
+>>xd
+D12 H5
+>>xc
+I9 H6
+
+>>Turno 815:
+>>xd
+C7 C1
+>>xc
+B5 A5
+
+>>Turno 817:
+>>xd
+F6 L9
+>>xc
+G10 F11
+
+>>Turno 819:
+>>xd
+C7 L9
+>>xc
+F11 B3
+
+>>Turno 821:
+>>xd
+C4 C6
+>>xc
+G6 M2
+
+>>Turno 823:
+>>xd
+F6 L4
+>>xc
+A5 L12
+
+>>Turno 825:
+>>xd
+F6 G1
+>>xc
+H1 E6
+
+>>Turno 827:
+>>xd
+C7 C3
+>>xc
+I9 N9
+
+>>Turno 829:
+>>xd
+C4 E8
+>>xc
+I9 I6
+
+>>Turno 831:
+>>xd
+C7 E8
+>>xc
+G6 B11
+
+>>Turno 833:
+>>xd
+C7 G1
+>>xc
+H1 M8
+
+>>Turno 835:
+>>xd
+C7 N6
+>>xc
+H1 I10
+
+>>Turno 837:
+>>xd
+C7 D11
+>>xc
+H1 E1
+
+>>Turno 839:
+>>xd
+C7 N2
+>>xc
+H1 L12
+
+>>Turno 841:
+>>xd
+F6 A6
+>>xc
+B3 D2
+
+>>Turno 843:
+>>xd
+C4 I8
+>>xc
+I9 F8
+
+>>Turno 845:
+>>xd
+F6 L2
+>>xc
+I9 D12
+
+>>Turno 847:
+>>xd
+H5 D10
+>>xc
+I9 E9
+
+>>Turno 849:
+>>xd
+F6 G8
+>>xc
+I9 E1
+
+>>Turno 851:
+>>xd
+D10 I3
+>>xc
+G6 L3
+
+>>Turno 853:
+>>xd
+I3 B9
+>>xc
+I9 C3
+
+>>Turno 855:
+>>xd
+C4 B4
+>>xc
+G6 D12
+
+>>Turno 857:
+>>xd
+D1 E2
+>>xc
+G6 F3
+
+>>Turno 859:
+>>xd
+C7 I3
+>>xc
+H1 C4
+
+>>Turno 861:
+>>xd
+F6 N12
+>>xc
+H1 L12
+
+>>Turno 863:
+>>xd
+F6 B9
+>>xc
+H1 I1
+
+>>Turno 865:
+>>xd
+F6 I4
+>>xc
+L12 D8
+
+>>Turno 867:
+>>xd
+E2 B12
+>>xc
+D8 H12
+
+>>Turno 869:
+>>xd
+C4 G7
+>>xc
+D2 C12
+
+>>Turno 871:
+>>xd
+C4 D3
+>>xc
+G6 M2
+
+>>Turno 873:
+>>xd
+F6 F12
+>>xc
+I9 A12
+
+>>Turno 875:
+>>xd
+B12 L10
+>>xc
+G6 A10
+
+>>Turno 877:
+>>xd
+F6 C2
+>>xc
+I9 N1
+
+>>Turno 879:
+>>xd
+L10 E3
+>>xc
+C12 L4
+
+>>Turno 881:
+>>xd
+F6 G9
+>>xc
+H1 L6
+
+>>Turno 883:
+>>xd
+B9 I7
+>>xc
+H1 H11
+
+>>Turno 885:
+>>xd
+C4 C6
+>>xc
+G6 B4
+
+>>Turno 887:
+>>xd
+F6 E10
+>>xc
+G6 F9
+
+>>Turno 889:
+>>xd
+F6 A5
+>>xc
+G6 A1
+
+>>Turno 891:
+>>xd
+I7 M10
+>>xc
+I9 D12
+
+>>Turno 893:
+>>xd
+C4 M1
+>>xc
+H1 D4
+
+>>Turno 895:
+>>xd
+F6 B7
+>>xc
+G6 N9
+
+>>Turno 897:
+>>xd
+C4 C7
+>>xc
+L4 M9
+
+>>Turno 899:
+>>xd
+M10 G8
+>>xc
+H1 B10
+
+>>Turno 901:
+>>xd
+C4 A4
+>>xc
+H12 H7
+
+>>Turno 903:
+>>xd
+E3 M7
+>>xc
+H7 A10
+
+>>Turno 905:
+>>xd
+C4 I12
+>>xc
+I9 E7
+
+>>Turno 907:
+>>xd
+C7 C3
+>>xc
+I9 N8
+
+>>Turno 909:
+>>xd
+F6 C5
+>>xc
+H1 N7
+
+>>Turno 911:
+>>xd
+M7 H11
+>>xc
+A10 A6
+
+>>Turno 913:
+>>xd
+H11 I10
+>>xc
+G6 N4
+
+>>Turno 915:
+>>xd
+F6 F12
+>>xc
+M9 G5
+
+>>Turno 917:
+>>xd
+C7 F2
+>>xc
+A6 C10
+
+>>Turno 919:
+>>xd
+C4 B2
+>>xc
+G5 B1
+
+>>Turno 921:
+>>xd
+C7 C4
+>>xc
+C10 E4
+
+>>Turno 923:
+>>xd
+F6 E3
+>>xc
+E4 L8
+
+>>Turno 925:
+>>xd
+I10 G12
+>>xc
+I9 M7
+
+>>Turno 927:
+>>xd
+G8 M11
+>>xc
+I9 G1
+
+>>Turno 929:
+>>xd
+M11 B11
+>>xc
+L8 L10
+
+>>Turno 931:
+>>xd
+F6 H7
+>>xc
+I9 I5
+
+>>Turno 933:
+>>xd
+F6 L6
+>>xc
+H1 H2
+
+>>Turno 935:
+>>xd
+F6 H5
+>>xc
+I9 H12
+
+>>Turno 937:
+>>xd
+C7 I4
+>>xc
+I9 E4
+
+>>Turno 939:
+>>xd
+B11 B2
+>>xc
+I9 A10
+
+>>Turno 941:
+>>xd
+B2 M3
+>>xc
+I9 G8
+
+>>Turno 943:
+>>xd
+M3 F8
+>>xc
+G6 N4
+
+>>Turno 945:
+>>xd
+F8 B2
+>>xc
+G6 N8
+
+>>Turno 947:
+>>xd
+F6 A7
+>>xc
+G6 M4
+
+>>Turno 949:
+>>xd
+G12 M12
+>>xc
+I9 I5
+
+>>Turno 951:
+>>xd
+C4 G10
+>>xc
+L10 G3
+
+>>Turno 953:
+>>xd
+C7 B8
+>>xc
+H1 I2
+
+>>Turno 955:
+>>xd
+C7 F8
+>>xc
+H1 H3
+
+>>Turno 957:
+>>xd
+F6 H12
+>>xc
+I9 I1
+
+>>Turno 959:
+>>xd
+C7 E1
+>>xc
+G6 A3
+
+>>Turno 961:
+>>xd
+M12 L9
+>>xc
+B1 F9
+
+>>Turno 963:
+>>xd
+L9 I8
+>>xc
+G6 H12
+
+>>Turno 965:
+>>xd
+C7 C1
+>>xc
+H1 G8
+
+>>Turno 967:
+>>xd
+C7 G4
+>>xc
+G6 B1
+
+>>Turno 969:
+>>xd
+I8 I12
+>>xc
+G3 F2
+
+>>Turno 971:
+>>xd
+F6 F9
+>>xc
+I9 F10
+
+>>Turno 973:
+>>xd
+I12 L10
+>>xc
+G6 B11
+
+>>Turno 975:
+>>xd
+F6 G3
+>>xc
+F2 B12
+
+>>Turno 977:
+>>xd
+C7 I12
+>>xc
+G6 F11
+
+>>Turno 979:
+>>xd
+C4 G10
+>>xc
+B12 G3
+
+>>Turno 981:
+>>xd
+B2 C2
+>>xc
+G6 A7
+
+>>Turno 983:
+>>xd
+C2 F5
+>>xc
+I9 H9
+
+>>Turno 985:
+>>xd
+C7 M6
+>>xc
+G6 G1
+
+>>Turno 987:
+>>xd
+C7 G6
+>>xc
+G3 M3
+
+>>Turno 989:
+>>xd
+L10 G4
+>>xc
+G6 E11
+
+>>Turno 991:
+>>xd
+F6 M12
+>>xc
+I9 N5
+
+>>Turno 993:
+>>xd
+F6 I2
+>>xc
+I9 F1
+
+>>Turno 995:
+>>xd
+F5 M9
+>>xc
+H1 H11
+
+>>Turno 997:
+>>xd
+C7 H5
+>>xc
+G6 E6
+
+>>Turno 999:
+>>xd
+M9 H9
+>>xc
+G6 G7
+
+>>Turno 1001:
+>>xd
+C4 D10
+>>xc
+M3 L9
+
+>>Turno 1003:
+>>xd
+C7 H11
+>>xc
+I9 I11
+
+>>Turno 1005:
+>>xd
+H9 E9
+>>xc
+G6 A9
+
+>>Turno 1007:
+>>xd
+C4 A11
+>>xc
+I9 A1
+
+>>Turno 1009:
+>>xd
+C4 E9
+>>xc
+I9 N10
+
+>>Turno 1011:
+>>xd
+C4 G2
+>>xc
+H1 I10
+
+>>Turno 1013:
+>>xd
+G4 D11
+>>xc
+I9 B1
+
+>>Turno 1015:
+>>xd
+E9 H12
+>>xc
+G6 C4
+
+>>Turno 1017:
+>>xd
+C7 L7
+>>xc
+I9
+
+>>Turno 1019:
+>>xd
+H12 F5
+>>xc
+G6 I5
+
+>>Turno 1021:
+>>xd
+C7 G9
+>>xc
+H1 M8
+
+>>Turno 1023:
+>>xd
+F6 C7
+>>xc
+H1 H3
+
+>>Turno 1025:
+>>xd
+F6 E6
+>>xc
+G6 E7
+
+>>Turno 1027:
+>>xd
+F6 C10
+>>xc
+G6 E9
+
+>>Turno 1029:
+>>xd
+C7 A12
+>>xc
+H1 M1
+
+>>Turno 1031:
+>>xd
+C4 L2
+>>xc
+I9 M8
+
+>>Turno 1033:
+>>xd
+C4 D8
+>>xc
+H1 B12
+
+>>Turno 1035:
+>>xd
+C7 G4
+>>xc
+H1 D1
+
+>>Turno 1037:
+>>xd
+C7 D7
+>>xc
+I9 B11
+
+>>Turno 1039:
+>>xd
+F5 L3
+>>xc
+I9 F11
+
+>>Turno 1041:
+>>xd
+C7 I10
+>>xc
+L9 M12
+
+>>Turno 1043:
+>>xd
+F6 F1
+>>xc
+M12 N6
+
+>>Turno 1045:
+>>xd
+F6 H10
+>>xc
+N6 L11
+
+>>Turno 1047:
+>>xd
+C7 H8
+>>xc
+L11 M5
+
+>>Turno 1049:
+>>xd
+L3 B8
+>>xc
+G6 D8
+
+>>Turno 1051:
+>>xd
+F6 N8
+>>xc
+I9 E2
+
+>>Turno 1053:
+>>xd
+B8 C2
+>>xc
+H1 I6
+
+>>Turno 1055:
+>>xd
+F6 F1
+>>xc
+I9 D3
+
+>>Turno 1057:
+>>xd
+F6 A4
+>>xc
+G6 N3
+
+>>Turno 1059:
+>>xd
+C7 D10
+>>xc
+M5 G9
+
+>>Turno 1061:
+>>xd
+F6 H8
+>>xc
+G6 M12
+
+>>Turno 1063:
+>>xd
+C7 B10
+>>xc
+G6 A7
+
+>>Turno 1065:
+>>xd
+C4 L6
+>>xc
+I9 H6
+
+>>Turno 1067:
+>>xd
+C2 L6
+>>xc
+G9 H9
+
+>>Turno 1069:
+>>xd
+C7 C1
+>>xc
+H9 L3
+
+>>Turno 1071:
+>>xd
+C4 A7
+>>xc
+L3 F5
+
+>>Turno 1073:
+>>xd
+F6 A10
+>>xc
+F5 M6
+
+>>Turno 1075:
+>>xd
+C4 M12
+>>xc
+H1 D7
+
+>>Turno 1077:
+>>xd
+C4 N2
+>>xc
+I9 B5
+
+>>Turno 1079:
+>>xd
+F6 M2
+>>xc
+M6 C6
+
+>>Turno 1081:
+>>xd
+F6 E5
+>>xc
+C6 N9
+
+>>Turno 1083:
+>>xd
+D11 C5
+>>xc
+H1 L11
+
+>>Turno 1085:
+>>xd
+L6 C3
+>>xc
+I9 N4
+
+>>Turno 1087:
+>>xd
+C4 E1
+>>xc
+I9 I1
+
+>>Turno 1089:
+>>xd
+C3 F3
+>>xc
+G6 M4
+
+>>Turno 1091:
+>>xd
+C7 B4
+>>xc
+G6 A2
+
+>>Turno 1093:
+>>xd
+C5 E1
+>>xc
+H1 L10
+
+>>Turno 1095:
+>>xd
+C4 M6
+>>xc
+I9 D5
+
+>>Turno 1097:
+>>xd
+F6 G2
+>>xc
+H1 L4
+
+>>Turno 1099:
+>>xd
+F6 F2
+>>xc
+I9 L6
+
+>>Turno 1101:
+>>xd
+C7 I11
+>>xc
+I9 M11
+
+>>Turno 1103:
+>>xd
+F6 M10
+>>xc
+G6 D4
+
+>>Turno 1105:
+>>xd
+F6 I5
+>>xc
+G6 C11
+
+>>Turno 1107:
+>>xd
+C7 C2
+>>xc
+H1 C9
+
+>>Turno 1109:
+>>xd
+F6 D7
+>>xc
+N9 A12
+
+>>Turno 1111:
+>>xd
+E1 D10
+>>xc
+A12 C2
+
+>>Turno 1113:
+>>xd
+C4 A6
+>>xc
+H1 H4
+
+>>Turno 1115:
+>>xd
+F3 C12
+>>xc
+I9 N9
+
+>>Turno 1117:
+>>xd
+C7 I9
+>>xc
+C2 N2
+
+>>Turno 1119:
+>>xd
+D10 M2
+>>xc
+H1 M12
+
+>>Turno 1121:
+>>xd
+C4 L1
+>>xc
+N2 C5
+
+>>Turno 1123:
+>>xd
+F6 L7
+>>xc
+H1 I9
+
+>>Turno 1125:
+>>xd
+C7 F2
+>>xc
+G6 M8
+
+>>Turno 1127:
+>>xd
+F6 F9
+>>xc
+H1 L9
+
+>>Turno 1129:
+>>xd
+C4 N5
+>>xc
+G6 H11
+
+>>Turno 1131:
+>>xd
+C12 L10
+>>xc
+H1 I5
+
+>>Turno 1133:
+>>xd
+C4 C1
+>>xc
+I9 L5
+
+>>Turno 1135:
+>>xd
+C7 F2
+>>xc
+C5 D1
+
+>>Turno 1137:
+>>xd
+M2 B11
+>>xc
+H1 E7
+
+>>Turno 1139:
+>>xd
+C4 H7
+>>xc
+H1 H11
+
+>>Turno 1141:
+>>xd
+L10 B3
+>>xc
+D1 C10
+
+>>Turno 1143:
+>>xd
+C7 G7
+>>xc
+G6 B3
+
+>>Turno 1145:
+>>xd
+B11 I9
+>>xc
+G6 B3
+
+>>Turno 1147:
+>>xd
+B3 C8
+>>xc
+I9 M10
+
+>>Turno 1149:
+>>xd
+C4 D1
+>>xc
+H1 D4
+
+>>Turno 1151:
+>>xd
+F6 A4
+>>xc
+I9 A10
+
+>>Turno 1153:
+>>xd
+C4 E3
+>>xc
+H1 I9
+
+>>Turno 1155:
+>>xd
+C7 C6
+>>xc
+C10 L2
+
+>>Turno 1157:
+>>xd
+F6 A3
+>>xc
+H1 N3
+
+>>Turno 1159:
+>>xd
+C4 L7
+>>xc
+I9 N9
+
+>>Turno 1161:
+>>xd
+F6 G7
+>>xc
+G6 B11
+
+>>Turno 1163:
+>>xd
+F6 E8
+>>xc
+G6 B5
+
+>>Turno 1165:
+>>xd
+C7 I8
+>>xc
+G6 D10
+
+>>Turno 1167:
+>>xd
+F6 A8
+>>xc
+H1 D9
+
+>>Turno 1169:
+>>xd
+C8 F1
+>>xc
+I9 M10
+
+>>Turno 1171:
+>>xd
+C4 A12
+>>xc
+L2 L3
+
+>>Turno 1173:
+>>xd
+F1 I2
+>>xc
+H1 E7
+
+>>Turno 1175:
+>>xd
+F6 H4
+>>xc
+G6 D12
+
+>>Turno 1177:
+>>xd
+F6 B5
+>>xc
+I9 I2
+
+>>Turno 1179:
+>>xd
+C4 F4
+>>xc
+G6 L10
+
+>>Turno 1181:
+>>xd
+C7 E1
+>>xc
+H1 H12
+
+>>Turno 1183:
+>>xd
+F6 L9
+>>xc
+H1 D4
+
+>>Turno 1185:
+>>xd
+C4 A6
+>>xc
+L3 B9
+
+>>Turno 1187:
+>>xd
+C4 H11
+>>xc
+B9 I5
+
+>>Turno 1189:
+>>xd
+I2 H2
+>>xc
+H1 H7
+
+>>Turno 1191:
+>>xd
+C4 H1
+>>xc
+I9 L11
+
+>>Turno 1193:
+>>xd
+C4 B5
+>>xc
+I5 E8
+
+>>Turno 1195:
+>>xd
+C7 L11
+>>xc
+H1 B9
+
+>>Turno 1197:
+>>xd
+F6 E12
+>>xc
+G6 C12
+
+>>Turno 1199:
+>>xd
+C4 D11
+>>xc
+G6 D8
+
+>>Turno 1201:
+>>xd
+C4 C3
+>>xc
+H1 E10
+
+>>Turno 1203:
+>>xd
+C7 A5
+>>xc
+H1 D8
+
+>>Turno 1205:
+>>xd
+H2 H4
+>>xc
+H1 B2
+
+>>Turno 1207:
+>>xd
+H4 M10
+>>xc
+G6 H3
+
+>>Turno 1209:
+>>xd
+C4 I3
+>>xc
+H1 D10
+
+>>Turno 1211:
+>>xd
+C4 L3
+>>xc
+G6 N6
+
+>>Turno 1213:
+>>xd
+F6 F1
+>>xc
+E8 B6
+
+>>Turno 1215:
+>>xd
+M10 E8
+>>xc
+H1 I10
+
+>>Turno 1217:
+>>xd
+C7 E8
+>>xc
+I9 D6
+
+>>Turno 1219:
+>>xd
+E8 H10
+>>xc
+G6 M9
+
+>>Turno 1221:
+>>xd
+C4 C6
+>>xc
+H1 F12
+
+>>Turno 1223:
+>>xd
+C7 E5
+>>xc
+I9 I12
+
+>>Turno 1225:
+>>xd
+C4 I12
+>>xc
+I9 M4
+
+>>Turno 1227:
+>>xd
+C4 G7
+>>xc
+I9 I2
+
+>>Turno 1229:
+>>xd
+F6 L2
+>>xc
+I9 C7
+
+>>Turno 1231:
+>>xd
+C4 E11
+>>xc
+I9 C10
+
+>>Turno 1233:
+>>xd
+F6 H4
+>>xc
+I9 F11
+
+>>Turno 1235:
+>>xd
+H10 C11
+>>xc
+H1 N6
+
+>>Turno 1237:
+>>xd
+C11 I8
+>>xc
+I9 F7
+
+>>Turno 1239:
+>>xd
+F6 D11
+>>xc
+I9 H5
+
+>>Turno 1241:
+>>xd
+F6 H9
+>>xc
+B6 B8
+
+>>Turno 1243:
+>>xd
+I8 L7
+>>xc
+H1 G8
+
+>>Turno 1245:
+>>xd
+C7 A10
+>>xc
+G6 I9
+
+>>Turno 1247:
+>>xd
+L7 M11
+>>xc
+B8 C9
+
+>>Turno 1249:
+>>xd
+F6 H10
+>>xc
+G6 I11
+
+>>Turno 1251:
+>>xd
+C4 G1
+>>xc
+C9 N10
+
+>>Turno 1253:
+>>xd
+M11 B8
+>>xc
+G6 M8
+
+>>Turno 1255:
+>>xd
+B8 M12
+>>xc
+N10 I3
+
+>>Turno 1257:
+>>xd
+C7 G3
+>>xc
+G6 H2
+
+>>Turno 1259:
+>>xd
+C7 F7
+>>xc
+G6 B12
+
+>>Turno 1261:
+>>xd
+F6 A3
+>>xc
+I9 B3
+
+>>Turno 1263:
+>>xd
+C4 I1
+>>xc
+I3 B9
+
+>>Turno 1265:
+>>xd
+C4 G6
+>>xc
+I9 N11
+
+>>Turno 1267:
+>>xd
+C4 D11
+>>xc
+G6 N6
+
+>>Turno 1269:
+>>xd
+F6 A6
+>>xc
+G6 N4
+
+>>Turno 1271:
+>>xd
+C7 B4
+>>xc
+G6 D1
+
+>>Turno 1273:
+>>xd
+C7 D9
+>>xc
+I9 H1
+
+>>Turno 1275:
+>>xd
+M12 C12
+>>xc
+I9 A7
+
+>>Turno 1277:
+>>xd
+C4 D2
+>>xc
+G6 L8
+
+>>Turno 1279:
+>>xd
+C4 L4
+>>xc
+B9 N4
+
+>>Turno 1281:
+>>xd
+C4 F1
+>>xc
+I9 M2
+
+>>Turno 1283:
+>>xd
+C4 N5
+>>xc
+I9 M10
+
+>>Turno 1285:
+>>xd
+C4 F5
+>>xc
+G6 B1
+
+>>Turno 1287:
+>>xd
+C12 H4
+>>xc
+G6 E12
+
+>>Turno 1289:
+>>xd
+C7 D5
+>>xc
+G6 L1
+
+>>Turno 1291:
+>>xd
+C4 A3
+>>xc
+N4 D5
+
+>>Turno 1293:
+>>xd
+C7 M6
+>>xc
+G6 L6
+
+>>Turno 1295:
+>>xd
+C7 D7
+>>xc
+I9 B7
+
+>>Turno 1297:
+>>xd
+F6 D12
+>>xc
+I9 N1
+
+>>Turno 1299:
+>>xd
+H4 D1
+>>xc
+G6 N5
+
+>>Turno 1301:
+>>xd
+D1 I10
+>>xc
+D5 L5
+
+>>Turno 1303:
+>>xd
+C4 H9
+>>xc
+L5 H9
+
+>>Turno 1305:
+>>xd
+C7 G8
+>>xc
+H9 E12
+
+>>Turno 1307:
+>>xd
+C7 I12
+>>xc
+I9 E2
+
+>>Turno 1309:
+>>xd
+C4 B2
+>>xc
+I9 A4
+
+>>Turno 1311:
+>>xd
+F6 E7
+>>xc
+G6 N7
+
+>>Turno 1313:
+>>xd
+F6 G5
+>>xc
+G6 L2
+
+>>Turno 1315:
+>>xd
+I10 B6
+>>xc
+E12 B9
+
+>>Turno 1317:
+>>xd
+B6 L9
+>>xc
+B9 C11
+
+>>Turno 1319:
+>>xd
+C4 A8
+>>xc
+G6 N12
+
+>>Turno 1321:
+>>xd
+F6 H1
+>>xc
+C11 H8
+
+>>Turno 1323:
+>>xd
+F6 C7
+>>xc
+G6 A12
+
+>>Turno 1325:
+>>xd
+C4 E6
+>>xc
+G6 L12
+
+>>Turno 1327:
+>>xd
+C4 A9
+>>xc
+G6 N11
+
+>>Turno 1329:
+>>xd
+F6 F11
+>>xc
+H8 A2
+
+>>Turno 1331:
+>>xd
+C7 F6
+>>xc
+G6 H5
+
+>>Turno 1333:
+>>xd
+C4 F2
+>>xc
+A2 G11
+
+>>Turno 1335:
+>>xd
+C4 F10
+>>xc
+G6 A12
+
+>>Turno 1337:
+>>xd
+C4 I6
+>>xc
+G6 F8
+
+>>Turno 1339:
+>>xd
+C4 I9
+>>xc
+G6 A7
+
+>>Turno 1341:
+>>xd
+C4 E4
+>>xc
+G6 M8
+
+>>Turno 1343:
+>>xd
+F6 E10
+>>xc
+G11 C9
+
+>>Turno 1345:
+>>xd
+F6 E11
+>>xc
+I9
+
+>>Turno 1347:
+>>xd
+C4 I10
+>>xc
+I9 H6
+
+>>Turno 1349:
+>>xd
+C4 M4
+>>xc
+C9 D3
+
+>>Turno 1351:
+>>xd
+C4 D1
+>>xc
+G6 E2
+
+>>Turno 1353:
+>>xd
+L9 C2
+>>xc
+I9 L7
+
+>>Turno 1355:
+>>xd
+C2 L9
+>>xc
+I9 F8
+
+>>Turno 1357:
+>>xd
+F6 N6
+>>xc
+I9 L7
+
+>>Turno 1359:
+>>xd
+F6 L4
+>>xc
+G6 E10
+
+>>Turno 1361:
+>>xd
+L9 C9
+>>xc
+D3 A7
+
+>>Turno 1363:
+>>xd
+F6 D9
+>>xc
+G6 A7
+
+>>Turno 1365:
+>>xd
+F6 F5
+>>xc
+I9 F10
+
+>>Turno 1367:
+>>xd
+C7 B12
+>>xc
+G6 N5
+
+>>Turno 1369:
+>>xd
+C7 M12
+>>xc
+G6 A10
+
+>>Turno 1371:
+>>xd
+C7 C11
+>>xc
+G6 C3
+
+>>Turno 1373:
+>>xd
+C7 E4
+>>xc
+I9 I5
+
+>>Turno 1375:
+>>xd
+C4 N1
+>>xc
+G6 G3
+
+>>Turno 1377:
+>>xd
+F6 G8
+>>xc
+A7 M7
+
+>>Turno 1379:
+>>xd
+C7 D5
+>>xc
+I9 E9
+
+>>Turno 1381:
+>>xd
+C4 G9
+>>xc
+M7 D10
+
+>>Turno 1383:
+>>xd
+C4 I12
+>>xc
+D10 I4
+
+>>Turno 1385:
+>>xd
+C4 H6
+>>xc
+I4 B12
+
+>>Turno 1387:
+>>xd
+C7 L9
+>>xc
+B12 E8
+
+>>Turno 1389:
+>>xd
+C9 M8
+>>xc
+I9 B4
+
+>>Turno 1391:
+>>xd
+F6 M12
+>>xc
+I9 B11
+
+>>Turno 1393:
+>>xd
+C4 C12
+>>xc
+E8 N9
+
+>>Turno 1395:
+>>xd
+C7 B2
+>>xc
+I9 M9
+
+>>Turno 1397:
+>>xd
+C7 H7
+>>xc
+I9 H11
+
+>>Turno 1399:
+>>xd
+C7 H4
+>>xc
+I9 L3
+
+>>Turno 1401:
+>>xd
+F6 G12
+>>xc
+N9 G6
+
+>>Turno 1403:
+>>xd
+C7 C2
+>>xc
+G6 F3
+
+>>Turno 1405:
+>>xd
+M8 L1
+>>xc
+F3 E2
+
+>>Turno 1407:
+>>xd
+F6 B3
+>>xc
+E2 H1
+
+>>Turno 1409:
+>>xd
+C4 G3
+>>xc
+I9 E8
+
+>>Turno 1411:
+>>xd
+L1 M5
+>>xc
+I9 A6
+
+>>Turno 1413:
+>>xd
+M5 H2
+>>xc
+H1 A11
+
+>>Turno 1415:
+>>xd
+C4 D2
+>>xc
+I9 M10
+
+>>Turno 1417:
+>>xd
+C4 I12
+>>xc
+A11 N10
+
+>>Turno 1419:
+>>xd
+C4 G12
+>>xc
+I9 M5
+
+>>Turno 1421:
+>>xd
+C4 E8
+>>xc
+I9 E8
+
+>>Turno 1423:
+>>xd
+H2 C1
+>>xc
+I9 N10
+
+>>Turno 1425:
+>>xd
+C4 A9
+>>xc
+I9 G8
+
+>>Turno 1427:
+>>xd
+F6 N6
+>>xc
+N10 E4
+
+>>Turno 1429:
+>>xd
+C4 H5
+>>xc
+E4 C8
+
+>>Turno 1431:
+>>xd
+F6 F7
+>>xc
+I9 A11
+
+>>Turno 1433:
+>>xd
+C7 L10
+>>xc
+C8 E4
+
+>>Turno 1435:
+>>xd
+C4 L1
+>>xc
+I9 N11
+
+>>Turno 1437:
+>>xd
+C4 C2
+>>xc
+E4 M6
+
+>>Turno 1439:
+>>xd
+C7 C5
+>>xc
+M6 N8
+
+>>Turno 1441:
+>>xd
+C4 C9
+>>xc
+N8 B10
+
+>>Turno 1443:
+>>xd
+F6 A4
+>>xc
+I9 E12
+
+>>Turno 1445:
+>>xd
+F6 F9
+>>xc
+I9 L3
+
+>>Turno 1447:
+>>xd
+C1 H9
+>>xc
+I9 A10
+
+>>Turno 1449:
+>>xd
+C4 N11
+>>xc
+I9 L2
+
+>>Turno 1451:
+>>xd
+C7 I6
+>>xc
+I9 B7
+
+>>Turno 1453:
+>>xd
+H9 F11
+>>xc
+I9 A10
+
+>>Turno 1455:
+>>xd
+F11 D2
+>>xc
+B10 G1
+
+>>Turno 1457:
+>>xd
+C4 L2
+>>xc
+I9 M11
+
+>>Turno 1459:
+>>xd
+D2 E8
+>>xc
+G1 H6
+
+>>Turno 1461:
+>>xd
+F6 M7
+>>xc
+I9 G5
+
+>>Turno 1463:
+>>xd
+C4 G2
+>>xc
+H6 L6
+
+>>Turno 1465:
+>>xd
+E8 G3
+>>xc
+L6 E6
+
+>>Turno 1467:
+>>xd
+F6 C9
+>>xc
+I9 I11
+
+>>Turno 1469:
+>>xd
+C4 L7
+>>xc
+E6 C5
+
+>>Turno 1471:
+>>xd
+C7 L12
+>>xc
+C5 E4
+
+>>Turno 1473:
+>>xd
+C7 G1
+>>xc
+I9 M10
+
+>>Turno 1475:
+>>xd
+C7 D6
+>>xc
+E4 D9
+
+>>Turno 1477:
+>>xd
+G3 C1
+>>xc
+I9 I5
+
+>>Turno 1479:
+>>xd
+C7 E11
+>>xc
+D9 D2
+
+>>Turno 1481:
+>>xd
+C4 F11
+>>xc
+I9 N2
+
+>>Turno 1483:
+>>xd
+C4 C9
+>>xc
+I9 D1
+
+>>Turno 1485:
+>>xd
+F6 F5
+>>xc
+D2 G2
+
+>>Turno 1487:
+>>xd
+C4 D6
+>>xc
+G2 H7
+
+>>Turno 1489:
+>>xd
+C4 M1
+>>xc
+I9 B9
+
+>>Turno 1491:
+>>xd
+C7 E7
+>>xc
+H7 A5
+
+>>Turno 1493:
+>>xd
+C4 E5
+>>xc
+I9 G1
+
+>>Turno 1495:
+>>xd
+F6 G6
+>>xc
+I9 F12
+
+>>Turno 1497:
+>>xd
+C7 G5
+>>xc
+I9 H2
+
+>>Turno 1499:
+>>xd
+C7 E4
+>>xc
+A5 B7
+
+>>Turno 1501:
+>>xd
+F6 D1
+>>xc
+I9 D6
+
+>>Turno 1503:
+>>xd
+C4 I10
+>>xc
+B7 L5
+
+>>Turno 1505:
+>>xd
+C7 H8
+>>xc
+I9 D7
+
+>>Turno 1507:
+>>xd
+C4 L6
+>>xc
+L5 E1
+
+>>Turno 1509:
+>>xd
+C7 D8
+>>xc
+E1 C11
+
+>>Turno 1511:
+>>xd
+F6 C12
+>>xc
+C11 L8
+
+>>Turno 1513:
+>>xd
+F6 I4
+>>xc
+I9 I4
+
+>>Turno 1515:
+>>xd
+C4 M10
+>>xc
+L8 I1
+
+>>Turno 1517:
+>>xd
+C4 M7
+>>xc
+I1 C8
+
+>>Turno 1519:
+>>xd
+C4 D8
+>>xc
+I9 B3
+
+>>Turno 1521:
+>>xd
+F6 A9
+>>xc
+I9 A3
+
+>>Turno 1523:
+>>xd
+F6 N12
+>>xc
+C8 E9
+
+>>Turno 1525:
+>>xd
+C7 N11
+>>xc
+E9 G2
+
+>>Turno 1527:
+>>xd
+F6 I10
+>>xc
+G2 I1
+
+>>Turno 1529:
+>>xd
+C4 D2
+>>xc
+I9 B7
+
+>>Turno 1531:
+>>xd
+C7 H6
+>>xc
+I9 H5
+
+>>Turno 1533:
+>>xd
+C4 A9
+>>xc
+I9 E3
+
+>>Turno 1535:
+>>xd
+F6 A3
+>>xc
+I9 M6
+
+>>Turno 1537:
+>>xd
+F6 L4
+>>xc
+I9 B3
+
+>>Turno 1539:
+>>xd
+F6 A6
+>>xc
+I9 M2
+
+>>Turno 1541:
+>>xd
+C7 G4
+>>xc
+I1 M6
+
+>>Turno 1543:
+>>xd
+C7 D6
+>>xc
+I9 M2
+
+>>Turno 1545:
+>>xd
+C4 A8
+>>xc
+I9 E6
+
+>>Turno 1547:
+>>xd
+C7 N3
+>>xc
+I9 C7
+
+>>Turno 1549:
+>>xd
+F6 G11
+>>xc
+I9 H2
+
+>>Turno 1551:
+>>xd
+C4 E9
+>>xc
+I9 I5
+
+>>Turno 1553:
+>>xd
+C7 B4
+>>xc
+M6 N11
+
+>>Turno 1555:
+>>xd
+F6 M3
+>>xc
+I9 B1
+
+>>Turno 1557:
+>>xd
+C7 N10
+>>xc
+N11 F2
+
+>>Turno 1559:
+>>xd
+F6 L3
+>>xc
+I9 C9
+
+>>Turno 1561:
+>>xd
+F6 D12
+>>xc
+F2 F5
+
+>>Turno 1563:
+>>xd
+F6 A8
+>>xc
+F5 N6
+
+>>Turno 1565:
+>>xd
+F6 F4
+>>xc
+N6 N8
+
+>>Turno 1567:
+>>xd
+F6 I5
+>>xc
+N8 I2
+
+>>Turno 1569:
+>>xd
+C7 C6
+>>xc
+I2 N6
+
+>>Turno 1571:
+>>xd
+C7 B12
+>>xc
+N6 N4
+
+>>Turno 1573:
+>>xd
+C4 L1
+>>xc
+N4 G12
+
+>>Turno 1575:
+>>xd
+F6 C8
+>>xc
+I9 M7
+
+>>Turno 1577:
+>>xd
+F6 E9
+>>xc
+I9 G2
+
+>>Turno 1579:
+>>xd
+C4 B7
+>>xc
+G12 G9
+
+>>Turno 1581:
+>>xd
+C4 A3
+>>xc
+G9 G4
+
+>>Turno 1583:
+>>xd
+C4 M11
+>>xc
+I9 D8
+
+>>Turno 1585:
+>>xd
+F6 N8
+>>xc
+I9 M10
+
+>>Turno 1587:
+>>xd
+C7 L7
+>>xc
+I9 L2
+
+>>Turno 1589:
+>>xd
+F6 I10
+>>xc
+G4 E12
+
+>>Turno 1591:
+>>xd
+C7 A4
+>>xc
+I9 M6
+
+>>Turno 1593:
+>>xd
+C4 E1
+>>xc
+E12 D12
+
+>>Turno 1595:
+>>xd
+F6 G9
+>>xc
+I9 B2
+
+>>Turno 1597:
+>>xd
+C7 E6
+>>xc
+I9 N5
+
+>>Turno 1599:
+>>xd
+F6
+>>xc
+I9 N2
+
+>>Turno 1601:
+>>xd
+F6 A10
+>>xc
+D12 G4
+
+>>Turno 1603:
+>>xd
+F6 H12
+>>xc
+G4 E6
+
+>>Turno 1605:
+>>xd
+F6 C10
+>>xc
+I9 L12
+
+>>Turno 1607:
+>>xd
+C7 A6
+>>xc
+E6 F12
+
+>>Turno 1609:
+>>xd
+C7 A9
+>>xc
+F12 C10
+
+>>Turno 1611:
+>>xd
+C7 L3
+>>xc
+C10 I1
+
+>>Turno 1613:
+>>xd
+C4 C9
+>>xc
+I9 M10
+
+>>Turno 1615:
+>>xd
+F6 E4
+>>xc
+I9 H4
+
+>>Turno 1617:
+>>xd
+F6 I9
+>>xc
+I9 C5
+
+>>Turno 1619:
+>>xd
+F6 D4
+>>xc
+I1 B3
+
+>>Turno 1621:
+>>xd
+F6 C3
+>>xc
+I9 M12
+
+>>Turno 1623:
+>>xd
+C7 G9
+>>xc
+I9 G9
+
+>>Turno 1625:
+>>xd
+C4 L10
+>>xc
+I9 H4
+
+>>Turno 1627:
+>>xd
+C4 M9
+>>xc
+I9 F12
+
+>>Turno 1629:
+>>xd
+F6 G7
+>>xc
+I9 E10
+
+>>Turno 1631:
+>>xd
+F6 C5
+>>xc
+I9 D5
+
+>>Turno 1633:
+>>xd
+C7 F4
+>>xc
+B3 A1
+
+>>Turno 1635:
+>>xd
+F6 A9
+>>xc
+I9 F8
+
+>>Turno 1637:
+>>xd
+F6 E12
+>>xc
+A1 I6
+
+>>Turno 1639:
+>>xd
+C7 E9
+>>xc
+I6 H1
+
+>>Turno 1641:
+>>xd
+F6 N5
+>>xc
+H1 F8
+
+>>Turno 1643:
+>>xd
+C7 H1
+>>xc
+I9 E3
+
+>>Turno 1645:
+>>xd
+F6 D10
+>>xc
+I9 H8
+
+>>Turno 1647:
+>>xd
+C4 N4
+>>xc
+I9 B3
+
+>>Turno 1649:
+>>xd
+F6 C9
+>>xc
+F8 L11
+
+>>Turno 1651:
+>>xd
+F6 F2
+>>xc
+L11 F9
+
+>>Turno 1653:
+>>xd
+C7 M1
+>>xc
+F9 N6
+
+>>Turno 1655:
+>>xd
+C4 D7
+>>xc
+I9 E1
+
+>>Turno 1657:
+>>xd
+C7 M11
+>>xc
+I9 M9
+
+>>Turno 1659:
+>>xd
+C7 D12
+>>xc
+N6 H1
+
+>>Turno 1661:
+>>xd
+C4 H2
+>>xc
+H1 H11
+
+>>Turno 1663:
+>>xd
+C7 I7
+>>xc
+H11 H5
+
+>>Turno 1665:
+>>xd
+C4 H12
+>>xc
+H5 I1
+
+>>Turno 1667:
+>>xd
+C7 E10
+>>xc
+I1 G3
+
+>>Turno 1669:
+>>xd
+C4 D7
+>>xc
+G3 M6
+
+>>Turno 1671:
+>>xd
+F6 D3
+>>xc
+M6 H5
+
+>>Turno 1673:
+>>xd
+F6 D8
+>>xc
+H5 C10
+
+>>Turno 1675:
+>>xd
+C7 C12
+>>xc
+C10 L12
+
+>>Turno 1677:
+>>xd
+C7 D2
+>>xc
+L12 F3
+
+>>Turno 1679:
+>>xd
+C7 G5
+>>xc
+F3 M2
+
+>>Turno 1681:
+>>xd
+C4 D7
+>>xc
+M2 M7
+
+>>Turno 1683:
+>>xd
+C7 C5
+>>xc
+M7 B11
+
+>>Turno 1685:
+>>xd
+F6 G7
+>>xc
+B11 H6
+
+>>Turno 1687:
+>>xd
+C7 C1
+>>xc
+H6 A8
+
+>>Turno 1689:
+>>xd
+C7 H4
+>>xc
+A8 D7
+
+>>Turno 1691:
+>>xd
+C4 G11
+>>xc
+D7 G12
+
+>>Turno 1693:
+>>xd
+F6 E9
+>>xc
+G12 N1
+
+>>Turno 1695:
+>>xd
+C7 D11
+>>xc
+N1 F6
+
+>>Turno 1697:
+>>xd
+F6 I5
+>>xc
+F6 N12
+
+>>Turno 1699:
+>>xd
+C7 A10
+>>xc
+N12 N11
+
+>>Turno 1701:
+>>xd
+C4 D7
+>>xc
+N11 N4
+
+>>Turno 1703:
+>>xd
+C7 A3
+>>xc
+N4 C8
+
+>>Turno 1705:
+>>xd
+C7 D12
+>>xc
+C8 L10
+
+>>Turno 1707:
+>>xd
+F6 H5
+>>xc
+L10 E4
+
+>>Turno 1709:
+>>xd
+F6 G1
+>>xc
+E4 F9
+
+>>Turno 1711:
+>>xd
+F6 M1
+>>xc
+F9 L12
+
+>>Turno 1713:
+>>xd
+C4 C2
+>>xc
+L12 M7
+
+>>Turno 1715:
+>>xd
+F6 D2
+>>xc
+M7 A10
+
+>>Turno 1717:
+>>xd
+C7 N6
+>>xc
+A10 H4
+
+>>Turno 1719:
+>>xd
+C7 A11
+>>xc
+H4 E6
+
+>>Turno 1721:
+>>xd
+C4 I8
+>>xc
+E6 D2
+
+>>Turno 1723:
+>>xd
+F6 N9
+>>xc
+D2 D10
+
+>>Turno 1725:
+>>xd
+F6 N6
+>>xc
+D10 F10
+
+>>Turno 1727:
+>>xd
+C7 M5
+>>xc
+F10 N5
+
+>>Turno 1729:
+>>xd
+F6 H4
+>>xc
+N5 N11
+
+>>Turno 1731:
+>>xd
+C7 I6
+>>xc
+N11 N3
+
+>>Turno 1733:
+>>xd
+F6 E12
+>>xc
+N3 D8
+
+>>Turno 1735:
+>>xd
+C7 E2
+>>xc
+D8 F4
+
+>>Turno 1737:
+>>xd
+C4 N11
+>>xc
+F4 H7
+
+>>Turno 1739:
+>>xd
+C4 L6
+>>xc
+H7 G6
+
+>>Turno 1741:
+>>xd
+C7 I11
+>>xc
+G6 M7
+
+>>Turno 1743:
+>>xd
+F6 G4
+>>xc
+M7 B3
+
+>>Turno 1745:
+>>xd
+C7 C3
+>>xc
+B3 N2
+
+>>Turno 1747:
+>>xd
+C7 D5
+>>xc
+N2 N9
+
+>>Turno 1749:
+>>xd
+C4 M2
+>>xc
+N9 C4
+
+>>Turno 1751:
+>>xd
+C4 E2
+>>xc
+C4 N12
+
+>>Turno 1753:
+>>xd
+C4 F4
+>>xc
+N12 E11
+
+>>Turno 1755:
+>>xd
+C4 L10
+>>xc
+E11 C10
+
+>>Turno 1757:
+>>xd
+C7 M10
+>>xc
+C10 N3
+
+>>Turno 1759:
+>>xd
+C7 C1
+>>xc
+N3 C2
+
+>>Turno 1761:
+>>xd
+F6 E5
+>>xc
+C2 N12
+
+>>Turno 1763:
+>>xd
+C7 H12
+>>xc
+N12 E8
+
+>>Turno 1765:
+>>xd
+F6 C1
+>>xc
+E8 H2
+
+>>Turno 1767:
+>>xd
+F6 N10
+>>xc
+H2 L6
+
+>>Turno 1769:
+>>xd
+C7 D3
+>>xc
+L6 N9
+
+>>Turno 1771:
+>>xd
+F6 F10
+>>xc
+N9 F10
+
+>>Turno 1773:
+>>xd
+C4 F11
+>>xc
+F10 E6
+
+>>Turno 1775:
+>>xd
+F6 D4
+>>xc
+E6 F7
+
+>>Turno 1777:
+>>xd
+F6 L10
+>>xc
+F7 I8
+
+>>Turno 1779:
+>>xd
+F6 D8
+>>xc
+I8 D1
+
+>>Turno 1781:
+>>xd
+F6 G3
+>>xc
+D1 B10
+
+>>Turno 1783:
+>>xd
+C7 D5
+>>xc
+B10 I10
+
+>>Turno 1785:
+>>xd
+C4 G5
+>>xc
+I10 E12
+
+>>Turno 1787:
+>>xd
+F6 E3
+>>xc
+E12 N9
+
+>>Turno 1789:
+>>xd
+F6 H1
+>>xc
+N9 H1
+
+>>Turno 1791:
+>>xd
+C7 G12
+>>xc
+H1 M12
+
+>>Turno 1793:
+>>xd
+C7 C8
+>>xc
+M12 N4
+
+>>Turno 1795:
+>>xd
+C7 C8
+>>xc
+N4 I5
+
+>>Turno 1797:
+>>xd
+F6 F3
+>>xc
+I5 G3
+
+>>Turno 1799:
+>>xd
+F6 I2
+>>xc
+G3 L9
+
+>>Turno 1801:
+>>xd
+C7 A2
+>>xc
+L9 B12
+
+>>Turno 1803:
+>>xd
+C4 M9
+>>xc
+B12 B6
+
+>>Turno 1805:
+>>xd
+F6
+>>xc
+B6 E4
+
+>>Turno 1807:
+>>xd
+F6 L3
+>>xc
+E4 G5
+
+>>Turno 1809:
+>>xd
+C4 M11
+>>xc
+G5 M9
+
+>>Turno 1811:
+>>xd
+C4 D9
+>>xc
+M9 C6
+
+>>Turno 1813:
+>>xd
+C4 M9
+>>xc
+C6 D11
+
+>>Turno 1815:
+>>xd
+C4 A12
+>>xc
+D11 I11
+
+>>Turno 1817:
+>>xd
+C4 H1
+>>xc
+I11 N7
+
+>>Turno 1819:
+>>xd
+F6 F11
+>>xc
+N7 M7
+
+>>Turno 1821:
+>>xd
+C4 I6
+>>xc
+M7 L6
+
+>>Turno 1823:
+>>xd
+C7 N5
+>>xc
+L6 M12
+
+>>Turno 1825:
+>>xd
+F6 N9
+>>xc
+M12 I4
+
+>>Turno 1827:
+>>xd
+F6 I4
+
+xd
+>>>>>>> 9f2ee3de62765ae75bf005dd23a9d5d78ff713d3

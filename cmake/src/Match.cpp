@@ -91,8 +91,7 @@ int command(Position& a, Position& b)
 		return 5;
 	
 	if(input_string == "TT TT")
-		return 5;
-	
+		return 6;
 	
 	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
 	// ma non so bene come fare
@@ -119,6 +118,7 @@ int command(Position& a, Position& b)
 	{
 		if(!std::regex_match(in1, reg_position))
 		{
+			// comando non valido
 			return -1;
 		}
 		else	// inserimento di un sottomarino
@@ -145,16 +145,17 @@ int command(Position& a, Position& b)
 int random_command(Player& player, Position& origin, Position& target)
 {
 	// parto da una nave randomica, se questa è affondata passo alla successiva
-	int ship_number = rand()%DefenceGrid::SHIP_NUMBER;
-	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
-	{
-		if(player.get_ship(ship_number).is_sunk())
-		{
-			ship_number = (ship_number+1)%DefenceGrid::SHIP_NUMBER;
-			continue;
-		}
+	int ship_number = rand()%player.get_placed_ships();
+	// queste cose non serovno più dato che ora ships contiene solo navi non affondate
+//	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
+//	{
+//		if(player.get_ship(ship_number).is_sunk())
+//		{
+//			ship_number = (ship_number+1)%DefenceGrid::SHIP_NUMBER;
+//			continue;
+//		}
 		origin = player.get_ship(ship_number).get_center();
-	}
+//	}
 	// in teoria il ciclo va sempre a buon fine perché random_command viene chiamata dopo aver controllato
 	// che il giocatore non abbia perso, e quindi ci sarà almeno una nave non affondata
 	
@@ -233,18 +234,21 @@ void user_placement(Player& p, Log& file_log)
 	
 	for(int i=0; i<3; i++)
 	{
-		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i, file_log);
+		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
 		p.add_ship(new Battleship(prow, prune, p)); 
+		file_log.write(prow, prune);
 	}
 	for(int i=3; i<6; i++)
 	{
-		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i, file_log);
+		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i);
 		p.add_ship(new Support(prow, prune, p)); 
+		file_log.write(prow, prune);
 	}
 	for(int i=6; i<8; i++)
 	{
-		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i, file_log);
+		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i);
 		p.add_ship(new Submarine(prow, p)); 
+		file_log.write(prow, prune);
 	}
 	
 	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
@@ -252,7 +256,7 @@ void user_placement(Player& p, Log& file_log)
 }
 
 void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
-							std::string ship_name, int ship_size, int ship_number, Log& file_log)
+							std::string ship_name, int ship_size, int ship_number)
 {
 	bool ok = false;
 	while(!ok)
@@ -270,23 +274,30 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 			std::cout << "Il comando inserito non e' valido\n";
 			continue;
 		}
-		if(code==3)
+		
+		if(code==1)
 		{
 			p.print_defence();
 			continue;
 		}
-		if(code==4 || code==5)
+		
+		if(code>=2 && code<=6)
 		{
 			std::cout << "La funzione inserita non e' disponibile in fase di inserimento delle navi\n";
 			continue;
 		}
 		
-		if(code!=n_coordinates)
+		// è stata inserita una coordinata ma ne servono due
+		if(code == 10 && n_coordinates == 2)
 		{
-			if(n_coordinates==2)
-				std::cout << "Sono necessarie due posizioni\n";
-			else
-				std::cout << "E' necessaria una posizione\n";
+			std::cout << "Sono necessarie due posizioni\n";
+			continue;
+		}
+		
+		// sono state inserite due coordinate ma ne serve una
+		if(code == 20 && n_coordinates == 1)
+		{
+			std::cout << "E' necessaria una posizione\n";
 			continue;
 		}
 		
@@ -315,11 +326,11 @@ void user_placement_helper(Player& p, int n_coordinates, Position& prow, Positio
 		ok = true;
 		//scrivo la posizione delle navi sul file di log
 //		file_log.add(prow.toString() + " " + prune.toString() + "\n");
-		file_log.write(prow, prune);
+//		file_log.write(prow, prune);
 	}
 }
 
-void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& prune, Log& file_log)
+void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& prune)
 {
 	bool ok = false;
 	while(!ok)
@@ -333,7 +344,7 @@ void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& pr
 			{
 				ok = true;
 //				file_log.add(prow.toString() + " " + prune.toString() + "\n");
-				file_log.write(prow, prune);
+//				file_log.write(prow, prune);
 				break;
 			}
 			direction=(direction+1)%4;
@@ -346,18 +357,21 @@ void bot_placement(Player& p, Log& file_log)
 	Position prow, prune;
 	for(int i=0; i<3; i++)
 	{
-		bot_placement_helper(p, 5, prow, prune, file_log);
+		bot_placement_helper(p, 5, prow, prune);
 		p.add_ship(new Battleship(prow, prune, p));
+		file_log.write(prow, prune);
 	}
 	for(int i=3; i<6; i++)
 	{
-		bot_placement_helper(p, 3, prow, prune, file_log);
-		p.add_ship(new Support(prow, prune, p)); 
+		bot_placement_helper(p, 3, prow, prune);
+		p.add_ship(new Support(prow, prune, p));
+		file_log.write(prow, prune);
 	}
 	for(int i=6; i<8; i++)
 	{
-		bot_placement_helper(p, 1, prow, prune, file_log);
+		bot_placement_helper(p, 1, prow, prune);
 		p.add_ship(new Submarine(prow, p)); 
+		file_log.write(prow, prune);
 	}
 	
 	
@@ -459,8 +473,17 @@ void round(Player& player, Player& enemy, Log& file_log)
 	int code = -1;
 	Position origin, target;
 	
+	if((player.is_cpu && !enemy.is_cpu) || (!player.is_cpu && enemy.is_cpu))
+	{
+		// piccola pausa prima che il computer faccia la sua mossa
+		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	}
+	
 	if(player.is_cpu)
+	{
+		
 		std::cout << player.name + " svolge il suo turno\n";
+	}
 	else
 		std::cout << player.name + " e' il tuo turno\n";
 	
@@ -540,9 +563,73 @@ void Match::play()
 	file_log.write("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
-void re_play(Player& p1, Player& p2, Log& file)		//lol
+void re_play(std::ifstream& input)		//lol
 {
-	file.read(p1.name);
-	file.read(p2.name);
+	std::string temp = "";
+	
+	//leggo i nomi dei giocatori
+	std::getline(input, temp);
+	Player p1(temp);
+	std::getline(input, temp);
+	Player p2(temp);
+	
+	std::getline(input, temp);		//serve per bypassare la riga vuota
+	
+	//posizionamento delle navi
+	replay_placement(p1, input);
+	replay_placement(p2, input);
+	
+	std::getline(input, temp);		//serve per bypassare la riga vuota
+	
+	while(!input.eof())
+	{
+		
+	}
+	
+	
 }
 
+void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
+{
+	std::string input_string;
+	std::getline(input, input_string);
+	
+	std::vector<std::string> vec = split(input_string, ' ');
+	std::string in1, in2;
+	
+	in1 = vec.at(0);
+	if(vec.size()==1)
+	{
+		a = Position(in1);
+		b = Position(in1);
+		return;
+	}
+	
+	in2 = vec.at(1);
+	a = Position(in1);
+	b = Position(in2);
+}
+
+//dovrei fare anche un placement for replay??
+void replay_placement(Player& p, std::ifstream& input)
+{
+	Position prow, prune;
+	
+	for(int i = 0; i < 3; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Battleship(prow, prune, p)); 
+	}
+	
+	for(int i = 3; i < 6; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Support(prow, prune, p)); 
+	}
+	
+	for(int i = 6; i < 8; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Submarine(prow, p)); 
+	}
+}
