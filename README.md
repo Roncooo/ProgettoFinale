@@ -38,20 +38,29 @@ Position
 |	|			|		|
 |	|			|		+----- Player
 |	|			|				|
-|	|			+------- Submarine	+----- Match
+|	|			|				+----- Match
+|	|			|
+|	|			+------- Submarine	
 |	|			|		|
 |	|			|		+----- Player
 |	|			|				|
-|	|			+------- Battleship	+----- Match
+|	|			|				+----- Match
+|	|			|				
+|	|			+------- Battleship	
 |	|					|
 |	|					+----- Player
-|	+-------- AttackGrid				|
-|				|				+----- Match
+|	|							|
+|	|							+----- Match
+|	|							
+|	+-------- AttackGrid				
+|				|				
 |				+------- Battleship
 |				|
 |				+------- Player
 |						|
-+--------- Log				+----- Match
+|						+----- Match
+|						
++--------- Log				
 		 |
 		 +----- Match
 
