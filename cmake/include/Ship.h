@@ -4,9 +4,9 @@
 #define Ship_H
 
 #include <vector>
-//#include "Player.h"
 #include "Position.h"
 #include "DefenceGrid.h"
+
 class Player;	// forward declaration
 
 class Ship
@@ -19,10 +19,9 @@ public:
 	Player& player;
 	// sono vector e non array perché a priori (compilazione) non conosco la loro 
 	// dimensione (e una Ship generica non ha dimensione specifica)
-	// si potrebbe aggirare rendendo Ship una classe template ma è solo un casino credo
 	std::vector<game_board::Position> pos;
 	// corazza, memorizza quali pezzi della Ship sono stati colpiti: pubblica perché su
-	// receive_shot vado a modificarne lo status
+	// receive_shot di Player vado a modificarne lo status
 	// corazza(armor[i]) integra = true;
 	// corazza(armor[i]) colpita = false;
 	std::vector<bool> armor;
@@ -34,13 +33,12 @@ public:
 	game_board::Position get_center() const;
 	
 	int move(const game_board::Position& new_pos);
-	void restore_armor();	// aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
+	void restore_armor();
 	virtual int is_sunk()=0;
-	virtual std::string ship_type() const =0;	// si può ritornare altro, anche non stringa
+	virtual std::string ship_type() const =0;
 	// non è const perché può muovere e poi agire
 	virtual int action(const game_board::Position& target, Player& enemy)=0;
 	
-//	virtual ~Ship()=0;	 stratagemma per rendere Ship virtuale pura
 private:
 	bool sunk = false;
 	int dimension;

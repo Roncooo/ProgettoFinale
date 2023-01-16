@@ -19,7 +19,7 @@ public:
 	Player(std::string n = "Player");
 	// si può mettere una variabile statica per dare nomi di default Player1 Player2
 	const std::string name;
-	bool is_cpu;
+	bool is_cpu = false;
 	bool auto_placement = false;
 	bool operator==(const Player& p) const;
 //	Player& operator=(const Player& p);
@@ -45,6 +45,7 @@ public:
 	bool has_lost();	// può essere resa const se non deve più usare is_sunk quindi per esempio se usiamo il vector
 						// oppure se siamo sicuri che bool sunk sia sempre correttamente aggiornato
 	int get_ship_index(const game_board::Position& pos) const;
+	int get_placed_ships() const;
 	bool is_valid(const game_board::Position& prow, const game_board::Position& prune) const;
 	// si poteva fare anche un unica funzione che ritorna un vector lungo 3 magari ma vabb nsomma
 	int how_many_battleships() const;
