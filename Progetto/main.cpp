@@ -127,11 +127,9 @@ void cpu_vs_cpu(int n)
 		player2.auto_placement = true;
 		
 		Match partita(player1, player2, file_log);
-//		partita.ship_placement(player1);
-//		partita.ship_placement(player2);
 		partita.play();
-		std::string azioni = file_log.getActions();
-		cout << "\nLe mosse effettuate sono state:\n" + azioni;
+//		std::string azioni = file_log.getActions();
+//		cout << "\nLe mosse effettuate sono state:\n" + azioni;
 		file_log.close();
 	}
 }

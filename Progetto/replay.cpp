@@ -14,8 +14,16 @@ int main_function(void){
 //		//fai qualcosa
 	
 	
-//	partita.re_play(input_file);
+//	re_play(p1, p2, file_log);
 	
 	file_log.close();
 	return 0;
 }
+
+
+//PAUSA
+
+//#include <chrono>
+//#include <thread>
+//
+//std::this_thread::sleep_for(std::chrono::milliseconds(500));

@@ -72,4 +72,7 @@ void recap(const Player& player1, const Player& player2);
 std::vector<std::string> split(std::string str, char delimiter);
 //esegue il replay dell'ultima partita giocata
 void re_play(Player& p1, Player& p2, Log& file);
+//
+//void perchè non serve che ritorni codici di usciti, visto che saranno tutti validi
+void command_for_replay(game_board::Position& a, game_board::Position& b);
 #endif // MATCH_H
