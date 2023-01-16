@@ -2,7 +2,7 @@
 
 #include "Match.h"
 
-using std::cout, std::cin, std::string;
+using std::cout, std::cin, std::endl, std::string;
 
 void standard_match()
 {
@@ -20,9 +20,13 @@ void standard_match()
 	cout << " - BB BB\t per cancellare tutta la griglia di attacco\n";
 	cout << " - CC CC\t per imbrogliare\n";
 	cout << " - TT TT\t per visualizzare la tabella di resoconto attuale\n";
-	cout << "Buon divertimento\n\n";
+	cout << "Buon divertimento\n" << endl;
+	
+	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	
+	cout << "Inserire i nomi dei giocatori" << endl;
 
-	cout << "Inserire i nomi dei giocatori\n";
+	std::this_thread::sleep_for(std::chrono::milliseconds(500));
 	
 	cout << "Nome giocatore 1: ";
 	string player1_name;
@@ -37,13 +41,15 @@ void standard_match()
 		cout << "Per favore inserisci un nome diverso da " + player1_name + "\n"; 
 		std::getline(std::cin, player2_name);
 		if(player2_name != player1_name)
-			cout << "\"" + player2_name + "\" va bene, grazie\n";
+			cout << "\"" + player2_name + "\" va bene, grazie" << endl;
 	}
 	
 	Player player1(player1_name);
 	Player player2(player2_name);
 	
 	std::string input_str;
+	
+	std::this_thread::sleep_for(std::chrono::milliseconds(500));
 	
 	while(input_str != "Y" && input_str != "N")
 	{
@@ -72,7 +78,7 @@ void standard_match()
 		
 		player2.is_cpu = true;
 		player2.auto_placement = true;
-		cout << "Almeno un giocatore deve essere computerizzato. " + player2_name + ", il computer giochera' al posto tuo\n";
+		cout << "Almeno un giocatore deve essere computerizzato. " + player2_name + ", il computer giochera' al posto tuo" << endl;
 	}
 	else
 	{
@@ -102,6 +108,8 @@ void standard_match()
 		}
 		input_str = "";
 	}
+	
+	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	
 	Match partita(player1, player2, file_log);
 	partita.play();
@@ -136,7 +144,7 @@ void cpu_vs_cpu(int n)
 
 int main(void)
 {
-	cpu_vs_cpu(1);
-//	standard_match();
+//	cpu_vs_cpu(1);
+	standard_match();
 	return 0;
 }

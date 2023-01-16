@@ -474,7 +474,11 @@ void round(Player& player, Player& enemy, Log& file_log)
 	Position origin, target;
 	
 	if(player.is_cpu)
+	{
+		// piccola pausa prima che il computer faccia la sua mossa
+		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 		std::cout << player.name + " svolge il suo turno\n";
+	}
 	else
 		std::cout << player.name + " e' il tuo turno\n";
 	
