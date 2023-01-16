@@ -564,7 +564,7 @@ void re_play(std::ifstream& input)		//lol
 	std::getline(input, temp);
 	Player p2(temp);
 	
-	std::getline(input, temp);
+	std::getline(input, temp);		//serve per bypassare la riga vuota
 	
 //	while(!input.eof())
 //	{
@@ -574,7 +574,7 @@ void re_play(std::ifstream& input)		//lol
 	
 }
 
-void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream input)
+void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
 {
 	std::string input_string;
 	std::getline(input, input_string);
@@ -593,4 +593,28 @@ void command_for_replay(game_board::Position& a, game_board::Position& b, std::i
 	in2 = vec.at(1);
 	a = Position(in1);
 	b = Position(in2);
+}
+
+//dovrei fare anche un placement for replay??
+void replay_placement(Player& p, std::ifstream& input)
+{
+	Position prow, prune;
+	
+	for(int i = 0; i < 3; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Battleship(prow, prune, p)); 
+	}
+	
+	for(int i = 3; i < 6; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Support(prow, prune, p)); 
+	}
+	
+	for(int i = 6; i < 8; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Submarine(prow, p)); 
+	}
 }
