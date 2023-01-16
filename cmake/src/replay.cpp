@@ -9,13 +9,21 @@ using std::cout, std::cin, std::ofstream, std::ifstream;
 int main_function(void){
 	
 	Log file_log = Log();
-	Player p1, p2; 
+ 
 //	while(!input_file.eof())		//restituisce true quando arriva alla fine del file
 //		//fai qualcosa
 	
 	
-//	partita.re_play(input_file);
+//	re_play(file_log);
 	
 	file_log.close();
 	return 0;
 }
+
+
+//PAUSA
+
+//#include <chrono>
+//#include <thread>
+//
+//std::this_thread::sleep_for(std::chrono::milliseconds(500));

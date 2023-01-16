@@ -17,7 +17,7 @@ Match::Match(Player& p1, Player& p2, Log& file)
 void recap(const Player& player1, const Player& player2)
 {
 	std::vector<std::string> ship_names{"Battleship", "Support", "Submarine"};
-	// gli interi vengono direttamente convertiti in stringhe, rende più agevole le operazioni di stampa
+	// gli interi vengono convertiti in stringhe, rende più agevole le operazioni di stampa
 	std::vector<std::string> ship_count1{	std::to_string(player1.how_many_battleships()	),
 											std::to_string(player1.how_many_supports()		),
 											std::to_string(player1.how_many_submarines()	)
@@ -27,10 +27,12 @@ void recap(const Player& player1, const Player& player2)
 											std::to_string(player2.how_many_submarines()	)
 										};
 									
-	// larghezza interna di ogni colonna, senza contare il padding di uno spazio a destra e uno a sinistra
+	// larghezze interne di ogni colonna, senza contare il padding di uno spazio a destra e uno a sinistra
 	int width_0 = 0;
 	int width_1 = player1.name.length();
 	int width_2 = player2.name.length();
+	
+	// cerco la massima larghezza di ogni colonna
 	for(int i=0; i<ship_names.size(); i++)
 	{
 		if(ship_names[i].length()>width_0)
@@ -52,10 +54,12 @@ void recap(const Player& player1, const Player& player2)
 	first_row += "| "+std::string(width_1-player1.name.length(), ' ')+player1.name+" ";
 	first_row += "| "+std::string(width_2-player2.name.length(), ' ')+player2.name+" |";
 	
+	// stampa la prima riga
 	std::cout << border << "\n";
 	std::cout << first_row << "\n";
 	std::cout << border << "\n";
 	
+	// stampa delle righe con i dati
 	for(int i=0; i<ship_names.size(); i++)
 	{
 		std::string row;
@@ -69,12 +73,12 @@ void recap(const Player& player1, const Player& player2)
 
 int command(Position& a, Position& b)
 {
-	std::string input_string;	// tutto l'input (cin invece si ferma allo spazio)
+	std::string input_string;
 	std::getline(std::cin, input_string);
-	// trasformo in uppercase l'input
 	std::transform(input_string.begin(), input_string.end(), input_string.begin(), ::toupper);
 	
 	// COMANDI SPECIALI
+	
 	if(input_string == "XX")
 		return 1;
 		
@@ -144,22 +148,14 @@ int command(Position& a, Position& b)
 
 int random_command(Player& player, Position& origin, Position& target)
 {
-	// parto da una nave randomica, se questa è affondata passo alla successiva
+	// si sceglie una nave randomica (che sicuramente esiste non affondata in quanto il vector ships in DefenceGrid contiene
+	// solo navi non affondate e perché prima di un qualsiasi comando viene controllato se il giocatore ha perso)
 	int ship_number = rand()%player.get_placed_ships();
-	// queste cose non serovno più dato che ora ships contiene solo navi non affondate
-//	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
-//	{
-//		if(player.get_ship(ship_number).is_sunk())
-//		{
-//			ship_number = (ship_number+1)%DefenceGrid::SHIP_NUMBER;
-//			continue;
-//		}
-		origin = player.get_ship(ship_number).get_center();
-//	}
-	// in teoria il ciclo va sempre a buon fine perché random_command viene chiamata dopo aver controllato
-	// che il giocatore non abbia perso, e quindi ci sarà almeno una nave non affondata
-	
+	origin = player.get_ship(ship_number).get_center();
+	// il target invece è scelto a caso tra le 12x12 posizioni possibili
 	target = random_position();
+	// il comando così restituito potrebbe non andare a buon fine (spostamento non valido)
+	// il controllo di validità viene fatto da round
 	return 20;	// per uniformarsi alle altre funzioni, indica che il comando prevede 2 posizioni valide
 }
 
@@ -219,164 +215,169 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	}
 }
 
-void Match::ship_placement(Player& p)
+void Match::ship_placement(Player& player)
 {
-	if(p.auto_placement)
-		bot_placement(p, file_log);
+	if(player.auto_placement)
+		bot_placement(player, file_log);
 	else
-		user_placement(p, file_log);
+		user_placement(player, file_log);
+		
+	if(!player.is_cpu)
+	{
+		std::cout << "\n" + player.name + ", questa e' la disposizione delle tue navi\n";
+		player.print_defence();
+	}
 }
 
-void user_placement(Player& p, Log& file_log)
+void user_placement(Player& player, Log& file_log)
 {
-	std::cout << "\n" + p.name + " inserisci le tue navi\n\n";
+	std::cout << "\n" + player.name + " inserisci le tue navi\n\n";
 	Position prow, prune;
 	
-	for(int i=0; i<3; i++)
+	// uso una lambda per evitare codice duplicato
+	auto user_placement_helper = [&player, &prow, &prune](std::string ship_name, int ship_size, int ship_number)
 	{
-		user_placement_helper(p, 2, prow, prune, "corazzata "+std::to_string(i+1), 5, i);
-		p.add_ship(new Battleship(prow, prune, p)); 
-		file_log.write(prow, prune);
-	}
-	for(int i=3; i<6; i++)
-	{
-		user_placement_helper(p, 2, prow, prune, "nave di supporto "+std::to_string(i+1-3), 3, i);
-		p.add_ship(new Support(prow, prune, p)); 
-		file_log.write(prow, prune);
-	}
-	for(int i=6; i<8; i++)
-	{
-		user_placement_helper(p, 1, prow, prune, "sottomarino "+std::to_string(i+1-6), 1, i);
-		p.add_ship(new Submarine(prow, p)); 
-		file_log.write(prow, prune);
-	}
-	
-	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
-	p.print_defence();
-}
-
-void user_placement_helper(Player& p, int n_coordinates, Position& prow, Position& prune, 
-							std::string ship_name, int ship_size, int ship_number)
-{
-	bool ok = false;
-	while(!ok)
-	{
-		if(n_coordinates==2)
-			std::cout << ">> Quali sono le coordinate per la "+ship_name+":\n";
-		else
-			std::cout << ">> Qual e' la coordinata per il "+ship_name+":\n";
-			
-		//std::string prow_str, prune_str;		non è usato da nessuna parte
-		
-		int code = command(prow, prune);
-		if(code==-1)
+		bool ok = false;
+		while(!ok)
 		{
-			std::cout << "Il comando inserito non e' valido\n";
-			continue;
-		}
-		
-		if(code==1)
-		{
-			p.print_defence();
-			continue;
-		}
-		
-		if(code>=2 && code<=6)
-		{
-			std::cout << "La funzione inserita non e' disponibile in fase di inserimento delle navi\n";
-			continue;
-		}
-		
-		// è stata inserita una coordinata ma ne servono due
-		if(code == 10 && n_coordinates == 2)
-		{
-			std::cout << "Sono necessarie due posizioni\n";
-			continue;
-		}
-		
-		// sono state inserite due coordinate ma ne serve una
-		if(code == 20 && n_coordinates == 1)
-		{
-			std::cout << "E' necessaria una posizione\n";
-			continue;
-		}
-		
-		if(!p.is_valid(prow,prune))
-		{
-			if(n_coordinates==2)
-				std::cout << "Le posizioni inserite non sono valide\n";
+			if(ship_size==1)
+				std::cout << ">> Qual e' la coordinata per il "+ship_name+":\n";
 			else
-				std::cout << "La posizione inserita non e' valida\n";
-				
-			continue;
-		}
-		
-		// il +1 compensa abs che non considera la cella finale
-		if((prow-prune).abs()+1 != ship_size)
-		{
-			if(n_coordinates==2)
-				std::cout << "La "+ship_name+" deve essere lunga "+std::to_string(ship_size)+" caselle\n";
-			else
-				std::cout << "Il "+ship_name+" deve occupare una casella\n";
+				std::cout << ">> Quali sono le coordinate per la "+ship_name+":\n";
 			
-			continue;
-		}
-		
-		// tutti i controlli sono andati a buon fine
-		ok = true;
-		//scrivo la posizione delle navi sul file di log
-//		file_log.add(prow.toString() + " " + prune.toString() + "\n");
-//		file_log.write(prow, prune);
-	}
-}
-
-void bot_placement_helper(Player& p, int ship_size, Position& prow, Position& prune)
-{
-	bool ok = false;
-	while(!ok)
-	{
-		prow = random_position();
-		int direction = rand()%4;
-		for(int i=1; i<=4; i++)	// ciclo sulle 4 direzioni partendo da una randomica
-		{
-			prune = ortogonal_position(prow, ship_size, direction);
-			if(p.is_valid(prow, prune))
+			int code = command(prow, prune);
+			
+			if(code==-1)
 			{
-				ok = true;
-//				file_log.add(prow.toString() + " " + prune.toString() + "\n");
-//				file_log.write(prow, prune);
-				break;
+				std::cout << "Il comando inserito non e' valido\n";
+				continue;
 			}
-			direction=(direction+1)%4;
+			
+			// comando xx
+			if(code==1)
+			{
+				player.print_defence();
+				continue;
+			}
+			
+			// codici relativi ai comandi xx xx, aa aa, bb bb, cc cc, tt tt
+			if(code>=2 && code<=6)
+			{
+				std::cout << "La funzione inserita non e' disponibile in fase di inserimento delle navi\n";
+				continue;
+			}
+			
+			// è stata inserita una coordinata ma ne servono due
+			if(code == 10 && ship_size > 1)
+			{
+				std::cout << "Sono necessarie due posizioni\n";
+				continue;
+			}
+			
+			// sono state inserite due coordinate ma ne serve una
+			if(code == 20 && ship_size == 1)
+			{
+				std::cout << "E' necessaria una posizione\n";
+				continue;
+			}
+			
+			if(!player.is_valid(prow,prune))
+			{
+				if(ship_size==1)
+					std::cout << "La posizione inserita non e' valida\n";
+				else
+					std::cout << "Le posizioni inserite non sono valide\n";
+					
+				continue;
+			}
+			
+			// il +1 compensa abs il fatto che non considera la cella finale
+			if((prow-prune).abs()+1 != ship_size)
+			{
+				if(ship_size==1)
+					std::cout << "Il "+ship_name+" deve occupare una casella\n";
+				else
+					std::cout << "La "+ship_name+" deve essere lunga "+std::to_string(ship_size)+" caselle\n";
+				
+				continue;
+			}
+			
+			// tutti i controlli sono andati a buon fine
+			ok = true;
 		}
-	}
-}
-
-void bot_placement(Player& p, Log& file_log)
-{
-	Position prow, prune;
+	};
+	
+	
 	for(int i=0; i<3; i++)
 	{
-		bot_placement_helper(p, 5, prow, prune);
-		p.add_ship(new Battleship(prow, prune, p));
+		user_placement_helper("corazzata "+std::to_string(i+1), 5, i);
+		player.add_ship(new Battleship(prow, prune, player)); 
 		file_log.write(prow, prune);
 	}
 	for(int i=3; i<6; i++)
 	{
-		bot_placement_helper(p, 3, prow, prune);
-		p.add_ship(new Support(prow, prune, p));
+		user_placement_helper("nave di supporto "+std::to_string(i+1-3), 3, i);
+		player.add_ship(new Support(prow, prune, player)); 
 		file_log.write(prow, prune);
 	}
 	for(int i=6; i<8; i++)
 	{
-		bot_placement_helper(p, 1, prow, prune);
-		p.add_ship(new Submarine(prow, p)); 
+		user_placement_helper("sottomarino "+std::to_string(i+1-6), 1, i);
+		player.add_ship(new Submarine(prow, player)); 
 		file_log.write(prow, prune);
 	}
 	
+	// la stampa della griglia avviene in ship_placement così da discernere utente umano e computerizzato
 	
-	std::cout << "\n" + p.name + ", questa e' la disposizione delle tue navi\n";
-	p.print_defence();
+}
+
+void bot_placement(Player& player, Log& file_log)
+{
+	Position prow, prune;
+	
+	// uso una lambda per evitare codice duplicato
+	auto bot_placement_helper = [&player, &prow, &prune](int ship_size)
+	{
+		bool ok = false;
+		while(!ok)
+		{
+			// ciclo sulle 4 direzioni partendo da una randomica
+			prow = random_position();
+			int direction = rand()%4;
+			for(int i=1; i<=4; i++)
+			{
+				prune = ortogonal_position(prow, ship_size, direction);
+				if(player.is_valid(prow, prune))
+				{
+					ok = true;
+					break;
+				}
+				// se la direzione non è valida si sceglie la successiva in modo da non scegliere la stessa due volte 
+				direction=(direction+1)%4;
+			}
+		}
+	};
+	
+	for(int i=0; i<3; i++)
+	{
+		bot_placement_helper(5);
+		player.add_ship(new Battleship(prow, prune, player));
+		file_log.write(prow, prune);
+	}
+	for(int i=3; i<6; i++)
+	{
+		bot_placement_helper(3);
+		player.add_ship(new Support(prow, prune, player));
+		file_log.write(prow, prune);
+	}
+	for(int i=6; i<8; i++)
+	{
+		bot_placement_helper(1);
+		player.add_ship(new Submarine(prow, player)); 
+		file_log.write(prow, prune);
+	}
+	
+	// la stampa della griglia avviene in ship_placement così da discernere utente umano e computerizzato
 }
 
 std::vector<std::string> split(std::string str, char delimiter)
@@ -473,17 +474,13 @@ void round(Player& player, Player& enemy, Log& file_log)
 	int code = -1;
 	Position origin, target;
 	
-	if((player.is_cpu && !enemy.is_cpu) || (!player.is_cpu && enemy.is_cpu))
-	{
-		// piccola pausa prima che il computer faccia la sua mossa
+	// se c'è un (solo) umano, viene fatta una pausa prima della mossa del nemico
+	// migliora la leggibilità della partita
+	if(!player.is_cpu != !enemy.is_cpu)
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-	}
 	
 	if(player.is_cpu)
-	{
-		
 		std::cout << player.name + " svolge il suo turno\n";
-	}
 	else
 		std::cout << player.name + " e' il tuo turno\n";
 	
@@ -503,9 +500,7 @@ void round(Player& player, Player& enemy, Log& file_log)
 	
 	// a questo punto è stato eseguito un comando non speciale
 	// scrivo nel file
-//	file_log.add(origin.toString() + " " + target.toString() + "\n");
 	file_log.write(origin, target);
-//	std::cout << "Comando eseguito\n\n";
 }
 
 void print_winner(Player& player)
@@ -563,7 +558,7 @@ void Match::play()
 	file_log.write("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
-void re_play(std::ifstream& input)		//lol
+void re_play(std::ifstream& input)
 {
 	std::string temp = "";
 	

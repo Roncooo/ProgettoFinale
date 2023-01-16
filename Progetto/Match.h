@@ -56,13 +56,10 @@ int random_command(Player& player, game_board::Position& origin, game_board::Pos
 // usata solo durante il gioco, non nell'inserimento, esegue qualsiasi comando (speciale o non) passato
 // se l'azione non è valida non viene eseguita e l'errore viene segnalato con exit codes
 int execute(Player& player, Player& enemy, int code, const game_board::Position& origin, const game_board::Position& target);
-// interagisce con l'utente per fargli inserire tutte le navi, si serve della funzione ausiliaria user_placement_helper
+// interagisce con l'utente per fargli inserire tutte le navi
 void user_placement(Player& p, Log& file_log);
-void user_placement_helper(Player& p, int n_coordinates, game_board::Position& prow, game_board::Position& prune, 
-							std::string ship_name, int ship_size, int ship_number);
-// richiede l'inserimento randomico delle navi
+// inserisce automaticamente le navi
 void bot_placement(Player& p, Log& file_log);
-void bot_placement_helper(Player& p, int ship_size, game_board::Position& start, game_board::Position& end);
 game_board::Position random_position();
 // funzione ausiliaria che ritorna la posizione distante dim da start in direzione direction
 game_board::Position ortogonal_position(const game_board::Position& start, int dim, int direction);
