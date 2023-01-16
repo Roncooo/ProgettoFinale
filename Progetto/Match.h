@@ -70,10 +70,10 @@ void recap(const Player& player1, const Player& player2);
 // serve per l'inserimento umano
 std::vector<std::string> split(std::string str, char delimiter);
 //esegue il replay dell'ultima partita giocata
-void re_play(Player& p1, Player& p2, Log& file);
+void re_play(std::ifstream& input);
 //
 //void perchè non serve che ritorni codici di usciti, visto che saranno tutti validi
-void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input);
+//void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input);
 //
-void replay_placement(Player& p, std::ifstream& input);
+//void replay_placement(Player& p, std::ifstream& input);
 #endif // MATCH_H

@@ -9,9 +9,6 @@ Log::Log()
 	input.open("Progetto\\log.txt", std::ios::in);
 };
 
-//void Log::add(const std::string s) { actions += s; }
-//
-//std::string Log::getActions() const { return actions; }
 
 void Log::write(const std::string s) 
 { 

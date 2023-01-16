@@ -10,11 +10,7 @@ int main_function(void){
 	
 	Log file_log = Log();
  
-//	while(!input_file.eof())		//restituisce true quando arriva alla fine del file
-//		//fai qualcosa
-	
-	
-//	re_play(file_log);
+	re_play(file_log.input);
 	
 	file_log.close();
 	return 0;

@@ -8,7 +8,6 @@ using game_board::Grid;
 Match::Match(Player& p1, Player& p2, Log& file)
 	: player1{p1}, player2{p2}, file_log{file}
 {
-//	file_log.add(player1.name + "\n" + player2.name + "\n\n");
 	file_log.write(player1.name + "\n" + player2.name + "\n\n");
 	ship_placement(player1);
 	ship_placement(player2);
@@ -518,7 +517,6 @@ void Match::play()
 	while(n_rounds<MAX_ROUNDS)
 	{
 		std::cout << "\nTurno: " << n_rounds << "\n";
-//		file_log.add("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
 		file_log.write("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
 		
 		round(player1, player2, file_log);
@@ -527,14 +525,12 @@ void Match::play()
 			print_winner(player1);
 			recap(player1, player2);
 			
-//			file_log.add("\n" + player1.name);
 			file_log.write("\n" + player1.name);
 			
 			return;
 		}
 		n_rounds++;
 		
-//		file_log.add(">>" + player2.name + "\n");
 		file_log.write(">>" + player2.name + "\n");
 		
 		round(player2, player1, file_log);
@@ -543,7 +539,6 @@ void Match::play()
 			print_winner(player2);
 			recap(player2, player1);
 			
-//			file_log.add("\n" + player2.name);
 			file_log.write("\n" + player2.name);
 			
 			return;
@@ -554,38 +549,10 @@ void Match::play()
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
 	recap(player1, player2);
 	
-//	file_log.add("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 	file_log.write("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
-void re_play(std::ifstream& input)
-{
-	std::string temp = "";
-	
-	//leggo i nomi dei giocatori
-	std::getline(input, temp);
-	Player p1(temp);
-	std::getline(input, temp);
-	Player p2(temp);
-	
-	std::getline(input, temp);		//serve per bypassare la riga vuota
-	
-	//posizionamento delle navi
-	replay_placement(p1, input);
-	replay_placement(p2, input);
-	
-	std::getline(input, temp);		//serve per bypassare la riga vuota
-	
-	while(!input.eof())
-	{
-		Position origin, target;
-		command_for_replay(origin, target, input);
-		
-		player.act_ship(player.get_ship_index(origin), target, enemy);
-	}
-	
-	
-}
+
 
 void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
 {
@@ -637,4 +604,40 @@ void replay_placement(Player& p, std::ifstream& input)
 		command_for_replay(prow, prune, input);
 		p.add_ship(new Submarine(prow, p)); 
 	}
+}
+
+void replay_round(Player& player, Player& enemy, std::ifstream& input)
+{
+	Position origin, target;
+	command_for_replay(origin, target, input);
+	
+	player.act_ship(player.get_ship_index(origin), target, enemy);
+}
+
+
+void re_play(std::ifstream& input)
+{
+	std::string temp = "";
+	
+	//leggo i nomi dei giocatori
+	std::getline(input, temp);
+	Player p1(temp);
+	std::getline(input, temp);
+	Player p2(temp);
+	
+	std::getline(input, temp);		//serve per bypassare la riga vuota
+	
+	//posizionamento delle navi
+	replay_placement(p1, input);
+	replay_placement(p2, input);
+	
+	std::getline(input, temp);		//serve per bypassare la riga vuota
+	
+	//eseguo i turni, leggendo le mosse dal file, finchè non arrivo alla fine del file
+	while(!input.eof())
+	{
+		replay_round(p1, p2, input);
+		replay_round(p2, p1, input);
+	}
+	
 }
