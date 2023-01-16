@@ -473,10 +473,15 @@ void round(Player& player, Player& enemy, Log& file_log)
 	int code = -1;
 	Position origin, target;
 	
-	if(player.is_cpu)
+	if((player.is_cpu && !enemy.is_cpu) || (!player.is_cpu && enemy.is_cpu))
 	{
 		// piccola pausa prima che il computer faccia la sua mossa
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	}
+	
+	if(player.is_cpu)
+	{
+		
 		std::cout << player.name + " svolge il suo turno\n";
 	}
 	else
@@ -568,17 +573,23 @@ void re_play(std::ifstream& input)		//lol
 	std::getline(input, temp);
 	Player p2(temp);
 	
-	std::getline(input, temp);
+	std::getline(input, temp);		//serve per bypassare la riga vuota
 	
-//	while(!input.eof())
-//	{
-//		command_for_replay(prow, prune, input);
-//	}
+	//posizionamento delle navi
+	replay_placement(p1, input);
+	replay_placement(p2, input);
+	
+	std::getline(input, temp);		//serve per bypassare la riga vuota
+	
+	while(!input.eof())
+	{
+		
+	}
 	
 	
 }
 
-void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream input)
+void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
 {
 	std::string input_string;
 	std::getline(input, input_string);
@@ -597,4 +608,28 @@ void command_for_replay(game_board::Position& a, game_board::Position& b, std::i
 	in2 = vec.at(1);
 	a = Position(in1);
 	b = Position(in2);
+}
+
+//dovrei fare anche un placement for replay??
+void replay_placement(Player& p, std::ifstream& input)
+{
+	Position prow, prune;
+	
+	for(int i = 0; i < 3; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Battleship(prow, prune, p)); 
+	}
+	
+	for(int i = 3; i < 6; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Support(prow, prune, p)); 
+	}
+	
+	for(int i = 6; i < 8; i++)
+	{
+		command_for_replay(prow, prune, input);
+		p.add_ship(new Submarine(prow, p)); 
+	}
 }

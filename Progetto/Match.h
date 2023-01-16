@@ -76,5 +76,7 @@ std::vector<std::string> split(std::string str, char delimiter);
 void re_play(Player& p1, Player& p2, Log& file);
 //
 //void perchè non serve che ritorni codici di usciti, visto che saranno tutti validi
-void command_for_replay(game_board::Position& a, game_board::Position& b);
+void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input);
+//
+void replay_placement(Player& p, std::ifstream& input);
 #endif // MATCH_H

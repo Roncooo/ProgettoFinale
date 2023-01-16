@@ -144,7 +144,7 @@ void cpu_vs_cpu(int n)
 
 int main(void)
 {
-//	cpu_vs_cpu(1);
-	standard_match();
+	cpu_vs_cpu(1);
+//	standard_match();
 	return 0;
 }
