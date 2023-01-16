@@ -158,59 +158,37 @@ int random_command(Player& player, Position& origin, Position& target)
 	return 20;	// per uniformarsi alle altre funzioni, indica che il comando prevede 2 posizioni valide
 }
 
-
-/* non chiama command così è valida anche per il robot
- * prende un codice ed esegue l'istruzione associata
- * poi restituisce nuovamente un codice per dire se è andato tutto bene
-*/
+// prende un codice ed esegue l'istruzione associata
+// poi restituisce nuovamente un codice per dire se è andato tutto bene
 int execute(Player& player, Player& enemy, int code, const Position& origin, const Position& target)
-{	
-	if(code == -1)
-		return -1;	// comando non valido
-	
-	if(code == 10)	// codice riservato all'inserimento del sottomarino
-		return -1;
-	
-	if(code == 1)	// xx stampa della griglia di difesa
+{
+	switch(code)
 	{
+	case 10:	// codice riservato all'inserimento del sottomarino
+		return -1;
+	case 1:	// xx stampa della griglia di difesa
 		player.print_defence();
 		return 1;
-	}
-	
-	if(code == 2)	// xx xx stampa della griglia di difesa e di attacco
-	{
+	case 2:	// xx xx stampa della griglia di difesa e di attacco
 		player.print_defence_attack();
 		return 2;
-	}
-	
-	if(code == 3)	// aa aa
-	{
+	case 3:	// aa aa
 		player.attack.reset_sonar();
 		return 3;
-	}
-	
-	if(code == 4)	// bb bb
-	{
+	case 4:	// bb bb
 		player.attack.reset_matrix();
 		return 4;
-	}
-	
-	
-	if(code == 5)	//	cc cc per vedere la griglia nemica utile per il debugging
-	{
+	case 5:	//	cc cc per vedere la griglia nemica utile per il debugging
 		enemy.print_defence();
 		return 5;
-	}
-	
-	if(code == 6)	//	tt tt per vedere la tabella
-	{
+	case 6:	//	tt tt per vedere la tabella
 		recap(player, enemy);
 		return 6;
-	}
-	
-	if(code == 20)	// due posizioni valide inserite
-	{
+	case 20:	// due posizioni valide inserite
 		return player.act_ship(player.get_ship_index(origin), target, enemy);
+	default:
+		// coincide con case -1:
+		return -1;	// comando non valido
 	}
 }
 
@@ -430,9 +408,6 @@ void print_code(int code, const Position& origin, const Position& target)
 {
 	switch(code)
 	{
-	case -1:
-		std::cout << "Comando non valido\n";
-		break;
 	case -2:
 		std::cout << "Non e' possibile spostare la nave di supporto nella posizione " << target << "\n";
 		break;
@@ -464,6 +439,10 @@ void print_code(int code, const Position& origin, const Position& target)
 		break;
 	case 31:
 		std::cout << "Colpito\n";
+		break;
+	default:
+	// coincide con case -1:
+		std::cout << "Comando non valido\n";
 		break;
 	}
 }
@@ -582,7 +561,10 @@ void command_for_replay(game_board::Position& a, game_board::Position& b, std::i
 	b = Position(in2);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f657fe278382fdc4dc80d9d5ee664a152548facd
 void replay_placement(Player& p, std::ifstream& input)
 {
 	Position prow, prune;

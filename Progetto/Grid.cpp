@@ -1,4 +1,4 @@
-// autore: 
+//	autore: FRANCESCO RONCOLATO
 
 #include "Grid.h"
 
