@@ -1,4 +1,4 @@
-// author: BEATRICE BELLESSO 
+//	author: BEATRICE BELLESSO 
 
 #ifndef Submarine_H
 #define Submarine_H
