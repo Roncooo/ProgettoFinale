@@ -10,10 +10,10 @@ namespace game_board
 
 Grid		
   |
-  +-------- DefenceGrid
+  +-- DefenceGrid
   |					
   |					
-  +-------- AttackGrid		
+  +-- AttackGrid		
 							
 Position						
 
@@ -28,44 +28,45 @@ Ship
 +-- Battleship
 
 ***SCHEMA DI INCLUSIONE DELLE CLASSI***
+(Con la convenzione grafica: in alto la classe inclusa dalla classe in basso)
 
 Position
 |
-+---Grid
++-- Grid
 |	|
-|	+---DefenceGrid
+|	+-- DefenceGrid
 |	|	|
-|	|	+-------Ship
+|	|	+-- Ship
+|	|		|
+|	|		+-- Support
+|	|		|	|
+|	|		|	+-- Player
+|	|		|		|
+|	|		|		+-- Match
+|	|		|
+|	|		+-- Submarine	
+|	|		|	|
+|	|		|	+-- Player
+|	|		|		|
+|	|		|		+-- Match
+|	|		|				
+|	|		+-- Battleship	
 |	|			|
-|	|			+-------Support
-|	|			|		|
-|	|			|		+-----Player
-|	|			|			  |
-|	|			|			  +----- Match
-|	|			|
-|	|			+-------Submarine	
-|	|			|		|
-|	|			|		+-----Player
-|	|			|			  |
-|	|			|			  +----- Match
-|	|			|				
-|	|			+-------Battleship	
-|	|					|
-|	|					+----- Player
-|	|						   |
-|	|						   +----- Match
+|	|			+-- Player
+|	|				|
+|	|				+-- Match
 |	|							
-|	+-------- AttackGrid				
-|				|				
-|				+------- Battleship
-|				|
-|				+------- Player
-|						 |
-|						 +----- Match
+|	+-- AttackGrid				
+|		|				
+|		+-- Battleship
+|		|
+|		+-- Player
+|			|
+|			+-- Match
 |						
-+--------- Log				
-		   |
-		   +----- Match
++-- Log				
+   |
+   +-- Match
 
 ***COMANDI PER L'UTENTE***
 
@@ -76,11 +77,10 @@ bb bb		cancella tutta la griglia di attacco
 cc cc		mostra la griglia avversaria per gli imbroglioni
 tt tt		mostra la tabella con il numero di navi ancora in vita
 
-N.B: abbiamo voluto includere il comando cc cc per semplificare la fase di debugging a noi progettisti, la incorporiamo nel codice definitivamente perché può essere utile
-	 nel correggere il codice. Il suo utilizzo è puramente a discrezione dell'utente.
+N.B: abbiamo voluto includere il comando cc cc per semplificare la fase di debugging a noi progettisti, la incorporiamo nel codice definitivamente perché può essere utile nel correggere il codice. Il suo utilizzo è puramente a discrezione dell'utente.
 
 ***LEGENDA CODICI***	
-all'interno del codice sono stati utilizzati codici che identificano la natura dell'azione, di seguito vengono riportati per una maggiore completezza del testo:
+Alcune delle funzioni sviluppate "parlano" tra di loro attraverso codici che identificano un errore, un comando o l'esito di un'azione e che riportiamo per una maggiore completezza del testo:
 -1 comando non valido
 -2 non è possibile spostare la nave di supporto
 -3 non è possibile spostare il sottomarino
@@ -91,13 +91,12 @@ all'interno del codice sono stati utilizzati codici che identificano la natura d
 4 comando bb bb
 5 comando cc cc
 6 comando tt tt
+10 è stata inserita una posizione valida (inserimento del sottomarino)
+20 sono state inserite due posizioni valide
 30 colpo a vuoto
 31 nave colpita
 32 sottomarino spostato con successo
 33 supporto spostato con successo
 
 ***BREVE DESCRIZIONE***
-Il gioco segue il più fedelmente possibile il procedimento della Battaglia Navale classica: i due giocatori (di cui uno necessariamente robot) posizionano le proprie navi 
-automaticamente, o nel caso dell'umano, anche manualmente. I due giocatori devono interagire nelle fasi di attacco per sapere se i target sono stati colpiti, 
-poiché come da gioco classico, non hanno e non devono aver accesso alla tavola di difesa dell'avversario.
- Le interazioni sono date dalla classe Player e la partita è gestita dalla classe Match. Attraverso l'oggetto Log in Match è poi possibile fare il replay della partita. 
+Il gioco segue il più fedelmente possibile il procedimento della Battaglia Navale classica: i due giocatori (di cui uno necessariamente robot) posizionano le proprie navi automaticamente, o nel caso dell'umano, anche manualmente. I due giocatori devono interagire nelle fasi di attacco per sapere se i target sono stati colpiti, poiché come da gioco classico, non hanno e non devono aver accesso alla tavola di difesa dell'avversario. Le interazioni sono date dalla classe Player e la partita è gestita dalla classe Match. Attraverso l'oggetto Log in Match è poi possibile salvare quanto avvenuto e fare il replay della partita. 
