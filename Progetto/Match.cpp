@@ -482,6 +482,9 @@ void round(Player& player, Player& enemy, Log& file_log)
 			print_code(code, origin, target);
 	}
 	
+//	for(int ship_index=0; ship_index<defence.get_placed_ships(); ship_index++)
+//		defence.ships[ship_index]->is_sunk();
+	
 	// a questo punto è stato eseguito un comando non speciale
 	// scrivo nel file
 	file_log.write(origin, target);

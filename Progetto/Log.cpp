@@ -6,7 +6,7 @@ Log::Log()
 	: actions{""}
 {
 	output.open("Progetto\\log.txt", std::ios::out);
-	input.open("Progetto\\log.txt", std::ios::in);
+//	input.open("Progetto\\log.txt", std::ios::in);
 };
 
 
@@ -29,4 +29,8 @@ void Log::write(game_board::Position& prow, game_board::Position& prune)
 //}
 
 
-void Log::close() { output.close(); input.close(); }
+void Log::close() 
+{
+	output.close();
+//	input.close();
+}

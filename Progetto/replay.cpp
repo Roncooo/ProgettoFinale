@@ -1,19 +1,20 @@
 //	author: FULVIO BRUZZESE
 
-#include <iostream>
+//#include <iostream>
 #include <fstream>
 #include "Match.h"
 
-using std::cout, std::cin, std::ofstream, std::ifstream;
+using std::ifstream, std::ios;
 
 // rinominata perché crea interferenza con l'altro main
-int main_function(void){
+int main_f(void){
 	
-	Log file_log = Log();
+//	Log file_log = Log();
+	ifstream input("Progetto\\log.txt", ios::in);
  
-	re_play(file_log.input);
+	re_play(input);
 	
-	file_log.close();
+	input.close();
 	return 0;
 }
 
