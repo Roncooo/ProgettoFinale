@@ -214,7 +214,7 @@ int main(int argc, char* argv[])
 		player2.is_cpu = true;
 		player2.auto_placement = true;
 	}
-	if(match_type == "PC")
+	else if(match_type == "PC")
 	{
 		cout << "E' stata selezionata da riga di comando la modalita' umano vs computer\n";
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));

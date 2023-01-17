@@ -440,8 +440,14 @@ void print_code(int code, const Position& origin, const Position& target)
 	case 31:
 		std::cout << "Colpito\n";
 		break;
+	case 32:
+		// supporto spostato con successo
+		break;
+	case 33:
+		// supporto spostato con successo
+		break;
 	default:
-	// coincide con case -1:
+		// coincide con case -1:
 		std::cout << "Comando non valido\n";
 		break;
 	}
