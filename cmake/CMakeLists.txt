@@ -25,10 +25,18 @@ add_library(my_lib
 	${SOURCES}
 )
 
-add_executable(eseguibile 
+add_executable(battaglia_navale 
 	src/main.cpp
 )
 
-target_link_libraries(eseguibile
+target_link_libraries(battaglia_navale
+	my_lib
+)
+
+add_executable(replay 
+	src/replay.cpp
+)
+
+target_link_libraries(replay
 	my_lib
 )

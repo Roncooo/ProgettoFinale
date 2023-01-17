@@ -1,4 +1,4 @@
-// author: FRANCESCO RONCOLATO
+//	author: FRANCESCO RONCOLATO
 
 #include "Player.h"
 
@@ -137,11 +137,7 @@ int Player::act_ship(int index, const Position& target, Player& enemy)
 bool Player::has_lost()
 {
 	// per ciascuna nave nemica, se è una Corazzata e non è affondata, p non ha ancora vinto
-//	for(int i=0; i<DefenceGrid::SHIP_NUMBER; i++)
-//	{
-//		if(!defence.ships[i]->is_sunk())
-//			return false;
-//	}
+	// get_placed_ships ritorna il numero di navi non affondate
 	return get_placed_ships()==0;
 }
 

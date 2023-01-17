@@ -12,7 +12,6 @@ class Ship;	// forward declaration
 class DefenceGrid : public game_board::Grid
 {
 public:
-	static constexpr int SHIP_NUMBER = 8;
 	
 	// risolve i memory leak ma impedisce la copia
 	std::vector<std::unique_ptr<Ship>> ships;

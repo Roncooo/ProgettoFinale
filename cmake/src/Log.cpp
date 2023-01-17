@@ -6,12 +6,9 @@ Log::Log()
 	: actions{""}
 {
 	output.open("Progetto\\log.txt", std::ios::out);
-	input.open("Progetto\\log.txt", std::ios::in);
+//	input.open("Progetto\\log.txt", std::ios::in);
 };
 
-//void Log::add(const std::string s) { actions += s; }
-//
-//std::string Log::getActions() const { return actions; }
 
 void Log::write(const std::string s) 
 { 
@@ -32,4 +29,8 @@ void Log::write(game_board::Position& prow, game_board::Position& prune)
 //}
 
 
-void Log::close() { output.close(); input.close(); }
+void Log::close() 
+{
+	output.close();
+//	input.close();
+}

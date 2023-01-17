@@ -1,4 +1,4 @@
-// author: FRANCESCO RONCOLATO
+//	author: FRANCESCO RONCOLATO
 
 
 #ifndef Grid_H
@@ -12,6 +12,11 @@ namespace game_board
 	static constexpr int rows {12};
 	static constexpr char letters[rows] = {'A','B','C','D','E','F','G','H','I','L','M','N'};
 	static constexpr char empty_char = ' ';
+	
+	static constexpr int SHIP_NUMBER = 8;
+	static constexpr int MAX_BATTLESHIPS = 3;
+	static constexpr int MAX_SUPPORTS = 3;
+	static constexpr int MAX_SUBMARINES = 2;
 	
 	class Grid
 	{
