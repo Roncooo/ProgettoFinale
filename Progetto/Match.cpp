@@ -451,8 +451,7 @@ void round(Player& player, Player& enemy, Log& file_log)
 	int code = -1;
 	Position origin, target;
 	
-	// se c'è un (solo) umano, viene fatta una pausa prima della mossa del nemico
-	// migliora la leggibilità della partita
+	// se c'è un (solo) umano, viene fatta una piccola pausa prima della mossa del nemico e una dopo
 	if(!player.is_cpu != !enemy.is_cpu)
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	
@@ -465,7 +464,11 @@ void round(Player& player, Player& enemy, Log& file_log)
 	while(code < 30)
 	{
 		if(player.is_cpu)
+		{
 			code = random_command(player, origin, target);
+			if(!player.is_cpu != !enemy.is_cpu)
+				std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+		}
 		else
 			code = command(origin, target);
 		code = execute(player, enemy, code, origin, target);
@@ -475,11 +478,6 @@ void round(Player& player, Player& enemy, Log& file_log)
 			print_code(code, origin, target);
 	}
 	
-//	for(int ship_index=0; ship_index<defence.get_placed_ships(); ship_index++)
-//		defence.ships[ship_index]->is_sunk();
-	
-	// a questo punto è stato eseguito un comando non speciale
-	// scrivo nel file
 	file_log.write(origin, target);
 }
 

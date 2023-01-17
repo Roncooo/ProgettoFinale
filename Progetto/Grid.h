@@ -14,9 +14,9 @@ namespace game_board
 	static constexpr char empty_char = ' ';
 	
 	static constexpr int SHIP_NUMBER = 8;
-	static constexpr int MAX_BATTLESHIPS = 8;
-	static constexpr int MAX_SUPPORTS = 8;
-	static constexpr int MAX_SUBMARINES = 8;
+	static constexpr int MAX_BATTLESHIPS = 3;
+	static constexpr int MAX_SUPPORTS = 3;
+	static constexpr int MAX_SUBMARINES = 2;
 	
 	class Grid
 	{
