@@ -506,7 +506,7 @@ void Match::play()
 			print_winner(player1);
 			recap(player1, player2);
 			
-			file_log.write("\n" + player1.name);
+			file_log.write("\n<<" + player1.name);
 			
 			return;
 		}
@@ -520,7 +520,7 @@ void Match::play()
 			print_winner(player2);
 			recap(player2, player1);
 			
-			file_log.write("\n" + player2.name);
+			file_log.write("\n<<" + player2.name);
 			
 			return;
 		}
@@ -530,100 +530,6 @@ void Match::play()
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
 	recap(player1, player2);
 	
-	file_log.write("\n*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
+	file_log.write("\n<<*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
-
-
-void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
-{
-	
-	std::string flag = ">>";
-	std::string input_string;
-	std::getline(input, input_string);
-	
-	if(input_string.length() < 2)				//controllo che ci siano almeno due caratteri
-		return;
-	if (input_string.substr(0, 2) == flag)		//controllo che non ci sia la flag che ho scelto
-		return;
-	
-	std::vector<std::string> vec = split(input_string, ' ');
-	std::string in1, in2;
-	
-	in1 = vec.at(0);
-	if(vec.size()==1)
-	{
-		a = Position(in1);
-		b = Position(in1);
-		return;
-	}
-	
-	in2 = vec.at(1);
-	a = Position(in1);
-	b = Position(in2);
-}
-
-void replay_placement(Player& p, std::ifstream& input)
-{
-	Position prow, prune;
-	
-	for(int i = 1; i <= game_board::MAX_BATTLESHIPS; i++)
-	{
-		command_for_replay(prow, prune, input);
-		p.add_ship(new Battleship(prow, prune, p)); 
-	}
-	
-	for(int i = 1; i <= game_board::MAX_SUPPORTS; i++)
-	{
-		command_for_replay(prow, prune, input);
-		p.add_ship(new Support(prow, prune, p)); 
-	}
-	
-	for(int i = 1; i <= game_board::MAX_SUBMARINES; i++)
-	{
-		command_for_replay(prow, prune, input);
-		p.add_ship(new Submarine(prow, p)); 
-	}
-}
-
-void replay_round(Player& player, Player& enemy, std::ifstream& input)
-{
-	Position origin, target;
-	command_for_replay(origin, target, input);
-	
-	player.act_ship(player.get_ship_index(origin), target, enemy);
-}
-
-
-void re_play(std::ifstream& input)
-{
-	std::string temp = "";
-	int n_rounds = 1;
-	
-	//leggo i nomi dei giocatori
-	std::getline(input, temp);
-	Player p1(temp);
-	std::getline(input, temp);
-	Player p2(temp);
-	
-	std::getline(input, temp);		//serve per bypassare la riga vuota
-	
-	//posizionamento delle navi
-	replay_placement(p1, input);
-	replay_placement(p2, input);
-	
-	
-	//eseguo i turni, leggendo le mosse dal file, finchè non arrivo alla fine del file
-	while(!input.eof() && n_rounds != Match::MAX_ROUNDS)
-	{
-		std::getline(input, temp);		//serve per bypassare la riga vuota
-		
-		std::cout << "\nTurno: " << n_rounds << "\n";
-		replay_round(p1, p2, input);
-		n_rounds++;
-		
-		replay_round(p2, p1, input);
-		n_rounds++;
-	}
-	
-}
