@@ -533,11 +533,11 @@ void Match::play()
 		}
 		n_rounds++;
 	}
-	std::cout << "*** Numero di turni massimo raggiunto ***\n";
+	std::cout << "\n*** Numero di turni massimo raggiunto ***\n";
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
 	recap(player1, player2);
 	
-	file_log.write("*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
+	file_log.write("\n*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
 
@@ -605,6 +605,7 @@ void replay_round(Player& player, Player& enemy, std::ifstream& input)
 void re_play(std::ifstream& input)
 {
 	std::string temp = "";
+	int n_rounds = 1;
 	
 	//leggo i nomi dei giocatori
 	std::getline(input, temp);
@@ -618,13 +619,18 @@ void re_play(std::ifstream& input)
 	replay_placement(p1, input);
 	replay_placement(p2, input);
 	
-	std::getline(input, temp);		//serve per bypassare la riga vuota
 	
 	//eseguo i turni, leggendo le mosse dal file, finchè non arrivo alla fine del file
-	while(!input.eof())
+	while(!input.eof() && n_rounds != Match::MAX_ROUNDS)
 	{
+		std::getline(input, temp);		//serve per bypassare la riga vuota
+		
+		std::cout << "\nTurno: " << n_rounds << "\n";
 		replay_round(p1, p2, input);
+		n_rounds++;
+		
 		replay_round(p2, p1, input);
+		n_rounds++;
 	}
 	
 }

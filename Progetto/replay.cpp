@@ -7,7 +7,7 @@
 using std::ifstream, std::ios;
 
 // rinominata perché crea interferenza con l'altro main
-int main_f(void){
+int main(void){
 	
 //	Log file_log = Log();
 	ifstream input("Progetto\\log.txt", ios::in);
