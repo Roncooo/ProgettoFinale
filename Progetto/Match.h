@@ -18,10 +18,12 @@
 #include "Submarine.h"
 #include "Support.h"
 
+// definita nel costruttore di Match per migliore efficienza, riconosce il comando relativo ad una posizione valida
+static std::regex reg_position;
+
 class Match
 {
 private:
-	static std::regex reg_position;	// inizializzata nel costruttore per comodità, riconosce il comando relativo ad una posizione valida
 public:
 	Match(Player& p1, Player& p2, Log& file);
 	Log& file_log;

@@ -143,7 +143,7 @@ void cpu_vs_cpu(int n)
 	}
 }
 
-int main_f(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	// argc vale 2 se c'è un argomento (perché argv[0] contiene nome e percorso dell'eseguibile)
 	// se c'è un solo argomento ed è lungo 2, lo trasformo in uppercase e lo confronto con i comandi
