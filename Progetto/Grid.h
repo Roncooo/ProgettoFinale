@@ -13,6 +13,11 @@ namespace game_board
 	static constexpr char letters[rows] = {'A','B','C','D','E','F','G','H','I','L','M','N'};
 	static constexpr char empty_char = ' ';
 	
+	static constexpr int SHIP_NUMBER = 8;
+	static constexpr int MAX_BATTLESHIPS = 8;
+	static constexpr int MAX_SUPPORTS = 8;
+	static constexpr int MAX_SUBMARINES = 8;
+	
 	class Grid
 	{
 	public:

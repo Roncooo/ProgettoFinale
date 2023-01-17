@@ -212,7 +212,7 @@ void user_placement(Player& player, Log& file_log)
 	Position prow, prune;
 	
 	// uso una lambda per evitare codice duplicato
-	auto user_placement_helper = [&player, &prow, &prune](std::string ship_name, int ship_size, int ship_number)
+	auto user_placement_helper = [&player, &prow, &prune](std::string ship_name, int ship_size)
 	{
 		bool ok = false;
 		while(!ok)
@@ -285,21 +285,21 @@ void user_placement(Player& player, Log& file_log)
 	};
 	
 	
-	for(int i=0; i<3; i++)
+	for(int i=1; i<=game_board::MAX_BATTLESHIPS; i++)
 	{
-		user_placement_helper("corazzata "+std::to_string(i+1), 5, i);
+		user_placement_helper("corazzata "+std::to_string(i), 5);
 		player.add_ship(new Battleship(prow, prune, player)); 
 		file_log.write(prow, prune);
 	}
-	for(int i=3; i<6; i++)
+	for(int i=1; i<=game_board::MAX_SUPPORTS; i++)
 	{
-		user_placement_helper("nave di supporto "+std::to_string(i+1-3), 3, i);
+		user_placement_helper("nave di supporto "+std::to_string(i), 3);
 		player.add_ship(new Support(prow, prune, player)); 
 		file_log.write(prow, prune);
 	}
-	for(int i=6; i<8; i++)
+	for(int i=1; i<=game_board::MAX_SUBMARINES; i++)
 	{
-		user_placement_helper("sottomarino "+std::to_string(i+1-6), 1, i);
+		user_placement_helper("sottomarino "+std::to_string(i), 1);
 		player.add_ship(new Submarine(prow, player)); 
 		file_log.write(prow, prune);
 	}
@@ -574,19 +574,19 @@ void replay_placement(Player& p, std::ifstream& input)
 {
 	Position prow, prune;
 	
-	for(int i = 0; i < 3; i++)
+	for(int i = 1; i <= game_board::MAX_BATTLESHIPS; i++)
 	{
 		command_for_replay(prow, prune, input);
 		p.add_ship(new Battleship(prow, prune, p)); 
 	}
 	
-	for(int i = 3; i < 6; i++)
+	for(int i = 1; i <= game_board::MAX_SUPPORTS; i++)
 	{
 		command_for_replay(prow, prune, input);
 		p.add_ship(new Support(prow, prune, p)); 
 	}
 	
-	for(int i = 6; i < 8; i++)
+	for(int i = 1; i <= game_board::MAX_SUBMARINES; i++)
 	{
 		command_for_replay(prow, prune, input);
 		p.add_ship(new Submarine(prow, p)); 
