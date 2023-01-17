@@ -8,7 +8,16 @@ using game_board::Grid;
 Match::Match(Player& p1, Player& p2, Log& file)
 	: player1{p1}, player2{p2}, file_log{file}
 {
+	// definizione della regex statica per il riconoscimento di una posizione valida
+	// una posizione valida è formata da una lettera compresa tra quelle valide (game_board::letters)
+	// e da un numero compreso tra 1 e 12 (sono stati divisi i due casi dove il numero è tra 1-9 e tra 10-12)
+	std::string reg_rule = "[";
+	for(int i=0; i<game_board::rows; i++)
+		reg_rule += game_board::letters[i];
+	reg_position = std::regex(reg_rule+"]([1-9]|1[012])");
+	
 	file_log.write(player1.name + "\n" + player2.name + "\n\n");
+	
 	ship_placement(player1);
 	ship_placement(player2);
 }
@@ -47,7 +56,7 @@ void recap(const Player& player1, const Player& player2)
 	std::string border = 	"+"+std::string(width_0+2, '-')+
 							"+"+std::string(width_1+2, '-')+
 							"+"+std::string(width_2+2, '-')+"+";
-							
+	
 	std::string first_row = "|"+std::string(width_0+2, ' ');
 	// se un numero è più largo del nome dell'utente, aggiungo degli spazi prima del nome
 	first_row += "| "+std::string(width_1-player1.name.length(), ' ')+player1.name+" ";
@@ -80,29 +89,17 @@ int command(Position& a, Position& b)
 	
 	if(input_string == "XX")
 		return 1;
-		
 	if(input_string == "XX XX")
 		return 2;
-	
 	if(input_string == "AA AA")
 		return 3;
-	
 	if(input_string == "BB BB")
 		return 4;
-	
 	if(input_string == "CC CC")
 		return 5;
-	
 	if(input_string == "TT TT")
 		return 6;
 	
-	// inizializzazione della regex, non so bene come/dove metterla, potrebbe essere benissimo statica
-	// ma non so bene come fare
-	std::string reg_rule = "[";
-	for(int i=0; i<game_board::rows; i++)
-		reg_rule += game_board::letters[i];
-	reg_rule+="]([1-9]|1[012])";
-	std::regex reg_position(reg_rule);
 	
 	// COMANDI CON COORDINATE
 	
@@ -119,11 +116,8 @@ int command(Position& a, Position& b)
 	// se non c'è un secondo comando, il primo deve essere la coordinata di inserimento di un sottomarino
 	if(vec.size()==1)
 	{
-		if(!std::regex_match(in1, reg_position))
-		{
-			// comando non valido
+		if(!std::regex_match(in1, reg_position))	// comando non valido
 			return -1;
-		}
 		else	// inserimento di un sottomarino
 		{
 			a = Position(in1);
@@ -166,29 +160,28 @@ int execute(Player& player, Player& enemy, int code, const Position& origin, con
 	{
 	case 10:	// codice riservato all'inserimento del sottomarino
 		return -1;
-	case 1:	// xx stampa della griglia di difesa
+	case 1:		// xx stampa della griglia di difesa
 		player.print_defence();
 		return 1;
-	case 2:	// xx xx stampa della griglia di difesa e di attacco
+	case 2:		// xx xx stampa della griglia di difesa e di attacco
 		player.print_defence_attack();
 		return 2;
-	case 3:	// aa aa
+	case 3:		// aa aa
 		player.attack.reset_sonar();
 		return 3;
-	case 4:	// bb bb
+	case 4:		// bb bb
 		player.attack.reset_matrix();
 		return 4;
-	case 5:	//	cc cc per vedere la griglia nemica utile per il debugging
+	case 5:		// cc cc per vedere la griglia nemica utile per il debugging
 		enemy.print_defence();
 		return 5;
-	case 6:	//	tt tt per vedere la tabella
+	case 6:		// tt tt per vedere la tabella
 		recap(player, enemy);
 		return 6;
 	case 20:	// due posizioni valide inserite
 		return player.act_ship(player.get_ship_index(origin), target, enemy);
-	default:
-		// coincide con case -1:
-		return -1;	// comando non valido
+	default:	// coincide con case -1: comando non valido
+		return -1;
 	}
 }
 
@@ -335,19 +328,19 @@ void bot_placement(Player& player, Log& file_log)
 		}
 	};
 	
-	for(int i=0; i<3; i++)
+	for(int i=1; i<=game_board::MAX_BATTLESHIPS; i++)
 	{
 		bot_placement_helper(5);
 		player.add_ship(new Battleship(prow, prune, player));
 		file_log.write(prow, prune);
 	}
-	for(int i=3; i<6; i++)
+	for(int i=1; i<=game_board::MAX_SUPPORTS; i++)
 	{
 		bot_placement_helper(3);
 		player.add_ship(new Support(prow, prune, player));
 		file_log.write(prow, prune);
 	}
-	for(int i=6; i<8; i++)
+	for(int i=1; i<=game_board::MAX_SUBMARINES; i++)
 	{
 		bot_placement_helper(1);
 		player.add_ship(new Submarine(prow, player)); 
