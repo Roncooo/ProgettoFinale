@@ -19,14 +19,10 @@ private:
 	//- comandi NON speciali (uno per ogni riga)
 public:
 	Log();
-	std::ifstream input;		//essendo file di sola lettura, posso anche dichiararlo public
-//	void add(const std::string s);		//solo per il debug
+//	std::ifstream input;		//essendo file di sola lettura, posso anche dichiararlo public
 	void write(const std::string s);
 	void write(game_board::Position& prow, game_board::Position& prune);
-//	void read(std::string s);
-//	std::string getActions() const; 	//solo per debug
 	void close();
-	
 };
 
 

@@ -1,4 +1,5 @@
-// author: FRANCESCO RONCOLATO
+//	author: FRANCESCO RONCOLATO
+
 #include "Battleship.h"
 
 using game_board::Position;
