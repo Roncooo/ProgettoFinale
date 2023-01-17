@@ -10,8 +10,8 @@ using std::ifstream, std::ios, game_board::Position;
 void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
 {
 	
-	std::string ignore = ">>";
-	std::string eof = "<<";		//fine partita: stampa il risultato
+//	std::string ignore = ">>";
+//	std::string eof = "<<";		//fine partita: stampa il risultato
 	std::string input_string;
 	bool flag = false;
 	

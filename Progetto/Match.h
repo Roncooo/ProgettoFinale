@@ -21,6 +21,9 @@
 // definita nel costruttore di Match per migliore efficienza, riconosce il comando relativo ad una posizione valida
 static std::regex reg_position;
 
+const std::string ignore = ">>";
+const std::string eof = "<<";
+
 class Match
 {
 private:
@@ -49,7 +52,8 @@ public:
 	// gli exit code servono perché coma comando sa se è andato a buon fine
 };
 
-//
+
+
 // --- HELPER FUNCTIONS ---
 
 // interagisce con l'utente per ottenere un comando (speciale o non) con un formato valido

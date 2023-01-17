@@ -15,7 +15,8 @@ public:
 	// il parametro enemy serve solo per uniformità con Ship::action virtuale pura
 	int action(const game_board::Position& pos, Player& enemy) override;
 	// l'override permette di stampare il messaggio con le informazioni della nave	
-	int is_sunk() override;	
+	int is_sunk() override;
+	int sunk_code() const override;
 	std::string ship_type() const override;
 };
 #endif // Support_H

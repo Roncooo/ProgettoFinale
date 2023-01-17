@@ -131,7 +131,12 @@ int Player::act_ship(int index, const Position& target, Player& enemy)
 {
 	if(index==-1)	// get_ship_index non ha trovato il centro della nave
 		return -4;
-	return defence.ships[index]->action(target, enemy);
+	
+	int temp = defence.ships[index]->action(target, enemy);		//viene eseguita l'azione e il code viene salvato 
+	
+	if(defence.ships[index]->is_sunk())
+		return defence.ships[index]->sunk_code();
+	return temp;
 }
 
 bool Player::has_lost()

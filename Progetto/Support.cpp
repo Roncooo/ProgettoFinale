@@ -15,6 +15,11 @@ std::string Support::ship_type() const
 	return "support";
 }
 
+int Support::sunk_code() const 
+{
+	return 41;
+}
+
 // controlla se, rispetto al center di support, la nave da curare è nella posizione giusta
 // dice se la posizione passata è curabile dalla nave di supporto che invoca la funzione
 // quindi deve essere sufficentemente vicina e non può essere la nave stessa
@@ -67,7 +72,7 @@ int Support::is_sunk()
 	int code = Ship::is_sunk();
 	if(code == 2)	// la nave è affondata ora
 	{
-		std::cout << "~~~Hai affondato una nave di supporto!~~~\n";
+//		std::cout << "~~~Hai affondato una nave di supporto!~~~\n";
 		return 1;	// è affondata (codice compatibile con true)
 	}
 	return code;

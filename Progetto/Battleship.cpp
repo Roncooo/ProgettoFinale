@@ -15,6 +15,11 @@ std::string Battleship::ship_type() const
 	return "battleship";
 }
 
+int Battleship::sunk_code() const 
+{
+	return 40;
+}
+
 int Battleship::action(const Position& pos, Player& enemy) 
 {
 	// la versione precedente era sbagliata perché si basava sulla griglia del nemico che non per forza era aggiornata
@@ -43,7 +48,7 @@ int Battleship::is_sunk()
 	int code = Ship::is_sunk();
 	if(code == 2)	// la nave è affondata ora
 	{
-		std::cout << "~~~Hai affondato una corazzata!~~~\n";
+//		std::cout << "~~~Hai affondato una corazzata!~~~\n";
 		return 1;	// è affondata (codice compatibile con true)
 	}
 	return code;

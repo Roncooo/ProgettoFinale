@@ -5,6 +5,8 @@
 using game_board::Position;
 using game_board::Grid;
 
+
+
 Match::Match(Player& p1, Player& p2, Log& file)
 	: player1{p1}, player2{p2}, file_log{file}
 {
@@ -434,10 +436,25 @@ void print_code(int code, const Position& origin, const Position& target)
 		std::cout << "Colpito\n";
 		break;
 	case 32:
-		// supporto spostato con successo
+		// sottomarino spostato con successo
 		break;
 	case 33:
 		// supporto spostato con successo
+		break;
+	case 40:
+		//hai colpito e affondato una CORAZZATA
+		std::cout << "Colpito\n";
+		std::cout << "~~~Hai affondato una corazzata!~~~\n";
+		break;
+	case 41:
+		//hai colpito e affondato una NAVE DI SUPPORTO
+		std::cout << "Colpito\n";
+		std::cout << "~~~Hai affondato una nave di supporto!~~~\n";
+		break;
+	case 42:
+		//hai colpito e affondato un SOTTOMARINO
+		std::cout << "Colpito\n";
+		std::cout << "~~~Hai affondato un sottomarino!~~~\n";
 		break;
 	default:
 		// coincide con case -1:
@@ -451,7 +468,8 @@ void round(Player& player, Player& enemy, Log& file_log)
 	int code = -1;
 	Position origin, target;
 	
-	// se c'è un (solo) umano, viene fatta una piccola pausa prima della mossa del nemico e una dopo
+	// se c'è un (solo) umano, viene fatta una pausa prima della mossa del nemico
+	// migliora la leggibilità della partita
 	if(!player.is_cpu != !enemy.is_cpu)
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	
@@ -464,11 +482,7 @@ void round(Player& player, Player& enemy, Log& file_log)
 	while(code < 30)
 	{
 		if(player.is_cpu)
-		{
 			code = random_command(player, origin, target);
-			if(!player.is_cpu != !enemy.is_cpu)
-				std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-		}
 		else
 			code = command(origin, target);
 		code = execute(player, enemy, code, origin, target);
@@ -478,6 +492,11 @@ void round(Player& player, Player& enemy, Log& file_log)
 			print_code(code, origin, target);
 	}
 	
+//	for(int ship_index=0; ship_index<defence.get_placed_ships(); ship_index++)
+//		defence.ships[ship_index]->is_sunk();
+	
+	// a questo punto è stato eseguito un comando non speciale
+	// scrivo nel file
 	file_log.write(origin, target);
 }
 
@@ -496,7 +515,7 @@ void Match::play()
 	while(n_rounds<MAX_ROUNDS)
 	{
 		std::cout << "\nTurno: " << n_rounds << "\n";
-		file_log.write("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
+		file_log.write("\n" + ignore + "Turno " + std::to_string(n_rounds) + ":\n" + ignore + player1.name + "\n");
 		
 		round(player1, player2, file_log);
 		if(player2.has_lost())
@@ -504,13 +523,13 @@ void Match::play()
 			print_winner(player1);
 			recap(player1, player2);
 			
-			file_log.write("\n<<" + player1.name);
+			file_log.write("\n" + eof + player1.name);
 			
 			return;
 		}
 		n_rounds++;
 		
-		file_log.write(">>" + player2.name + "\n");
+		file_log.write(ignore + player2.name + "\n");
 		
 		round(player2, player1, file_log);
 		if(player1.has_lost())
@@ -518,7 +537,7 @@ void Match::play()
 			print_winner(player2);
 			recap(player2, player1);
 			
-			file_log.write("\n<<" + player2.name);
+			file_log.write("\n" + eof + player2.name);
 			
 			return;
 		}
@@ -528,6 +547,6 @@ void Match::play()
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
 	recap(player1, player2);
 	
-	file_log.write("\n<<*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
+	file_log.write("\n" + eof + "*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
