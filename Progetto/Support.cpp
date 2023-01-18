@@ -28,17 +28,14 @@ bool Support::is_curable(const Position& p)
 	}
 	
 	Position center = get_center();
-	if( p != center+Position(-1,-1) && 	// top left
-		p != center+Position(-1, 0) &&	// top
-		p != center+Position(-1,+1) &&	// top right
-		p != center+Position( 0,+1) &&	// right
-		p != center+Position(+1,+1) &&	// bottom right
-		p != center+Position(+1, 0) &&	// bottom
-		p != center+Position(+1,-1) &&	// bottom left
-		p != center+Position( 0,-1)  	)	// left
-		return false;
-	
-	return true;
+	for(int i = -1; i < 2; i++)
+	{
+		for(int j = -1; j < 2; j++)
+		{
+			if(p == center+Position(i, j)) return true;
+		}
+	}
+	return false;
 }
 
 // mi sposto dove chiede l'utente, se la posizione non e' valida ritorno, altrimenti
