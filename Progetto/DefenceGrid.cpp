@@ -20,8 +20,8 @@ int DefenceGrid::get_placed_ships() const
 	return ships.size();
 }
 
-// aggiorna la griglia: se una nave è affondata non la riscrivo, altrimento setto
-// il carattere hit o not_hit se la corazza in quel punto è integra o no
+// aggiorna la griglia: setto il carattere hit o not_hit 
+// se la corazza in quel punto è integra o no
 void DefenceGrid::update()
 {
 	reset_matrix();

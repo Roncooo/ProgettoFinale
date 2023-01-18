@@ -91,14 +91,12 @@ Position operator+(const Position& a, const Position& b)
 	return Position(a.get_row()+b.get_row(), a.get_col()+b.get_col());
 }
 
-// attenzione che (A1-A5).abs() ritorna 4 e non 5
-// è un errore?
+// (A1-A5).abs() ritorna 4
 double Position::abs() const
 {
 	return std::sqrt(std::pow(row,2)+std::pow(col,2));
 }
 
-// DA CONTROLLARE SE I CONTI SONO GIUSTI O BISOGNA FARE +1 O ALTRI ARROTONDAMENTI
 Position Position::norm() const
 {
 	return Position(row/abs(), col/abs());

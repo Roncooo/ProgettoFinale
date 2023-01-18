@@ -1,7 +1,7 @@
 //	author: FRANCESCO RONCOLATO
 
-#ifndef CORAZZATA_H
-#define CORAZZATA_H
+#ifndef BATTLESHIP_H
+#define BATTLESHIP_H
 
 #include "Ship.h"
 #include "AttackGrid.h"
