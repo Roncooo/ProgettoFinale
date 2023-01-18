@@ -118,6 +118,7 @@ int main(int argc, char* argv[])
 		cout << "Giocatore 1, qual e' il tuo nome? ";
 		string player1_name;
 		std::getline(std::cin, player1_name);
+		player1.name = player1_name;
 		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 		
 		// garantisco che i due nomi siano diversi

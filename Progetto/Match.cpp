@@ -464,7 +464,7 @@ void print_code(int code, const Position& origin, const Position& target)
 	}
 }
 
-void round(Player& player, Player& enemy, Log& file_log)
+int round(Player& player, Player& enemy, Log& file_log)
 {
 	int code = -1;
 	Position origin, target;
@@ -500,6 +500,16 @@ void round(Player& player, Player& enemy, Log& file_log)
 	// a questo punto è stato eseguito un comando non speciale
 	// scrivo nel file
 	file_log.write(origin, target);
+	
+	if(enemy.has_lost())
+	{
+		print_winner(player);
+		recap(player, enemy);
+		
+		file_log.write("\n" + eof + player.name);
+		
+		return 100;	// partita terminata
+	}
 }
 
 void print_winner(Player& player)
@@ -514,37 +524,33 @@ void Match::play()
 {
 	int n_rounds = 1;
 	
+	int active_player = rand()%2;
+	if(active_player == 0)
+		std::cout << "Iniziera' a giocare: " << player1.name << std::endl;
+	else
+		std::cout << "Iniziera' a giocare: " << player2.name << std::endl;
+	
+	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	
 	while(n_rounds<MAX_ROUNDS)
 	{
 		std::cout << "\nTurno: " << n_rounds << "\n";
-		file_log.write("\n" + ignore + "Turno " + std::to_string(n_rounds) + ":\n" + ignore + player1.name + "\n");
-		
-		round(player1, player2, file_log);
-		if(player2.has_lost())
+		if(active_player==0)
 		{
-			print_winner(player1);
-			recap(player1, player2);
-			
-			file_log.write("\n" + eof + player1.name);
-			
-			return;
+			file_log.write("\n" + ignore + "Turno " + std::to_string(n_rounds) + ":\n" + ignore + player1.name + "\n");
+			if(round(player1, player2, file_log)==100) 
+				return;
 		}
-		n_rounds++;
-		
-		file_log.write(ignore + player2.name + "\n");
-		
-		round(player2, player1, file_log);
-		if(player1.has_lost())
+		else
 		{
-			print_winner(player2);
-			recap(player2, player1);
-			
-			file_log.write("\n" + eof + player2.name);
-			
-			return;
+			file_log.write("\n" + ignore + "Turno " + std::to_string(n_rounds) + ":\n" + ignore + player2.name + "\n");
+			if(round(player2, player1, file_log)==100)
+				return;
 		}
+		active_player = !active_player;
 		n_rounds++;
 	}
+	
 	std::cout << "\n*** Numero di turni massimo raggiunto ***\n";
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
 	recap(player1, player2);
