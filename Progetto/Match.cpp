@@ -502,7 +502,7 @@ int round(Player& player, Player& enemy, Log& file_log)
 		print_winner(player);
 		recap(player, enemy);
 		
-		file_log.write("\n" + eof + player.name);
+		file_log.write("\n" + eof + "Il vincitore e'  " + player.name);
 		
 		return 100;	// partita terminata
 	}

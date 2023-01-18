@@ -1,0 +1,10 @@
+^C:\USERS\FULVI\ONEDRIVE\DESKTOP\CODELITE\PROGETTOFINALE\CMAKE\CMAKEFILES\42B7072FC86FCB76F953AC10FF0EC93C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/fulvi/OneDrive/Desktop/codelite/ProgettoFinale/cmake -BC:/Users/fulvi/OneDrive/Desktop/codelite/ProgettoFinale/cmake --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/fulvi/OneDrive/Desktop/codelite/ProgettoFinale/cmake/BattagliaNavale.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -21,8 +21,8 @@
 // definita nel costruttore di Match per migliore efficienza, riconosce il comando relativo ad una posizione valida
 static std::regex reg_position;
 
-const std::string ignore = ">>";
-const std::string eof = "<<";
+const std::string ignore = ">>";		//flag per ignorare il comando
+const std::string eof = "<<";			//flag di fine partita
 
 class Match
 {
