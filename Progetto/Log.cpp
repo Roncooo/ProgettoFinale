@@ -21,14 +21,10 @@ void Log::write(game_board::Position& prow, game_board::Position& prune)
 		output << prow << "\n";
 }
 
-//void Log::read(std::string s)
-//{
-//	std::getline(input, s);
-//}
 
 
 void Log::close() 
 {
 	output.close();
-//	input.close();
+
 }
