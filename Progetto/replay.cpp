@@ -144,6 +144,7 @@ void re_play(std::ifstream& input)
 void re_write(ifstream& input, ofstream& output)
 {
 	string line;
+	string text = "";
 	
 	//viene controllato che i file siano stati aperti correttamente
 	if (!input.is_open())
@@ -156,9 +157,9 @@ void re_write(ifstream& input, ofstream& output)
 	{
 		std::getline(input, line);
 		line += "\n";
-		output << line;
+		text += line;
 	}
-	
+	output << text;
 }
 
 
