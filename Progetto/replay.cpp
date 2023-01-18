@@ -137,7 +137,7 @@ void re_play(std::ifstream& input)
 
 
 // rinominata perché crea interferenza con l'altro main
-int main(void){
+int main_f(void){
 	
 //	Log file_log = Log();
 	ifstream input("Progetto\\log.txt", ios::in);

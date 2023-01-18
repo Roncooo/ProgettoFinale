@@ -15,11 +15,6 @@ std::string Submarine::ship_type() const
 	return "submarine";
 }
 
-int Submarine::sunk_code() const 
-{
-	return 42;
-}
-
 int Submarine::action(const Position& pos, Player& enemy)
 {
 	// muovo dove chiede l'utente, se questo è possibile
@@ -52,12 +47,9 @@ int Submarine::action(const Position& pos, Player& enemy)
 
 int Submarine::is_sunk()
 {
-	int code = Ship::is_sunk();
-	if(code == 2)	// la nave è affondata ora
-	{
-//		std::cout << "~~~Hai affondato un sottomarino!~~~\n";
-		return 1;	// è affondata (codice compatibile con true)
-	}
-	return code;
+	if(Ship::is_sunk() == 1)	// la nave non è affondata (necessariamente ora)
+		return 42;
+	
+	return 0;	// non è affondata
 }
 

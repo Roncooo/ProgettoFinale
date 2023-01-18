@@ -65,28 +65,35 @@ bool Player::operator==(const Player& p) const
 	return p.name==this->name;
 }
 
-bool Player::receive_shot(const Position& shot_position)
+int Player::receive_shot(const Position& shot_position)
 {
+	// per ogni nave ancora a galla
 	for(int ship_index=0; ship_index<defence.get_placed_ships(); ship_index++)
 	{
+		// per ogni posizione della nave
 		for(int pos_index=0; pos_index<defence.ships[ship_index]->get_dimension(); pos_index++)
 		{
-			if(defence.ships[ship_index]->pos[pos_index] == shot_position)
+			// se non è il pezzo giusto passo al prossimo
+			if(defence.ships[ship_index]->pos[pos_index] != shot_position)
+				continue;
+			
+			// segno che è stato colpito il pezzo
+			defence.ships[ship_index]->armor[pos_index] = false;
+			
+			// 0 se non affondata, 40 41 42 per identificare i tipi di nave affondati (necessariamente ora)
+			int code = defence.ships[ship_index]->is_sunk();
+			
+			if(code==0)		// nave non affondata
+				return 31;	// colpita nave generica (non diamo informazioni sul tipo di nave colpito)
+			else			// nave affondata
 			{
-				// segno che è stato colpito il pezzo
-				defence.ships[ship_index]->armor[pos_index] = false;
-				// controllo se sono rimaste armature (e in caso affonda)
-				// aggiorna lo stato di affondamento ed eventualmente lo dice
-				if(defence.ships[ship_index]->is_sunk())
-					// la nave viene fisicamente rimossa dal vector
-					defence.ships.erase(defence.ships.begin()+ship_index);
-				// dico al nemico che ha colpito
-				return true;
+				// la nave viene fisicamente rimossa dal vector
+				defence.ships.erase(defence.ships.begin()+ship_index);
+				return code;	// segnalo che tipo di nave è affondata
 			}
 		}
 	}
-	// dico al nemico che non ha colpito
-	return false;
+	return 30; 		// non colpito
 }
 
 
@@ -132,11 +139,7 @@ int Player::act_ship(int index, const Position& target, Player& enemy)
 	if(index==-1)	// get_ship_index non ha trovato il centro della nave
 		return -4;
 	
-	int temp = defence.ships[index]->action(target, enemy);		//viene eseguita l'azione e il code viene salvato 
-	
-	if(defence.ships[index]->is_sunk())
-		return defence.ships[index]->sunk_code();
-	return temp;
+	return defence.ships[index]->action(target, enemy);		// viene eseguita l'azione e ritornato il codice
 }
 
 bool Player::has_lost()

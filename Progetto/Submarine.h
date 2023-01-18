@@ -15,7 +15,6 @@ public:
 	// l'override permette di stampare il messaggio con le informazioni 
 	// della nave
 	int is_sunk() override;
-	int sunk_code() const override;
 	std::string ship_type() const override;
 };
 

@@ -196,7 +196,8 @@ void Match::ship_placement(Player& player)
 		
 	if(!player.is_cpu)
 	{
-		std::cout << "\n" + player.name + ", questa e' la disposizione delle tue navi\n";
+		std::cout << "\n" + player.name + ", questa e' la disposizione delle tue navi\n" << std::endl;
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 		player.print_defence();
 	}
 }
@@ -485,6 +486,7 @@ void round(Player& player, Player& enemy, Log& file_log)
 			code = random_command(player, origin, target);
 		else
 			code = command(origin, target);
+		
 		code = execute(player, enemy, code, origin, target);
 		
 		// solo agli umani comunico il messaggio 
