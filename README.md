@@ -98,6 +98,7 @@ Alcune delle funzioni sviluppate "parlano" tra di loro attraverso codici che ide
 40 affondata nave corazzata
 41 affondata nave di supporto
 42 affondato sottomarino
+100 partita terminata
 
 ***BREVE DESCRIZIONE***
 Il gioco segue il più fedelmente possibile il procedimento della Battaglia Navale classica: i due giocatori (di cui uno necessariamente robot) posizionano le proprie navi automaticamente, o nel caso dell'umano, anche manualmente. I due giocatori devono interagire nelle fasi di attacco per sapere se i target sono stati colpiti, poiché come da gioco classico, non hanno e non devono aver accesso alla tavola di difesa dell'avversario. Le interazioni sono date dalla classe Player e la partita è gestita dalla classe Match. Attraverso l'oggetto Log in Match è poi possibile salvare quanto avvenuto e fare il replay della partita. 
