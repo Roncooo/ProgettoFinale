@@ -2,7 +2,8 @@
 
 #include "Support.h"
 
-using game_board::Position;
+//using game_board::Position;
+using namespace game_board;
 
 Support::Support(const Position& prune, const Position& stern, Player& p) 
 	: Ship(prune, stern, p, 'S', 's')
@@ -64,11 +65,8 @@ int Support::action(const Position& pos, Player& enemy)
 
 int Support::is_sunk()
 {
-	int code = Ship::is_sunk();
-	if(code == 2)	// la nave è affondata ora
-	{
-		std::cout << "~~~Hai affondato una nave di supporto!~~~\n";
-		return 1;	// è affondata (codice compatibile con true)
-	}
-	return code;
+	if(Ship::is_sunk() == 1)	// la nave non è affondata (necessariamente ora)
+		return 41;
+	
+	return 0;	// non è affondata
 }

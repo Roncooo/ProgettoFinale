@@ -10,8 +10,7 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, c
 	if(!p.is_valid(prow, prune))
 		throw std::invalid_argument("Posizioni non valide");
 		
-	// per semplicità sistemo e se il modulo della poppa è più piccolo della prua
-	// inverto, altrimenti lascio così
+	// si ordinano prua e poppa in modo che la prua ordinata sia più vicina all'origine
 	Position ordered_prow;
 	Position ordered_prune;
 	if(prow.abs() < prune.abs())
@@ -26,7 +25,7 @@ Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, c
 	}
 	
 	dimension = (prune-prow).abs() +1;
-	// definisco pos e armor
+	
 	pos = std::vector<Position>(dimension);
 	armor = std::vector<bool>(dimension);
 	
@@ -75,7 +74,8 @@ int Ship::move(const Position& new_center)
 	for(int i=0; i<dimension; i++)
 		pos[i] = Position();
 	
-	// controlla sia che la nave sia completamente dentro alla griglia, sia che non sormonti altre navi
+	// se le posizioni che sarebbero occupate dalla nuova posizione della nave
+	// non sono completamente dentro alla griglia o sormontano altre navi
 	if(!player.is_valid(temp[0]+dislocation,temp[dimension-1]+dislocation))
 	{
 		// ripristino le posizioni salvate
@@ -93,12 +93,9 @@ int Ship::move(const Position& new_center)
 // aggiusta l'armatura di una nave non affondata (chiamato da Support::cure)
 void Ship::restore_armor()
 {
-	if(sunk) return;
-	
 	for(int i=0; i<dimension; i++)
 		armor[i] = true;
 }
-
 
 // ritorna 0 se la nave non è affondata
 // ritorna 1 se la nave è affondata ora

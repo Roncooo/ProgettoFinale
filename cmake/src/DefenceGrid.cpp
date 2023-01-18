@@ -2,6 +2,8 @@
 
 #include "DefenceGrid.h"
 
+using namespace game_board;
+
 DefenceGrid::DefenceGrid()
 {
 	// intentionally left blank
@@ -23,10 +25,8 @@ int DefenceGrid::get_placed_ships() const
 void DefenceGrid::update()
 {
 	reset_matrix();
-	for(int i = 0; i < ships.size(); i++)
+	for(int i = 0; i < get_placed_ships(); i++)
 	{
-		if(ships[i]->is_sunk() == true) continue;	// se la nave è affondata vado alla prossima
-		
 		for(int j = 0; j < ships[i]->get_dimension(); j++)
 		{
 			if(ships[i]->armor[j] == true)		// armor[i] è true se il pezzo è integro (non colpito)

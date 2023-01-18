@@ -9,19 +9,21 @@
 
 class Ship;	// forward declaration
 
-class DefenceGrid : public game_board::Grid
+namespace game_board
 {
-public:
+	class DefenceGrid : public game_board::Grid
+	{
+	public:
 	
-	// risolve i memory leak ma impedisce la copia
-	std::vector<std::unique_ptr<Ship>> ships;
+		std::vector<std::unique_ptr<Ship>> ships;
 	
-	DefenceGrid();
-	int get_placed_ships() const;
-	void update() override;
+		DefenceGrid();
+		int get_placed_ships() const;
+		void update() override;
 	
-	~DefenceGrid();
-};
+		~DefenceGrid();
+	};
+}
 
 #include "Ship.h"
 

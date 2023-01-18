@@ -31,9 +31,9 @@ namespace game_board
 		int col;
 	};
 
-	std::ostream& operator<<(std::ostream& os, const Position& a);
-	Position operator-(const Position& a, const Position& b);
-	Position operator+(const Position& a, const Position& b);
 }
+	std::ostream& operator<<(std::ostream& os, const game_board::Position& a);
+	game_board::Position operator-(const game_board::Position& a, const game_board::Position& b);
+	game_board::Position operator+(const game_board::Position& a, const game_board::Position& b);
 
 #endif // Position_H
