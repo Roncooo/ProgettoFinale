@@ -2,6 +2,8 @@
 
 #include "DefenceGrid.h"
 
+using namespace game_board;
+
 DefenceGrid::DefenceGrid()
 {
 	// intentionally left blank

@@ -3,6 +3,7 @@
 #include "Submarine.h"
 
 using game_board::Position;
+using game_board::AttackGrid;
 
 Submarine::Submarine(const Position& pos, Player& p) 
 	: Ship(pos, pos, p, 'E', 'e')

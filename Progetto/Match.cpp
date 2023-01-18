@@ -2,8 +2,7 @@
 
 #include "Match.h"
 
-using game_board::Position;
-using game_board::Grid;
+using namespace game_board;
 
 
 Match::Match(Player& p1, Player& p2, Log& file)

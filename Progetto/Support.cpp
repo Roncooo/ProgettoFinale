@@ -2,7 +2,8 @@
 
 #include "Support.h"
 
-using game_board::Position;
+//using game_board::Position;
+using namespace game_board;
 
 Support::Support(const Position& prune, const Position& stern, Player& p) 
 	: Ship(prune, stern, p, 'S', 's')

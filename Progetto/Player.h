@@ -27,7 +27,7 @@ public:
 	void restore_ship(int index);
 	void add_ship(Ship* to_add);
 	
-	AttackGrid attack;
+	game_board::AttackGrid attack;
 	
 	void print_defence();	// non const perché le griglie sono aggiornate prima di essere stampate
 	void print_defence_attack();
@@ -41,7 +41,7 @@ public:
 	int how_many_supports() const;
 	int how_many_submarines() const;
 private:
-	DefenceGrid defence;
+	game_board::DefenceGrid defence;
 };
 
 

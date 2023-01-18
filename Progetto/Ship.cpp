@@ -2,7 +2,7 @@
 
 #include "Ship.h"
 
-using game_board::Position;
+using namespace game_board;
 
 Ship::Ship(const Position& prow, const Position& prune, Player& p, char upper, char lower) 
 	: player{p}, not_hit{upper}, hit{lower}

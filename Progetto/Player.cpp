@@ -2,8 +2,8 @@
 
 #include "Player.h"
 
-using game_board::Position;
-using game_board::Grid;
+using namespace game_board;
+
 
 Player::Player(std::string n)
 	: name{n}

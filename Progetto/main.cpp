@@ -19,9 +19,9 @@ int main_f(int argc, char* argv[])
 		// trasformo in uppercase un carattere alla volta
 		for(int i=0; i<strlen(argv[1]); i++)
 			argv[1][i] = toupper(argv[1][i]);
-		if(strcmp(argv[1], "CC")==0 || strcmp(argv[1], "-CC")==0)
+		if(strcmp(argv[1], "CC")==0)
 			match_type = "CC";
-		else if(strcmp(argv[1], "PC")==0 || strcmp(argv[1], "-PC")==0)
+		else if(strcmp(argv[1], "PC")==0)
 			match_type = "PC";
 		else
 			match_type = "INVALID";
