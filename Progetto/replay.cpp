@@ -2,12 +2,13 @@
 
 //#include <iostream>
 #include <fstream>
+#include <cstring>
 #include "Match.h"
 
 using std::ifstream, std::ios, game_board::Position;
 
 
-void command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
+int command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
 {
 	
 //	std::string ignore = ">>";
@@ -26,17 +27,15 @@ void command_for_replay(game_board::Position& a, game_board::Position& b, std::i
 		}
 		if (input_string.substr(0, 2) == ignore)		//controllo che non ci sia la flag che ho scelto
 		{
-			std::cout << "Qui c'è una flag\n";
+//			std::cout << "Qui c'è una flag\n";
 			continue;
 		}
 		
 		if (input_string.substr(0, 2) == eof)		//controllo che non ci sia la flag che ho scelto
 		{
-			std::cout << "### FINE PARTITA ###\n";
+//			flag = true;
 			std::cout << input_string.substr(2) << "\n";
-			input.close();
-			flag = true;
-			break;
+			return -1;
 		}
 		
 		std::vector<std::string> vec = split(input_string, ' ');
@@ -57,6 +56,7 @@ void command_for_replay(game_board::Position& a, game_board::Position& b, std::i
 		
 		flag = true;		//ha letto i comandi
 	}
+	return 1;
 }
 
 void replay_placement(Player& p, std::ifstream& input)
@@ -82,13 +82,15 @@ void replay_placement(Player& p, std::ifstream& input)
 	}
 }
 
-void replay_round(Player& player, Player& enemy, std::ifstream& input)
+int replay_round(Player& player, Player& enemy, std::ifstream& input)
 {
 	Position origin, target;
 	
-	command_for_replay(origin, target, input);
+	int code = command_for_replay(origin, target, input);
 	player.act_ship(player.get_ship_index(origin), target, enemy);
-	std::cout << "Comando eseguito\n";
+	player.print_defence_attack();
+//	std::cout << "Comando eseguito\n";
+	return code;
 }
 
 
@@ -122,10 +124,20 @@ void re_play(std::ifstream& input)
 		std::getline(input, temp);		//serve per bypassare la riga vuota
 		
 		std::cout << "\nTurno: " << n_rounds << "\n";
-		replay_round(p1, p2, input);
+		if (replay_round(p1, p2, input) == -1)
+		{
+			std::cout << "### FINE PARTITA ###\n";
+			break; //o return
+		}
 		n_rounds++;
 		
-		replay_round(p2, p1, input);
+		std::this_thread::sleep_for(std::chrono::milliseconds(10));
+		
+		if(replay_round(p2, p1, input) == -1)
+		{
+			std::cout << "### FINE PARTITA ###\n";
+			break;
+		}
 		n_rounds++;
 	}
 	
@@ -142,7 +154,7 @@ int main(void){
 //	Log file_log = Log();
 	ifstream input("Progetto\\log.txt", ios::in);
 	re_play(input);
-	
+	input.close();
 	return 0;
 }
 
