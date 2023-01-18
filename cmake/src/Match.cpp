@@ -2,8 +2,8 @@
 
 #include "Match.h"
 
-using game_board::Position;
-using game_board::Grid;
+using namespace game_board;
+
 
 Match::Match(Player& p1, Player& p2, Log& file)
 	: player1{p1}, player2{p2}, file_log{file}
@@ -153,7 +153,7 @@ int random_command(Player& player, Position& origin, Position& target)
 }
 
 // prende un codice ed esegue l'istruzione associata
-// poi restituisce nuovamente un codice per dire se è andato tutto bene
+// poi restituisce nuovamente un codice per dire se è andato tutto bene e per permettere le stampe
 int execute(Player& player, Player& enemy, int code, const Position& origin, const Position& target)
 {
 	switch(code)
@@ -194,7 +194,8 @@ void Match::ship_placement(Player& player)
 		
 	if(!player.is_cpu)
 	{
-		std::cout << "\n" + player.name + ", questa e' la disposizione delle tue navi\n";
+		std::cout << "\n" + player.name + ", questa e' la disposizione delle tue navi\n" << std::endl;
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 		player.print_defence();
 	}
 }
@@ -204,7 +205,7 @@ void user_placement(Player& player, Log& file_log)
 	std::cout << "\n" + player.name + " inserisci le tue navi\n\n";
 	Position prow, prune;
 	
-	// uso una lambda per evitare codice duplicato
+	// uso una lambda expression per evitare codice duplicato
 	auto user_placement_helper = [&player, &prow, &prune](std::string ship_name, int ship_size)
 	{
 		bool ok = false;
@@ -434,10 +435,25 @@ void print_code(int code, const Position& origin, const Position& target)
 		std::cout << "Colpito\n";
 		break;
 	case 32:
-		// supporto spostato con successo
+		// sottomarino spostato con successo
 		break;
 	case 33:
 		// supporto spostato con successo
+		break;
+	case 40:
+		//hai colpito e affondato una CORAZZATA
+		std::cout << "Colpito\n";
+		std::cout << "~~~Hai affondato una corazzata!~~~\n";
+		break;
+	case 41:
+		//hai colpito e affondato una NAVE DI SUPPORTO
+		std::cout << "Colpito\n";
+		std::cout << "~~~Hai affondato una nave di supporto!~~~\n";
+		break;
+	case 42:
+		//hai colpito e affondato un SOTTOMARINO
+		std::cout << "Colpito\n";
+		std::cout << "~~~Hai affondato un sottomarino!~~~\n";
 		break;
 	default:
 		// coincide con case -1:
@@ -446,12 +462,13 @@ void print_code(int code, const Position& origin, const Position& target)
 	}
 }
 
-void round(Player& player, Player& enemy, Log& file_log)
+int round(Player& player, Player& enemy, Log& file_log)
 {
 	int code = -1;
 	Position origin, target;
 	
-	// se c'è un (solo) umano, viene fatta una piccola pausa prima della mossa del nemico e una dopo
+	// se c'è un (solo) umano, viene fatta una pausa prima della mossa del nemico
+	// migliora la leggibilità della partita
 	if(!player.is_cpu != !enemy.is_cpu)
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	
@@ -464,13 +481,10 @@ void round(Player& player, Player& enemy, Log& file_log)
 	while(code < 30)
 	{
 		if(player.is_cpu)
-		{
 			code = random_command(player, origin, target);
-			if(!player.is_cpu != !enemy.is_cpu)
-				std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-		}
 		else
 			code = command(origin, target);
+		
 		code = execute(player, enemy, code, origin, target);
 		
 		// solo agli umani comunico il messaggio 
@@ -478,7 +492,19 @@ void round(Player& player, Player& enemy, Log& file_log)
 			print_code(code, origin, target);
 	}
 	
+	// a questo punto è stato eseguito un comando non speciale
+	// scrivo nel file
 	file_log.write(origin, target);
+	
+	if(enemy.has_lost())
+	{
+		print_winner(player);
+		recap(player, enemy);
+		
+		file_log.write("\n" + eof + "Il vincitore e'  " + player.name);
+		
+		return 100;	// partita terminata
+	}
 }
 
 void print_winner(Player& player)
@@ -493,41 +519,37 @@ void Match::play()
 {
 	int n_rounds = 1;
 	
+	int active_player = rand()%2;
+	if(active_player == 0)
+		std::cout << "Iniziera' a giocare: " << player1.name << std::endl;
+	else
+		std::cout << "Iniziera' a giocare: " << player2.name << std::endl;
+	
+	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	
 	while(n_rounds<MAX_ROUNDS)
 	{
 		std::cout << "\nTurno: " << n_rounds << "\n";
-		file_log.write("\n>>Turno " + std::to_string(n_rounds) + ":\n" + ">>" + player1.name + "\n");
-		
-		round(player1, player2, file_log);
-		if(player2.has_lost())
+		if(active_player==0)
 		{
-			print_winner(player1);
-			recap(player1, player2);
-			
-			file_log.write("\n<<" + player1.name);
-			
-			return;
+			file_log.write("\n" + ignore + "Turno " + std::to_string(n_rounds) + ":\n" + ignore + player1.name + "\n");
+			if(round(player1, player2, file_log)==100) 
+				return;
 		}
-		n_rounds++;
-		
-		file_log.write(">>" + player2.name + "\n");
-		
-		round(player2, player1, file_log);
-		if(player1.has_lost())
+		else
 		{
-			print_winner(player2);
-			recap(player2, player1);
-			
-			file_log.write("\n<<" + player2.name);
-			
-			return;
+			file_log.write("\n" + ignore + "Turno " + std::to_string(n_rounds) + ":\n" + ignore + player2.name + "\n");
+			if(round(player2, player1, file_log)==100)
+				return;
 		}
+		active_player = !active_player;
 		n_rounds++;
 	}
+	
 	std::cout << "\n*** Numero di turni massimo raggiunto ***\n";
 	std::cout << "*** La partita e' finita con un pareggio ***\n";
 	recap(player1, player2);
 	
-	file_log.write("\n<<*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
+	file_log.write("\n" + eof + "*** Numero di turni massimo raggiunto ***\n*** La partita e' finita con un pareggio ***\n");
 }
 
