@@ -1,7 +1,6 @@
 author: Beatrice Bellesso
 
 # ProgettoFinale C(alabrese)++
-"This does what you think it does" 
 
 ***SCHEMA DI DERIVAZIONE DELLE CLASSI***
 
@@ -9,11 +8,10 @@ namespace game_board
 {
 
 Grid		
-  |
-  +-- DefenceGrid
-  |					
-  |					
-  +-- AttackGrid		
+|
++-- DefenceGrid	
+|					
++-- AttackGrid		
 							
 Position						
 
@@ -97,6 +95,13 @@ Alcune delle funzioni sviluppate "parlano" tra di loro attraverso codici che ide
 31 nave colpita
 32 sottomarino spostato con successo
 33 supporto spostato con successo
+40 affondata nave corazzata
+41 affondata nave di supporto
+42 affondato sottomarino
 
 ***BREVE DESCRIZIONE***
 Il gioco segue il più fedelmente possibile il procedimento della Battaglia Navale classica: i due giocatori (di cui uno necessariamente robot) posizionano le proprie navi automaticamente, o nel caso dell'umano, anche manualmente. I due giocatori devono interagire nelle fasi di attacco per sapere se i target sono stati colpiti, poiché come da gioco classico, non hanno e non devono aver accesso alla tavola di difesa dell'avversario. Le interazioni sono date dalla classe Player e la partita è gestita dalla classe Match. Attraverso l'oggetto Log in Match è poi possibile salvare quanto avvenuto e fare il replay della partita. 
+
+***Funzionamento dell'eseguibile***
+Come da consegna, è possibile indicare da riga di comando gli argomenti "pc" o "cc" per identificare una partita "persona-computer" o "computer-computer" (sono riconosciuti anche gli argomenti con un "-" davanti o scritti in maiuscolo o a lettere invertite). Se non viene inserito un comando o il comando inserito non è valido, viene comunque avviato il gioco e si chiederà da standard input come si vuole procedere (ovvero se si vuole che sia il computer a giocare). In ogni caso per l'utente umano è possibile scegliere l'inserimento automatico delle navi.
+

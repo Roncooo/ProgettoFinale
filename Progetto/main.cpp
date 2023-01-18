@@ -5,7 +5,7 @@
 
 using std::cout, std::cin, std::endl, std::string;
 
-int main_f(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	std::string match_type;
 	// argc vale 2 se c'è un argomento (perché argv[0] contiene nome e percorso dell'eseguibile)

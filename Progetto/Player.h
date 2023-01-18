@@ -23,7 +23,7 @@ public:
 	bool auto_placement = false;
 	bool operator==(const Player& p) const;
 //	Player& operator=(const Player& p);
-	bool receive_shot(const game_board::Position& pos);
+	int receive_shot(const game_board::Position& pos);
 	int is_there_ship(const game_board::Position& pos) const;
 	
 	// per la privatizzazione di defence

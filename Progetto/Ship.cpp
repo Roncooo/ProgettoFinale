@@ -99,20 +99,14 @@ void Ship::restore_armor()
 		armor[i] = true;
 }
 
+
+// ritorna 0 se la nave non è affondata
+// ritorna 1 se la nave è affondata ora
+// una nave affondata è completamente rimossa quindi non ci sono navi precedentemente affondate
 int Ship::is_sunk()
 {
-	// se so già che è affondata non devo calcolare niente
-	if(sunk == true)
-		return 1;	// funge da true
+	if(get_armor()>0)	//se almeno un armatura è intatta, la nave non è affondata
+		return 0;		// funge da false
 	
-	for (int i = 0; i < armor.size(); i++){
-		if (armor[i] == true)	//se almeno un armatura è intatta, la nave non è affondata
-			return 0;	// funge da false
-	}
-	
-	// se arrivo qui, tutte le armature == false
-	// e la nave è affondata ora
-	sunk = true;
-	
-	return 2;	// indica che la nave è affondata ora 
+	return 1;
 }

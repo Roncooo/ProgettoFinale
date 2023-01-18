@@ -35,7 +35,6 @@ public:
 	int move(const game_board::Position& new_pos);
 	void restore_armor();
 	virtual int is_sunk()=0;
-	virtual int sunk_code() const =0;
 	virtual std::string ship_type() const =0;
 	// non è const perché può muovere e poi agire
 	virtual int action(const game_board::Position& target, Player& enemy)=0;

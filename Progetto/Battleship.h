@@ -16,7 +16,6 @@ public:
 	int is_sunk() override;		// l'override permette di stampare il messaggio con le informazioni della nave
 	std::string ship_type() const override;
 //	int dimension = 5;		// settata dal costruttore di Ship
-	int sunk_code() const override;
 //	~Battleship() override;
 };
 
