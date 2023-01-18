@@ -4,7 +4,6 @@
 
 using namespace game_board;
 
-
 Match::Match(Player& p1, Player& p2, Log& file)
 	: player1{p1}, player2{p2}, file_log{file}
 {
@@ -299,7 +298,6 @@ void user_placement(Player& player, Log& file_log)
 	}
 	
 	// la stampa della griglia avviene in ship_placement così da discernere utente umano e computerizzato
-	
 }
 
 void bot_placement(Player& player, Log& file_log)

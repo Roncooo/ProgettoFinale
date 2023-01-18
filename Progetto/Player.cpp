@@ -31,7 +31,7 @@ int Player::how_many_battleships() const
 	int count=0;
 	for(int i=0; i<get_placed_ships(); i++)
 	{
-		// non serve più il controllo defence.ships[i]->is_sunk()==false perché ships contiene solo navi non affondate
+		// ships contiene solo le navi non affondate
 		if(defence.ships[i]->ship_type()=="battleship")
 			count++;
 	}

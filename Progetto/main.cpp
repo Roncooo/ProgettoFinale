@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 			argv[1][i] = toupper(argv[1][i]);
 		if(strcmp(argv[1], "CC")==0)
 			match_type = "CC";
-		else if(strcmp(argv[1], "PC")==0)
+		else if(strcmp(argv[1], "PC")==0 || strcmp(argv[1], "CP")==0)
 			match_type = "PC";
 		else
 			match_type = "INVALID";

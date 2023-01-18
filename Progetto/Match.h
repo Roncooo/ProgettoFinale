@@ -18,7 +18,8 @@
 #include "Submarine.h"
 #include "Support.h"
 
-// definita nel costruttore di Match per migliore efficienza, riconosce il comando relativo ad una posizione valida
+// definita nel costruttore di Match per migliore efficienza, 
+// riconosce il comando relativo ad una posizione valida
 static std::regex reg_position;
 
 const std::string ignore = ">>";		//flag per ignorare il comando
@@ -26,7 +27,6 @@ const std::string eof = "<<";			//flag di fine partita
 
 class Match
 {
-private:
 public:
 	Match(Player& p1, Player& p2, Log& file);
 	Log& file_log;
@@ -38,7 +38,6 @@ public:
 	
 	static constexpr int MAX_ROUNDS = 4000;
 	void play();
-	
 };
 
 

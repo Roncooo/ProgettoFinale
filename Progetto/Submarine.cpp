@@ -48,7 +48,7 @@ int Submarine::action(const Position& pos, Player& enemy)
 
 int Submarine::is_sunk()
 {
-	if(Ship::is_sunk() == 1)	// la nave non è affondata (necessariamente ora)
+	if(Ship::is_sunk() == 1)	// la nave è affondata (necessariamente ora)
 		return 42;
 	
 	return 0;	// non è affondata
