@@ -6,7 +6,6 @@ using game_board::Position;
 using game_board::Grid;
 
 
-
 Match::Match(Player& p1, Player& p2, Log& file)
 	: player1{p1}, player2{p2}, file_log{file}
 {
@@ -155,7 +154,7 @@ int random_command(Player& player, Position& origin, Position& target)
 }
 
 // prende un codice ed esegue l'istruzione associata
-// poi restituisce nuovamente un codice per dire se è andato tutto bene
+// poi restituisce nuovamente un codice per dire se è andato tutto bene e per permettere le stampe
 int execute(Player& player, Player& enemy, int code, const Position& origin, const Position& target)
 {
 	switch(code)
@@ -207,7 +206,7 @@ void user_placement(Player& player, Log& file_log)
 	std::cout << "\n" + player.name + " inserisci le tue navi\n\n";
 	Position prow, prune;
 	
-	// uso una lambda per evitare codice duplicato
+	// uso una lambda expression per evitare codice duplicato
 	auto user_placement_helper = [&player, &prow, &prune](std::string ship_name, int ship_size)
 	{
 		bool ok = false;
@@ -493,9 +492,6 @@ int round(Player& player, Player& enemy, Log& file_log)
 		if(!player.is_cpu)
 			print_code(code, origin, target);
 	}
-	
-//	for(int ship_index=0; ship_index<defence.get_placed_ships(); ship_index++)
-//		defence.ships[ship_index]->is_sunk();
 	
 	// a questo punto è stato eseguito un comando non speciale
 	// scrivo nel file

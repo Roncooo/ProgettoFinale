@@ -36,22 +36,10 @@ public:
 	// discerne l'utente umano/robotico
 	void ship_placement(Player& p);
 	
-	static constexpr int MAX_ROUNDS = 4000;	// boh a caso raga
+	static constexpr int MAX_ROUNDS = 4000;
 	void play();
 	
-	/* Command restituisce un exit code che identifica il comando inserito da tastiera
-	 * Se l'input è compatibile con due posizioni, modifica i parametri
-	 * -1: comando non valido
-	 *  1: una posizione inserita (inserimento del sottomarino), posizioni modificate
-	 *  2: due posizioni inserite, posizioni modificate
-	 *  3: stampa della matrice di difesa
-	 *  4: stampa delle matrice di difesa e attacco
-	 *  5: cancella i sonar
-	 * altro...?
-	 */
-	// gli exit code servono perché coma comando sa se è andato a buon fine
 };
-
 
 
 // --- HELPER FUNCTIONS ---
@@ -90,4 +78,5 @@ void re_play(std::ifstream& input);
 
 // stampa il nome del vincitore incorniciato
 void print_winner(Player& player);
+
 #endif // MATCH_H

@@ -13,7 +13,6 @@ class DefenceGrid : public game_board::Grid
 {
 public:
 	
-	// risolve i memory leak ma impedisce la copia
 	std::vector<std::unique_ptr<Ship>> ships;
 	
 	DefenceGrid();

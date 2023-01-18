@@ -8,7 +8,7 @@ using game_board::Grid;
 Player::Player(std::string n)
 	: name{n}
 {
-	// attack e defence inizializzate di default
+	// intentionally left blank
 }
 
 Ship& Player::get_ship(int index)
@@ -35,7 +35,7 @@ int Player::how_many_battleships() const
 		if(defence.ships[i]->ship_type()=="battleship")
 			count++;
 	}
-	return count++;
+	return count;
 }
 
 int Player::how_many_supports() const
@@ -46,7 +46,7 @@ int Player::how_many_supports() const
 		if(defence.ships[i]->is_sunk()==false && defence.ships[i]->ship_type()=="support")
 			count++;
 	}
-	return count++;
+	return count;
 }
 
 int Player::how_many_submarines() const
@@ -57,7 +57,7 @@ int Player::how_many_submarines() const
 		if(defence.ships[i]->is_sunk()==false && defence.ships[i]->ship_type()=="submarine")
 			count++;
 	}
-	return count++;
+	return count;
 }
 
 bool Player::operator==(const Player& p) const
@@ -99,29 +99,23 @@ int Player::receive_shot(const Position& shot_position)
 
 int Player::is_there_ship(const Position& sonar_request) const
 {
+	// per ogni nave a galla
 	for(int ship_index=0; ship_index<get_placed_ships(); ship_index++)
 	{
-		// il controllo non serve più perché ships contiene solo navi non affondate
-		// se la nave è affondata completamente, non verrà vista dal sonar
-//		if(defence.ships[ship_index]->is_sunk())
-//			continue;
-		
+		// per ogni posizione della nave
 		for(int pos_index=0; pos_index<defence.ships[ship_index]->get_dimension(); pos_index++)
 		{
+			// se la posizione richiesta dal sonar coincide con il pezzo di nave
 			if(defence.ships[ship_index]->pos[pos_index] == sonar_request)
 			{
 				if(defence.ships[ship_index]->armor[pos_index] == true)
-					return 2;	// se l'armatura della nave risulta intatta ritorno un codice valido 2
+					return 2;	// pezzo di armatura intatta
 				else
 					return 1;	// pezzo di nave colpito
 			}
 		}
 	}
 	return -1;	// nella posizione richiesta non c'è una nave
-}
-
-Player::~Player()
-{
 }
 
 void Player::print_defence()
@@ -142,9 +136,8 @@ int Player::act_ship(int index, const Position& target, Player& enemy)
 	return defence.ships[index]->action(target, enemy);		// viene eseguita l'azione e ritornato il codice
 }
 
-bool Player::has_lost()
+bool Player::has_lost() const
 {
-	// per ciascuna nave nemica, se è una Corazzata e non è affondata, p non ha ancora vinto
 	// get_placed_ships ritorna il numero di navi non affondate
 	return get_placed_ships()==0;
 }
@@ -159,7 +152,7 @@ int Player::get_ship_index(const Position& pos) const
 		if(pos==ship_center)
 			return i;
 	}
-	return -1;
+	return -1;	// pos non è il centro di una nave
 }
 
 int Player::get_placed_ships() const
@@ -190,18 +183,14 @@ bool Player::is_valid(const Position& prow, const Position& prune) const
 	if(ordered_prow.get_row() != ordered_prune.get_row() && ordered_prow.get_col() != ordered_prune.get_col())
 		return false;
 	
-	// controllo che non ci siano già navi NON AFFONDATE nelle posizioni tra prua e poppa (comprese)
+	// controllo che non ci siano già navi non affondate nelle posizioni tra prua e poppa (comprese)
 	Position vec = (ordered_prune-ordered_prow).norm();
-			// se funziona tutto non dovrebbe essere un ciclo infinito
-			// "ma diciamocelo, il rischio c'è"
-	for(Position current=ordered_prow; current!=ordered_prune+vec; current+=vec)		// per ogni posizione tra prua e poppa
+	// per ogni posizione tra prua e poppa
+	for(Position current=ordered_prow; current!=ordered_prune+vec; current+=vec)
 	{
-		for(int s=0; s<defence.get_placed_ships(); s++)				// per ogni nave nella griglia
+		// per ogni nave nella griglia
+		for(int s=0; s<defence.get_placed_ships(); s++)
 		{
-			// se la nave è affondata non crea problemi e ci si può passare sopra quindi passo alla prossima nave
-			if(defence.ships[s]->is_sunk())
-				continue;
-			
 			// per ogni posizione della nave
 			for(int p=0; p<defence.ships[s]->get_dimension(); p++)
 			{
@@ -212,21 +201,5 @@ bool Player::is_valid(const Position& prow, const Position& prune) const
 		}
 	}
 	return true;
-	
-	// questa versione controlla attraverso la matrice che quindi dovrebbe essere sempre aggiornata ma non lo è
-//	for(int i=0; i<(ordered_prow-ordered_prune).abs(); i++)
-//	{
-//		if(ordered_prow.row == ordered_prune.row)	// se sono in riga
-//		{
-//			if(get_char(ordered_prune+(i,0)) != ' ')	// scorro verso destra
-//				return false;
-//		}
-//		
-//		if(ordered_prow.col == ordered_prune.col)	// se sono in colonna
-//		{
-//			if(get_char(ordered_prune+(0,i)) != ' ')	// scorro verso il basso
-//				return false;
-//		}
-//	}
 }
 
