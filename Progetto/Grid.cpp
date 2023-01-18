@@ -152,4 +152,4 @@ void Grid::print(Grid& a, Grid& b)
 		std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
 	}
 }
-	
+

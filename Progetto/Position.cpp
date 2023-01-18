@@ -6,11 +6,9 @@ using namespace game_board;
 
 Position::Position(std::string s)
 {
-	// non dovrebbe mai essere chiamata
 	if(s.length()<2 || s.length()>3)
 		throw std::invalid_argument("Invalid length for Position(std::string)");
 	
-	// è orribile ma per il momento funziona, si può certamente migliorare
 	switch(s[0])
 	{
 		case 'A':	row = 0;	break;
@@ -29,7 +27,7 @@ Position::Position(std::string s)
 			throw std::invalid_argument("Invalid char for Position(std::string)");
 	}
 	
-	// Non faccio ulteriori controlli perché in teoria sono già fatti dalla regex
+	// Non faccio ulteriori controlli perché sono già fatti dalla regex
 	col = std::stoi(s.substr(1)) -1;
 }
 
