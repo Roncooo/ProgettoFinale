@@ -156,9 +156,9 @@ void re_write(ifstream& input, ofstream& output)
 	{
 		std::getline(input, line);
 		line += "\n";
+		output << line;
 	}
 	
-	output << line;
 }
 
 
@@ -203,6 +203,8 @@ int main(int argc, char* argv[])
 			ofstream output(file_output_replay_name, ios::out | ios::app);
 			
 			re_write(input, output);
+			input.close();
+			output.close();
 		}
 		else
 			match_type = "INVALID";

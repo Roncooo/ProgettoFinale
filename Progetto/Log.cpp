@@ -26,5 +26,4 @@ void Log::write(game_board::Position& prow, game_board::Position& prune)
 void Log::close() 
 {
 	output.close();
-
 }
