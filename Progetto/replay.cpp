@@ -5,7 +5,7 @@
 #include <cstring>
 #include "Match.h"
 
-using std::ifstream, std::ios, game_board::Position;
+using std::ifstream, std::ios, game_board::Position, std::cout;
 
 
 int command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
@@ -22,7 +22,7 @@ int command_for_replay(game_board::Position& a, game_board::Position& b, std::if
 		
 		if(input_string.length() < 1)				//controllo che ci siano almeno due caratteri
 		{
-			std::cout << "Lunghezza insufficiente\n";
+			cout << "Lunghezza insufficiente\n";
 			break;
 		}
 		if (input_string.substr(0, 2) == ignore)		//controllo che non ci sia la flag che ho scelto
@@ -34,7 +34,7 @@ int command_for_replay(game_board::Position& a, game_board::Position& b, std::if
 		if (input_string.substr(0, 2) == eof)		//controllo che non ci sia la flag che ho scelto
 		{
 //			flag = true;
-			std::cout << input_string.substr(2) << "\n";
+			cout << input_string.substr(2) << "\n";
 			return -1;
 		}
 		
@@ -98,7 +98,7 @@ void re_play(std::ifstream& input)
 {
 	if (!input.is_open())
 	{
-		std::cout << "~~~~ERRORE APERTURA FILE~~~~";
+		cout << "~~~~ERRORE APERTURA FILE~~~~";
 		return;
 	}
 	
@@ -123,10 +123,10 @@ void re_play(std::ifstream& input)
 	{
 		std::getline(input, temp);		//serve per bypassare la riga vuota
 		
-		std::cout << "\nTurno: " << n_rounds << "\n";
+		cout << "\nTurno: " << n_rounds << "\n";
 		if (replay_round(p1, p2, input) == -1)
 		{
-			std::cout << "### FINE PARTITA ###\n";
+			cout << "### FINE PARTITA ###\n";
 			break; //o return
 		}
 		n_rounds++;
@@ -135,13 +135,12 @@ void re_play(std::ifstream& input)
 		
 		if(replay_round(p2, p1, input) == -1)
 		{
-			std::cout << "### FINE PARTITA ###\n";
+			cout << "### FINE PARTITA ###\n";
 			break;
 		}
 		n_rounds++;
 	}
 	
-	std::cout << "\nSI SI SI CAZZO SIIIIIIIIII";
 	
 }
 
@@ -149,12 +148,58 @@ void re_play(std::ifstream& input)
 
 
 // rinominata perché crea interferenza con l'altro main
-int main_f(void){
+int main_f(int argc, char* argv[])
+{
+	std:: string match_type;
+	std::string file_log_name;
+	std::string file_output_replay_name;
+	
+	if(argc==1)
+		match_type = "UNASSIGNED";
+	if(argc==2)
+		match_type = "TOO_LOW_ARGS";
+	if(argc==3)
+	{
+		if (strcmp(argv[1], "v") || strcmp(argv[1], "V"))
+			{
+				file_log_name = argv[2];
+				
+				ifstream input(file_log_name, ios::in);
+				re_play(input);
+				input.close();
+			}
+		else if (strcmp(argv[1], "f") || strcmp(argv[1], "F"))
+			match_type = "TOO_LOW_ARGS";
+		else
+			match_type = "INVALID";
+	}
+	if(argc==4)
+	{
+		if (strcmp(argv[1], "f") || strcmp(argv[1], "F"))
+		{
+			file_log_name = argv[2];
+			file_output_replay_name = argv[3];
+		}
+		else
+			match_type = "INVALID";
+	}
+	if(argc>4)
+		match_type = "TOO_MANY_ARGS";
+	
+	
+	if(match_type=="UNASSIGNED")
+		cout << "Non e' stato inserito nulla nella riga di comando\n";
+	if(match_type=="TOO_LOW_ARGS")
+		cout << "Non e' stato inserito nulla nella riga di comando\n";
+	if(match_type=="TOO_MANY_ARGS")
+		cout << "Sono stati inseriti troppi elementi nella riga di comando\n";
+	if(match_type=="INVALID")
+		cout << "Il comando inserito da riga di comando non e' valido\n";
 	
 //	Log file_log = Log();
-	ifstream input("Progetto\\log.txt", ios::in);
-	re_play(input);
-	input.close();
+//	ifstream input("Progetto\\log.txt", ios::in);
+//	re_play(input);
+//	input.close();
 	return 0;
 }
 
