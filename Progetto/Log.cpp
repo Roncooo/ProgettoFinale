@@ -3,10 +3,8 @@
 #include "Log.h"
 
 Log::Log() 
-	: actions{""}
 {
 	output.open("Progetto\\log.txt", std::ios::out);
-//	input.open("Progetto\\log.txt", std::ios::in);
 };
 
 

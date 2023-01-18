@@ -5,7 +5,7 @@
 #include <cstring>
 #include "Match.h"
 
-using std::ifstream, std::ios, game_board::Position, std::cout;
+using std::ifstream, std::ofstream, std::string, std::ios, game_board::Position, std::cout;
 
 
 int command_for_replay(game_board::Position& a, game_board::Position& b, std::ifstream& input)
@@ -13,7 +13,7 @@ int command_for_replay(game_board::Position& a, game_board::Position& b, std::if
 	
 //	std::string ignore = ">>";
 //	std::string eof = "<<";		//fine partita: stampa il risultato
-	std::string input_string;
+	string input_string;
 	bool flag = false;
 	
 	while(!flag)
@@ -39,7 +39,7 @@ int command_for_replay(game_board::Position& a, game_board::Position& b, std::if
 		}
 		
 		std::vector<std::string> vec = split(input_string, ' ');
-		std::string in1, in2;
+		string in1, in2;
 		
 		in1 = vec.at(0);
 		if(vec.size()==1)
@@ -102,7 +102,7 @@ void re_play(std::ifstream& input)
 		return;
 	}
 	
-	std::string temp = "";
+	string temp = "";
 	int n_rounds = 1;
 	
 	//leggo i nomi dei giocatori
@@ -144,15 +144,35 @@ void re_play(std::ifstream& input)
 	
 }
 
+void re_write(ifstream& input, ofstream& output)
+{
+//	input >> output;		//ancora non capisco oerchè sto comando non funziona mai
+	string line;
+	
+	if (!input.is_open())
+		cout << "**** OPS!! QUALCOSA E' ANDATO STORTO COL FILE INPUT ****";
+	if (!output.is_open())
+		cout << "**** OPS!! QUALCOSA E' ANDATO STORTO COL FILE OUTPUT ****";
+	
+	while(input.good())
+	{
+		std::getline(input, line);
+		line += "\n";
+	}
+	
+	output << line;
+}
 
 
 
 // rinominata perché crea interferenza con l'altro main
 int main_f(int argc, char* argv[])
 {
-	std:: string match_type;
-	std::string file_log_name;
-	std::string file_output_replay_name;
+	string match_type;
+	string file_log_name;
+	string file_output_replay_name;
+	
+	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	
 	if(argc==1)
 		match_type = "UNASSIGNED";
@@ -179,6 +199,11 @@ int main_f(int argc, char* argv[])
 		{
 			file_log_name = argv[2];
 			file_output_replay_name = argv[3];
+			
+			ifstream input(file_log_name, ios::in);
+			ofstream output(file_output_replay_name, ios::out);
+			
+			re_write(input, output);
 		}
 		else
 			match_type = "INVALID";
