@@ -21,7 +21,7 @@ int command_for_replay(Position& a, Position& b, ifstream& input)
 		
 		if(input_string.length() < 1)				//controllo che ci siano almeno due caratteri
 		{
-			break;
+			continue;
 		}
 		if (input_string.substr(0, 2) == ignore)		//controllo che non ci sia la flag che ignora la riga
 		{
@@ -84,7 +84,7 @@ int replay_round(Player& player, Player& enemy, ifstream& input)
 {
 	Position origin, target;
 	
-	player.print_defence();
+	player.print_defence_attack();
 	int code = command_for_replay(origin, target, input);
 	player.act_ship(player.get_ship_index(origin), target, enemy);
 
@@ -140,7 +140,7 @@ void re_play(ifstream& input)
 		n_rounds++;
 		
 		cout << "\n";
-		std::this_thread::sleep_for(std::chrono::milliseconds(300));
+//		std::this_thread::sleep_for(std::chrono::milliseconds(300));
 		
 		if(replay_round(p2, p1, input) == -1)
 		{
@@ -247,15 +247,16 @@ int main(int argc, char* argv[])
 	{
 		match_type = "UNASSIGNED";
 		
-		file_log_name = "Progetto\\log.txt";
-		file_output_replay_name = "Progetto\\output.txt";
-		
-		ifstream input(file_log_name, ios::in);
-		ofstream output(file_output_replay_name, ios::out | ios::app);
-		
-		re_write(input, output);
-		input.close();
-		output.close();
+//		file_log_name = "Progetto\\log.txt";
+//		file_output_replay_name = "Progetto\\output.txt";
+//		
+//		ifstream input(file_log_name, ios::in);
+//		ofstream output(file_output_replay_name, ios::out | ios::app);
+//		
+//		re_write(input, output);
+//		input.close();
+//		output.close();
+
 //		Player p1("pippo");
 //		string grid = p1.grids_to_string();
 //		cout << grid;
