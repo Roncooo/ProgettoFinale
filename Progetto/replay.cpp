@@ -215,6 +215,17 @@ void re_write(ifstream& input, ofstream& output)
 	if (!output.is_open())
 		cout << "**** OPS!! QUALCOSA E' ANDATO STORTO COL FILE OUTPUT ****";
 	
+//	string line;
+//	string txt = "";
+//	
+//	while(input.good())
+//	{
+//		std::getline(input, line);
+//		line += "\n";
+//		txt += line;
+//	}
+//	output << txt;
+	
 	//deve rigiocare la partita con replay, ma senza stampare nulla a video
 	string text = replay_in_file(input);
 	output << text;
@@ -223,7 +234,7 @@ void re_write(ifstream& input, ofstream& output)
 
 
 // rinominata perché crea interferenza con l'altro main
-int main_f(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	string match_type;
 	string file_log_name;
@@ -252,6 +263,7 @@ int main_f(int argc, char* argv[])
 		if (strcmp(argv[1], "v") || strcmp(argv[1], "V"))
 			{
 				file_log_name = argv[2];
+				cout << argv[1];
 				
 				ifstream input(file_log_name, ios::in);
 				re_play(input);
