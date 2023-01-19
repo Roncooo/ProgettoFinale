@@ -95,7 +95,7 @@ int replay_round_in_file(Player& player, Player& enemy, ifstream& input, string&
 {
 	Position origin, target;
 	
-	match_string += player.defence_to_string();
+	match_string += player.grids_to_string();
 	int code = command_for_replay(origin, target, input);
 	player.act_ship(player.get_ship_index(origin), target, enemy);
 
@@ -246,6 +246,7 @@ int main(int argc, char* argv[])
 	if(argc==1)
 	{
 		match_type = "UNASSIGNED";
+		
 		file_log_name = "Progetto\\log.txt";
 		file_output_replay_name = "Progetto\\output.txt";
 		
@@ -255,6 +256,9 @@ int main(int argc, char* argv[])
 		re_write(input, output);
 		input.close();
 		output.close();
+//		Player p1("pippo");
+//		string grid = p1.grids_to_string();
+//		cout << grid;
 	}
 	if(argc==2)
 		match_type = "TOO_LOW_ARGS";
@@ -320,6 +324,3 @@ int main(int argc, char* argv[])
 //
 //std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
-//adesso mi sta venedno in mente di creare una funzione che vada a fare da parassita e quindi copiare su una stringa tutto quello che gli passo
-//statica, tale da accettare due argomenti
-//static void copy_paste(string in, string& out)

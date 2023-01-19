@@ -36,7 +36,7 @@ public:
 	int get_ship_index(const game_board::Position& pos) const;
 	int get_placed_ships() const;
 	bool is_valid(const game_board::Position& prow, const game_board::Position& prune) const;
-	std::string defence_to_string();
+	std::string grids_to_string();
 	
 	int how_many_battleships() const;
 	int how_many_supports() const;

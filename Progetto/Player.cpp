@@ -118,9 +118,9 @@ int Player::is_there_ship(const Position& sonar_request) const
 	return -1;	// nella posizione richiesta non c'è una nave
 }
 
-std::string Player::defence_to_string()
+std::string Player::grids_to_string()
 {
-	return Grid::to_string(defence);
+	return Grid::to_string(defence, attack);
 }
 
 void Player::print_defence()
