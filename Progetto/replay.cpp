@@ -42,62 +42,61 @@ int command_for_replay(Position& a, Position& b, ifstream& input, string& match_
 		{
 			a = Position(in1);
 			b = Position(in1);
+			
+			match_string += in1 + "\n";
 			return 1;
 		}
 		
 		in2 = vec.at(1);
+		
 		a = Position(in1);
 		b = Position(in2);
+		
+		match_string += in1 + " ";
+		match_string += in2 + "\n";
 		
 		flag = true;		//ha letto i comandi
 	}
 	return 1;
 }
 
-
-void replay_placement(Player& p, ifstream& input)
+//vengono inserite le le navi sulla griglia esattamente come indicato dal file di log
+void replay_placement(Player& p, ifstream& input, string& match_string)
 {
 	Position prow, prune;
-	string temp = "";
 	
 	for(int i = 1; i <= game_board::MAX_BATTLESHIPS; i++)
 	{
-		command_for_replay(prow, prune, input, temp);
+		command_for_replay(prow, prune, input, match_string);
 		p.add_ship(new Battleship(prow, prune, p)); 
 	}
 	
 	for(int i = 1; i <= game_board::MAX_SUPPORTS; i++)
 	{
-		command_for_replay(prow, prune, input, temp);
+		command_for_replay(prow, prune, input, match_string);
 		p.add_ship(new Support(prow, prune, p)); 
 	}
 	
 	for(int i = 1; i <= game_board::MAX_SUBMARINES; i++)
 	{
-		command_for_replay(prow, prune, input, temp);
+		command_for_replay(prow, prune, input, match_string);
 		p.add_ship(new Submarine(prow, p)); 
 	}
 }
 
 
-//int replay_round(Player& player, Player& enemy, ifstream& input)
-//{
-//	Position origin, target;
-//	
-//	player.print_defence_attack();
-//	int code = command_for_replay(origin, target, input);
-//	player.act_ship(player.get_ship_index(origin), target, enemy);
-//
-//	return code;
-//}
 
 int replay_round(Player& player, Player& enemy, ifstream& input, string& match_string)
 {
 	Position origin, target;
 	
-	match_string += player.grids_to_string();
+	match_string += "Griglie di  " + player.name + "\n";
+	
 	int code = command_for_replay(origin, target, input, match_string);
+
 	player.act_ship(player.get_ship_index(origin), target, enemy);
+	
+	match_string += player.grids_to_string();
 
 	return code;
 }
@@ -115,17 +114,25 @@ std::string replay_in_string(ifstream& input)
 	
 	Player p1, p2;
 	string temp = "";
+	
 	//leggo i nomi dei giocatori
 	std::getline(input, temp);
 	p1.name = temp;
+	match_string += p1.name;
+	
+	match_string += "\n";
+	
 	std::getline(input, temp);
 	p2.name = temp;
+	match_string += p2.name;
+	
+	match_string += "\n\n";
 	
 	std::getline(input, temp);		//serve per bypassare la riga vuota
 	
 	//posizionamento delle navi
-	replay_placement(p1, input);
-	replay_placement(p2, input);
+	replay_placement(p1, input, match_string);
+	replay_placement(p2, input, match_string);
 	
 	int n_rounds = 1;
 	while(input.good())
@@ -136,7 +143,7 @@ std::string replay_in_string(ifstream& input)
 		if (replay_round(p1, p2, input, match_string) == -1)
 		{
 			match_string += "\n### FINE PARTITA ###\n";
-			return match_string;
+			return match_string;;
 		}
 		n_rounds++;
 		match_string += "\n";
@@ -144,42 +151,31 @@ std::string replay_in_string(ifstream& input)
 		if(replay_round(p2, p1, input, match_string) == -1)
 		{
 			match_string += "\n### FINE PARTITA ###\n";
-			return match_string;
+			return match_string;;
 		}
 		n_rounds++;
 	}
 	
 }
 
+
+//scrive sul file "output" il replay dell'ultima partita giocata
 void re_write(ifstream& input, ofstream& output)
 {
-	//oppure vado a modifcare print_defence, facendo in modo che tutto quello che stampa lo salva 
-	//anche in una stringa che puoò benissimo ritornare
-	
-	
 	//viene controllato che i file siano stati aperti correttamente
 	if (!input.is_open())
 		cout << "**** OPS!! QUALCOSA E' ANDATO STORTO COL FILE INPUT ****";
 	if (!output.is_open())
 		cout << "**** OPS!! QUALCOSA E' ANDATO STORTO COL FILE OUTPUT ****";
 	
-//	string line;
-//	string txt = "";
-//	
-//	while(input.good())
-//	{
-//		std::getline(input, line);
-//		line += "\n";
-//		txt += line;
-//	}
-//	output << txt;
 	
 	//deve rigiocare la partita con replay, ma senza stampare nulla a video
 	string text = replay_in_string(input);
+//	cout << text;
 	output << text;
 }
 
-
+//esegue il replay dell'ultima partita giocata
 void re_play(ifstream& input)
 {
 	if (!input.is_open())
@@ -187,51 +183,65 @@ void re_play(ifstream& input)
 		cout << "~~~~ERRORE APERTURA FILE~~~~";
 		return;
 	}
-//	string match_string = "";
-//	Player p1, p2;
-//	string temp = "";
-//	//leggo i nomi dei giocatori
-//	std::getline(input, temp);
-//	p1.name = temp;
-//	std::getline(input, temp);
-//	p2.name = temp;
-//	
-//	std::getline(input, temp);		//serve per bypassare la riga vuota
-//	
-//	//posizionamento delle navi
-//	replay_placement(p1, input);
-//	replay_placement(p2, input);
-//	
-//	int n_rounds = 1;
-//	//eseguo i turni, leggendo le mosse dal file, finchè non arrivo alla fine del file
-//	while(input.good())
-//	{
-//		std::getline(input, temp);		//serve per bypassare la riga vuota
-//		
-//		cout << "\nTurno: " << n_rounds << "\n";
-//		if (replay_round(p1, p2, input, match_string) == -1)
-//		{
-//			cout << "\n### FINE PARTITA ###\n";
-//			return;
-//		}
-//		n_rounds++;
-//		
-//		cout << "\n";
-////		std::this_thread::sleep_for(std::chrono::milliseconds(300));
-//		
-//		if(replay_round(p2, p1, input, match_string) == -1)
-//		{
-//			cout << "\n### FINE PARTITA ###\n";
-//			return;
-//		}
-//		n_rounds++;
-//	}
-	cout << replay_in_string(input);
+	
+	
+	Player p1, p2;
+	string temp = "";
+	string match_string = "";
+	
+	//leggo i nomi dei giocatori
+	std::getline(input, temp);
+	p1.name = temp;
+	std::getline(input, temp);
+	p2.name = temp;
+	
+	std::getline(input, temp);		//serve per bypassare la riga vuota
+	
+	//posizionamento delle navi
+	replay_placement(p1, input, match_string);
+	cout << match_string;
+	match_string = "";
+	
+	replay_placement(p2, input, match_string);
+	cout << match_string;
+	match_string = "";
+	
+	int n_rounds = 1;
+	while(input.good())
+	{
+		std::getline(input, temp);		//serve per bypassare la riga vuota
+		
+		cout << "\nTurno: " << std::to_string(n_rounds) << "\n";
+		if (replay_round(p1, p2, input, match_string) == -1)
+		{
+			cout << "\n### FINE PARTITA ###\n";
+			cout << "\nIl vincitore e'  " << p1.name << "\n";
+			break;
+		}
+		n_rounds++;
+		cout << match_string;
+		match_string = "";
+		
+		cout << "\n";
+		std::this_thread::sleep_for(std::chrono::milliseconds(250));
+		
+		if(replay_round(p2, p1, input, match_string) == -1)
+		{
+			cout << "\n### FINE PARTITA ###\n";
+			cout << "\nIl vincitore e'  " << p1.name << "\n";
+			break;
+		}
+		n_rounds++;
+		cout << match_string;
+		match_string = "";
+		
+		cout << "\n";
+		std::this_thread::sleep_for(std::chrono::milliseconds(250));
+	}
 }
 
 
 
-// rinominata perché crea interferenza con l'altro main
 int main(int argc, char* argv[])
 {
 	string match_type;

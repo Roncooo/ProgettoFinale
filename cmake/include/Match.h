@@ -72,8 +72,8 @@ void recap(const Player& player1, const Player& player2);
 // serve per l'inserimento umano
 std::vector<std::string> split(std::string str, char delimiter);
 
-//esegue il replay dell'ultima partita giocata
-void re_play(std::ifstream& input);
+//ritorna una stringa col nome del vincitore
+std::string winner_string(Player& player);
 
 // stampa il nome del vincitore incorniciato
 void print_winner(Player& player);

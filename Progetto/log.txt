@@ -1,0 +1,13386 @@
+kcj
+CPU
+
+A6 A10
+M5 M9
+N12 H12
+C9 C11
+I5 G5
+G9 G7
+I11
+D11
+L2 L6
+D3 H3
+C5 C1
+C11 C9
+E1 G1
+L9 H9
+N12
+M5
+
+>>Turno 1:
+>>kcj
+H5 E8
+
+>>Turno 2:
+>>CPU
+N12 E10
+
+>>Turno 3:
+>>kcj
+M7 A10
+
+>>Turno 4:
+>>CPU
+F1 D6
+
+>>Turno 5:
+>>kcj
+C10 C7
+
+>>Turno 6:
+>>CPU
+L4 B12
+
+>>Turno 7:
+>>kcj
+D11 E4
+
+>>Turno 8:
+>>CPU
+F3 D11
+
+>>Turno 9:
+>>kcj
+L12 G5
+
+>>Turno 10:
+>>CPU
+L4 N4
+
+>>Turno 11:
+>>kcj
+A8 B8
+
+>>Turno 12:
+>>CPU
+C3 C5
+
+>>Turno 13:
+>>kcj
+M7 N6
+
+>>Turno 14:
+>>CPU
+F3 D11
+
+>>Turno 15:
+>>kcj
+E4 C10
+
+>>Turno 16:
+>>CPU
+L4 F7
+
+>>Turno 17:
+>>kcj
+A8 H8
+
+>>Turno 18:
+>>CPU
+M5 M10
+
+>>Turno 19:
+>>kcj
+C10 F1
+
+>>Turno 20:
+>>CPU
+E10 A8
+
+>>Turno 21:
+>>kcj
+F1 L5
+
+>>Turno 22:
+>>CPU
+M10 N4
+
+>>Turno 23:
+>>kcj
+C7 G11
+
+>>Turno 24:
+>>CPU
+D6 H5
+
+>>Turno 25:
+>>kcj
+L5 N11
+
+>>Turno 26:
+>>CPU
+C3 E10
+
+>>Turno 27:
+>>kcj
+G11 H8
+
+>>Turno 28:
+>>CPU
+L4 M5
+
+>>Turno 29:
+>>kcj
+L12 A11
+
+>>Turno 30:
+>>CPU
+H5 E1
+
+>>Turno 31:
+>>kcj
+L12 A10
+
+>>Turno 32:
+>>CPU
+A8 H10
+
+>>Turno 33:
+>>kcj
+N11 I7
+
+>>Turno 34:
+>>CPU
+E1 G8
+
+>>Turno 35:
+>>kcj
+L12 C7
+
+>>Turno 36:
+>>CPU
+N4 D4
+
+>>Turno 37:
+>>kcj
+L12 E8
+
+>>Turno 38:
+>>CPU
+L4 N12
+
+>>Turno 39:
+>>kcj
+G8 F3
+
+>>Turno 40:
+>>CPU
+D4 B3
+
+>>Turno 41:
+>>kcj
+L12 E6
+
+>>Turno 42:
+>>CPU
+I9 G12
+
+>>Turno 43:
+>>kcj
+A8 B8
+
+>>Turno 44:
+>>CPU
+L4 B5
+
+>>Turno 45:
+>>kcj
+A8 D2
+
+>>Turno 46:
+>>CPU
+C10 D5
+
+>>Turno 47:
+>>kcj
+E8 H3
+
+>>Turno 48:
+>>CPU
+L4 I11
+
+>>Turno 49:
+>>kcj
+I7 H4
+
+>>Turno 50:
+>>CPU
+L4 E4
+
+>>Turno 51:
+>>kcj
+L12 L2
+
+>>Turno 52:
+>>CPU
+G8 D9
+
+>>Turno 53:
+>>kcj
+L12 A9
+
+>>Turno 54:
+>>CPU
+L4 M11
+
+>>Turno 55:
+>>kcj
+H8 I7
+
+>>Turno 56:
+>>CPU
+D5 F7
+
+>>Turno 57:
+>>kcj
+A8 L1
+
+>>Turno 58:
+>>CPU
+F3 L8
+
+>>Turno 59:
+>>kcj
+L12 M9
+
+>>Turno 60:
+>>CPU
+F3 C12
+
+>>Turno 61:
+>>kcj
+L12 M12
+
+>>Turno 62:
+>>CPU
+H10 N12
+
+>>Turno 63:
+>>kcj
+H3 I5
+
+>>Turno 64:
+>>CPU
+C3 N12
+
+>>Turno 65:
+>>kcj
+A8 M9
+
+>>Turno 66:
+>>CPU
+B3 D5
+
+>>Turno 67:
+>>kcj
+I7 A4
+
+>>Turno 68:
+>>CPU
+C3 E9
+
+>>Turno 69:
+>>kcj
+A4 N2
+
+>>Turno 70:
+>>CPU
+D5 H8
+
+>>Turno 71:
+>>kcj
+H4 C2
+
+>>Turno 72:
+>>CPU
+F7 N3
+
+>>Turno 73:
+>>kcj
+L12 M2
+
+>>Turno 74:
+>>CPU
+F3 I12
+
+>>Turno 75:
+>>kcj
+N2 G7
+
+>>Turno 76:
+>>CPU
+F3 C7
+
+>>Turno 77:
+>>kcj
+G7 I7
+
+>>Turno 78:
+>>CPU
+L4 I11
+
+>>Turno 79:
+>>kcj
+A8 M12
+
+>>Turno 80:
+>>CPU
+H8 D7
+
+>>Turno 81:
+>>kcj
+M7 B7
+
+>>Turno 82:
+>>CPU
+D7 D8
+
+>>Turno 83:
+>>kcj
+L12 I1
+
+>>Turno 84:
+>>CPU
+L4 F6
+
+>>Turno 85:
+>>kcj
+F3 E4
+
+>>Turno 86:
+>>CPU
+N3 B11
+
+>>Turno 87:
+>>kcj
+E4 G3
+
+>>Turno 88:
+>>CPU
+C3 F6
+
+>>Turno 89:
+>>kcj
+M7 I8
+
+>>Turno 90:
+>>CPU
+L4 H9
+
+>>Turno 91:
+>>kcj
+A8 G9
+
+>>Turno 92:
+>>CPU
+D8 N5
+
+>>Turno 93:
+>>kcj
+I7 D3
+
+>>Turno 94:
+>>CPU
+B11 A6
+
+>>Turno 95:
+>>kcj
+A8 I1
+
+>>Turno 96:
+>>CPU
+G12 I8
+
+>>Turno 97:
+>>kcj
+I5 D5
+
+>>Turno 98:
+>>CPU
+F3 G5
+
+>>Turno 99:
+>>kcj
+D5 C9
+
+>>Turno 100:
+>>CPU
+N5 C11
+
+>>Turno 101:
+>>kcj
+A8 G5
+
+>>Turno 102:
+>>CPU
+C11 M5
+
+>>Turno 103:
+>>kcj
+D3 E9
+
+>>Turno 104:
+>>CPU
+N12 N2
+
+>>Turno 105:
+>>kcj
+E9 N2
+
+>>Turno 106:
+>>CPU
+I8 E7
+
+>>Turno 107:
+>>kcj
+A8 L11
+
+>>Turno 108:
+>>CPU
+F3 L7
+
+>>Turno 109:
+>>kcj
+C9 G11
+
+>>Turno 110:
+>>CPU
+F3 E11
+
+>>Turno 111:
+>>kcj
+L12 G12
+
+>>Turno 112:
+>>CPU
+E7 H6
+
+>>Turno 113:
+>>kcj
+L12 B8
+
+>>Turno 114:
+>>CPU
+M5 C8
+
+>>Turno 115:
+>>kcj
+N2 F5
+
+>>Turno 116:
+>>CPU
+L4 F8
+
+>>Turno 117:
+>>kcj
+A8 H7
+
+>>Turno 118:
+>>CPU
+H6 G12
+
+>>Turno 119:
+>>kcj
+A8 D6
+
+>>Turno 120:
+>>CPU
+C8 M1
+
+>>Turno 121:
+>>kcj
+C2 N7
+
+>>Turno 122:
+>>CPU
+A6 I6
+
+>>Turno 123:
+>>kcj
+N7 H4
+
+>>Turno 124:
+>>CPU
+C3 F3
+
+>>Turno 125:
+>>kcj
+F5 D9
+
+>>Turno 126:
+>>CPU
+N2 L1
+
+>>Turno 127:
+>>kcj
+M7 I1
+
+>>Turno 128:
+>>CPU
+M1 H5
+
+>>Turno 129:
+>>kcj
+M7 I4
+
+>>Turno 130:
+>>CPU
+C3 A12
+
+>>Turno 131:
+>>kcj
+D9 G8
+
+>>Turno 132:
+>>CPU
+L1 N2
+
+>>Turno 133:
+>>kcj
+G8 D10
+
+>>Turno 134:
+>>CPU
+H5 H8
+
+>>Turno 135:
+>>kcj
+A8 F8
+
+>>Turno 136:
+>>CPU
+I6 M4
+
+>>Turno 137:
+>>kcj
+L12 F7
+
+>>Turno 138:
+>>CPU
+C3 D10
+
+>>Turno 139:
+>>kcj
+A8 N10
+
+>>Turno 140:
+>>CPU
+C3 G5
+
+>>Turno 141:
+>>kcj
+G3 E11
+
+>>Turno 142:
+>>CPU
+H8 B12
+
+>>Turno 143:
+>>kcj
+D10 C9
+
+>>Turno 144:
+>>CPU
+B12 M10
+
+>>Turno 145:
+>>kcj
+E11 D2
+
+>>Turno 146:
+>>CPU
+L4 B6
+
+>>Turno 147:
+>>kcj
+A8 F6
+
+>>Turno 148:
+>>CPU
+C3 L12
+
+>>Turno 149:
+>>kcj
+A8 A6
+
+>>Turno 150:
+>>CPU
+G12 L7
+
+>>Turno 151:
+>>kcj
+H4 M2
+
+>>Turno 152:
+>>CPU
+L4 H7
+
+>>Turno 153:
+>>kcj
+G11 M1
+
+>>Turno 154:
+>>CPU
+L4 N12
+
+>>Turno 155:
+>>kcj
+L12 B10
+
+>>Turno 156:
+>>CPU
+F3 M12
+
+>>Turno 157:
+>>kcj
+L12 N9
+
+>>Turno 158:
+>>CPU
+M4 E11
+
+>>Turno 159:
+>>kcj
+C9 I8
+
+>>Turno 160:
+>>CPU
+C3 B3
+
+>>Turno 161:
+>>kcj
+M2 N4
+
+>>Turno 162:
+>>CPU
+F3 C8
+
+>>Turno 163:
+>>kcj
+M7 M12
+
+>>Turno 164:
+>>CPU
+L7 E5
+
+>>Turno 165:
+>>kcj
+D2 F6
+
+>>Turno 166:
+>>CPU
+F3 F9
+
+>>Turno 167:
+>>kcj
+I8 G4
+
+>>Turno 168:
+>>CPU
+M10 A10
+
+>>Turno 169:
+>>kcj
+G4 H6
+
+>>Turno 170:
+>>CPU
+N2 I4
+
+>>Turno 171:
+>>kcj
+A8 A9
+
+>>Turno 172:
+>>CPU
+I4 F12
+
+>>Turno 173:
+>>kcj
+N4 N10
+
+>>Turno 174:
+>>CPU
+E5 F5
+
+>>Turno 175:
+>>kcj
+M1 E3
+
+>>Turno 176:
+>>CPU
+F12 N3
+
+>>Turno 177:
+>>kcj
+M7 M1
+
+>>Turno 178:
+>>CPU
+C3 H9
+
+>>Turno 179:
+>>kcj
+A8 C1
+
+>>Turno 180:
+>>CPU
+N3 L10
+
+>>Turno 181:
+>>kcj
+L12 D8
+
+>>Turno 182:
+>>CPU
+C3 L6
+
+>>Turno 183:
+>>kcj
+M7 A12
+
+>>Turno 184:
+>>CPU
+L4 N4
+
+>>Turno 185:
+>>kcj
+L12 G1
+
+>>Turno 186:
+>>CPU
+C3 F3
+
+>>Turno 187:
+>>kcj
+A8 F4
+
+>>Turno 188:
+>>CPU
+F3 L8
+
+>>Turno 189:
+>>kcj
+N10 B11
+
+>>Turno 190:
+>>CPU
+A10 M12
+
+>>Turno 191:
+>>kcj
+B11 G5
+
+>>Turno 192:
+>>CPU
+C3 G9
+
+>>Turno 193:
+>>kcj
+H6 E11
+
+>>Turno 194:
+>>CPU
+C3 G10
+
+>>Turno 195:
+>>kcj
+G5 D9
+
+>>Turno 196:
+>>CPU
+C3 M10
+
+>>Turno 197:
+>>kcj
+A8 N3
+
+>>Turno 198:
+>>CPU
+C3 N2
+
+>>Turno 199:
+>>kcj
+M7 I1
+
+>>Turno 200:
+>>CPU
+F5 B7
+
+>>Turno 201:
+>>kcj
+F6 B10
+
+>>Turno 202:
+>>CPU
+L4 H7
+
+>>Turno 203:
+>>kcj
+D9 A3
+
+>>Turno 204:
+>>CPU
+F3 A5
+
+>>Turno 205:
+>>kcj
+E11 L9
+
+>>Turno 206:
+>>CPU
+E11 A3
+
+>>Turno 207:
+>>kcj
+B10 E9
+
+>>Turno 208:
+>>CPU
+B7 F4
+
+>>Turno 209:
+>>kcj
+E9 B5
+
+>>Turno 210:
+>>CPU
+M12 B10
+
+>>Turno 211:
+>>kcj
+A8 A11
+
+>>Turno 212:
+>>CPU
+C3 I8
+
+>>Turno 213:
+>>kcj
+M7 M4
+
+>>Turno 214:
+>>CPU
+C3 E7
+
+>>Turno 215:
+>>kcj
+A8 H5
+
+>>Turno 216:
+>>CPU
+C3 C12
+
+>>Turno 217:
+>>kcj
+A8 E9
+
+>>Turno 218:
+>>CPU
+F3 M11
+
+>>Turno 219:
+>>kcj
+A3 H3
+
+>>Turno 220:
+>>CPU
+D9 B9
+
+>>Turno 221:
+>>kcj
+B5 L3
+
+>>Turno 222:
+>>CPU
+C3 F2
+
+>>Turno 223:
+>>kcj
+H3 C12
+
+>>Turno 224:
+>>CPU
+B10 G11
+
+>>Turno 225:
+>>kcj
+C12 D2
+
+>>Turno 226:
+>>CPU
+L10 C8
+
+>>Turno 227:
+>>kcj
+L12 C1
+
+>>Turno 228:
+>>CPU
+C3 A8
+
+>>Turno 229:
+>>kcj
+L9 L6
+
+>>Turno 230:
+>>CPU
+L4 I10
+
+>>Turno 231:
+>>kcj
+A8 H3
+
+>>Turno 232:
+>>CPU
+C3 E1
+
+>>Turno 233:
+>>kcj
+L12 H2
+
+>>Turno 234:
+>>CPU
+C8 D8
+
+>>Turno 235:
+>>kcj
+L6 H7
+
+>>Turno 236:
+>>CPU
+F3 B3
+
+>>Turno 237:
+>>kcj
+E3 I10
+
+>>Turno 238:
+>>CPU
+F3 N8
+
+>>Turno 239:
+>>kcj
+M7 C8
+
+>>Turno 240:
+>>CPU
+C3 I3
+
+>>Turno 241:
+>>kcj
+M7 L9
+
+>>Turno 242:
+>>CPU
+L4 A10
+
+>>Turno 243:
+>>kcj
+D2 M2
+
+>>Turno 244:
+>>CPU
+F3 H7
+
+>>Turno 245:
+>>kcj
+L3 I2
+
+>>Turno 246:
+>>CPU
+L4 E2
+
+>>Turno 247:
+>>kcj
+L12 L1
+
+>>Turno 248:
+>>CPU
+F3 E3
+
+>>Turno 249:
+>>kcj
+M7 H2
+
+>>Turno 250:
+>>CPU
+G11 D4
+
+>>Turno 251:
+>>kcj
+L12 B4
+
+>>Turno 252:
+>>CPU
+B9 G9
+
+>>Turno 253:
+>>kcj
+H7 N6
+
+>>Turno 254:
+>>CPU
+C3 D6
+
+>>Turno 255:
+>>kcj
+L12 H9
+
+>>Turno 256:
+>>CPU
+C3 A7
+
+>>Turno 257:
+>>kcj
+M2 E1
+
+>>Turno 258:
+>>CPU
+C3 A5
+
+>>Turno 259:
+>>kcj
+E1 B3
+
+>>Turno 260:
+>>CPU
+D8 E5
+
+>>Turno 261:
+>>kcj
+B3 N2
+
+>>Turno 262:
+>>CPU
+E5 D1
+
+>>Turno 263:
+>>kcj
+N2 B5
+
+>>Turno 264:
+>>CPU
+C3 L10
+
+>>Turno 265:
+>>kcj
+A8 L9
+
+>>Turno 266:
+>>CPU
+A3 A2
+
+>>Turno 267:
+>>kcj
+I2 I3
+
+>>Turno 268:
+>>CPU
+F3 A7
+
+>>Turno 269:
+>>kcj
+N6 M3
+
+>>Turno 270:
+>>CPU
+D1 D7
+
+>>Turno 271:
+>>kcj
+M7 H11
+
+>>Turno 272:
+>>CPU
+C3 M11
+
+>>Turno 273:
+>>kcj
+L12 F5
+
+>>Turno 274:
+>>CPU
+L4 F3
+
+>>Turno 275:
+>>kcj
+B5 A12
+
+>>Turno 276:
+>>CPU
+G9 E6
+
+>>Turno 277:
+>>kcj
+A8 L8
+
+>>Turno 278:
+>>CPU
+F3 A12
+
+>>Turno 279:
+>>kcj
+I3 L8
+
+>>Turno 280:
+>>CPU
+L4 N8
+
+>>Turno 281:
+>>kcj
+L12 M3
+
+>>Turno 282:
+>>CPU
+F4 L8
+
+>>Turno 283:
+>>kcj
+M7 C1
+
+>>Turno 284:
+>>CPU
+L8 I9
+
+>>Turno 285:
+>>kcj
+L12 F6
+
+>>Turno 286:
+>>CPU
+C3 H1
+
+>>Turno 287:
+>>kcj
+A8 M2
+
+>>Turno 288:
+>>CPU
+D7 D5
+
+>>Turno 289:
+>>kcj
+L8 H8
+
+>>Turno 290:
+>>CPU
+D4 N4
+
+>>Turno 291:
+>>kcj
+I10 D9
+
+>>Turno 292:
+>>CPU
+I9 H8
+
+>>Turno 293:
+>>kcj
+M3 G7
+
+>>Turno 294:
+>>CPU
+F3 E12
+
+>>Turno 295:
+>>kcj
+H8 L9
+
+>>Turno 296:
+>>CPU
+A2 M11
+
+>>Turno 297:
+>>kcj
+M7 D4
+
+>>Turno 298:
+>>CPU
+H8 E12
+
+>>Turno 299:
+>>kcj
+L12
+
+>>Turno 300:
+>>CPU
+N4 H9
+
+>>Turno 301:
+>>kcj
+G7 B5
+
+>>Turno 302:
+>>CPU
+H9 B3
+
+>>Turno 303:
+>>kcj
+B5 F4
+
+>>Turno 304:
+>>CPU
+L4 D9
+
+>>Turno 305:
+>>kcj
+A8 I3
+
+>>Turno 306:
+>>CPU
+L4 M6
+
+>>Turno 307:
+>>kcj
+L12 F9
+
+>>Turno 308:
+>>CPU
+D5 M9
+
+>>Turno 309:
+>>kcj
+L9 G8
+
+>>Turno 310:
+>>CPU
+C3 D10
+
+>>Turno 311:
+>>kcj
+A8 I12
+
+>>Turno 312:
+>>CPU
+L4 N2
+
+>>Turno 313:
+>>kcj
+A8 M5
+
+>>Turno 314:
+>>CPU
+E6 I1
+
+>>Turno 315:
+>>kcj
+M7 B1
+
+>>Turno 316:
+>>CPU
+E12 F6
+
+>>Turno 317:
+>>kcj
+D9 C6
+
+>>Turno 318:
+>>CPU
+M9 C10
+
+>>Turno 319:
+>>kcj
+M7
+
+>>Turno 320:
+>>CPU
+C3 B10
+
+>>Turno 321:
+>>kcj
+F4 G3
+
+>>Turno 322:
+>>CPU
+F6 G9
+
+>>Turno 323:
+>>kcj
+A8 M9
+
+>>Turno 324:
+>>CPU
+B3 N2
+
+>>Turno 325:
+>>kcj
+M7 A3
+
+>>Turno 326:
+>>CPU
+C3 I10
+
+>>Turno 327:
+>>kcj
+A8 A9
+
+>>Turno 328:
+>>CPU
+C3 H12
+
+>>Turno 329:
+>>kcj
+A8 F11
+
+>>Turno 330:
+>>CPU
+L4 F12
+
+>>Turno 331:
+>>kcj
+L12 C12
+
+>>Turno 332:
+>>CPU
+C10 G8
+
+>>Turno 333:
+>>kcj
+G8 D9
+
+>>Turno 334:
+>>CPU
+C3 I2
+
+>>Turno 335:
+>>kcj
+G3 G5
+
+>>Turno 336:
+>>CPU
+F3 E2
+
+>>Turno 337:
+>>kcj
+L12 E6
+
+>>Turno 338:
+>>CPU
+M11 F11
+
+>>Turno 339:
+>>kcj
+A8 F9
+
+>>Turno 340:
+>>CPU
+G8 E2
+
+>>Turno 341:
+>>kcj
+L12 N5
+
+>>Turno 342:
+>>CPU
+F3 M11
+
+>>Turno 343:
+>>kcj
+L12 N3
+
+>>Turno 344:
+>>CPU
+C3 L12
+
+>>Turno 345:
+>>kcj
+A8 H4
+
+>>Turno 346:
+>>CPU
+F3 C6
+
+>>Turno 347:
+>>kcj
+L12 E6
+
+>>Turno 348:
+>>CPU
+L4 C10
+
+>>Turno 349:
+>>kcj
+A8 M12
+
+>>Turno 350:
+>>CPU
+F3 D1
+
+>>Turno 351:
+>>kcj
+C6 C11
+
+>>Turno 352:
+>>CPU
+I1 B11
+
+>>Turno 353:
+>>kcj
+A8 L7
+
+>>Turno 354:
+>>CPU
+N2 D8
+
+>>Turno 355:
+>>kcj
+M7 A7
+
+>>Turno 356:
+>>CPU
+E2 L1
+
+>>Turno 357:
+>>kcj
+L12 L5
+
+>>Turno 358:
+>>CPU
+L4 N4
+
+>>Turno 359:
+>>kcj
+L12 I9
+
+>>Turno 360:
+>>CPU
+F3 H6
+
+>>Turno 361:
+>>kcj
+M7 F2
+
+>>Turno 362:
+>>CPU
+D8 C7
+
+>>Turno 363:
+>>kcj
+A8 H3
+
+>>Turno 364:
+>>CPU
+C7 E11
+
+>>Turno 365:
+>>kcj
+L12 N3
+
+>>Turno 366:
+>>CPU
+L1 D6
+
+>>Turno 367:
+>>kcj
+L12 G1
+
+>>Turno 368:
+>>CPU
+L4 B9
+
+>>Turno 369:
+>>kcj
+M7 I5
+
+>>Turno 370:
+>>CPU
+E11 D4
+
+>>Turno 371:
+>>kcj
+D9 G11
+
+>>Turno 372:
+>>CPU
+D6 M2
+
+>>Turno 373:
+>>kcj
+G5 E8
+
+>>Turno 374:
+>>CPU
+B11 G8
+
+>>Turno 375:
+>>kcj
+G11 F5
+
+>>Turno 376:
+>>CPU
+C3 H7
+
+>>Turno 377:
+>>kcj
+F5 H4
+
+>>Turno 378:
+>>CPU
+G8 D8
+
+>>Turno 379:
+>>kcj
+M7 C12
+
+>>Turno 380:
+>>CPU
+C3 N10
+
+>>Turno 381:
+>>kcj
+L12 I12
+
+>>Turno 382:
+>>CPU
+G9 H6
+
+>>Turno 383:
+>>kcj
+L12 B12
+
+>>Turno 384:
+>>CPU
+F3 C2
+
+>>Turno 385:
+>>kcj
+E8 D2
+
+>>Turno 386:
+>>CPU
+C3 F12
+
+>>Turno 387:
+>>kcj
+A8 D4
+
+>>Turno 388:
+>>CPU
+D8 B9
+
+>>Turno 389:
+>>kcj
+M7 F11
+
+>>Turno 390:
+>>CPU
+C3 G1
+
+>>Turno 391:
+>>kcj
+L12 C2
+
+>>Turno 392:
+>>CPU
+B9 G4
+
+>>Turno 393:
+>>kcj
+M7 N2
+
+>>Turno 394:
+>>CPU
+G4 M1
+
+>>Turno 395:
+>>kcj
+L12 I7
+
+>>Turno 396:
+>>CPU
+M2 A12
+
+>>Turno 397:
+>>kcj
+D2 E11
+
+>>Turno 398:
+>>CPU
+M1 H2
+
+>>Turno 399:
+>>kcj
+E11 L6
+
+>>Turno 400:
+>>CPU
+L4 B3
+
+>>Turno 401:
+>>kcj
+C11 H11
+
+>>Turno 402:
+>>CPU
+C3 L7
+
+>>Turno 403:
+>>kcj
+A8 M6
+
+>>Turno 404:
+>>CPU
+F3 N6
+
+>>Turno 405:
+>>kcj
+L6 F11
+
+>>Turno 406:
+>>CPU
+A12 E6
+
+>>Turno 407:
+>>kcj
+L12 A11
+
+>>Turno 408:
+>>CPU
+L4 B8
+
+>>Turno 409:
+>>kcj
+F11 A2
+
+>>Turno 410:
+>>CPU
+F3 H10
+
+>>Turno 411:
+>>kcj
+A8 E3
+
+>>Turno 412:
+>>CPU
+F3 M11
+
+>>Turno 413:
+>>kcj
+H4 L6
+
+>>Turno 414:
+>>CPU
+L4 B3
+
+>>Turno 415:
+>>kcj
+H11 B4
+
+>>Turno 416:
+>>CPU
+F3 G1
+
+>>Turno 417:
+>>kcj
+A2 N5
+
+>>Turno 418:
+>>CPU
+C3 H8
+
+>>Turno 419:
+>>kcj
+A8
+
+>>Turno 420:
+>>CPU
+F3 A5
+
+>>Turno 421:
+>>kcj
+L12 H8
+
+>>Turno 422:
+>>CPU
+F3 F1
+
+>>Turno 423:
+>>kcj
+N5 F9
+
+>>Turno 424:
+>>CPU
+F3 C11
+
+>>Turno 425:
+>>kcj
+L12 E4
+
+>>Turno 426:
+>>CPU
+C3 F11
+
+>>Turno 427:
+>>kcj
+L6 L4
+
+>>Turno 428:
+>>CPU
+F3 A11
+
+>>Turno 429:
+>>kcj
+M7 H10
+
+>>Turno 430:
+>>CPU
+E6 E10
+
+>>Turno 431:
+>>kcj
+A8 N3
+
+>>Turno 432:
+>>CPU
+C3 H8
+
+>>Turno 433:
+>>kcj
+A8 E9
+
+>>Turno 434:
+>>CPU
+C3 E8
+
+>>Turno 435:
+>>kcj
+L4 D6
+
+>>Turno 436:
+>>CPU
+C3 B7
+
+>>Turno 437:
+>>kcj
+B4 G5
+
+>>Turno 438:
+>>CPU
+F11 C9
+
+>>Turno 439:
+>>kcj
+D6 B9
+
+>>Turno 440:
+>>CPU
+E10 B1
+
+>>Turno 441:
+>>kcj
+A8 B9
+
+>>Turno 442:
+>>CPU
+L4 L1
+
+>>Turno 443:
+>>kcj
+G5 E11
+
+>>Turno 444:
+>>CPU
+F3 I11
+
+>>Turno 445:
+>>kcj
+F9 H9
+
+>>Turno 446:
+>>CPU
+C3 A2
+
+>>Turno 447:
+>>kcj
+A8 L6
+
+>>Turno 448:
+>>CPU
+L4 L8
+
+>>Turno 449:
+>>kcj
+E11 C4
+
+>>Turno 450:
+>>CPU
+C3 I1
+
+>>Turno 451:
+>>kcj
+L12 I2
+
+>>Turno 452:
+>>CPU
+F3 A2
+
+>>Turno 453:
+>>kcj
+M7 C1
+
+>>Turno 454:
+>>CPU
+F3 F6
+
+>>Turno 455:
+>>kcj
+L12 G9
+
+>>Turno 456:
+>>CPU
+L4 G4
+
+>>Turno 457:
+>>kcj
+M7 I4
+
+>>Turno 458:
+>>CPU
+C9 I10
+
+>>Turno 459:
+>>kcj
+C4 G5
+
+>>Turno 460:
+>>CPU
+F3 L5
+
+>>Turno 461:
+>>kcj
+G5 G3
+
+>>Turno 462:
+>>CPU
+F3 G9
+
+>>Turno 463:
+>>kcj
+H9 N7
+
+>>Turno 464:
+>>CPU
+L4 B3
+
+>>Turno 465:
+>>kcj
+B9 L5
+
+>>Turno 466:
+>>CPU
+I10 H10
+
+>>Turno 467:
+>>kcj
+L12 C3
+
+>>Turno 468:
+>>CPU
+F3 C10
+
+>>Turno 469:
+>>kcj
+A8 D12
+
+>>Turno 470:
+>>CPU
+B1 H1
+
+>>Turno 471:
+>>kcj
+A8 L12
+
+>>Turno 472:
+>>CPU
+L4 G12
+
+>>Turno 473:
+>>kcj
+L12 I8
+
+>>Turno 474:
+>>CPU
+L4 I4
+
+>>Turno 475:
+>>kcj
+G3 F8
+
+>>Turno 476:
+>>CPU
+H6 I7
+
+>>Turno 477:
+>>kcj
+A8 F9
+
+>>Turno 478:
+>>CPU
+F3 D10
+
+>>Turno 479:
+>>kcj
+F8 I3
+
+>>Turno 480:
+>>CPU
+H10 M8
+
+>>Turno 481:
+>>kcj
+N7 D5
+
+>>Turno 482:
+>>CPU
+H2 E6
+
+>>Turno 483:
+>>kcj
+L5 B9
+
+>>Turno 484:
+>>CPU
+F3 H12
+
+>>Turno 485:
+>>kcj
+L12 D1
+
+>>Turno 486:
+>>CPU
+L4 G6
+
+>>Turno 487:
+>>kcj
+M7 A3
+
+>>Turno 488:
+>>CPU
+I7 F2
+
+>>Turno 489:
+>>kcj
+D5 L6
+
+>>Turno 490:
+>>CPU
+C3 G11
+
+>>Turno 491:
+>>kcj
+B9 C9
+
+>>Turno 492:
+>>CPU
+C3 L12
+
+>>Turno 493:
+>>kcj
+A8 F11
+
+>>Turno 494:
+>>CPU
+L4 H9
+
+>>Turno 495:
+>>kcj
+L12 I12
+
+>>Turno 496:
+>>CPU
+L4 D8
+
+>>Turno 497:
+>>kcj
+M7 B4
+
+>>Turno 498:
+>>CPU
+H1 N3
+
+>>Turno 499:
+>>kcj
+L6 G10
+
+>>Turno 500:
+>>CPU
+F2 I9
+
+>>Turno 501:
+>>kcj
+C9 L10
+
+>>Turno 502:
+>>CPU
+C3 H1
+
+>>Turno 503:
+>>kcj
+L12 D6
+
+>>Turno 504:
+>>CPU
+C3 M5
+
+>>Turno 505:
+>>kcj
+G10 F10
+
+>>Turno 506:
+>>CPU
+F3 B1
+
+>>Turno 507:
+>>kcj
+L10 C4
+
+>>Turno 508:
+>>CPU
+N3 D12
+
+>>Turno 509:
+>>kcj
+I3 E8
+
+>>Turno 510:
+>>CPU
+D12 N7
+
+>>Turno 511:
+>>kcj
+L12 G1
+
+>>Turno 512:
+>>CPU
+N7 I11
+
+>>Turno 513:
+>>kcj
+L12 I8
+
+>>Turno 514:
+>>CPU
+E6 F8
+
+>>Turno 515:
+>>kcj
+E8 H1
+
+>>Turno 516:
+>>CPU
+F8 L10
+
+>>Turno 517:
+>>kcj
+H1 E2
+
+>>Turno 518:
+>>CPU
+L4 B4
+
+>>Turno 519:
+>>kcj
+A8 H2
+
+>>Turno 520:
+>>CPU
+F3 B8
+
+>>Turno 521:
+>>kcj
+F10 G8
+
+>>Turno 522:
+>>CPU
+M8 C11
+
+>>Turno 523:
+>>kcj
+G8 C9
+
+>>Turno 524:
+>>CPU
+I9 M9
+
+>>Turno 525:
+>>kcj
+M7 G9
+
+>>Turno 526:
+>>CPU
+C3 H6
+
+>>Turno 527:
+>>kcj
+A8 M10
+
+>>Turno 528:
+>>CPU
+F3 M11
+
+>>Turno 529:
+>>kcj
+C4 N6
+
+>>Turno 530:
+>>CPU
+F3 D2
+
+>>Turno 531:
+>>kcj
+L12 F4
+
+>>Turno 532:
+>>CPU
+F3 D12
+
+>>Turno 533:
+>>kcj
+A8 H12
+
+>>Turno 534:
+>>CPU
+I11 E10
+
+>>Turno 535:
+>>kcj
+M7 C12
+
+>>Turno 536:
+>>CPU
+F3 B6
+
+>>Turno 537:
+>>kcj
+M7 L10
+
+>>Turno 538:
+>>CPU
+C11 D6
+
+>>Turno 539:
+>>kcj
+M7 D5
+
+>>Turno 540:
+>>CPU
+D6 A3
+
+>>Turno 541:
+>>kcj
+E2 H4
+
+>>Turno 542:
+>>CPU
+F3 F1
+
+>>Turno 543:
+>>kcj
+C9 H6
+
+>>Turno 544:
+>>CPU
+C3 G6
+
+>>Turno 545:
+>>kcj
+M7 L7
+
+>>Turno 546:
+>>CPU
+C3 E1
+
+>>Turno 547:
+>>kcj
+A8 E2
+
+>>Turno 548:
+>>CPU
+C3 D12
+
+>>Turno 549:
+>>kcj
+M7
+
+>>Turno 550:
+>>CPU
+C3 N11
+
+>>Turno 551:
+>>kcj
+H4 H1
+
+>>Turno 552:
+>>CPU
+M9 F11
+
+>>Turno 553:
+>>kcj
+M7 G6
+
+>>Turno 554:
+>>CPU
+F11 C11
+
+>>Turno 555:
+>>kcj
+N6 L6
+
+>>Turno 556:
+>>CPU
+L10 H9
+
+>>Turno 557:
+>>kcj
+L12 D12
+
+>>Turno 558:
+>>CPU
+C3 D4
+
+>>Turno 559:
+>>kcj
+M7 N6
+
+>>Turno 560:
+>>CPU
+C3 E9
+
+>>Turno 561:
+>>kcj
+A8 G4
+
+>>Turno 562:
+>>CPU
+C3 N6
+
+>>Turno 563:
+>>kcj
+A8 M12
+
+>>Turno 564:
+>>CPU
+F3 M2
+
+>>Turno 565:
+>>kcj
+L12 B11
+
+>>Turno 566:
+>>CPU
+F3 B6
+
+>>Turno 567:
+>>kcj
+A8 C12
+
+>>Turno 568:
+>>CPU
+C3 F4
+
+>>Turno 569:
+>>kcj
+L6
+
+>>Turno 570:
+>>CPU
+L4 N10
+
+>>Turno 571:
+>>kcj
+A8 L12
+
+>>Turno 572:
+>>CPU
+C3 L6
+
+>>Turno 573:
+>>kcj
+H6 F6
+
+>>Turno 574:
+>>CPU
+C11 G4
+
+>>Turno 575:
+>>kcj
+A8 M9
+
+>>Turno 576:
+>>CPU
+E10 M3
+
+>>Turno 577:
+>>kcj
+M7 C6
+
+>>Turno 578:
+>>CPU
+C3 M1
+
+>>Turno 579:
+>>kcj
+L6 D8
+
+>>Turno 580:
+>>CPU
+G4 F10
+
+>>Turno 581:
+>>kcj
+F6 G7
+
+>>Turno 582:
+>>CPU
+F10 C10
+
+>>Turno 583:
+>>kcj
+A8 D7
+
+>>Turno 584:
+>>CPU
+F3 G7
+
+>>Turno 585:
+>>kcj
+L12 E5
+
+>>Turno 586:
+>>CPU
+C3 G2
+
+>>Turno 587:
+>>kcj
+D8 M2
+
+>>Turno 588:
+>>CPU
+C10 G7
+
+>>Turno 589:
+>>kcj
+M7 G4
+
+>>Turno 590:
+>>CPU
+M3 C9
+
+>>Turno 591:
+>>kcj
+H1 C1
+
+>>Turno 592:
+>>CPU
+C3 B11
+
+>>Turno 593:
+>>kcj
+G7 B5
+
+>>Turno 594:
+>>CPU
+L4 M5
+
+>>Turno 595:
+>>kcj
+M7 G11
+
+>>Turno 596:
+>>CPU
+A3 N9
+
+>>Turno 597:
+>>kcj
+M7 C2
+
+>>Turno 598:
+>>CPU
+C3 A10
+
+>>Turno 599:
+>>kcj
+A8 D1
+
+>>Turno 600:
+>>CPU
+C9 N7
+
+>>Turno 601:
+>>kcj
+C1 E7
+
+>>Turno 602:
+>>CPU
+F3 B7
+
+>>Turno 603:
+>>kcj
+L12 B12
+
+>>Turno 604:
+>>CPU
+F3 A1
+
+>>Turno 605:
+>>kcj
+L12 N6
+
+>>Turno 606:
+>>CPU
+N7 M12
+
+>>Turno 607:
+>>kcj
+A8 F3
+
+>>Turno 608:
+>>CPU
+F3 L11
+
+>>Turno 609:
+>>kcj
+A8 D1
+
+>>Turno 610:
+>>CPU
+C3 B10
+
+>>Turno 611:
+>>kcj
+E7 H4
+
+>>Turno 612:
+>>CPU
+L4 G5
+
+>>Turno 613:
+>>kcj
+L12 M12
+
+>>Turno 614:
+>>CPU
+C3 A12
+
+>>Turno 615:
+>>kcj
+M7 D8
+
+>>Turno 616:
+>>CPU
+N9 M3
+
+>>Turno 617:
+>>kcj
+M7 M2
+
+>>Turno 618:
+>>CPU
+C3 I12
+
+>>Turno 619:
+>>kcj
+M7 A4
+
+>>Turno 620:
+>>CPU
+M3 L11
+
+>>Turno 621:
+>>kcj
+H4 C11
+
+>>Turno 622:
+>>CPU
+L11 D10
+
+>>Turno 623:
+>>kcj
+M7 H7
+
+>>Turno 624:
+>>CPU
+F3 D9
+
+>>Turno 625:
+>>kcj
+L12 H12
+
+>>Turno 626:
+>>CPU
+F3 B5
+
+>>Turno 627:
+>>kcj
+L12 A11
+
+>>Turno 628:
+>>CPU
+F3 C11
+
+>>Turno 629:
+>>kcj
+M7 M4
+
+>>Turno 630:
+>>CPU
+F3 I6
+
+>>Turno 631:
+>>kcj
+B5 H5
+
+>>Turno 632:
+>>CPU
+C3 G2
+
+>>Turno 633:
+>>kcj
+M7 E9
+
+>>Turno 634:
+>>CPU
+H9 F12
+
+>>Turno 635:
+>>kcj
+A8 I11
+
+>>Turno 636:
+>>CPU
+C3 I11
+
+>>Turno 637:
+>>kcj
+C11 M4
+
+>>Turno 638:
+>>CPU
+C3 F10
+
+>>Turno 639:
+>>kcj
+L12 L11
+
+>>Turno 640:
+>>CPU
+L4 D9
+
+>>Turno 641:
+>>kcj
+M4 G10
+
+>>Turno 642:
+>>CPU
+F3 N10
+
+>>Turno 643:
+>>kcj
+A8 I9
+
+>>Turno 644:
+>>CPU
+D10 B4
+
+>>Turno 645:
+>>kcj
+M7 I7
+
+>>Turno 646:
+>>CPU
+F12 H11
+
+>>Turno 647:
+>>kcj
+M7 H9
+
+>>Turno 648:
+>>CPU
+C3 L7
+
+>>Turno 649:
+>>kcj
+L12 C6
+
+>>Turno 650:
+>>CPU
+C3 C11
+
+>>Turno 651:
+>>kcj
+L12 I1
+
+>>Turno 652:
+>>CPU
+C3 F5
+
+>>Turno 653:
+>>kcj
+A8 D9
+
+>>Turno 654:
+>>CPU
+L4 B11
+
+>>Turno 655:
+>>kcj
+H5 I2
+
+>>Turno 656:
+>>CPU
+B4 M3
+
+>>Turno 657:
+>>kcj
+M2 L7
+
+>>Turno 658:
+>>CPU
+M3 A9
+
+>>Turno 659:
+>>kcj
+L12 M7
+
+>>Turno 660:
+>>CPU
+A9 N10
+
+>>Turno 661:
+>>kcj
+G10 E5
+
+>>Turno 662:
+>>CPU
+C3 C5
+
+>>Turno 663:
+>>kcj
+E5 E9
+
+>>Turno 664:
+>>CPU
+H11 B12
+
+>>Turno 665:
+>>kcj
+A8 D11
+
+>>Turno 666:
+>>CPU
+G7 G5
+
+>>Turno 667:
+>>kcj
+A8 C1
+
+>>Turno 668:
+>>CPU
+B12 E1
+
+>>Turno 669:
+>>kcj
+M7 F1
+
+>>Turno 670:
+>>CPU
+F3 D11
+
+>>Turno 671:
+>>kcj
+L12 M2
+
+>>Turno 672:
+>>CPU
+E1 F11
+
+>>Turno 673:
+>>kcj
+M7 M9
+
+>>Turno 674:
+>>CPU
+F11 G1
+
+>>Turno 675:
+>>kcj
+L7 B10
+
+>>Turno 676:
+>>CPU
+G5 F2
+
+>>Turno 677:
+>>kcj
+L12 B10
+
+>>Turno 678:
+>>CPU
+G1 D6
+
+>>Turno 679:
+>>kcj
+A8 F4
+
+>>Turno 680:
+>>CPU
+C3 D11
+
+>>Turno 681:
+>>kcj
+L12 E5
+
+>>Turno 682:
+>>CPU
+D6 D7
+
+>>Turno 683:
+>>kcj
+L12 A10
+
+>>Turno 684:
+>>CPU
+F2 I1
+
+>>Turno 685:
+>>kcj
+B10 H9
+
+>>Turno 686:
+>>CPU
+L4 H1
+
+>>Turno 687:
+>>kcj
+M7 M5
+
+>>Turno 688:
+>>CPU
+I1 I10
+
+>>Turno 689:
+>>kcj
+M7 B4
+
+>>Turno 690:
+>>CPU
+N10 M4
+
+>>Turno 691:
+>>kcj
+A8 F5
+
+>>Turno 692:
+>>CPU
+C3 D9
+
+>>Turno 693:
+>>kcj
+A8 A1
+
+>>Turno 694:
+>>CPU
+F3 N2
+
+>>Turno 695:
+>>kcj
+E9 C4
+
+>>Turno 696:
+>>CPU
+L4 D5
+
+>>Turno 697:
+>>kcj
+A8 M4
+
+>>Turno 698:
+>>CPU
+I10 I12
+
+>>Turno 699:
+>>kcj
+I2 F11
+
+>>Turno 700:
+>>CPU
+F3 B6
+
+>>Turno 701:
+>>kcj
+L12 N5
+
+>>Turno 702:
+>>CPU
+L4 A7
+
+>>Turno 703:
+>>kcj
+A8 B3
+
+>>Turno 704:
+>>CPU
+I12 F12
+
+>>Turno 705:
+>>kcj
+C4 H3
+
+>>Turno 706:
+>>CPU
+D7 E9
+
+>>Turno 707:
+>>kcj
+A8 L5
+
+>>Turno 708:
+>>CPU
+C3 H7
+
+>>Turno 709:
+>>kcj
+H3 G6
+
+>>Turno 710:
+>>CPU
+L4 D3
+
+>>Turno 711:
+>>kcj
+G6 C1
+
+>>Turno 712:
+>>CPU
+C3 N12
+
+>>Turno 713:
+>>kcj
+M7 I7
+
+>>Turno 714:
+>>CPU
+C3 E10
+
+>>Turno 715:
+>>kcj
+M7 B11
+
+>>Turno 716:
+>>CPU
+F12 M10
+
+>>Turno 717:
+>>kcj
+M7 G7
+
+>>Turno 718:
+>>CPU
+F3 A3
+
+>>Turno 719:
+>>kcj
+A8 C12
+
+>>Turno 720:
+>>CPU
+L4 L3
+
+>>Turno 721:
+>>kcj
+H9 F5
+
+>>Turno 722:
+>>CPU
+C3 G12
+
+>>Turno 723:
+>>kcj
+A8
+
+>>Turno 724:
+>>CPU
+C3 D8
+
+>>Turno 725:
+>>kcj
+M7 H5
+
+>>Turno 726:
+>>CPU
+F3 H6
+
+>>Turno 727:
+>>kcj
+A8 N1
+
+>>Turno 728:
+>>CPU
+L4 G5
+
+>>Turno 729:
+>>kcj
+A8 E8
+
+>>Turno 730:
+>>CPU
+M10 E2
+
+>>Turno 731:
+>>kcj
+F11 B8
+
+>>Turno 732:
+>>CPU
+L4 M12
+
+>>Turno 733:
+>>kcj
+F5 F8
+
+>>Turno 734:
+>>CPU
+C3 H2
+
+>>Turno 735:
+>>kcj
+A8 F9
+
+>>Turno 736:
+>>CPU
+C3 L5
+
+>>Turno 737:
+>>kcj
+M7 C3
+
+>>Turno 738:
+>>CPU
+E2 F11
+
+>>Turno 739:
+>>kcj
+A8 D10
+
+>>Turno 740:
+>>CPU
+C3 A9
+
+>>Turno 741:
+>>kcj
+A8 E9
+
+>>Turno 742:
+>>CPU
+L4 D6
+
+>>Turno 743:
+>>kcj
+A8 I10
+
+>>Turno 744:
+>>CPU
+L4 F10
+
+>>Turno 745:
+>>kcj
+A8 I9
+
+>>Turno 746:
+>>CPU
+F3 B8
+
+>>Turno 747:
+>>kcj
+A8 G1
+
+>>Turno 748:
+>>CPU
+F3 L1
+
+>>Turno 749:
+>>kcj
+M7 A6
+
+>>Turno 750:
+>>CPU
+F3 B5
+
+>>Turno 751:
+>>kcj
+B8 N8
+
+>>Turno 752:
+>>CPU
+L4 I2
+
+>>Turno 753:
+>>kcj
+F8 F6
+
+>>Turno 754:
+>>CPU
+C3 H6
+
+>>Turno 755:
+>>kcj
+C1 M10
+
+>>Turno 756:
+>>CPU
+L4 M12
+
+>>Turno 757:
+>>kcj
+A8 M3
+
+>>Turno 758:
+>>CPU
+F3 A1
+
+>>Turno 759:
+>>kcj
+M7 H4
+
+>>Turno 760:
+>>CPU
+C3 D5
+
+>>Turno 761:
+>>kcj
+M7 G2
+
+>>Turno 762:
+>>CPU
+L4 I10
+
+>>Turno 763:
+>>kcj
+M7
+
+>>Turno 764:
+>>CPU
+F3 N11
+
+>>Turno 765:
+>>kcj
+M10 F12
+
+>>Turno 766:
+>>CPU
+L4 E9
+
+>>Turno 767:
+>>kcj
+A8 D5
+
+>>Turno 768:
+>>CPU
+C3 C5
+
+>>Turno 769:
+>>kcj
+F12 L12
+
+>>Turno 770:
+>>CPU
+E9 G6
+
+>>Turno 771:
+>>kcj
+M7 B9
+
+>>Turno 772:
+>>CPU
+C3 M2
+
+>>Turno 773:
+>>kcj
+M7 C7
+
+>>Turno 774:
+>>CPU
+L4 E7
+
+>>Turno 775:
+>>kcj
+N8 C7
+
+>>Turno 776:
+>>CPU
+G6 I8
+
+>>Turno 777:
+>>kcj
+M7 A11
+
+>>Turno 778:
+>>CPU
+C3 L10
+
+>>Turno 779:
+>>kcj
+C7 G10
+
+>>Turno 780:
+>>CPU
+F11 F12
+
+>>Turno 781:
+>>kcj
+L12 C9
+
+>>Turno 782:
+>>CPU
+F3 D11
+
+>>Turno 783:
+>>kcj
+G10 L7
+
+>>Turno 784:
+>>CPU
+F3 H6
+
+>>Turno 785:
+>>kcj
+L7 G11
+
+>>Turno 786:
+>>CPU
+C3 E3
+
+>>Turno 787:
+>>kcj
+G11 C3
+
+>>Turno 788:
+>>CPU
+F12 E4
+
+>>Turno 789:
+>>kcj
+A8 L3
+
+>>Turno 790:
+>>CPU
+C3 B8
+
+>>Turno 791:
+>>kcj
+M7 E12
+
+>>Turno 792:
+>>CPU
+L4 N3
+
+>>Turno 793:
+>>kcj
+A8 G2
+
+>>Turno 794:
+>>CPU
+E4 G1
+
+>>Turno 795:
+>>kcj
+F6
+
+>>Turno 796:
+>>CPU
+F3 H11
+
+>>Turno 797:
+>>kcj
+M7 B10
+
+>>Turno 798:
+>>CPU
+G1 E5
+
+>>Turno 799:
+>>kcj
+M7 B6
+
+>>Turno 800:
+>>CPU
+C3 C11
+
+>>Turno 801:
+>>kcj
+C3 H10
+
+>>Turno 802:
+>>CPU
+I8 M12
+
+>>Turno 803:
+>>kcj
+M7 N3
+
+>>Turno 804:
+>>CPU
+F3 H3
+
+>>Turno 805:
+>>kcj
+M7 E9
+
+>>Turno 806:
+>>CPU
+C3 E7
+
+>>Turno 807:
+>>kcj
+H10 C7
+
+>>Turno 808:
+>>CPU
+E5 M8
+
+>>Turno 809:
+>>kcj
+C9 C5
+
+>>Turno 810:
+>>CPU
+C3 N2
+
+>>Turno 811:
+>>kcj
+C7 E6
+
+>>Turno 812:
+>>CPU
+C3 L8
+
+>>Turno 813:
+>>kcj
+M7 L4
+
+>>Turno 814:
+>>CPU
+C3
+
+>>Turno 815:
+>>kcj
+C5 H10
+
+>>Turno 816:
+>>CPU
+L4 A11
+
+>>Turno 817:
+>>kcj
+A8 C6
+
+>>Turno 818:
+>>CPU
+F3 E9
+
+>>Turno 819:
+>>kcj
+A8 E8
+
+>>Turno 820:
+>>CPU
+M12 I1
+
+>>Turno 821:
+>>kcj
+F6 D7
+
+>>Turno 822:
+>>CPU
+I1 G6
+
+>>Turno 823:
+>>kcj
+M7 H11
+
+>>Turno 824:
+>>CPU
+F3 F9
+
+>>Turno 825:
+>>kcj
+D7 B7
+
+>>Turno 826:
+>>CPU
+L4 B9
+
+>>Turno 827:
+>>kcj
+M7 G5
+
+>>Turno 828:
+>>CPU
+C3 C4
+
+>>Turno 829:
+>>kcj
+M7 I11
+
+>>Turno 830:
+>>CPU
+L4 F8
+
+>>Turno 831:
+>>kcj
+B7 L7
+
+>>Turno 832:
+>>CPU
+C3 C10
+
+>>Turno 833:
+>>kcj
+L7 F7
+
+>>Turno 834:
+>>CPU
+G6 L12
+
+>>Turno 835:
+>>kcj
+F7 N3
+
+>>Turno 836:
+>>CPU
+C3 D8
+
+>>Turno 837:
+>>kcj
+A8 A11
+
+>>Turno 838:
+>>CPU
+L4 E6
+
+>>Turno 839:
+>>kcj
+H10 F3
+
+>>Turno 840:
+>>CPU
+F3 M9
+
+>>Turno 841:
+>>kcj
+A8 B3
+
+>>Turno 842:
+>>CPU
+M8 E12
+
+>>Turno 843:
+>>kcj
+N3 A3
+
+>>Turno 844:
+>>CPU
+L12 F7
+
+>>Turno 845:
+>>kcj
+M7 E8
+
+>>Turno 846:
+>>CPU
+L4 M2
+
+>>Turno 847:
+>>kcj
+E6 L4
+
+>>Turno 848:
+>>CPU
+E12 F6
+
+>>Turno 849:
+>>kcj
+A3 H11
+
+>>Turno 850:
+>>CPU
+F6 I1
+
+>>Turno 851:
+>>kcj
+L4 I8
+
+>>Turno 852:
+>>CPU
+C3 H12
+
+>>Turno 853:
+>>kcj
+I8 F11
+
+>>Turno 854:
+>>CPU
+L4 N11
+
+>>Turno 855:
+>>kcj
+F3 E7
+
+>>Turno 856:
+>>CPU
+C3 I8
+
+>>Turno 857:
+>>kcj
+E7 D12
+
+>>Turno 858:
+>>CPU
+C3 G11
+
+>>Turno 859:
+>>kcj
+A8 C7
+
+>>Turno 860:
+>>CPU
+I1 F9
+
+>>Turno 861:
+>>kcj
+A8 I1
+
+>>Turno 862:
+>>CPU
+C3 C2
+
+>>Turno 863:
+>>kcj
+F11 L10
+
+>>Turno 864:
+>>CPU
+F7 I1
+
+>>Turno 865:
+>>kcj
+L10 E7
+
+>>Turno 866:
+>>CPU
+L4 B7
+
+>>Turno 867:
+>>kcj
+H11 F3
+
+>>Turno 868:
+>>CPU
+I1 B9
+
+>>Turno 869:
+>>kcj
+E7 L6
+
+>>Turno 870:
+>>CPU
+B9 G7
+
+>>Turno 871:
+>>kcj
+L6 B6
+
+>>Turno 872:
+>>CPU
+F3 A3
+
+>>Turno 873:
+>>kcj
+M7 I4
+
+>>Turno 874:
+>>CPU
+G7 H2
+
+>>Turno 875:
+>>kcj
+A8 L4
+
+>>Turno 876:
+>>CPU
+C3 I8
+
+>>Turno 877:
+>>kcj
+M7 N9
+
+>>Turno 878:
+>>CPU
+F9 F1
+
+>>Turno 879:
+>>kcj
+A8 E10
+
+>>Turno 880:
+>>CPU
+H2 F9
+
+>>Turno 881:
+>>kcj
+A8 G2
+
+>>Turno 882:
+>>CPU
+F3 H5
+
+>>Turno 883:
+>>kcj
+A8 H8
+
+>>Turno 884:
+>>CPU
+L4 H9
+
+>>Turno 885:
+>>kcj
+A8 L3
+
+>>Turno 886:
+>>CPU
+C3 N9
+
+>>Turno 887:
+>>kcj
+A8 N1
+
+>>Turno 888:
+>>CPU
+C3 D9
+
+>>Turno 889:
+>>kcj
+B6 F7
+
+>>Turno 890:
+>>CPU
+F1 B8
+
+>>Turno 891:
+>>kcj
+F7 I4
+
+>>Turno 892:
+>>CPU
+L4 N9
+
+>>Turno 893:
+>>kcj
+I4 L9
+
+>>Turno 894:
+>>CPU
+C3 M2
+
+>>Turno 895:
+>>kcj
+D12 L3
+
+>>Turno 896:
+>>CPU
+L4 C3
+
+>>Turno 897:
+>>kcj
+L9 B9
+
+>>Turno 898:
+>>CPU
+L4 D9
+
+>>Turno 899:
+>>kcj
+F3 L7
+
+>>Turno 900:
+>>CPU
+F9 D10
+
+>>Turno 901:
+>>kcj
+L7 H4
+
+>>Turno 902:
+>>CPU
+C3 A4
+
+>>Turno 903:
+>>kcj
+H4 C8
+
+>>Turno 904:
+>>CPU
+D10 F2
+
+>>Turno 905:
+>>kcj
+L3 G6
+
+>>Turno 906:
+>>CPU
+F3 C6
+
+>>Turno 907:
+>>kcj
+C8 L9
+
+>>Turno 908:
+>>CPU
+B8 C7
+
+>>Turno 909:
+>>kcj
+L9 I3
+
+>>Turno 910:
+>>CPU
+L4 N4
+
+>>Turno 911:
+>>kcj
+I3 F11
+
+>>Turno 912:
+>>CPU
+C3 A10
+
+>>Turno 913:
+>>kcj
+F11 C5
+
+>>Turno 914:
+>>CPU
+F3 M10
+
+>>Turno 915:
+>>kcj
+M7 N12
+
+>>Turno 916:
+>>CPU
+C7 E12
+
+>>Turno 917:
+>>kcj
+A8 E10
+
+>>Turno 918:
+>>CPU
+E12 L8
+
+>>Turno 919:
+>>kcj
+A8
+
+>>Turno 920:
+>>CPU
+C3 B1
+
+>>Turno 921:
+>>kcj
+M7 E4
+
+>>Turno 922:
+>>CPU
+F2 I7
+
+>>Turno 923:
+>>kcj
+A8 M8
+
+>>Turno 924:
+>>CPU
+L8 M9
+
+>>Turno 925:
+>>kcj
+C5 L11
+
+>>Turno 926:
+>>CPU
+L4 F6
+
+>>Turno 927:
+>>kcj
+B9 C11
+
+>>Turno 928:
+>>CPU
+C3 E6
+
+>>Turno 929:
+>>kcj
+G6 G7
+
+>>Turno 930:
+>>CPU
+I7 I11
+
+>>Turno 931:
+>>kcj
+C11 N8
+
+>>Turno 932:
+>>CPU
+F3 H11
+
+>>Turno 933:
+>>kcj
+N8 M11
+
+>>Turno 934:
+>>CPU
+L4 F7
+
+>>Turno 935:
+>>kcj
+A8 I9
+
+>>Turno 936:
+>>CPU
+I11 G9
+
+>>Turno 937:
+>>kcj
+G7 D2
+
+>>Turno 938:
+>>CPU
+M9 G4
+
+>>Turno 939:
+>>kcj
+M7 F9
+
+>>Turno 940:
+>>CPU
+L4 L11
+
+>>Turno 941:
+>>kcj
+A8 L1
+
+>>Turno 942:
+>>CPU
+F3 M12
+
+>>Turno 943:
+>>kcj
+L11 N11
+
+>>Turno 944:
+>>CPU
+C3 G10
+
+>>Turno 945:
+>>kcj
+N11 B5
+
+>>Turno 946:
+>>CPU
+G4 F12
+
+>>Turno 947:
+>>kcj
+M11 N3
+
+>>Turno 948:
+>>CPU
+L4 I5
+
+>>Turno 949:
+>>kcj
+A8 I3
+
+>>Turno 950:
+>>CPU
+C3 N9
+
+>>Turno 951:
+>>kcj
+A8 E12
+
+>>Turno 952:
+>>CPU
+C3 E8
+
+>>Turno 953:
+>>kcj
+M7 F8
+
+>>Turno 954:
+>>CPU
+C3 D6
+
+>>Turno 955:
+>>kcj
+A8 H9
+
+>>Turno 956:
+>>CPU
+L4 I3
+
+>>Turno 957:
+>>kcj
+N3 L5
+
+>>Turno 958:
+>>CPU
+F3 H11
+
+>>Turno 959:
+>>kcj
+L5 H2
+
+>>Turno 960:
+>>CPU
+G9 M9
+
+>>Turno 961:
+>>kcj
+A8 E3
+
+>>Turno 962:
+>>CPU
+C3 E4
+
+>>Turno 963:
+>>kcj
+M7 B6
+
+>>Turno 964:
+>>CPU
+F3 H1
+
+>>Turno 965:
+>>kcj
+B5 L2
+
+>>Turno 966:
+>>CPU
+L4 C2
+
+>>Turno 967:
+>>kcj
+L2 I2
+
+>>Turno 968:
+>>CPU
+C3 F8
+
+>>Turno 969:
+>>kcj
+H2 H8
+
+>>Turno 970:
+>>CPU
+C3 F8
+
+>>Turno 971:
+>>kcj
+M7 H5
+
+>>Turno 972:
+>>CPU
+F3 I5
+
+>>Turno 973:
+>>kcj
+H8 C10
+
+>>Turno 974:
+>>CPU
+C3 B6
+
+>>Turno 975:
+>>kcj
+A8 C12
+
+>>Turno 976:
+>>CPU
+M9 F2
+
+>>Turno 977:
+>>kcj
+C10 H9
+
+>>Turno 978:
+>>CPU
+F3 B2
+
+>>Turno 979:
+>>kcj
+H9 I7
+
+>>Turno 980:
+>>CPU
+F3 H8
+
+>>Turno 981:
+>>kcj
+M7 C9
+
+>>Turno 982:
+>>CPU
+F12 D12
+
+>>Turno 983:
+>>kcj
+A8 F1
+
+>>Turno 984:
+>>CPU
+C3 H3
+
+>>Turno 985:
+>>kcj
+D2 L4
+
+>>Turno 986:
+>>CPU
+F3 G4
+
+>>Turno 987:
+>>kcj
+A8 N8
+
+>>Turno 988:
+>>CPU
+D12 G10
+
+>>Turno 989:
+>>kcj
+A8 I3
+
+>>Turno 990:
+>>CPU
+L4 H10
+
+>>Turno 991:
+>>kcj
+M7 L7
+
+>>Turno 992:
+>>CPU
+F3 N4
+
+>>Turno 993:
+>>kcj
+A8 I5
+
+>>Turno 994:
+>>CPU
+C3 B2
+
+>>Turno 995:
+>>kcj
+M7 G4
+
+>>Turno 996:
+>>CPU
+L4 F6
+
+>>Turno 997:
+>>kcj
+M7 M10
+
+>>Turno 998:
+>>CPU
+C3 G7
+
+>>Turno 999:
+>>kcj
+I2 H9
+
+>>Turno 1000:
+>>CPU
+F3 F1
+
+>>Turno 1001:
+>>kcj
+A8 G5
+
+>>Turno 1002:
+>>CPU
+C3 C1
+
+>>Turno 1003:
+>>kcj
+I7 N7
+
+>>Turno 1004:
+>>CPU
+C3 E3
+
+>>Turno 1005:
+>>kcj
+A8 D8
+
+>>Turno 1006:
+>>CPU
+F2 F8
+
+>>Turno 1007:
+>>kcj
+A8 L3
+
+>>Turno 1008:
+>>CPU
+C3 H1
+
+>>Turno 1009:
+>>kcj
+L4 F3
+
+>>Turno 1010:
+>>CPU
+G10 D9
+
+>>Turno 1011:
+>>kcj
+H9 C6
+
+>>Turno 1012:
+>>CPU
+F3 D5
+
+>>Turno 1013:
+>>kcj
+M7 A12
+
+>>Turno 1014:
+>>CPU
+C3 M8
+
+>>Turno 1015:
+>>kcj
+C6 E11
+
+>>Turno 1016:
+>>CPU
+F8 C11
+
+>>Turno 1017:
+>>kcj
+E11 D4
+
+>>Turno 1018:
+>>CPU
+F3 N8
+
+>>Turno 1019:
+>>kcj
+F3 H5
+
+>>Turno 1020:
+>>CPU
+C11 E1
+
+>>Turno 1021:
+>>kcj
+M7 H7
+
+>>Turno 1022:
+>>CPU
+D9 H1
+
+>>Turno 1023:
+>>kcj
+N7 C11
+
+>>Turno 1024:
+>>CPU
+C3 A8
+
+>>Turno 1025:
+>>kcj
+D4 B6
+
+>>Turno 1026:
+>>CPU
+L4 G4
+
+>>Turno 1027:
+>>kcj
+A8 C11
+
+>>Turno 1028:
+>>CPU
+C3 I8
+
+>>Turno 1029:
+>>kcj
+A8 B11
+
+>>Turno 1030:
+>>CPU
+F3 M11
+
+>>Turno 1031:
+>>kcj
+H5 M11
+
+>>Turno 1032:
+>>CPU
+C3 N9
+
+>>Turno 1033:
+>>kcj
+A8 E2
+
+>>Turno 1034:
+>>CPU
+C3 I2
+
+>>Turno 1035:
+>>kcj
+C11 I2
+
+>>Turno 1036:
+>>CPU
+E1 M7
+
+>>Turno 1037:
+>>kcj
+M11 I12
+
+>>Turno 1038:
+>>CPU
+H1 G12
+
+>>Turno 1039:
+>>kcj
+I12 M12
+
+>>Turno 1040:
+>>CPU
+L4 A12
+
+>>Turno 1041:
+>>kcj
+B6 H5
+
+>>Turno 1042:
+>>CPU
+F3 I4
+
+>>Turno 1043:
+>>kcj
+I2 F3
+
+>>Turno 1044:
+>>CPU
+F3 A11
+
+>>Turno 1045:
+>>kcj
+H5 G10
+
+>>Turno 1046:
+>>CPU
+L4 D3
+
+>>Turno 1047:
+>>kcj
+M12 E6
+
+>>Turno 1048:
+>>CPU
+L4 N11
+
+>>Turno 1049:
+>>kcj
+M7 I11
+
+>>Turno 1050:
+>>CPU
+C3 H9
+
+>>Turno 1051:
+>>kcj
+F3 M11
+
+>>Turno 1052:
+>>CPU
+C3 I8
+
+>>Turno 1053:
+>>kcj
+E6 L2
+
+>>Turno 1054:
+>>CPU
+F3 C5
+
+>>Turno 1055:
+>>kcj
+G10 N8
+
+>>Turno 1056:
+>>CPU
+F3
+
+>>Turno 1057:
+>>kcj
+M7 L8
+
+>>Turno 1058:
+>>CPU
+L4 E5
+
+>>Turno 1059:
+>>kcj
+N8 H8
+
+>>Turno 1060:
+>>CPU
+L4 M3
+
+>>Turno 1061:
+>>kcj
+A8 A3
+
+>>Turno 1062:
+>>CPU
+L4 L10
+
+>>Turno 1063:
+>>kcj
+L2 D1
+
+>>Turno 1064:
+>>CPU
+F3 C11
+
+>>Turno 1065:
+>>kcj
+A8 M10
+
+>>Turno 1066:
+>>CPU
+F3 G12
+
+>>Turno 1067:
+>>kcj
+H8 N2
+
+>>Turno 1068:
+>>CPU
+F3 L6
+
+>>Turno 1069:
+>>kcj
+N2 I8
+
+>>Turno 1070:
+>>CPU
+C3 G5
+
+>>Turno 1071:
+>>kcj
+D1 F7
+
+>>Turno 1072:
+>>CPU
+F3 C3
+
+>>Turno 1073:
+>>kcj
+M7 C1
+
+>>Turno 1074:
+>>CPU
+F3 G3
+
+>>Turno 1075:
+>>kcj
+M7 I8
+
+>>Turno 1076:
+>>CPU
+F3 C11
+
+>>Turno 1077:
+>>kcj
+A8 E1
+
+>>Turno 1078:
+>>CPU
+L4 M5
+
+>>Turno 1079:
+>>kcj
+I8 B2
+
+>>Turno 1080:
+>>CPU
+F3 L9
+
+>>Turno 1081:
+>>kcj
+A8 N12
+
+>>Turno 1082:
+>>CPU
+C3 H5
+
+>>Turno 1083:
+>>kcj
+M7 A6
+
+>>Turno 1084:
+>>CPU
+F3 M1
+
+>>Turno 1085:
+>>kcj
+B2 L3
+
+>>Turno 1086:
+>>CPU
+F3 H1
+
+>>Turno 1087:
+>>kcj
+A8 M9
+
+>>Turno 1088:
+>>CPU
+F3 I5
+
+>>Turno 1089:
+>>kcj
+L3 N10
+
+>>Turno 1090:
+>>CPU
+C3 M3
+
+>>Turno 1091:
+>>kcj
+M11 G9
+
+>>Turno 1092:
+>>CPU
+L4 G2
+
+>>Turno 1093:
+>>kcj
+N10 I3
+
+>>Turno 1094:
+>>CPU
+M7 D8
+
+>>Turno 1095:
+>>kcj
+G9 C5
+
+>>Turno 1096:
+>>CPU
+L4 E6
+
+>>Turno 1097:
+>>kcj
+A8 B8
+
+>>Turno 1098:
+>>CPU
+L4 A5
+
+>>Turno 1099:
+>>kcj
+I3 A3
+
+>>Turno 1100:
+>>CPU
+F3 A1
+
+>>Turno 1101:
+>>kcj
+A3 L9
+
+>>Turno 1102:
+>>CPU
+F3 F5
+
+>>Turno 1103:
+>>kcj
+A8 E11
+
+>>Turno 1104:
+>>CPU
+D8 D6
+
+>>Turno 1105:
+>>kcj
+L9 C10
+
+>>Turno 1106:
+>>CPU
+C3 G12
+
+>>Turno 1107:
+>>kcj
+M7 A12
+
+>>Turno 1108:
+>>CPU
+C3 L5
+
+>>Turno 1109:
+>>kcj
+C5 L8
+
+>>Turno 1110:
+>>CPU
+C3 H3
+
+>>Turno 1111:
+>>kcj
+C10 B11
+
+>>Turno 1112:
+>>CPU
+F3 H1
+
+>>Turno 1113:
+>>kcj
+B11 C10
+
+>>Turno 1114:
+>>CPU
+L4 G5
+
+>>Turno 1115:
+>>kcj
+L8 E5
+
+>>Turno 1116:
+>>CPU
+L4 M12
+
+>>Turno 1117:
+>>kcj
+A8 E3
+
+>>Turno 1118:
+>>CPU
+L4 D6
+
+>>Turno 1119:
+>>kcj
+A8 G2
+
+>>Turno 1120:
+>>CPU
+C3 L4
+
+>>Turno 1121:
+>>kcj
+A8 C2
+
+>>Turno 1122:
+>>CPU
+C3 I10
+
+>>Turno 1123:
+>>kcj
+F7 C1
+
+>>Turno 1124:
+>>CPU
+C3 F9
+
+>>Turno 1125:
+>>kcj
+C1 G7
+
+>>Turno 1126:
+>>CPU
+L4 C4
+
+>>Turno 1127:
+>>kcj
+A8 I8
+
+>>Turno 1128:
+>>CPU
+F3 H11
+
+>>Turno 1129:
+>>kcj
+M7 G4
+
+>>Turno 1130:
+>>CPU
+G12 G5
+
+>>Turno 1131:
+>>kcj
+G7 M12
+
+>>Turno 1132:
+>>CPU
+F3 D7
+
+>>Turno 1133:
+>>kcj
+E5 L2
+
+>>Turno 1134:
+>>CPU
+C3 A9
+
+>>Turno 1135:
+>>kcj
+A8 H2
+
+>>Turno 1136:
+>>CPU
+F3 C10
+
+>>Turno 1137:
+>>kcj
+A8 L1
+
+>>Turno 1138:
+>>CPU
+G5 H2
+
+>>Turno 1139:
+>>kcj
+L2 I3
+
+>>Turno 1140:
+>>CPU
+L4 A5
+
+>>Turno 1141:
+>>kcj
+M7 A9
+
+>>Turno 1142:
+>>CPU
+L4 N12
+
+>>Turno 1143:
+>>kcj
+M7 L7
+
+>>Turno 1144:
+>>CPU
+H2 M9
+
+>>Turno 1145:
+>>kcj
+M7 M6
+
+>>Turno 1146:
+>>CPU
+D6 M7
+
+>>Turno 1147:
+>>kcj
+M7 A10
+
+>>Turno 1148:
+>>CPU
+L4 M11
+
+>>Turno 1149:
+>>kcj
+A8 F11
+
+>>Turno 1150:
+>>CPU
+M9 G11
+
+>>Turno 1151:
+>>kcj
+I3 E5
+
+>>Turno 1152:
+>>CPU
+F3 D5
+
+>>Turno 1153:
+>>kcj
+M12 D12
+
+>>Turno 1154:
+>>CPU
+F3 M4
+
+>>Turno 1155:
+>>kcj
+D12 G8
+
+>>Turno 1156:
+>>CPU
+L4 D11
+
+>>Turno 1157:
+>>kcj
+A8 B9
+
+>>Turno 1158:
+>>CPU
+C3 N7
+
+>>Turno 1159:
+>>kcj
+G8 G12
+
+>>Turno 1160:
+>>CPU
+L4 B9
+
+>>Turno 1161:
+>>kcj
+C10 L7
+
+>>Turno 1162:
+>>CPU
+C3 L10
+
+>>Turno 1163:
+>>kcj
+E5 D9
+
+>>Turno 1164:
+>>CPU
+C3 G6
+
+>>Turno 1165:
+>>kcj
+D9 N9
+
+>>Turno 1166:
+>>CPU
+L4 D8
+
+>>Turno 1167:
+>>kcj
+M7 D12
+
+>>Turno 1168:
+>>CPU
+C3 N9
+
+>>Turno 1169:
+>>kcj
+N9 E8
+
+>>Turno 1170:
+>>CPU
+L4 E7
+
+>>Turno 1171:
+>>kcj
+G12 M12
+
+>>Turno 1172:
+>>CPU
+L4 L1
+
+>>Turno 1173:
+>>kcj
+M7 G12
+
+>>Turno 1174:
+>>CPU
+F3 M11
+
+>>Turno 1175:
+>>kcj
+A8 E10
+
+>>Turno 1176:
+>>CPU
+C3 M12
+
+>>Turno 1177:
+>>kcj
+M7 N9
+
+>>Turno 1178:
+>>CPU
+M7 B8
+
+>>Turno 1179:
+>>kcj
+L7 N8
+
+>>Turno 1180:
+>>CPU
+G11 F1
+
+>>Turno 1181:
+>>kcj
+M7 N2
+
+>>Turno 1182:
+>>CPU
+L4 M5
+
+>>Turno 1183:
+>>kcj
+A8 H7
+
+>>Turno 1184:
+>>CPU
+C3 D10
+
+>>Turno 1185:
+>>kcj
+M12 G8
+
+>>Turno 1186:
+>>CPU
+F1 D10
+
+>>Turno 1187:
+>>kcj
+G8 I11
+
+>>Turno 1188:
+>>CPU
+C3 C7
+
+>>Turno 1189:
+>>kcj
+A8 L10
+
+>>Turno 1190:
+>>CPU
+C3 A12
+
+>>Turno 1191:
+>>kcj
+I11 E11
+
+>>Turno 1192:
+>>CPU
+B8 F7
+
+>>Turno 1193:
+>>kcj
+E8 H5
+
+>>Turno 1194:
+>>CPU
+F3 D5
+
+>>Turno 1195:
+>>kcj
+A8 M11
+
+>>Turno 1196:
+>>CPU
+F7 L9
+
+>>Turno 1197:
+>>kcj
+M7 I10
+
+>>Turno 1198:
+>>CPU
+L4 B2
+
+>>Turno 1199:
+>>kcj
+A8 B10
+
+>>Turno 1200:
+>>CPU
+L4 E3
+
+>>Turno 1201:
+>>kcj
+A8 H2
+
+>>Turno 1202:
+>>CPU
+L4 F6
+
+>>Turno 1203:
+>>kcj
+M7 F1
+
+>>Turno 1204:
+>>CPU
+F3 G1
+
+>>Turno 1205:
+>>kcj
+M7 C8
+
+>>Turno 1206:
+>>CPU
+L4 E6
+
+>>Turno 1207:
+>>kcj
+A8 D3
+
+>>Turno 1208:
+>>CPU
+C3 M7
+
+>>Turno 1209:
+>>kcj
+M7 G3
+
+>>Turno 1210:
+>>CPU
+C3 N8
+
+>>Turno 1211:
+>>kcj
+A8 C3
+
+>>Turno 1212:
+>>CPU
+L4 F6
+
+>>Turno 1213:
+>>kcj
+A8 D12
+
+>>Turno 1214:
+>>CPU
+D10 H5
+
+>>Turno 1215:
+>>kcj
+N8 I4
+
+>>Turno 1216:
+>>CPU
+F3 G1
+
+>>Turno 1217:
+>>kcj
+M7 E10
+
+>>Turno 1218:
+>>CPU
+L9 E9
+
+>>Turno 1219:
+>>kcj
+A8 M7
+
+>>Turno 1220:
+>>CPU
+F3 N2
+
+>>Turno 1221:
+>>kcj
+H5 E4
+
+>>Turno 1222:
+>>CPU
+E9 H2
+
+>>Turno 1223:
+>>kcj
+I4 C11
+
+>>Turno 1224:
+>>CPU
+H5 C8
+
+>>Turno 1225:
+>>kcj
+A8 N2
+
+>>Turno 1226:
+>>CPU
+C3 C9
+
+>>Turno 1227:
+>>kcj
+M7 N9
+
+>>Turno 1228:
+>>CPU
+C3 H2
+
+>>Turno 1229:
+>>kcj
+M7 B12
+
+>>Turno 1230:
+>>CPU
+C3 L5
+
+>>Turno 1231:
+>>kcj
+E4 H9
+
+>>Turno 1232:
+>>CPU
+C8 E12
+
+>>Turno 1233:
+>>kcj
+A8 E8
+
+>>Turno 1234:
+>>CPU
+L4 A6
+
+>>Turno 1235:
+>>kcj
+H9 E3
+
+>>Turno 1236:
+>>CPU
+F3 M6
+
+>>Turno 1237:
+>>kcj
+E3 I8
+
+>>Turno 1238:
+>>CPU
+E12 L8
+
+>>Turno 1239:
+>>kcj
+A8 B10
+
+>>Turno 1240:
+>>CPU
+L8 G12
+
+>>Turno 1241:
+>>kcj
+C11 A2
+
+>>Turno 1242:
+>>CPU
+G12 D12
+
+>>Turno 1243:
+>>kcj
+M7 N4
+
+>>Turno 1244:
+>>CPU
+L4 M9
+
+>>Turno 1245:
+>>kcj
+A8 E9
+
+>>Turno 1246:
+>>CPU
+L4 C2
+
+>>Turno 1247:
+>>kcj
+A8 L11
+
+>>Turno 1248:
+>>CPU
+F3 B9
+
+>>Turno 1249:
+>>kcj
+M7 M3
+
+>>Turno 1250:
+>>CPU
+F3 A7
+
+>>Turno 1251:
+>>kcj
+M7 C8
+
+>>Turno 1252:
+>>CPU
+D12 M10
+
+>>Turno 1253:
+>>kcj
+I8 C10
+
+>>Turno 1254:
+>>CPU
+C3 N6
+
+>>Turno 1255:
+>>kcj
+C10 D4
+
+>>Turno 1256:
+>>CPU
+H2 G7
+
+>>Turno 1257:
+>>kcj
+D4 H6
+
+>>Turno 1258:
+>>CPU
+F3 A1
+
+>>Turno 1259:
+>>kcj
+A2 G10
+
+>>Turno 1260:
+>>CPU
+L4 A2
+
+>>Turno 1261:
+>>kcj
+H6 L7
+
+>>Turno 1262:
+>>CPU
+F3 E8
+
+>>Turno 1263:
+>>kcj
+M7 A12
+
+>>Turno 1264:
+>>CPU
+F3 M10
+
+>>Turno 1265:
+>>kcj
+A8 L3
+
+>>Turno 1266:
+>>CPU
+L4 L10
+
+>>Turno 1267:
+>>kcj
+G10 E7
+
+>>Turno 1268:
+>>CPU
+L4 G5
+
+>>Turno 1269:
+>>kcj
+L7 D3
+
+>>Turno 1270:
+>>CPU
+C3 I9
+
+>>Turno 1271:
+>>kcj
+E11 I9
+
+>>Turno 1272:
+>>CPU
+M10 F6
+
+>>Turno 1273:
+>>kcj
+A8 M10
+
+>>Turno 1274:
+>>CPU
+L4 M7
+
+>>Turno 1275:
+>>kcj
+A8 C2
+
+>>Turno 1276:
+>>CPU
+C3 C12
+
+>>Turno 1277:
+>>kcj
+A8 N12
+
+>>Turno 1278:
+>>CPU
+F3 N7
+
+>>Turno 1279:
+>>kcj
+M7 L1
+
+>>Turno 1280:
+>>CPU
+G7 H12
+
+>>Turno 1281:
+>>kcj
+M7 D5
+
+>>Turno 1282:
+>>CPU
+F6 F5
+
+>>Turno 1283:
+>>kcj
+A8 D3
+
+>>Turno 1284:
+>>CPU
+F3 I2
+
+>>Turno 1285:
+>>kcj
+D3 N6
+
+>>Turno 1286:
+>>CPU
+C3 B12
+
+>>Turno 1287:
+>>kcj
+I9 E1
+
+>>Turno 1288:
+>>CPU
+F3 N4
+
+>>Turno 1289:
+>>kcj
+M7 F2
+
+>>Turno 1290:
+>>CPU
+L4 M3
+
+>>Turno 1291:
+>>kcj
+M7 L4
+
+>>Turno 1292:
+>>CPU
+L4 F12
+
+>>Turno 1293:
+>>kcj
+M7 A9
+
+>>Turno 1294:
+>>CPU
+F5 F10
+
+>>Turno 1295:
+>>kcj
+M7 D9
+
+>>Turno 1296:
+>>CPU
+C3 N8
+
+>>Turno 1297:
+>>kcj
+A8 B7
+
+>>Turno 1298:
+>>CPU
+F3 C6
+
+>>Turno 1299:
+>>kcj
+E7 L3
+
+>>Turno 1300:
+>>CPU
+L4 L2
+
+>>Turno 1301:
+>>kcj
+M7 B9
+
+>>Turno 1302:
+>>CPU
+F3 H1
+
+>>Turno 1303:
+>>kcj
+M7 G5
+
+>>Turno 1304:
+>>CPU
+F3 M12
+
+>>Turno 1305:
+>>kcj
+M7 I7
+
+>>Turno 1306:
+>>CPU
+F10 B10
+
+>>Turno 1307:
+>>kcj
+L3 D10
+
+>>Turno 1308:
+>>CPU
+F3 H5
+
+>>Turno 1309:
+>>kcj
+N6 H2
+
+>>Turno 1310:
+>>CPU
+L4 C2
+
+>>Turno 1311:
+>>kcj
+M7 I10
+
+>>Turno 1312:
+>>CPU
+L4 H12
+
+>>Turno 1313:
+>>kcj
+E1 G12
+
+>>Turno 1314:
+>>CPU
+L4 B8
+
+>>Turno 1315:
+>>kcj
+G12 I12
+
+>>Turno 1316:
+>>CPU
+L4 B5
+
+>>Turno 1317:
+>>kcj
+D10 B3
+
+>>Turno 1318:
+>>CPU
+H12 D6
+
+>>Turno 1319:
+>>kcj
+A8 L11
+
+>>Turno 1320:
+>>CPU
+L4 A5
+
+>>Turno 1321:
+>>kcj
+B3 B7
+
+>>Turno 1322:
+>>CPU
+C3 H11
+
+>>Turno 1323:
+>>kcj
+M7 C6
+
+>>Turno 1324:
+>>CPU
+C3 M7
+
+>>Turno 1325:
+>>kcj
+M7 B11
+
+>>Turno 1326:
+>>CPU
+C3 N11
+
+>>Turno 1327:
+>>kcj
+A8 C9
+
+>>Turno 1328:
+>>CPU
+C3 E2
+
+>>Turno 1329:
+>>kcj
+M7 I2
+
+>>Turno 1330:
+>>CPU
+F3 G1
+
+>>Turno 1331:
+>>kcj
+B7 G9
+
+>>Turno 1332:
+>>CPU
+C3 B9
+
+>>Turno 1333:
+>>kcj
+G9 F3
+
+>>Turno 1334:
+>>CPU
+D6 E6
+
+>>Turno 1335:
+>>kcj
+A8 C8
+
+>>Turno 1336:
+>>CPU
+L4 F2
+
+>>Turno 1337:
+>>kcj
+H2 C4
+
+>>Turno 1338:
+>>CPU
+C3 A3
+
+>>Turno 1339:
+>>kcj
+C4 G3
+
+>>Turno 1340:
+>>CPU
+F3 A10
+
+>>Turno 1341:
+>>kcj
+F3 F6
+
+>>Turno 1342:
+>>CPU
+L4 B10
+
+>>Turno 1343:
+>>kcj
+A8 D12
+
+>>Turno 1344:
+>>CPU
+F3 C8
+
+>>Turno 1345:
+>>kcj
+F6 C7
+
+>>Turno 1346:
+>>CPU
+L4 D3
+
+>>Turno 1347:
+>>kcj
+M7 C2
+
+>>Turno 1348:
+>>CPU
+C3 E7
+
+>>Turno 1349:
+>>kcj
+A8 D12
+
+>>Turno 1350:
+>>CPU
+E6 E7
+
+>>Turno 1351:
+>>kcj
+A8 H3
+
+>>Turno 1352:
+>>CPU
+E7 C11
+
+>>Turno 1353:
+>>kcj
+C7 I3
+
+>>Turno 1354:
+>>CPU
+F3 I5
+
+>>Turno 1355:
+>>kcj
+I3 E6
+
+>>Turno 1356:
+>>CPU
+L4 C8
+
+>>Turno 1357:
+>>kcj
+M7 I12
+
+>>Turno 1358:
+>>CPU
+L4 M7
+
+>>Turno 1359:
+>>kcj
+E6 N8
+
+>>Turno 1360:
+>>CPU
+B10 L1
+
+>>Turno 1361:
+>>kcj
+I12 H11
+
+>>Turno 1362:
+>>CPU
+C3 I1
+
+>>Turno 1363:
+>>kcj
+N8 H4
+
+>>Turno 1364:
+>>CPU
+F3 G6
+
+>>Turno 1365:
+>>kcj
+M7 N12
+
+>>Turno 1366:
+>>CPU
+L1 F2
+
+>>Turno 1367:
+>>kcj
+H4 H3
+
+>>Turno 1368:
+>>CPU
+F2 M9
+
+>>Turno 1369:
+>>kcj
+H3 H4
+
+>>Turno 1370:
+>>CPU
+C3 C1
+
+>>Turno 1371:
+>>kcj
+H11 E1
+
+>>Turno 1372:
+>>CPU
+F3 D10
+
+>>Turno 1373:
+>>kcj
+H4 E7
+
+>>Turno 1374:
+>>CPU
+C11 L10
+
+>>Turno 1375:
+>>kcj
+E7 N7
+
+>>Turno 1376:
+>>CPU
+M9 I11
+
+>>Turno 1377:
+>>kcj
+M7 H1
+
+>>Turno 1378:
+>>CPU
+C3 F4
+
+>>Turno 1379:
+>>kcj
+E1 I6
+
+>>Turno 1380:
+>>CPU
+F3 N3
+
+>>Turno 1381:
+>>kcj
+G3 F11
+
+>>Turno 1382:
+>>CPU
+C3 N4
+
+>>Turno 1383:
+>>kcj
+A8 N3
+
+>>Turno 1384:
+>>CPU
+L10 M8
+
+>>Turno 1385:
+>>kcj
+I6 L2
+
+>>Turno 1386:
+>>CPU
+L4 N10
+
+>>Turno 1387:
+>>kcj
+N7 F8
+
+>>Turno 1388:
+>>CPU
+C3 I10
+
+>>Turno 1389:
+>>kcj
+F11 N7
+
+>>Turno 1390:
+>>CPU
+M8 F4
+
+>>Turno 1391:
+>>kcj
+M7 F12
+
+>>Turno 1392:
+>>CPU
+C3 N5
+
+>>Turno 1393:
+>>kcj
+F8 F11
+
+>>Turno 1394:
+>>CPU
+F4 B12
+
+>>Turno 1395:
+>>kcj
+M7 B1
+
+>>Turno 1396:
+>>CPU
+B12 E1
+
+>>Turno 1397:
+>>kcj
+N7 L7
+
+>>Turno 1398:
+>>CPU
+C3 M7
+
+>>Turno 1399:
+>>kcj
+M7 I3
+
+>>Turno 1400:
+>>CPU
+F3 H3
+
+>>Turno 1401:
+>>kcj
+L7 C7
+
+>>Turno 1402:
+>>CPU
+F3 B6
+
+>>Turno 1403:
+>>kcj
+A8 F1
+
+>>Turno 1404:
+>>CPU
+F3 C11
+
+>>Turno 1405:
+>>kcj
+C7 D4
+
+>>Turno 1406:
+>>CPU
+E1 E2
+
+>>Turno 1407:
+>>kcj
+L2 G9
+
+>>Turno 1408:
+>>CPU
+F3 G6
+
+>>Turno 1409:
+>>kcj
+F11 E2
+
+>>Turno 1410:
+>>CPU
+E2 E12
+
+>>Turno 1411:
+>>kcj
+A8 L4
+
+>>Turno 1412:
+>>CPU
+C3 H11
+
+>>Turno 1413:
+>>kcj
+A8 D4
+
+>>Turno 1414:
+>>CPU
+E12 H4
+
+>>Turno 1415:
+>>kcj
+M7 G3
+
+>>Turno 1416:
+>>CPU
+L4 F6
+
+>>Turno 1417:
+>>kcj
+M7 A2
+
+>>Turno 1418:
+>>CPU
+H4 E2
+
+>>Turno 1419:
+>>kcj
+D4 L3
+
+>>Turno 1420:
+>>CPU
+E2 F1
+
+>>Turno 1421:
+>>kcj
+L3 H4
+
+>>Turno 1422:
+>>CPU
+F1 B11
+
+>>Turno 1423:
+>>kcj
+G9 F5
+
+>>Turno 1424:
+>>CPU
+I11 L8
+
+>>Turno 1425:
+>>kcj
+A8 N4
+
+>>Turno 1426:
+>>CPU
+C3 L2
+
+>>Turno 1427:
+>>kcj
+E2 C6
+
+>>Turno 1428:
+>>CPU
+C3 I4
+
+>>Turno 1429:
+>>kcj
+C6 L10
+
+>>Turno 1430:
+>>CPU
+L4 B2
+
+>>Turno 1431:
+>>kcj
+L10 N8
+
+>>Turno 1432:
+>>CPU
+L4 C12
+
+>>Turno 1433:
+>>kcj
+M7 B1
+
+>>Turno 1434:
+>>CPU
+F3 C4
+
+>>Turno 1435:
+>>kcj
+H4 F10
+
+>>Turno 1436:
+>>CPU
+L4 L9
+
+>>Turno 1437:
+>>kcj
+M7 F4
+
+>>Turno 1438:
+>>CPU
+F3 D12
+
+>>Turno 1439:
+>>kcj
+F5 I8
+
+>>Turno 1440:
+>>CPU
+L4 D4
+
+>>Turno 1441:
+>>kcj
+N8 N11
+
+>>Turno 1442:
+>>CPU
+B11 G8
+
+>>Turno 1443:
+>>kcj
+I8 H5
+
+>>Turno 1444:
+>>CPU
+G8 M10
+
+>>Turno 1445:
+>>kcj
+A8 E8
+
+>>Turno 1446:
+>>CPU
+L4 N6
+
+>>Turno 1447:
+>>kcj
+F10 C8
+
+>>Turno 1448:
+>>CPU
+C3 N8
+
+>>Turno 1449:
+>>kcj
+H5 I5
+
+>>Turno 1450:
+>>CPU
+L4 A1
+
+>>Turno 1451:
+>>kcj
+A8 M8
+
+>>Turno 1452:
+>>CPU
+C3 B3
+
+>>Turno 1453:
+>>kcj
+I5 E8
+
+>>Turno 1454:
+>>CPU
+L8 I8
+
+>>Turno 1455:
+>>kcj
+A8 L6
+
+>>Turno 1456:
+>>CPU
+I8 C9
+
+>>Turno 1457:
+>>kcj
+E8 L11
+
+>>Turno 1458:
+>>CPU
+C9 H4
+
+>>Turno 1459:
+>>kcj
+L11 G3
+
+>>Turno 1460:
+>>CPU
+H4 C12
+
+>>Turno 1461:
+>>kcj
+N11 A3
+
+>>Turno 1462:
+>>CPU
+M10 H11
+
+>>Turno 1463:
+>>kcj
+M7 F3
+
+>>Turno 1464:
+>>CPU
+C12 M7
+
+>>Turno 1465:
+>>kcj
+A3 I9
+
+>>Turno 1466:
+>>CPU
+C3 I2
+
+>>Turno 1467:
+>>kcj
+A8 M8
+
+>>Turno 1468:
+>>CPU
+F3 E6
+
+>>Turno 1469:
+>>kcj
+A8 A1
+
+>>Turno 1470:
+>>CPU
+C3 F1
+
+>>Turno 1471:
+>>kcj
+M7 D1
+
+>>Turno 1472:
+>>CPU
+F3 H8
+
+>>Turno 1473:
+>>kcj
+M7 D1
+
+>>Turno 1474:
+>>CPU
+C3 N6
+
+>>Turno 1475:
+>>kcj
+M7 G12
+
+>>Turno 1476:
+>>CPU
+F3 B8
+
+>>Turno 1477:
+>>kcj
+M7 C3
+
+>>Turno 1478:
+>>CPU
+L4 B12
+
+>>Turno 1479:
+>>kcj
+G3 E2
+
+>>Turno 1480:
+>>CPU
+C3 D2
+
+>>Turno 1481:
+>>kcj
+M7 N11
+
+>>Turno 1482:
+>>CPU
+F3 F11
+
+>>Turno 1483:
+>>kcj
+C8 B4
+
+>>Turno 1484:
+>>CPU
+F3 A1
+
+>>Turno 1485:
+>>kcj
+I9 E5
+
+>>Turno 1486:
+>>CPU
+H11 G9
+
+>>Turno 1487:
+>>kcj
+A8 H2
+
+>>Turno 1488:
+>>CPU
+C3 L12
+
+>>Turno 1489:
+>>kcj
+B4 G3
+
+>>Turno 1490:
+>>CPU
+C3 A12
+
+>>Turno 1491:
+>>kcj
+M7 D3
+
+>>Turno 1492:
+>>CPU
+M7 M9
+
+>>Turno 1493:
+>>kcj
+E5 N4
+
+>>Turno 1494:
+>>CPU
+M9 B8
+
+>>Turno 1495:
+>>kcj
+E2
+
+>>Turno 1496:
+>>CPU
+L4 B5
+
+>>Turno 1497:
+>>kcj
+A8 A1
+
+>>Turno 1498:
+>>CPU
+G9 G5
+
+>>Turno 1499:
+>>kcj
+M7 C5
+
+>>Turno 1500:
+>>CPU
+L4 I4
+
+>>Turno 1501:
+>>kcj
+M7 D1
+
+>>Turno 1502:
+>>CPU
+L4 G3
+
+>>Turno 1503:
+>>kcj
+N4 L7
+
+>>Turno 1504:
+>>CPU
+L4 E11
+
+>>Turno 1505:
+>>kcj
+A8 E1
+
+>>Turno 1506:
+>>CPU
+G5 B9
+
+>>Turno 1507:
+>>kcj
+A8 B11
+
+>>Turno 1508:
+>>CPU
+L4 D9
+
+>>Turno 1509:
+>>kcj
+L7 E7
+
+>>Turno 1510:
+>>CPU
+L4 D1
+
+>>Turno 1511:
+>>kcj
+A8 G10
+
+>>Turno 1512:
+>>CPU
+L4 B4
+
+>>Turno 1513:
+>>kcj
+G3 I8
+
+>>Turno 1514:
+>>CPU
+F3 L12
+
+>>Turno 1515:
+>>kcj
+M7 I5
+
+>>Turno 1516:
+>>CPU
+F3 H7
+
+>>Turno 1517:
+>>kcj
+M7 H8
+
+>>Turno 1518:
+>>CPU
+L4 F2
+
+>>Turno 1519:
+>>kcj
+A8 G11
+
+>>Turno 1520:
+>>CPU
+B8 L12
+
+>>Turno 1521:
+>>kcj
+A8 F1
+
+>>Turno 1522:
+>>CPU
+L4 D4
+
+>>Turno 1523:
+>>kcj
+E7 D7
+
+>>Turno 1524:
+>>CPU
+L4 A1
+
+>>Turno 1525:
+>>kcj
+I8 E6
+
+>>Turno 1526:
+>>CPU
+C3 A11
+
+>>Turno 1527:
+>>kcj
+E2 B1
+
+>>Turno 1528:
+>>CPU
+F3 M11
+
+>>Turno 1529:
+>>kcj
+E6 E5
+
+>>Turno 1530:
+>>CPU
+L12 F1
+
+>>Turno 1531:
+>>kcj
+E5 A4
+
+>>Turno 1532:
+>>CPU
+C3 L11
+
+>>Turno 1533:
+>>kcj
+M7 E6
+
+>>Turno 1534:
+>>CPU
+L4 H7
+
+>>Turno 1535:
+>>kcj
+D7 F2
+
+>>Turno 1536:
+>>CPU
+F1 I11
+
+>>Turno 1537:
+>>kcj
+M7 M8
+
+>>Turno 1538:
+>>CPU
+C3 D3
+
+>>Turno 1539:
+>>kcj
+B1 H4
+
+>>Turno 1540:
+>>CPU
+B9 H10
+
+>>Turno 1541:
+>>kcj
+F2 I11
+
+>>Turno 1542:
+>>CPU
+C3 G5
+
+>>Turno 1543:
+>>kcj
+I11 C5
+
+>>Turno 1544:
+>>CPU
+C3 H6
+
+>>Turno 1545:
+>>kcj
+M7 A6
+
+>>Turno 1546:
+>>CPU
+L4 I8
+
+>>Turno 1547:
+>>kcj
+M7 L1
+
+>>Turno 1548:
+>>CPU
+C3 H12
+
+>>Turno 1549:
+>>kcj
+C5 L11
+
+>>Turno 1550:
+>>CPU
+L4 C4
+
+>>Turno 1551:
+>>kcj
+M7 B5
+
+>>Turno 1552:
+>>CPU
+L4 N11
+
+>>Turno 1553:
+>>kcj
+A8 A4
+
+>>Turno 1554:
+>>CPU
+L4 A5
+
+>>Turno 1555:
+>>kcj
+L11 C7
+
+>>Turno 1556:
+>>CPU
+L4 B4
+
+>>Turno 1557:
+>>kcj
+C7 F7
+
+>>Turno 1558:
+>>CPU
+H10 E4
+
+>>Turno 1559:
+>>kcj
+A8 I11
+
+>>Turno 1560:
+>>CPU
+C3 M1
+
+>>Turno 1561:
+>>kcj
+M7 E4
+
+>>Turno 1562:
+>>CPU
+F3 D5
+
+>>Turno 1563:
+>>kcj
+F7 G8
+
+>>Turno 1564:
+>>CPU
+L4 C8
+
+>>Turno 1565:
+>>kcj
+M7 A10
+
+>>Turno 1566:
+>>CPU
+C3 D9
+
+>>Turno 1567:
+>>kcj
+M7 C1
+
+>>Turno 1568:
+>>CPU
+L4 M1
+
+>>Turno 1569:
+>>kcj
+M7 M1
+
+>>Turno 1570:
+>>CPU
+L4 B1
+
+>>Turno 1571:
+>>kcj
+A4 H8
+
+>>Turno 1572:
+>>CPU
+E4 C10
+
+>>Turno 1573:
+>>kcj
+H8 H2
+
+>>Turno 1574:
+>>CPU
+I11 E4
+
+>>Turno 1575:
+>>kcj
+M7 F3
+
+>>Turno 1576:
+>>CPU
+F3 L2
+
+>>Turno 1577:
+>>kcj
+H4 H6
+
+>>Turno 1578:
+>>CPU
+E4 B7
+
+>>Turno 1579:
+>>kcj
+A8 A12
+
+>>Turno 1580:
+>>CPU
+C3 E2
+
+>>Turno 1581:
+>>kcj
+A8 C10
+
+>>Turno 1582:
+>>CPU
+B7 I10
+
+>>Turno 1583:
+>>kcj
+M7 F9
+
+>>Turno 1584:
+>>CPU
+F3 H9
+
+>>Turno 1585:
+>>kcj
+A8 I3
+
+>>Turno 1586:
+>>CPU
+C3 I7
+
+>>Turno 1587:
+>>kcj
+H6 E5
+
+>>Turno 1588:
+>>CPU
+I10 F10
+
+>>Turno 1589:
+>>kcj
+G8 M11
+
+>>Turno 1590:
+>>CPU
+F10 G1
+
+>>Turno 1591:
+>>kcj
+M11 H8
+
+>>Turno 1592:
+>>CPU
+L4 E2
+
+>>Turno 1593:
+>>kcj
+H8 E7
+
+>>Turno 1594:
+>>CPU
+L4 F1
+
+>>Turno 1595:
+>>kcj
+A8 C9
+
+>>Turno 1596:
+>>CPU
+C3 E10
+
+>>Turno 1597:
+>>kcj
+M7 M3
+
+>>Turno 1598:
+>>CPU
+L4 M10
+
+>>Turno 1599:
+>>kcj
+M7 B2
+
+>>Turno 1600:
+>>CPU
+C3 I8
+
+>>Turno 1601:
+>>kcj
+E5 F3
+
+>>Turno 1602:
+>>CPU
+C10 D8
+
+>>Turno 1603:
+>>kcj
+F3 I10
+
+>>Turno 1604:
+>>CPU
+C3 L11
+
+>>Turno 1605:
+>>kcj
+E7 C6
+
+>>Turno 1606:
+>>CPU
+C3 E3
+
+>>Turno 1607:
+>>kcj
+C6 L5
+
+>>Turno 1608:
+>>CPU
+L4 D5
+
+>>Turno 1609:
+>>kcj
+M7 G8
+
+>>Turno 1610:
+>>CPU
+F3 A4
+
+>>Turno 1611:
+>>kcj
+L5 A2
+
+>>Turno 1612:
+>>CPU
+D8 D7
+
+>>Turno 1613:
+>>kcj
+A8 A12
+
+>>Turno 1614:
+>>CPU
+G1 E4
+
+>>Turno 1615:
+>>kcj
+M7 C11
+
+>>Turno 1616:
+>>CPU
+E4 F6
+
+>>Turno 1617:
+>>kcj
+A8 F6
+
+>>Turno 1618:
+>>CPU
+L4 G6
+
+>>Turno 1619:
+>>kcj
+H2 E5
+
+>>Turno 1620:
+>>CPU
+L4 F1
+
+>>Turno 1621:
+>>kcj
+M7 N3
+
+>>Turno 1622:
+>>CPU
+F3 M1
+
+>>Turno 1623:
+>>kcj
+I10 D11
+
+>>Turno 1624:
+>>CPU
+L4 E9
+
+>>Turno 1625:
+>>kcj
+E5 H11
+
+>>Turno 1626:
+>>CPU
+F3 N2
+
+>>Turno 1627:
+>>kcj
+D11 E2
+
+>>Turno 1628:
+>>CPU
+F6 F8
+
+>>Turno 1629:
+>>kcj
+M7 N3
+
+>>Turno 1630:
+>>CPU
+C3 E2
+
+>>Turno 1631:
+>>kcj
+A8 F8
+
+>>Turno 1632:
+>>CPU
+C3 M11
+
+>>Turno 1633:
+>>kcj
+A8 E2
+
+>>Turno 1634:
+>>CPU
+D7 H12
+
+>>Turno 1635:
+>>kcj
+H11 N6
+
+>>Turno 1636:
+>>CPU
+H12 L12
+
+>>Turno 1637:
+>>kcj
+M7 G10
+
+>>Turno 1638:
+>>CPU
+F3 E8
+
+>>Turno 1639:
+>>kcj
+M7 D12
+
+>>Turno 1640:
+>>CPU
+F3 H3
+
+>>Turno 1641:
+>>kcj
+A2 H4
+
+>>Turno 1642:
+>>CPU
+L4 I4
+
+>>Turno 1643:
+>>kcj
+A8 H9
+
+>>Turno 1644:
+>>CPU
+C3 E3
+
+>>Turno 1645:
+>>kcj
+M7 M9
+
+>>Turno 1646:
+>>CPU
+L4 F5
+
+>>Turno 1647:
+>>kcj
+E2 C6
+
+>>Turno 1648:
+>>CPU
+L12 E2
+
+>>Turno 1649:
+>>kcj
+N6 M11
+
+>>Turno 1650:
+>>CPU
+L4 A12
+
+>>Turno 1651:
+>>kcj
+M11 N11
+
+>>Turno 1652:
+>>CPU
+F3 H5
+
+>>Turno 1653:
+>>kcj
+C6 D7
+
+>>Turno 1654:
+>>CPU
+C3 M7
+
+>>Turno 1655:
+>>kcj
+M7 M3
+
+>>Turno 1656:
+>>CPU
+C3 I9
+
+>>Turno 1657:
+>>kcj
+H4 H6
+
+>>Turno 1658:
+>>CPU
+L4 L9
+
+>>Turno 1659:
+>>kcj
+D7 B5
+
+>>Turno 1660:
+>>CPU
+C3 H1
+
+>>Turno 1661:
+>>kcj
+A8 C10
+
+>>Turno 1662:
+>>CPU
+C3 B9
+
+>>Turno 1663:
+>>kcj
+H6 B9
+
+>>Turno 1664:
+>>CPU
+F3 I7
+
+>>Turno 1665:
+>>kcj
+B5 G9
+
+>>Turno 1666:
+>>CPU
+L4 C7
+
+>>Turno 1667:
+>>kcj
+M7 L4
+
+>>Turno 1668:
+>>CPU
+L4 B6
+
+>>Turno 1669:
+>>kcj
+M7 B6
+
+>>Turno 1670:
+>>CPU
+F3 L3
+
+>>Turno 1671:
+>>kcj
+A8 F7
+
+>>Turno 1672:
+>>CPU
+L4 D1
+
+>>Turno 1673:
+>>kcj
+M7 D9
+
+>>Turno 1674:
+>>CPU
+L4 G10
+
+>>Turno 1675:
+>>kcj
+M7 C8
+
+>>Turno 1676:
+>>CPU
+F3 D4
+
+>>Turno 1677:
+>>kcj
+B9 B8
+
+>>Turno 1678:
+>>CPU
+C3 B7
+
+>>Turno 1679:
+>>kcj
+A8 G1
+
+>>Turno 1680:
+>>CPU
+F3 G7
+
+>>Turno 1681:
+>>kcj
+G9 F5
+
+>>Turno 1682:
+>>CPU
+E2 I10
+
+>>Turno 1683:
+>>kcj
+M7 I1
+
+>>Turno 1684:
+>>CPU
+C3 E10
+
+>>Turno 1685:
+>>kcj
+M7 D8
+
+>>Turno 1686:
+>>CPU
+L4 D6
+
+>>Turno 1687:
+>>kcj
+A8 L12
+
+>>Turno 1688:
+>>CPU
+I10 E11
+
+>>Turno 1689:
+>>kcj
+N11 A4
+
+>>Turno 1690:
+>>CPU
+L4 L2
+
+>>Turno 1691:
+>>kcj
+A4 H8
+
+>>Turno 1692:
+>>CPU
+C3 L11
+
+>>Turno 1693:
+>>kcj
+B8 L11
+
+>>Turno 1694:
+>>CPU
+E11 D11
+
+>>Turno 1695:
+>>kcj
+H8 B9
+
+>>Turno 1696:
+>>CPU
+D11 H4
+
+>>Turno 1697:
+>>kcj
+F5 G11
+
+>>Turno 1698:
+>>CPU
+F3 F11
+
+>>Turno 1699:
+>>kcj
+M7 G9
+
+>>Turno 1700:
+>>CPU
+H4 B12
+
+>>Turno 1701:
+>>kcj
+B9 N11
+
+>>Turno 1702:
+>>CPU
+L4 N5
+
+>>Turno 1703:
+>>kcj
+A8 D6
+
+>>Turno 1704:
+>>CPU
+L4 F6
+
+>>Turno 1705:
+>>kcj
+N11 C2
+
+>>Turno 1706:
+>>CPU
+L4 D5
+
+>>Turno 1707:
+>>kcj
+L11 I8
+
+>>Turno 1708:
+>>CPU
+F3 N8
+
+>>Turno 1709:
+>>kcj
+M7 I9
+
+>>Turno 1710:
+>>CPU
+F3 F11
+
+>>Turno 1711:
+>>kcj
+A8 C3
+
+>>Turno 1712:
+>>CPU
+C3 G1
+
+>>Turno 1713:
+>>kcj
+A8 A9
+
+>>Turno 1714:
+>>CPU
+F3 F10
+
+>>Turno 1715:
+>>kcj
+A8 C11
+
+>>Turno 1716:
+>>CPU
+L4 E1
+
+>>Turno 1717:
+>>kcj
+M7 B11
+
+>>Turno 1718:
+>>CPU
+F3 E5
+
+>>Turno 1719:
+>>kcj
+C2 E2
+
+>>Turno 1720:
+>>CPU
+F8 I9
+
+>>Turno 1721:
+>>kcj
+M7 M12
+
+>>Turno 1722:
+>>CPU
+C3 F4
+
+>>Turno 1723:
+>>kcj
+A8 D10
+
+>>Turno 1724:
+>>CPU
+C3 M10
+
+>>Turno 1725:
+>>kcj
+A8 B10
+
+>>Turno 1726:
+>>CPU
+L4 G11
+
+>>Turno 1727:
+>>kcj
+M7 L6
+
+>>Turno 1728:
+>>CPU
+F3 A7
+
+>>Turno 1729:
+>>kcj
+A8 E8
+
+>>Turno 1730:
+>>CPU
+I9 L10
+
+>>Turno 1731:
+>>kcj
+E2
+
+>>Turno 1732:
+>>CPU
+B12 G9
+
+>>Turno 1733:
+>>kcj
+M7 D8
+
+>>Turno 1734:
+>>CPU
+L4 H8
+
+>>Turno 1735:
+>>kcj
+I8 F6
+
+>>Turno 1736:
+>>CPU
+C3 G8
+
+>>Turno 1737:
+>>kcj
+M7 E7
+
+>>Turno 1738:
+>>CPU
+L4 M8
+
+>>Turno 1739:
+>>kcj
+E2 F11
+
+>>Turno 1740:
+>>CPU
+F3 M11
+
+>>Turno 1741:
+>>kcj
+A8 I1
+
+>>Turno 1742:
+>>CPU
+F3 F6
+
+>>Turno 1743:
+>>kcj
+M7 N1
+
+>>Turno 1744:
+>>CPU
+L4 L12
+
+>>Turno 1745:
+>>kcj
+M7 F11
+
+>>Turno 1746:
+>>CPU
+L4 C5
+
+>>Turno 1747:
+>>kcj
+A8 E7
+
+>>Turno 1748:
+>>CPU
+C3 N6
+
+>>Turno 1749:
+>>kcj
+A8 B1
+
+>>Turno 1750:
+>>CPU
+L4 E12
+
+>>Turno 1751:
+>>kcj
+A8 H3
+
+>>Turno 1752:
+>>CPU
+L4 G10
+
+>>Turno 1753:
+>>kcj
+A8 E5
+
+>>Turno 1754:
+>>CPU
+L4 E9
+
+>>Turno 1755:
+>>kcj
+M7 D10
+
+>>Turno 1756:
+>>CPU
+F3 L11
+
+>>Turno 1757:
+>>kcj
+A8 C3
+
+>>Turno 1758:
+>>CPU
+L4 N8
+
+>>Turno 1759:
+>>kcj
+A8 A3
+
+>>Turno 1760:
+>>CPU
+F3 M11
+
+>>Turno 1761:
+>>kcj
+A8 L7
+
+>>Turno 1762:
+>>CPU
+L10 H2
+
+>>Turno 1763:
+>>kcj
+F11 F2
+
+>>Turno 1764:
+>>CPU
+H2 C9
+
+>>Turno 1765:
+>>kcj
+A8 C10
+
+>>Turno 1766:
+>>CPU
+G9 D8
+
+>>Turno 1767:
+>>kcj
+M7 D5
+
+>>Turno 1768:
+>>CPU
+C3 D8
+
+>>Turno 1769:
+>>kcj
+F2 M2
+
+>>Turno 1770:
+>>CPU
+L4 I12
+
+>>Turno 1771:
+>>kcj
+M7 N2
+
+>>Turno 1772:
+>>CPU
+C9 C6
+
+>>Turno 1773:
+>>kcj
+A8 E5
+
+>>Turno 1774:
+>>CPU
+F3 G1
+
+>>Turno 1775:
+>>kcj
+A8 I10
+
+>>Turno 1776:
+>>CPU
+L4 N4
+
+>>Turno 1777:
+>>kcj
+M7 G4
+
+>>Turno 1778:
+>>CPU
+C3 D4
+
+>>Turno 1779:
+>>kcj
+M2 I2
+
+>>Turno 1780:
+>>CPU
+C3 D11
+
+>>Turno 1781:
+>>kcj
+A8 C7
+
+>>Turno 1782:
+>>CPU
+L4 H1
+
+>>Turno 1783:
+>>kcj
+I2 E7
+
+>>Turno 1784:
+>>CPU
+L4 B7
+
+>>Turno 1785:
+>>kcj
+M7 N2
+
+>>Turno 1786:
+>>CPU
+F3 E6
+
+>>Turno 1787:
+>>kcj
+A8 N10
+
+>>Turno 1788:
+>>CPU
+F3 B9
+
+>>Turno 1789:
+>>kcj
+M7 F1
+
+>>Turno 1790:
+>>CPU
+D8 D10
+
+>>Turno 1791:
+>>kcj
+M7 C8
+
+>>Turno 1792:
+>>CPU
+C6 E7
+
+>>Turno 1793:
+>>kcj
+M7 B6
+
+>>Turno 1794:
+>>CPU
+E7 I1
+
+>>Turno 1795:
+>>kcj
+M7 H8
+
+>>Turno 1796:
+>>CPU
+L4 L11
+
+>>Turno 1797:
+>>kcj
+A8 I7
+
+>>Turno 1798:
+>>CPU
+L4 M8
+
+>>Turno 1799:
+>>kcj
+M7 A7
+
+>>Turno 1800:
+>>CPU
+L4 F8
+
+>>Turno 1801:
+>>kcj
+M7 N5
+
+>>Turno 1802:
+>>CPU
+D10 B12
+
+>>Turno 1803:
+>>kcj
+M7 C12
+
+>>Turno 1804:
+>>CPU
+L4 N5
+
+>>Turno 1805:
+>>kcj
+A8 I9
+
+>>Turno 1806:
+>>CPU
+C3 F9
+
+>>Turno 1807:
+>>kcj
+A8 A4
+
+>>Turno 1808:
+>>CPU
+L4 E6
+
+>>Turno 1809:
+>>kcj
+A8 F10
+
+>>Turno 1810:
+>>CPU
+C3 M10
+
+>>Turno 1811:
+>>kcj
+A8 C1
+
+>>Turno 1812:
+>>CPU
+L4 H11
+
+>>Turno 1813:
+>>kcj
+M7 D8
+
+>>Turno 1814:
+>>CPU
+F3 M8
+
+>>Turno 1815:
+>>kcj
+A8 H1
+
+>>Turno 1816:
+>>CPU
+F3 A1
+
+>>Turno 1817:
+>>kcj
+A8 D5
+
+>>Turno 1818:
+>>CPU
+B12 G2
+
+>>Turno 1819:
+>>kcj
+A8 C1
+
+>>Turno 1820:
+>>CPU
+F3 D11
+
+>>Turno 1821:
+>>kcj
+A8 F3
+
+>>Turno 1822:
+>>CPU
+I1 G5
+
+>>Turno 1823:
+>>kcj
+A8 C12
+
+>>Turno 1824:
+>>CPU
+C3 H3
+
+>>Turno 1825:
+>>kcj
+A8 L6
+
+>>Turno 1826:
+>>CPU
+G5 B8
+
+>>Turno 1827:
+>>kcj
+M7 N3
+
+>>Turno 1828:
+>>CPU
+B8 B6
+
+>>Turno 1829:
+>>kcj
+A8 C4
+
+>>Turno 1830:
+>>CPU
+G2 B7
+
+>>Turno 1831:
+>>kcj
+M7 L5
+
+>>Turno 1832:
+>>CPU
+C3 D10
+
+>>Turno 1833:
+>>kcj
+A8 E2
+
+>>Turno 1834:
+>>CPU
+B7 F1
+
+>>Turno 1835:
+>>kcj
+M7 D6
+
+>>Turno 1836:
+>>CPU
+L4 H7
+
+>>Turno 1837:
+>>kcj
+A8 F8
+
+>>Turno 1838:
+>>CPU
+L4 D2
+
+>>Turno 1839:
+>>kcj
+A8 B3
+
+>>Turno 1840:
+>>CPU
+C3 I4
+
+>>Turno 1841:
+>>kcj
+A8 L3
+
+>>Turno 1842:
+>>CPU
+L4 C2
+
+>>Turno 1843:
+>>kcj
+M7 B9
+
+>>Turno 1844:
+>>CPU
+B6 G4
+
+>>Turno 1845:
+>>kcj
+M7 I7
+
+>>Turno 1846:
+>>CPU
+G4 D6
+
+>>Turno 1847:
+>>kcj
+M7 A9
+
+>>Turno 1848:
+>>CPU
+C3 H9
+
+>>Turno 1849:
+>>kcj
+A8 I11
+
+>>Turno 1850:
+>>CPU
+F1 E7
+
+>>Turno 1851:
+>>kcj
+M7 M2
+
+>>Turno 1852:
+>>CPU
+L4 I12
+
+>>Turno 1853:
+>>kcj
+A8 A10
+
+>>Turno 1854:
+>>CPU
+C3 D6
+
+>>Turno 1855:
+>>kcj
+A8 I7
+
+>>Turno 1856:
+>>CPU
+C3 A12
+
+>>Turno 1857:
+>>kcj
+A8 M6
+
+>>Turno 1858:
+>>CPU
+L4 E9
+
+>>Turno 1859:
+>>kcj
+M7 G7
+
+>>Turno 1860:
+>>CPU
+E7 G5
+
+>>Turno 1861:
+>>kcj
+M7 G7
+
+>>Turno 1862:
+>>CPU
+F3 C2
+
+>>Turno 1863:
+>>kcj
+M7 G6
+
+>>Turno 1864:
+>>CPU
+G5 H1
+
+>>Turno 1865:
+>>kcj
+M7 L3
+
+>>Turno 1866:
+>>CPU
+H1 E8
+
+>>Turno 1867:
+>>kcj
+M7 F3
+
+>>Turno 1868:
+>>CPU
+F3 H9
+
+>>Turno 1869:
+>>kcj
+A8 H4
+
+>>Turno 1870:
+>>CPU
+L4 G12
+
+>>Turno 1871:
+>>kcj
+A8 H12
+
+>>Turno 1872:
+>>CPU
+L4 E6
+
+>>Turno 1873:
+>>kcj
+M7 L4
+
+>>Turno 1874:
+>>CPU
+F3 A3
+
+>>Turno 1875:
+>>kcj
+M7 C3
+
+>>Turno 1876:
+>>CPU
+C3 E8
+
+>>Turno 1877:
+>>kcj
+A8 L4
+
+>>Turno 1878:
+>>CPU
+C3 N9
+
+>>Turno 1879:
+>>kcj
+A8 B9
+
+>>Turno 1880:
+>>CPU
+D6 G9
+
+>>Turno 1881:
+>>kcj
+M7 N12
+
+>>Turno 1882:
+>>CPU
+L4 F6
+
+>>Turno 1883:
+>>kcj
+M7 I7
+
+>>Turno 1884:
+>>CPU
+C3 L11
+
+>>Turno 1885:
+>>kcj
+M7 I9
+
+>>Turno 1886:
+>>CPU
+E8 G5
+
+>>Turno 1887:
+>>kcj
+M7 F10
+
+>>Turno 1888:
+>>CPU
+C3 D10
+
+>>Turno 1889:
+>>kcj
+M7 L5
+
+>>Turno 1890:
+>>CPU
+F3 H7
+
+>>Turno 1891:
+>>kcj
+A8 C3
+
+>>Turno 1892:
+>>CPU
+F3 H4
+
+>>Turno 1893:
+>>kcj
+M7 I10
+
+>>Turno 1894:
+>>CPU
+F3 D2
+
+>>Turno 1895:
+>>kcj
+M7 G3
+
+>>Turno 1896:
+>>CPU
+C3 I6
+
+>>Turno 1897:
+>>kcj
+A8 C3
+
+>>Turno 1898:
+>>CPU
+L4 B11
+
+>>Turno 1899:
+>>kcj
+M7 N9
+
+>>Turno 1900:
+>>CPU
+F3 E9
+
+>>Turno 1901:
+>>kcj
+A8 H6
+
+>>Turno 1902:
+>>CPU
+F3 E3
+
+>>Turno 1903:
+>>kcj
+A8 D6
+
+>>Turno 1904:
+>>CPU
+G5 F8
+
+>>Turno 1905:
+>>kcj
+M7 D7
+
+>>Turno 1906:
+>>CPU
+F3 E3
+
+>>Turno 1907:
+>>kcj
+M7 B1
+
+>>Turno 1908:
+>>CPU
+F3 I11
+
+>>Turno 1909:
+>>kcj
+M7 C2
+
+>>Turno 1910:
+>>CPU
+C3 D5
+
+>>Turno 1911:
+>>kcj
+A8 N6
+
+>>Turno 1912:
+>>CPU
+C3 C4
+
+>>Turno 1913:
+>>kcj
+M7 G7
+
+>>Turno 1914:
+>>CPU
+F3 N3
+
+>>Turno 1915:
+>>kcj
+A8 M7
+
+>>Turno 1916:
+>>CPU
+L4 B1
+
+>>Turno 1917:
+>>kcj
+A8 B7
+
+>>Turno 1918:
+>>CPU
+F3 A4
+
+>>Turno 1919:
+>>kcj
+M7 G8
+
+>>Turno 1920:
+>>CPU
+L4 A5
+
+>>Turno 1921:
+>>kcj
+A8 D1
+
+>>Turno 1922:
+>>CPU
+F8 G11
+
+>>Turno 1923:
+>>kcj
+A8 M1
+
+>>Turno 1924:
+>>CPU
+F3 E2
+
+>>Turno 1925:
+>>kcj
+M7 A9
+
+>>Turno 1926:
+>>CPU
+G9 E10
+
+>>Turno 1927:
+>>kcj
+M7 I8
+
+>>Turno 1928:
+>>CPU
+C3 M1
+
+>>Turno 1929:
+>>kcj
+M7 M10
+
+>>Turno 1930:
+>>CPU
+E10 C6
+
+>>Turno 1931:
+>>kcj
+A8 L6
+
+>>Turno 1932:
+>>CPU
+G11 E8
+
+>>Turno 1933:
+>>kcj
+A8 E6
+
+>>Turno 1934:
+>>CPU
+C6 E7
+
+>>Turno 1935:
+>>kcj
+A8 H9
+
+>>Turno 1936:
+>>CPU
+F3 A8
+
+>>Turno 1937:
+>>kcj
+A8 F6
+
+>>Turno 1938:
+>>CPU
+L4 B7
+
+>>Turno 1939:
+>>kcj
+M7 I8
+
+>>Turno 1940:
+>>CPU
+E7 B9
+
+>>Turno 1941:
+>>kcj
+M7 D9
+
+>>Turno 1942:
+>>CPU
+L4 D5
+
+>>Turno 1943:
+>>kcj
+A8 L6
+
+>>Turno 1944:
+>>CPU
+E8 M9
+
+>>Turno 1945:
+>>kcj
+M7 I7
+
+>>Turno 1946:
+>>CPU
+L4 H4
+
+>>Turno 1947:
+>>kcj
+A8 D8
+
+>>Turno 1948:
+>>CPU
+F3 H9
+
+>>Turno 1949:
+>>kcj
+A8 E8
+
+>>Turno 1950:
+>>CPU
+M9 H6
+
+>>Turno 1951:
+>>kcj
+M7 L2
+
+>>Turno 1952:
+>>CPU
+C3 B3
+
+>>Turno 1953:
+>>kcj
+M7 L11
+
+>>Turno 1954:
+>>CPU
+C3 G5
+
+>>Turno 1955:
+>>kcj
+M7 L10
+
+>>Turno 1956:
+>>CPU
+F3 F2
+
+>>Turno 1957:
+>>kcj
+M7 F7
+
+>>Turno 1958:
+>>CPU
+F3 N11
+
+>>Turno 1959:
+>>kcj
+M7 I11
+
+>>Turno 1960:
+>>CPU
+H6 L3
+
+>>Turno 1961:
+>>kcj
+M7 F11
+
+>>Turno 1962:
+>>CPU
+F3 G11
+
+>>Turno 1963:
+>>kcj
+M7 F12
+
+>>Turno 1964:
+>>CPU
+L3 C6
+
+>>Turno 1965:
+>>kcj
+M7 H3
+
+>>Turno 1966:
+>>CPU
+C3 N3
+
+>>Turno 1967:
+>>kcj
+M7 B5
+
+>>Turno 1968:
+>>CPU
+B9 G6
+
+>>Turno 1969:
+>>kcj
+M7 B3
+
+>>Turno 1970:
+>>CPU
+C3 A8
+
+>>Turno 1971:
+>>kcj
+M7 N3
+
+>>Turno 1972:
+>>CPU
+F3 H2
+
+>>Turno 1973:
+>>kcj
+M7 B7
+
+>>Turno 1974:
+>>CPU
+C3 E7
+
+>>Turno 1975:
+>>kcj
+M7 C2
+
+>>Turno 1976:
+>>CPU
+F3 A8
+
+>>Turno 1977:
+>>kcj
+M7 C8
+
+>>Turno 1978:
+>>CPU
+C6 D7
+
+>>Turno 1979:
+>>kcj
+A8 L9
+
+>>Turno 1980:
+>>CPU
+F3 C2
+
+>>Turno 1981:
+>>kcj
+M7 N1
+
+>>Turno 1982:
+>>CPU
+F3 B9
+
+>>Turno 1983:
+>>kcj
+A8 E5
+
+>>Turno 1984:
+>>CPU
+D7 C10
+
+>>Turno 1985:
+>>kcj
+A8 H1
+
+>>Turno 1986:
+>>CPU
+C3 D8
+
+>>Turno 1987:
+>>kcj
+M7 N1
+
+>>Turno 1988:
+>>CPU
+C10 M7
+
+>>Turno 1989:
+>>kcj
+M7 H5
+
+>>Turno 1990:
+>>CPU
+F3 D7
+
+>>Turno 1991:
+>>kcj
+M7 I9
+
+>>Turno 1992:
+>>CPU
+F3 H2
+
+>>Turno 1993:
+>>kcj
+M7 H1
+
+>>Turno 1994:
+>>CPU
+C3 I11
+
+>>Turno 1995:
+>>kcj
+M7 A6
+
+>>Turno 1996:
+>>CPU
+M7 G2
+
+>>Turno 1997:
+>>kcj
+M7 H1
+
+>>Turno 1998:
+>>CPU
+F3 M11
+
+>>Turno 1999:
+>>kcj
+M7 B3
+
+>>Turno 2000:
+>>CPU
+F3 I8
+
+>>Turno 2001:
+>>kcj
+M7 A1
+
+>>Turno 2002:
+>>CPU
+C3 H9
+
+>>Turno 2003:
+>>kcj
+A8 M3
+
+>>Turno 2004:
+>>CPU
+C3 N2
+
+>>Turno 2005:
+>>kcj
+M7 E11
+
+>>Turno 2006:
+>>CPU
+C3 E3
+
+>>Turno 2007:
+>>kcj
+A8 L7
+
+>>Turno 2008:
+>>CPU
+G6 H7
+
+>>Turno 2009:
+>>kcj
+A8 H2
+
+>>Turno 2010:
+>>CPU
+F3 M9
+
+>>Turno 2011:
+>>kcj
+A8 D1
+
+>>Turno 2012:
+>>CPU
+G2 B9
+
+>>Turno 2013:
+>>kcj
+A8 H4
+
+>>Turno 2014:
+>>CPU
+F3 H6
+
+>>Turno 2015:
+>>kcj
+A8 L9
+
+>>Turno 2016:
+>>CPU
+C3 E12
+
+>>Turno 2017:
+>>kcj
+M7 L7
+
+>>Turno 2018:
+>>CPU
+C3 M8
+
+>>Turno 2019:
+>>kcj
+A8 N2
+
+>>Turno 2020:
+>>CPU
+C3 D11
+
+>>Turno 2021:
+>>kcj
+A8 A4
+
+>>Turno 2022:
+>>CPU
+B9 H2
+
+>>Turno 2023:
+>>kcj
+M7 L12
+
+>>Turno 2024:
+>>CPU
+C3 I7
+
+>>Turno 2025:
+>>kcj
+M7 N10
+
+>>Turno 2026:
+>>CPU
+H7 E2
+
+>>Turno 2027:
+>>kcj
+M7 A2
+
+>>Turno 2028:
+>>CPU
+C3 B5
+
+>>Turno 2029:
+>>kcj
+A8 A3
+
+>>Turno 2030:
+>>CPU
+F3 H7
+
+>>Turno 2031:
+>>kcj
+A8 A3
+
+>>Turno 2032:
+>>CPU
+H2 L8
+
+>>Turno 2033:
+>>kcj
+M7 H10
+
+>>Turno 2034:
+>>CPU
+F3 E4
+
+>>Turno 2035:
+>>kcj
+M7 M6
+
+>>Turno 2036:
+>>CPU
+C3 N12
+
+>>Turno 2037:
+>>kcj
+A8 G1
+
+>>Turno 2038:
+>>CPU
+C3 G1
+
+>>Turno 2039:
+>>kcj
+M7 I11
+
+>>Turno 2040:
+>>CPU
+C3 H7
+
+>>Turno 2041:
+>>kcj
+A8 E5
+
+>>Turno 2042:
+>>CPU
+F3 G3
+
+>>Turno 2043:
+>>kcj
+A8 F1
+
+>>Turno 2044:
+>>CPU
+F3 N9
+
+>>Turno 2045:
+>>kcj
+M7 N12
+
+>>Turno 2046:
+>>CPU
+F3 L3
+
+>>Turno 2047:
+>>kcj
+M7 G1
+
+>>Turno 2048:
+>>CPU
+C3 G4
+
+>>Turno 2049:
+>>kcj
+A8 G6
+
+>>Turno 2050:
+>>CPU
+E2 E7
+
+>>Turno 2051:
+>>kcj
+A8 B1
+
+>>Turno 2052:
+>>CPU
+E7 L10
+
+>>Turno 2053:
+>>kcj
+A8 F4
+
+>>Turno 2054:
+>>CPU
+F3 E10
+
+>>Turno 2055:
+>>kcj
+A8 N10
+
+>>Turno 2056:
+>>CPU
+C3 C4
+
+>>Turno 2057:
+>>kcj
+M7 C10
+
+>>Turno 2058:
+>>CPU
+L10 E7
+
+>>Turno 2059:
+>>kcj
+M7 G8
+
+>>Turno 2060:
+>>CPU
+F3 H3
+
+>>Turno 2061:
+>>kcj
+A8 L7
+
+>>Turno 2062:
+>>CPU
+E7 B6
+
+>>Turno 2063:
+>>kcj
+A8 I4
+
+>>Turno 2064:
+>>CPU
+F3 F2
+
+>>Turno 2065:
+>>kcj
+M7 B12
+
+>>Turno 2066:
+>>CPU
+C3 I2
+
+>>Turno 2067:
+>>kcj
+A8 N5
+
+>>Turno 2068:
+>>CPU
+B6 F8
+
+>>Turno 2069:
+>>kcj
+M7 N1
+
+>>Turno 2070:
+>>CPU
+F3 L8
+
+>>Turno 2071:
+>>kcj
+A8 E3
+
+>>Turno 2072:
+>>CPU
+F3 H6
+
+>>Turno 2073:
+>>kcj
+A8 M8
+
+>>Turno 2074:
+>>CPU
+F3 G6
+
+>>Turno 2075:
+>>kcj
+M7 L2
+
+>>Turno 2076:
+>>CPU
+F3 D1
+
+>>Turno 2077:
+>>kcj
+A8 E12
+
+>>Turno 2078:
+>>CPU
+L8 B12
+
+>>Turno 2079:
+>>kcj
+M7 L3
+
+>>Turno 2080:
+>>CPU
+F3 G1
+
+>>Turno 2081:
+>>kcj
+M7 E7
+
+>>Turno 2082:
+>>CPU
+F3 A8
+
+>>Turno 2083:
+>>kcj
+A8 G11
+
+>>Turno 2084:
+>>CPU
+B12 E10
+
+>>Turno 2085:
+>>kcj
+A8 N11
+
+>>Turno 2086:
+>>CPU
+C3 D8
+
+>>Turno 2087:
+>>kcj
+M7 M6
+
+>>Turno 2088:
+>>CPU
+C3 A2
+
+>>Turno 2089:
+>>kcj
+M7 C1
+
+>>Turno 2090:
+>>CPU
+E10 E12
+
+>>Turno 2091:
+>>kcj
+A8 M7
+
+>>Turno 2092:
+>>CPU
+F8 B7
+
+>>Turno 2093:
+>>kcj
+A8 D11
+
+>>Turno 2094:
+>>CPU
+C3 M10
+
+>>Turno 2095:
+>>kcj
+M7 C9
+
+>>Turno 2096:
+>>CPU
+E12 G10
+
+>>Turno 2097:
+>>kcj
+A8 G3
+
+>>Turno 2098:
+>>CPU
+B7 B9
+
+>>Turno 2099:
+>>kcj
+M7 C9
+
+>>Turno 2100:
+>>CPU
+B9 G6
+
+>>Turno 2101:
+>>kcj
+M7 D11
+
+>>Turno 2102:
+>>CPU
+G6 M2
+
+>>Turno 2103:
+>>kcj
+M7 E10
+
+>>Turno 2104:
+>>CPU
+M2 F4
+
+>>Turno 2105:
+>>kcj
+M7 G3
+
+>>Turno 2106:
+>>CPU
+G10 I2
+
+>>Turno 2107:
+>>kcj
+A8 C11
+
+>>Turno 2108:
+>>CPU
+I2 L3
+
+>>Turno 2109:
+>>kcj
+M7 B6
+
+>>Turno 2110:
+>>CPU
+F3 L8
+
+>>Turno 2111:
+>>kcj
+A8 D9
+
+>>Turno 2112:
+>>CPU
+F4 E12
+
+>>Turno 2113:
+>>kcj
+M7 H4
+
+>>Turno 2114:
+>>CPU
+L3 L11
+
+>>Turno 2115:
+>>kcj
+A8 D1
+
+>>Turno 2116:
+>>CPU
+C3 G1
+
+>>Turno 2117:
+>>kcj
+A8 E3
+
+>>Turno 2118:
+>>CPU
+L11 C6
+
+>>Turno 2119:
+>>kcj
+A8 E9
+
+>>Turno 2120:
+>>CPU
+C3 N8
+
+>>Turno 2121:
+>>kcj
+M7 F8
+
+>>Turno 2122:
+>>CPU
+E12 I11
+
+>>Turno 2123:
+>>kcj
+M7 B4
+
+>>Turno 2124:
+>>CPU
+C3 D6
+
+>>Turno 2125:
+>>kcj
+M7 M6
+
+>>Turno 2126:
+>>CPU
+C3 H5
+
+>>Turno 2127:
+>>kcj
+A8 M12
+
+>>Turno 2128:
+>>CPU
+C6 L3
+
+>>Turno 2129:
+>>kcj
+A8 M6
+
+>>Turno 2130:
+>>CPU
+F3 F4
+
+>>Turno 2131:
+>>kcj
+M7 H10
+
+>>Turno 2132:
+>>CPU
+C3 N11
+
+>>Turno 2133:
+>>kcj
+A8 H4
+
+>>Turno 2134:
+>>CPU
+F3 B11
+
+>>Turno 2135:
+>>kcj
+M7 H5
+
+>>Turno 2136:
+>>CPU
+L3 H12
+
+>>Turno 2137:
+>>kcj
+A8 D4
+
+>>Turno 2138:
+>>CPU
+F3 D12
+
+>>Turno 2139:
+>>kcj
+M7 I5
+
+>>Turno 2140:
+>>CPU
+F3 N6
+
+>>Turno 2141:
+>>kcj
+M7 C3
+
+>>Turno 2142:
+>>CPU
+F3 N4
+
+>>Turno 2143:
+>>kcj
+A8 F12
+
+>>Turno 2144:
+>>CPU
+F3 F7
+
+>>Turno 2145:
+>>kcj
+M7 D12
+
+>>Turno 2146:
+>>CPU
+C3 G3
+
+>>Turno 2147:
+>>kcj
+M7 M3
+
+>>Turno 2148:
+>>CPU
+I11 C8
+
+>>Turno 2149:
+>>kcj
+A8 I7
+
+>>Turno 2150:
+>>CPU
+H12 M2
+
+>>Turno 2151:
+>>kcj
+A8 M8
+
+>>Turno 2152:
+>>CPU
+C8 E8
+
+>>Turno 2153:
+>>kcj
+A8 H10
+
+>>Turno 2154:
+>>CPU
+C3
+
+>>Turno 2155:
+>>kcj
+M7 N6
+
+>>Turno 2156:
+>>CPU
+C3 G5
+
+>>Turno 2157:
+>>kcj
+M7 F9
+
+>>Turno 2158:
+>>CPU
+E8 D8
+
+>>Turno 2159:
+>>kcj
+M7 B9
+
+>>Turno 2160:
+>>CPU
+F3 F2
+
+>>Turno 2161:
+>>kcj
+M7 M2
+
+>>Turno 2162:
+>>CPU
+C3 C9
+
+>>Turno 2163:
+>>kcj
+A8 D5
+
+>>Turno 2164:
+>>CPU
+M2 M11
+
+>>Turno 2165:
+>>kcj
+A8 L2
+
+>>Turno 2166:
+>>CPU
+C3 N1
+
+>>Turno 2167:
+>>kcj
+M7 A12
+
+>>Turno 2168:
+>>CPU
+C3 F4
+
+>>Turno 2169:
+>>kcj
+A8 M11
+
+>>Turno 2170:
+>>CPU
+M11 B11
+
+>>Turno 2171:
+>>kcj
+M7 L12
+
+>>Turno 2172:
+>>CPU
+D8 H12
+
+>>Turno 2173:
+>>kcj
+M7 A8
+
+>>Turno 2174:
+>>CPU
+H12 I4
+
+>>Turno 2175:
+>>kcj
+M7 M12
+
+>>Turno 2176:
+>>CPU
+C3 H2
+
+>>Turno 2177:
+>>kcj
+M7 L3
+
+>>Turno 2178:
+>>CPU
+B11 E8
+
+>>Turno 2179:
+>>kcj
+A8 E11
+
+>>Turno 2180:
+>>CPU
+E8 D9
+
+>>Turno 2181:
+>>kcj
+M7 H8
+
+>>Turno 2182:
+>>CPU
+C3 A8
+
+>>Turno 2183:
+>>kcj
+A8 I9
+
+>>Turno 2184:
+>>CPU
+C3 M2
+
+>>Turno 2185:
+>>kcj
+A8 I1
+
+>>Turno 2186:
+>>CPU
+D9 G9
+
+>>Turno 2187:
+>>kcj
+A8 L12
+
+>>Turno 2188:
+>>CPU
+G9 F6
+
+>>Turno 2189:
+>>kcj
+M7 G10
+
+>>Turno 2190:
+>>CPU
+F3 B6
+
+>>Turno 2191:
+>>kcj
+A8 A3
+
+>>Turno 2192:
+>>CPU
+F6 H12
+
+>>Turno 2193:
+>>kcj
+M7 G12
+
+>>Turno 2194:
+>>CPU
+C3 N11
+
+>>Turno 2195:
+>>kcj
+A8 I11
+
+>>Turno 2196:
+>>CPU
+C3 C11
+
+>>Turno 2197:
+>>kcj
+A8 B7
+
+>>Turno 2198:
+>>CPU
+C3 F8
+
+>>Turno 2199:
+>>kcj
+M7 C5
+
+>>Turno 2200:
+>>CPU
+F3 H8
+
+>>Turno 2201:
+>>kcj
+A8 B6
+
+>>Turno 2202:
+>>CPU
+F3 L2
+
+>>Turno 2203:
+>>kcj
+A8 E9
+
+>>Turno 2204:
+>>CPU
+I4 G10
+
+>>Turno 2205:
+>>kcj
+M7 E12
+
+>>Turno 2206:
+>>CPU
+G10 I7
+
+>>Turno 2207:
+>>kcj
+A8 E5
+
+>>Turno 2208:
+>>CPU
+C3 A4
+
+>>Turno 2209:
+>>kcj
+A8 D4
+
+>>Turno 2210:
+>>CPU
+F3 I3
+
+>>Turno 2211:
+>>kcj
+A8 F3
+
+>>Turno 2212:
+>>CPU
+C3 B6
+
+>>Turno 2213:
+>>kcj
+A8 N12
+
+>>Turno 2214:
+>>CPU
+F3 D3
+
+>>Turno 2215:
+>>kcj
+A8 G8
+
+>>Turno 2216:
+>>CPU
+F3 F12
+
+>>Turno 2217:
+>>kcj
+A8 M4
+
+>>Turno 2218:
+>>CPU
+C3 H7
+
+>>Turno 2219:
+>>kcj
+M7 E7
+
+>>Turno 2220:
+>>CPU
+C3 I2
+
+>>Turno 2221:
+>>kcj
+M7 D1
+
+>>Turno 2222:
+>>CPU
+C3 C5
+
+>>Turno 2223:
+>>kcj
+A8 F3
+
+>>Turno 2224:
+>>CPU
+C3 G4
+
+>>Turno 2225:
+>>kcj
+M7 D5
+
+>>Turno 2226:
+>>CPU
+I7 F4
+
+>>Turno 2227:
+>>kcj
+A8 B7
+
+>>Turno 2228:
+>>CPU
+C3 B10
+
+>>Turno 2229:
+>>kcj
+M7 I12
+
+>>Turno 2230:
+>>CPU
+F4 L12
+
+>>Turno 2231:
+>>kcj
+M7 A11
+
+>>Turno 2232:
+>>CPU
+L12 E5
+
+>>Turno 2233:
+>>kcj
+A8 H6
+
+>>Turno 2234:
+>>CPU
+F3 L7
+
+>>Turno 2235:
+>>kcj
+A8 M8
+
+>>Turno 2236:
+>>CPU
+F3 E11
+
+>>Turno 2237:
+>>kcj
+A8 L1
+
+>>Turno 2238:
+>>CPU
+E5 D9
+
+>>Turno 2239:
+>>kcj
+A8 M10
+
+>>Turno 2240:
+>>CPU
+C3 L1
+
+>>Turno 2241:
+>>kcj
+M7 N2
+
+>>Turno 2242:
+>>CPU
+C3 F3
+
+>>Turno 2243:
+>>kcj
+M7 G11
+
+>>Turno 2244:
+>>CPU
+F3 B6
+
+>>Turno 2245:
+>>kcj
+M7 M11
+
+>>Turno 2246:
+>>CPU
+C3 N2
+
+>>Turno 2247:
+>>kcj
+M7 M4
+
+>>Turno 2248:
+>>CPU
+F3
+
+>>Turno 2249:
+>>kcj
+A8 H1
+
+>>Turno 2250:
+>>CPU
+C3 M6
+
+>>Turno 2251:
+>>kcj
+M7 F7
+
+>>Turno 2252:
+>>CPU
+C3 G3
+
+>>Turno 2253:
+>>kcj
+M7 B4
+
+>>Turno 2254:
+>>CPU
+C3 A9
+
+>>Turno 2255:
+>>kcj
+M7
+
+>>Turno 2256:
+>>CPU
+C3 M11
+
+>>Turno 2257:
+>>kcj
+A8 D5
+
+>>Turno 2258:
+>>CPU
+D9 I8
+
+>>Turno 2259:
+>>kcj
+M7 D6
+
+>>Turno 2260:
+>>CPU
+F3 H3
+
+>>Turno 2261:
+>>kcj
+M7 C8
+
+>>Turno 2262:
+>>CPU
+I8 L3
+
+>>Turno 2263:
+>>kcj
+A8 F2
+
+>>Turno 2264:
+>>CPU
+C3 E7
+
+>>Turno 2265:
+>>kcj
+M7 C3
+
+>>Turno 2266:
+>>CPU
+L3 B12
+
+>>Turno 2267:
+>>kcj
+A8 N12
+
+>>Turno 2268:
+>>CPU
+C3 A7
+
+>>Turno 2269:
+>>kcj
+M7 L3
+
+>>Turno 2270:
+>>CPU
+F3 H10
+
+>>Turno 2271:
+>>kcj
+A8 I7
+
+>>Turno 2272:
+>>CPU
+F3 B6
+
+>>Turno 2273:
+>>kcj
+A8 I2
+
+>>Turno 2274:
+>>CPU
+C3 A8
+
+>>Turno 2275:
+>>kcj
+A8 G12
+
+>>Turno 2276:
+>>CPU
+C3 B12
+
+>>Turno 2277:
+>>kcj
+A8 N2
+
+>>Turno 2278:
+>>CPU
+B12 G2
+
+>>Turno 2279:
+>>kcj
+M7 C5
+
+>>Turno 2280:
+>>CPU
+F3 D6
+
+>>Turno 2281:
+>>kcj
+A8 I5
+
+>>Turno 2282:
+>>CPU
+F3 A11
+
+>>Turno 2283:
+>>kcj
+A8 D4
+
+>>Turno 2284:
+>>CPU
+C3 E1
+
+>>Turno 2285:
+>>kcj
+M7 D6
+
+>>Turno 2286:
+>>CPU
+F3 G8
+
+>>Turno 2287:
+>>kcj
+M7 F4
+
+>>Turno 2288:
+>>CPU
+F3 I7
+
+>>Turno 2289:
+>>kcj
+M7 E8
+
+>>Turno 2290:
+>>CPU
+F3 E2
+
+>>Turno 2291:
+>>kcj
+A8 E2
+
+>>Turno 2292:
+>>CPU
+C3 N8
+
+>>Turno 2293:
+>>kcj
+M7 L1
+
+>>Turno 2294:
+>>CPU
+F3 C2
+
+>>Turno 2295:
+>>kcj
+M7 F8
+
+>>Turno 2296:
+>>CPU
+F3 M2
+
+>>Turno 2297:
+>>kcj
+M7 G7
+
+>>Turno 2298:
+>>CPU
+F3 C11
+
+>>Turno 2299:
+>>kcj
+A8 E12
+
+>>Turno 2300:
+>>CPU
+G2 E1
+
+>>Turno 2301:
+>>kcj
+M7 L8
+
+>>Turno 2302:
+>>CPU
+E1 L10
+
+>>Turno 2303:
+>>kcj
+A8 N12
+
+>>Turno 2304:
+>>CPU
+L10 H5
+
+>>Turno 2305:
+>>kcj
+M7 N1
+
+>>Turno 2306:
+>>CPU
+C3 I1
+
+>>Turno 2307:
+>>kcj
+M7 I1
+
+>>Turno 2308:
+>>CPU
+C3 B4
+
+>>Turno 2309:
+>>kcj
+A8 G9
+
+>>Turno 2310:
+>>CPU
+F3 F10
+
+>>Turno 2311:
+>>kcj
+A8 I1
+
+>>Turno 2312:
+>>CPU
+H5
+
+>>Turno 2313:
+>>kcj
+M7 D11
+
+>>Turno 2314:
+>>CPU
+C3 H3
+
+>>Turno 2315:
+>>kcj
+M7 M6
+
+>>Turno 2316:
+>>CPU
+C3 G3
+
+>>Turno 2317:
+>>kcj
+A8 G11
+
+>>Turno 2318:
+>>CPU
+C3 A1
+
+>>Turno 2319:
+>>kcj
+A8 E5
+
+>>Turno 2320:
+>>CPU
+C3 I8
+
+>>Turno 2321:
+>>kcj
+A8 C8
+
+>>Turno 2322:
+>>CPU
+F3 F10
+
+>>Turno 2323:
+>>kcj
+M7 A3
+
+>>Turno 2324:
+>>CPU
+H5 L11
+
+>>Turno 2325:
+>>kcj
+A8 D6
+
+>>Turno 2326:
+>>CPU
+C3
+
+>>Turno 2327:
+>>kcj
+A8 A6
+
+>>Turno 2328:
+>>CPU
+L11 H2
+
+>>Turno 2329:
+>>kcj
+A8 E11
+
+>>Turno 2330:
+>>CPU
+H2 E7
+
+>>Turno 2331:
+>>kcj
+M7 B3
+
+>>Turno 2332:
+>>CPU
+C3 F7
+
+>>Turno 2333:
+>>kcj
+A8 C4
+
+>>Turno 2334:
+>>CPU
+C3 G4
+
+>>Turno 2335:
+>>kcj
+A8 A1
+
+>>Turno 2336:
+>>CPU
+F3 H7
+
+>>Turno 2337:
+>>kcj
+A8 I10
+
+>>Turno 2338:
+>>CPU
+E7 M8
+
+>>Turno 2339:
+>>kcj
+M7 I5
+
+>>Turno 2340:
+>>CPU
+C3 C5
+
+>>Turno 2341:
+>>kcj
+A8 L11
+
+>>Turno 2342:
+>>CPU
+F3 H2
+
+>>Turno 2343:
+>>kcj
+A8 D10
+
+>>Turno 2344:
+>>CPU
+C3 B4
+
+>>Turno 2345:
+>>kcj
+A8 G5
+
+>>Turno 2346:
+>>CPU
+C3 L4
+
+>>Turno 2347:
+>>kcj
+A8 E10
+
+>>Turno 2348:
+>>CPU
+F3 D10
+
+>>Turno 2349:
+>>kcj
+A8 B9
+
+>>Turno 2350:
+>>CPU
+C3 G3
+
+>>Turno 2351:
+>>kcj
+A8 N11
+
+>>Turno 2352:
+>>CPU
+F3 G7
+
+>>Turno 2353:
+>>kcj
+A8 B11
+
+>>Turno 2354:
+>>CPU
+C3 H1
+
+>>Turno 2355:
+>>kcj
+A8 I5
+
+>>Turno 2356:
+>>CPU
+F3 F10
+
+>>Turno 2357:
+>>kcj
+M7 D7
+
+>>Turno 2358:
+>>CPU
+C3 E2
+
+>>Turno 2359:
+>>kcj
+M7 A2
+
+>>Turno 2360:
+>>CPU
+F3 C9
+
+>>Turno 2361:
+>>kcj
+M7 H2
+
+>>Turno 2362:
+>>CPU
+C3 F10
+
+>>Turno 2363:
+>>kcj
+M7 G8
+
+>>Turno 2364:
+>>CPU
+C3 F5
+
+>>Turno 2365:
+>>kcj
+A8 H4
+
+>>Turno 2366:
+>>CPU
+F3
+
+>>Turno 2367:
+>>kcj
+A8 G6
+
+>>Turno 2368:
+>>CPU
+C3 H6
+
+>>Turno 2369:
+>>kcj
+A8 A3
+
+>>Turno 2370:
+>>CPU
+F3 B11
+
+>>Turno 2371:
+>>kcj
+M7 D4
+
+>>Turno 2372:
+>>CPU
+M8 M12
+
+>>Turno 2373:
+>>kcj
+A8 H7
+
+>>Turno 2374:
+>>CPU
+C3 A8
+
+>>Turno 2375:
+>>kcj
+A8 N7
+
+>>Turno 2376:
+>>CPU
+F3 E8
+
+>>Turno 2377:
+>>kcj
+A8 A12
+
+>>Turno 2378:
+>>CPU
+F3 A3
+
+>>Turno 2379:
+>>kcj
+A8 A1
+
+>>Turno 2380:
+>>CPU
+F3 M1
+
+>>Turno 2381:
+>>kcj
+M7 A10
+
+>>Turno 2382:
+>>CPU
+C3 I2
+
+>>Turno 2383:
+>>kcj
+M7 H11
+
+>>Turno 2384:
+>>CPU
+F3 I11
+
+>>Turno 2385:
+>>kcj
+A8 L4
+
+>>Turno 2386:
+>>CPU
+C3 E1
+
+>>Turno 2387:
+>>kcj
+A8 C11
+
+>>Turno 2388:
+>>CPU
+C3 I3
+
+>>Turno 2389:
+>>kcj
+M7 D10
+
+>>Turno 2390:
+>>CPU
+C3 F11
+
+>>Turno 2391:
+>>kcj
+M7 D7
+
+>>Turno 2392:
+>>CPU
+F3 I11
+
+>>Turno 2393:
+>>kcj
+M7 M3
+
+>>Turno 2394:
+>>CPU
+C3 A12
+
+>>Turno 2395:
+>>kcj
+A8 F1
+
+>>Turno 2396:
+>>CPU
+F3 I8
+
+>>Turno 2397:
+>>kcj
+M7 F4
+
+>>Turno 2398:
+>>CPU
+C3 L6
+
+>>Turno 2399:
+>>kcj
+A8 A11
+
+>>Turno 2400:
+>>CPU
+F3 D1
+
+>>Turno 2401:
+>>kcj
+M7 E7
+
+>>Turno 2402:
+>>CPU
+C3 N5
+
+>>Turno 2403:
+>>kcj
+A8 D1
+
+>>Turno 2404:
+>>CPU
+C3 L2
+
+>>Turno 2405:
+>>kcj
+A8 B10
+
+>>Turno 2406:
+>>CPU
+M12 G4
+
+>>Turno 2407:
+>>kcj
+A8 I12
+
+>>Turno 2408:
+>>CPU
+F3 L6
+
+>>Turno 2409:
+>>kcj
+A8 I4
+
+>>Turno 2410:
+>>CPU
+F3 N6
+
+>>Turno 2411:
+>>kcj
+A8 F5
+
+>>Turno 2412:
+>>CPU
+F3 A12
+
+>>Turno 2413:
+>>kcj
+M7 B4
+
+>>Turno 2414:
+>>CPU
+G4 G8
+
+>>Turno 2415:
+>>kcj
+M7 H5
+
+>>Turno 2416:
+>>CPU
+G8 M7
+
+>>Turno 2417:
+>>kcj
+A8 L11
+
+>>Turno 2418:
+>>CPU
+F3 L5
+
+>>Turno 2419:
+>>kcj
+A8 G3
+
+>>Turno 2420:
+>>CPU
+C3 H4
+
+>>Turno 2421:
+>>kcj
+M7 F10
+
+>>Turno 2422:
+>>CPU
+M7 E2
+
+>>Turno 2423:
+>>kcj
+M7 F9
+
+>>Turno 2424:
+>>CPU
+C3 H10
+
+>>Turno 2425:
+>>kcj
+A8 N7
+
+>>Turno 2426:
+>>CPU
+F3 I6
+
+>>Turno 2427:
+>>kcj
+M7 L10
+
+>>Turno 2428:
+>>CPU
+C3 I1
+
+>>Turno 2429:
+>>kcj
+M7 G1
+
+>>Turno 2430:
+>>CPU
+F3 H7
+
+>>Turno 2431:
+>>kcj
+A8 A12
+
+>>Turno 2432:
+>>CPU
+F3 D1
+
+>>Turno 2433:
+>>kcj
+M7 H4
+
+>>Turno 2434:
+>>CPU
+E2 I6
+
+>>Turno 2435:
+>>kcj
+A8 N9
+
+>>Turno 2436:
+>>CPU
+I6 G1
+
+>>Turno 2437:
+>>kcj
+M7 L4
+
+>>Turno 2438:
+>>CPU
+G1 M8
+
+>>Turno 2439:
+>>kcj
+M7 A12
+
+>>Turno 2440:
+>>CPU
+M8 I9
+
+>>Turno 2441:
+>>kcj
+M7 A3
+
+>>Turno 2442:
+>>CPU
+C3 F4
+
+>>Turno 2443:
+>>kcj
+A8 B1
+
+>>Turno 2444:
+>>CPU
+I9 L4
+
+>>Turno 2445:
+>>kcj
+M7 D8
+
+>>Turno 2446:
+>>CPU
+L4 H1
+
+>>Turno 2447:
+>>kcj
+M7 D4
+
+>>Turno 2448:
+>>CPU
+H1 B7
+
+>>Turno 2449:
+>>kcj
+M7 F5
+
+>>Turno 2450:
+>>CPU
+C3 H1
+
+>>Turno 2451:
+>>kcj
+M7 F8
+
+>>Turno 2452:
+>>CPU
+C3 C10
+
+>>Turno 2453:
+>>kcj
+M7 D11
+
+>>Turno 2454:
+>>CPU
+F3 M2
+
+>>Turno 2455:
+>>kcj
+A8 N10
+
+>>Turno 2456:
+>>CPU
+C3 N12
+
+>>Turno 2457:
+>>kcj
+A8 M2
+
+>>Turno 2458:
+>>CPU
+C3 G4
+
+>>Turno 2459:
+>>kcj
+A8 H7
+
+>>Turno 2460:
+>>CPU
+F3 C2
+
+>>Turno 2461:
+>>kcj
+M7 G6
+
+>>Turno 2462:
+>>CPU
+F3 I8
+
+>>Turno 2463:
+>>kcj
+M7 F2
+
+>>Turno 2464:
+>>CPU
+C3 B11
+
+>>Turno 2465:
+>>kcj
+A8 E8
+
+>>Turno 2466:
+>>CPU
+C3 G3
+
+>>Turno 2467:
+>>kcj
+M7 L1
+
+>>Turno 2468:
+>>CPU
+C3 L9
+
+>>Turno 2469:
+>>kcj
+M7 B11
+
+>>Turno 2470:
+>>CPU
+F3 M8
+
+>>Turno 2471:
+>>kcj
+A8 F7
+
+>>Turno 2472:
+>>CPU
+F3 I2
+
+>>Turno 2473:
+>>kcj
+M7 D2
+
+>>Turno 2474:
+>>CPU
+C3 L12
+
+>>Turno 2475:
+>>kcj
+M7 H12
+
+>>Turno 2476:
+>>CPU
+B7 E5
+
+>>Turno 2477:
+>>kcj
+A8 H7
+
+>>Turno 2478:
+>>CPU
+E5 H4
+
+>>Turno 2479:
+>>kcj
+A8 F7
+
+>>Turno 2480:
+>>CPU
+H4 I1
+
+>>Turno 2481:
+>>kcj
+A8 D5
+
+>>Turno 2482:
+>>CPU
+C3 H5
+
+>>Turno 2483:
+>>kcj
+A8 D3
+
+>>Turno 2484:
+>>CPU
+C3 H2
+
+>>Turno 2485:
+>>kcj
+M7 G10
+
+>>Turno 2486:
+>>CPU
+I1 E2
+
+>>Turno 2487:
+>>kcj
+M7 C9
+
+>>Turno 2488:
+>>CPU
+F3 M2
+
+>>Turno 2489:
+>>kcj
+A8 N9
+
+>>Turno 2490:
+>>CPU
+E2 E12
+
+>>Turno 2491:
+>>kcj
+M7 M6
+
+>>Turno 2492:
+>>CPU
+F3 D6
+
+>>Turno 2493:
+>>kcj
+A8 F6
+
+>>Turno 2494:
+>>CPU
+F3 F2
+
+>>Turno 2495:
+>>kcj
+A8 N2
+
+>>Turno 2496:
+>>CPU
+E12 H2
+
+>>Turno 2497:
+>>kcj
+M7 L9
+
+>>Turno 2498:
+>>CPU
+H2 I8
+
+>>Turno 2499:
+>>kcj
+M7 G1
+
+>>Turno 2500:
+>>CPU
+I8 G11
+
+>>Turno 2501:
+>>kcj
+A8 F10
+
+>>Turno 2502:
+>>CPU
+F3 C1
+
+>>Turno 2503:
+>>kcj
+A8 M3
+
+>>Turno 2504:
+>>CPU
+F3 G5
+
+>>Turno 2505:
+>>kcj
+A8 L2
+
+>>Turno 2506:
+>>CPU
+F3 H6
+
+>>Turno 2507:
+>>kcj
+A8 I4
+
+>>Turno 2508:
+>>CPU
+C3 L6
+
+>>Turno 2509:
+>>kcj
+A8 I11
+
+>>Turno 2510:
+>>CPU
+F3 B7
+
+>>Turno 2511:
+>>kcj
+A8 I4
+
+>>Turno 2512:
+>>CPU
+G11 M3
+
+>>Turno 2513:
+>>kcj
+A8 I9
+
+>>Turno 2514:
+>>CPU
+C3 E5
+
+>>Turno 2515:
+>>kcj
+A8 C2
+
+>>Turno 2516:
+>>CPU
+F3 A7
+
+>>Turno 2517:
+>>kcj
+M7 D5
+
+>>Turno 2518:
+>>CPU
+F3 N8
+
+>>Turno 2519:
+>>kcj
+M7 E4
+
+>>Turno 2520:
+>>CPU
+C3 C9
+
+>>Turno 2521:
+>>kcj
+A8 A7
+
+>>Turno 2522:
+>>CPU
+C3 L8
+
+>>Turno 2523:
+>>kcj
+M7 D11
+
+>>Turno 2524:
+>>CPU
+F3 H11
+
+>>Turno 2525:
+>>kcj
+A8 B2
+
+>>Turno 2526:
+>>CPU
+C3 E3
+
+>>Turno 2527:
+>>kcj
+M7 D8
+
+>>Turno 2528:
+>>CPU
+F3 D10
+
+>>Turno 2529:
+>>kcj
+A8 G9
+
+>>Turno 2530:
+>>CPU
+F3 G6
+
+>>Turno 2531:
+>>kcj
+M7 F8
+
+>>Turno 2532:
+>>CPU
+M3 M6
+
+>>Turno 2533:
+>>kcj
+A8 N12
+
+>>Turno 2534:
+>>CPU
+C3 F1
+
+>>Turno 2535:
+>>kcj
+M7 G11
+
+>>Turno 2536:
+>>CPU
+M6 E2
+
+>>Turno 2537:
+>>kcj
+M7 G7
+
+>>Turno 2538:
+>>CPU
+F3 N2
+
+>>Turno 2539:
+>>kcj
+M7 G4
+
+>>Turno 2540:
+>>CPU
+F3 C11
+
+>>Turno 2541:
+>>kcj
+M7 I7
+
+>>Turno 2542:
+>>CPU
+C3 E2
+
+>>Turno 2543:
+>>kcj
+A8 G1
+
+>>Turno 2544:
+>>CPU
+F3 H8
+
+>>Turno 2545:
+>>kcj
+M7 C6
+
+>>Turno 2546:
+>>CPU
+C3 E10
+
+>>Turno 2547:
+>>kcj
+M7 B8
+
+>>Turno 2548:
+>>CPU
+C3 G9
+
+>>Turno 2549:
+>>kcj
+A8 G1
+
+>>Turno 2550:
+>>CPU
+F3 C1
+
+>>Turno 2551:
+>>kcj
+M7 H9
+
+>>Turno 2552:
+>>CPU
+F3 G3
+
+>>Turno 2553:
+>>kcj
+A8 H2
+
+>>Turno 2554:
+>>CPU
+E2 B11
+
+>>Turno 2555:
+>>kcj
+M7 D6
+
+>>Turno 2556:
+>>CPU
+F3 F11
+
+>>Turno 2557:
+>>kcj
+M7 L11
+
+>>Turno 2558:
+>>CPU
+C3 B5
+
+>>Turno 2559:
+>>kcj
+M7 N8
+
+>>Turno 2560:
+>>CPU
+F3 F5
+
+>>Turno 2561:
+>>kcj
+M7 F4
+
+>>Turno 2562:
+>>CPU
+C3 E4
+
+>>Turno 2563:
+>>kcj
+M7 G11
+
+>>Turno 2564:
+>>CPU
+F3 I11
+
+>>Turno 2565:
+>>kcj
+A8 F5
+
+>>Turno 2566:
+>>CPU
+C3 M4
+
+>>Turno 2567:
+>>kcj
+A8 M7
+
+>>Turno 2568:
+>>CPU
+B11 F7
+
+>>Turno 2569:
+>>kcj
+A8 I4
+
+>>Turno 2570:
+>>CPU
+C3 G3
+
+>>Turno 2571:
+>>kcj
+M7 D10
+
+>>Turno 2572:
+>>CPU
+F3 A12
+
+>>Turno 2573:
+>>kcj
+M7 C9
+
+>>Turno 2574:
+>>CPU
+F3 M10
+
+>>Turno 2575:
+>>kcj
+A8 B1
+
+>>Turno 2576:
+>>CPU
+F3 D2
+
+>>Turno 2577:
+>>kcj
+A8 F5
+
+>>Turno 2578:
+>>CPU
+F7 I6
+
+>>Turno 2579:
+>>kcj
+M7 N8
+
+>>Turno 2580:
+>>CPU
+F3 M11
+
+>>Turno 2581:
+>>kcj
+M7 D8
+
+>>Turno 2582:
+>>CPU
+I6 B10
+
+>>Turno 2583:
+>>kcj
+M7 N1
+
+>>Turno 2584:
+>>CPU
+F3 G4
+
+>>Turno 2585:
+>>kcj
+M7 F8
+
+>>Turno 2586:
+>>CPU
+F3 B11
+
+>>Turno 2587:
+>>kcj
+M7 H2
+
+>>Turno 2588:
+>>CPU
+B10 G9
+
+>>Turno 2589:
+>>kcj
+A8 C12
+
+>>Turno 2590:
+>>CPU
+C3
+
+>>Turno 2591:
+>>kcj
+M7 M4
+
+>>Turno 2592:
+>>CPU
+F3 B6
+
+>>Turno 2593:
+>>kcj
+M7 G8
+
+>>Turno 2594:
+>>CPU
+C3 B2
+
+>>Turno 2595:
+>>kcj
+M7 L4
+
+>>Turno 2596:
+>>CPU
+C3 L2
+
+>>Turno 2597:
+>>kcj
+A8 F5
+
+>>Turno 2598:
+>>CPU
+F3 E8
+
+>>Turno 2599:
+>>kcj
+M7 C8
+
+>>Turno 2600:
+>>CPU
+C3 L2
+
+>>Turno 2601:
+>>kcj
+M7 I4
+
+>>Turno 2602:
+>>CPU
+F3 I11
+
+>>Turno 2603:
+>>kcj
+A8 H6
+
+>>Turno 2604:
+>>CPU
+C3 E5
+
+>>Turno 2605:
+>>kcj
+A8 M4
+
+>>Turno 2606:
+>>CPU
+C3 H9
+
+>>Turno 2607:
+>>kcj
+M7 G7
+
+>>Turno 2608:
+>>CPU
+F3 F4
+
+>>Turno 2609:
+>>kcj
+M7 A2
+
+>>Turno 2610:
+>>CPU
+C3 M5
+
+>>Turno 2611:
+>>kcj
+A8 I2
+
+>>Turno 2612:
+>>CPU
+F3 G9
+
+>>Turno 2613:
+>>kcj
+A8 D5
+
+>>Turno 2614:
+>>CPU
+C3 M11
+
+>>Turno 2615:
+>>kcj
+A8 G3
+
+>>Turno 2616:
+>>CPU
+G9 G6
+
+>>Turno 2617:
+>>kcj
+A8 G1
+
+>>Turno 2618:
+>>CPU
+F3 L12
+
+>>Turno 2619:
+>>kcj
+A8 M9
+
+>>Turno 2620:
+>>CPU
+C3 N3
+
+>>Turno 2621:
+>>kcj
+A8 M6
+
+>>Turno 2622:
+>>CPU
+C3 D3
+
+>>Turno 2623:
+>>kcj
+A8 G4
+
+>>Turno 2624:
+>>CPU
+G6 B12
+
+>>Turno 2625:
+>>kcj
+A8 D6
+
+>>Turno 2626:
+>>CPU
+B12 B6
+
+>>Turno 2627:
+>>kcj
+A8 N7
+
+>>Turno 2628:
+>>CPU
+B6 F5
+
+>>Turno 2629:
+>>kcj
+A8 N7
+
+>>Turno 2630:
+>>CPU
+C3 E9
+
+>>Turno 2631:
+>>kcj
+A8 G10
+
+>>Turno 2632:
+>>CPU
+C3 C6
+
+>>Turno 2633:
+>>kcj
+A8 L2
+
+>>Turno 2634:
+>>CPU
+C3 L8
+
+>>Turno 2635:
+>>kcj
+A8 L5
+
+>>Turno 2636:
+>>CPU
+F3 M1
+
+>>Turno 2637:
+>>kcj
+A8 E7
+
+>>Turno 2638:
+>>CPU
+F5 E7
+
+>>Turno 2639:
+>>kcj
+A8 F5
+
+>>Turno 2640:
+>>CPU
+C3 H11
+
+>>Turno 2641:
+>>kcj
+A8 I10
+
+>>Turno 2642:
+>>CPU
+C3 D7
+
+>>Turno 2643:
+>>kcj
+A8 M1
+
+>>Turno 2644:
+>>CPU
+F3 D3
+
+>>Turno 2645:
+>>kcj
+A8 C9
+
+>>Turno 2646:
+>>CPU
+F3 N1
+
+>>Turno 2647:
+>>kcj
+A8 A10
+
+>>Turno 2648:
+>>CPU
+E7 E6
+
+>>Turno 2649:
+>>kcj
+A8 I6
+
+>>Turno 2650:
+>>CPU
+F3 B10
+
+>>Turno 2651:
+>>kcj
+A8 A2
+
+>>Turno 2652:
+>>CPU
+F3 L8
+
+>>Turno 2653:
+>>kcj
+A8 N12
+
+>>Turno 2654:
+>>CPU
+E6 L12
+
+>>Turno 2655:
+>>kcj
+A8 I9
+
+>>Turno 2656:
+>>CPU
+F3 A12
+
+>>Turno 2657:
+>>kcj
+A8 C7
+
+>>Turno 2658:
+>>CPU
+L12 M5
+
+>>Turno 2659:
+>>kcj
+A8 I8
+
+>>Turno 2660:
+>>CPU
+M5 I11
+
+>>Turno 2661:
+>>kcj
+A8 G6
+
+>>Turno 2662:
+>>CPU
+F3 B2
+
+>>Turno 2663:
+>>kcj
+A8 D7
+
+>>Turno 2664:
+>>CPU
+F3 D11
+
+>>Turno 2665:
+>>kcj
+A8 N12
+
+>>Turno 2666:
+>>CPU
+F3 A6
+
+>>Turno 2667:
+>>kcj
+A8 H10
+
+>>Turno 2668:
+>>CPU
+C3 G7
+
+>>Turno 2669:
+>>kcj
+A8 L10
+
+>>Turno 2670:
+>>CPU
+C3 L2
+
+>>Turno 2671:
+>>kcj
+A8 E12
+
+>>Turno 2672:
+>>CPU
+C3 N8
+
+>>Turno 2673:
+>>kcj
+A8 N12
+
+>>Turno 2674:
+>>CPU
+C3 E12
+
+>>Turno 2675:
+>>kcj
+A8 E12
+
+>>Turno 2676:
+>>CPU
+F3 D7
+
+>>Turno 2677:
+>>kcj
+A8 D7
+
+>>Turno 2678:
+>>CPU
+C3 A2
+
+>>Turno 2679:
+>>kcj
+A8 H8
+
+>>Turno 2680:
+>>CPU
+C3 E8
+
+>>Turno 2681:
+>>kcj
+A8 N6
+
+>>Turno 2682:
+>>CPU
+I11 I5
+
+>>Turno 2683:
+>>kcj
+A8 E10
+
+>>Turno 2684:
+>>CPU
+F3 B3
+
+>>Turno 2685:
+>>kcj
+A8 C12
+
+>>Turno 2686:
+>>CPU
+I5 L1
+
+>>Turno 2687:
+>>kcj
+A8 C2
+
+>>Turno 2688:
+>>CPU
+C3 I5
+
+>>Turno 2689:
+>>kcj
+A8 C9
+
+>>Turno 2690:
+>>CPU
+C3 N11
+
+>>Turno 2691:
+>>kcj
+A8 A1
+
+>>Turno 2692:
+>>CPU
+L1 E6
+
+>>Turno 2693:
+>>kcj
+A8 F7
+
+>>Turno 2694:
+>>CPU
+C3 C12
+
+>>Turno 2695:
+>>kcj
+A8 B11
+
+>>Turno 2696:
+>>CPU
+E6 D9
+
+>>Turno 2697:
+>>kcj
+A8 B3
+
+>>Turno 2698:
+>>CPU
+F3 C4
+
+>>Turno 2699:
+>>kcj
+A8 L3
+
+>>Turno 2700:
+>>CPU
+C3 M12
+
+>>Turno 2701:
+>>kcj
+A8 B8
+
+>>Turno 2702:
+>>CPU
+F3 E4
+
+>>Turno 2703:
+>>kcj
+A8 E9
+
+>>Turno 2704:
+>>CPU
+C3 H4
+
+>>Turno 2705:
+>>kcj
+A8 L8
+
+>>Turno 2706:
+>>CPU
+C3 C12
+
+>>Turno 2707:
+>>kcj
+A8 B1
+
+>>Turno 2708:
+>>CPU
+F3 G3
+
+>>Turno 2709:
+>>kcj
+A8 G9
+
+>>Turno 2710:
+>>CPU
+C3 L9
+
+>>Turno 2711:
+>>kcj
+A8 M3
+
+>>Turno 2712:
+>>CPU
+F3 H4
+
+>>Turno 2713:
+>>kcj
+A8 G10
+
+>>Turno 2714:
+>>CPU
+C3 H4
+
+>>Turno 2715:
+>>kcj
+A8 A11
+
+>>Turno 2716:
+>>CPU
+C3 L6
+
+>>Turno 2717:
+>>kcj
+A8 C10
+
+>>Turno 2718:
+>>CPU
+C3 L7
+
+>>Turno 2719:
+>>kcj
+A8 I12
+
+>>Turno 2720:
+>>CPU
+D9 L7
+
+>>Turno 2721:
+>>kcj
+A8 G12
+
+>>Turno 2722:
+>>CPU
+F3 H4
+
+>>Turno 2723:
+>>kcj
+A8 L8
+
+>>Turno 2724:
+>>CPU
+L7 H9
+
+>>Turno 2725:
+>>kcj
+A8 I8
+
+>>Turno 2726:
+>>CPU
+C3 M5
+
+>>Turno 2727:
+>>kcj
+A8 E5
+
+>>Turno 2728:
+>>CPU
+F3 N8
+
+>>Turno 2729:
+>>kcj
+A8 M5
+
+>>Turno 2730:
+>>CPU
+C3 C5
+
+>>Turno 2731:
+>>kcj
+A8 E4
+
+>>Turno 2732:
+>>CPU
+F3 G10
+
+>>Turno 2733:
+>>kcj
+A8 D6
+
+>>Turno 2734:
+>>CPU
+F3 C8
+
+>>Turno 2735:
+>>kcj
+A8 M8
+
+>>Turno 2736:
+>>CPU
+C3 C7
+
+>>Turno 2737:
+>>kcj
+A8 M5
+
+>>Turno 2738:
+>>CPU
+C3 N9
+
+>>Turno 2739:
+>>kcj
+A8 B11
+
+>>Turno 2740:
+>>CPU
+H9 E10
+
+>>Turno 2741:
+>>kcj
+A8 C12
+
+>>Turno 2742:
+>>CPU
+F3 H10
+
+>>Turno 2743:
+>>kcj
+A8 M8
+
+>>Turno 2744:
+>>CPU
+E10 F1
+
+>>Turno 2745:
+>>kcj
+A8 E4
+
+>>Turno 2746:
+>>CPU
+F1 L12
+
+>>Turno 2747:
+>>kcj
+A8 D2
+
+>>Turno 2748:
+>>CPU
+F3 M5
+
+>>Turno 2749:
+>>kcj
+A8 C4
+
+>>Turno 2750:
+>>CPU
+C3 F8
+
+>>Turno 2751:
+>>kcj
+A8 B3
+
+>>Turno 2752:
+>>CPU
+C3 G7
+
+>>Turno 2753:
+>>kcj
+A8 F9
+
+>>Turno 2754:
+>>CPU
+F3 G5
+
+>>Turno 2755:
+>>kcj
+A8 E9
+
+>>Turno 2756:
+>>CPU
+F3 E2
+
+>>Turno 2757:
+>>kcj
+A8 C11
+
+>>Turno 2758:
+>>CPU
+F3 N6
+
+>>Turno 2759:
+>>kcj
+A8
+
+>>Turno 2760:
+>>CPU
+L12 H4
+
+>>Turno 2761:
+>>kcj
+A8 I7
+
+>>Turno 2762:
+>>CPU
+C3 D6
+
+>>Turno 2763:
+>>kcj
+A8 M9
+
+>>Turno 2764:
+>>CPU
+F3 L7
+
+>>Turno 2765:
+>>kcj
+A8 G8
+
+>>Turno 2766:
+>>CPU
+H4 I6
+
+>>Turno 2767:
+>>kcj
+A8 E6
+
+>>Turno 2768:
+>>CPU
+C3 M12
+
+>>Turno 2769:
+>>kcj
+A8 E10
+
+>>Turno 2770:
+>>CPU
+F3 C9
+
+>>Turno 2771:
+>>kcj
+A8 G1
+
+>>Turno 2772:
+>>CPU
+F3 N10
+
+>>Turno 2773:
+>>kcj
+A8 C10
+
+>>Turno 2774:
+>>CPU
+I6 M10
+
+>>Turno 2775:
+>>kcj
+A8 D4
+
+>>Turno 2776:
+>>CPU
+C3 I6
+
+>>Turno 2777:
+>>kcj
+A8 A10
+
+>>Turno 2778:
+>>CPU
+C3 A4
+
+>>Turno 2779:
+>>kcj
+A8 I9
+
+>>Turno 2780:
+>>CPU
+C3 E5
+
+>>Turno 2781:
+>>kcj
+A8 N4
+
+>>Turno 2782:
+>>CPU
+C3
+
+>>Turno 2783:
+>>kcj
+A8 H7
+
+>>Turno 2784:
+>>CPU
+F3 D12
+
+>>Turno 2785:
+>>kcj
+A8 L2
+
+>>Turno 2786:
+>>CPU
+F3 G10
+
+>>Turno 2787:
+>>kcj
+A8 A2
+
+>>Turno 2788:
+>>CPU
+C3 L10
+
+>>Turno 2789:
+>>kcj
+A8 M3
+
+>>Turno 2790:
+>>CPU
+F3 E6
+
+>>Turno 2791:
+>>kcj
+A8 E7
+
+>>Turno 2792:
+>>CPU
+C3 D10
+
+>>Turno 2793:
+>>kcj
+A8 B10
+
+>>Turno 2794:
+>>CPU
+C3 L8
+
+>>Turno 2795:
+>>kcj
+A8 B3
+
+>>Turno 2796:
+>>CPU
+M10 G12
+
+>>Turno 2797:
+>>kcj
+A8 L5
+
+>>Turno 2798:
+>>CPU
+G12 I9
+
+>>Turno 2799:
+>>kcj
+A8 A6
+
+>>Turno 2800:
+>>CPU
+I9 B7
+
+>>Turno 2801:
+>>kcj
+A8 C3
+
+>>Turno 2802:
+>>CPU
+B7 B9
+
+>>Turno 2803:
+>>kcj
+A8 N7
+
+>>Turno 2804:
+>>CPU
+F3 G3
+
+>>Turno 2805:
+>>kcj
+A8 I11
+
+>>Turno 2806:
+>>CPU
+C3 I1
+
+>>Turno 2807:
+>>kcj
+A8 A4
+
+>>Turno 2808:
+>>CPU
+F3 I4
+
+>>Turno 2809:
+>>kcj
+A8 H3
+
+>>Turno 2810:
+>>CPU
+C3 E12
+
+>>Turno 2811:
+>>kcj
+A8 I5
+
+>>Turno 2812:
+>>CPU
+F3 N3
+
+>>Turno 2813:
+>>kcj
+A8 H11
+
+>>Turno 2814:
+>>CPU
+C3 B8
+
+>>Turno 2815:
+>>kcj
+A8 L2
+
+>>Turno 2816:
+>>CPU
+B9 M11
+
+>>Turno 2817:
+>>kcj
+A8 M12
+
+>>Turno 2818:
+>>CPU
+M11 F6
+
+>>Turno 2819:
+>>kcj
+A8 E5
+
+>>Turno 2820:
+>>CPU
+F3 A6
+
+>>Turno 2821:
+>>kcj
+A8 H10
+
+>>Turno 2822:
+>>CPU
+F3 N3
+
+>>Turno 2823:
+>>kcj
+A8 A2
+
+>>Turno 2824:
+>>CPU
+F3 G3
+
+>>Turno 2825:
+>>kcj
+A8
+
+>>Turno 2826:
+>>CPU
+F3 A6
+
+>>Turno 2827:
+>>kcj
+A8 N4
+
+>>Turno 2828:
+>>CPU
+F6 L10
+
+>>Turno 2829:
+>>kcj
+A8 B11
+
+>>Turno 2830:
+>>CPU
+F3 E7
+
+>>Turno 2831:
+>>kcj
+A8 F10
+
+>>Turno 2832:
+>>CPU
+C3 N3
+
+>>Turno 2833:
+>>kcj
+A8 B12
+
+>>Turno 2834:
+>>CPU
+C3 E4
+
+>>Turno 2835:
+>>kcj
+A8 G7
+
+>>Turno 2836:
+>>CPU
+L10 I10
+
+>>Turno 2837:
+>>kcj
+A8 A2
+
+>>Turno 2838:
+>>CPU
+I10 E6
+
+>>Turno 2839:
+>>kcj
+A8 F6
+
+>>Turno 2840:
+>>CPU
+E6 I11
+
+>>Turno 2841:
+>>kcj
+A8 M8
+
+>>Turno 2842:
+>>CPU
+I11 E4
+
+>>Turno 2843:
+>>kcj
+A8 H8
+
+>>Turno 2844:
+>>CPU
+F3 M1
+
+>>Turno 2845:
+>>kcj
+A8 I4
+
+>>Turno 2846:
+>>CPU
+F3 I10
+
+>>Turno 2847:
+>>kcj
+A8 L11
+
+>>Turno 2848:
+>>CPU
+E4 F4
+
+>>Turno 2849:
+>>kcj
+A8 E10
+
+>>Turno 2850:
+>>CPU
+F3 F11
+
+>>Turno 2851:
+>>kcj
+A8 I7
+
+>>Turno 2852:
+>>CPU
+C3 M4
+
+>>Turno 2853:
+>>kcj
+A8 H6
+
+>>Turno 2854:
+>>CPU
+F4 D10
+
+>>Turno 2855:
+>>kcj
+A8 G11
+
+>>Turno 2856:
+>>CPU
+D10 M5
+
+>>Turno 2857:
+>>kcj
+A8 M10
+
+>>Turno 2858:
+>>CPU
+F3 A6
+
+>>Turno 2859:
+>>kcj
+A8 L6
+
+>>Turno 2860:
+>>CPU
+F3 C8
+
+>>Turno 2861:
+>>kcj
+A8 M9
+
+>>Turno 2862:
+>>CPU
+C3 C7
+
+>>Turno 2863:
+>>kcj
+A8 D9
+
+>>Turno 2864:
+>>CPU
+C3 F2
+
+>>Turno 2865:
+>>kcj
+A8 H7
+
+>>Turno 2866:
+>>CPU
+C3 I7
+
+>>Turno 2867:
+>>kcj
+A8 N2
+
+>>Turno 2868:
+>>CPU
+C3 L8
+
+>>Turno 2869:
+>>kcj
+A8 D4
+
+>>Turno 2870:
+>>CPU
+M5 C6
+
+>>Turno 2871:
+>>kcj
+A8 M11
+
+>>Turno 2872:
+>>CPU
+F3 I1
+
+>>Turno 2873:
+>>kcj
+A8 D1
+
+>>Turno 2874:
+>>CPU
+C6 L6
+
+>>Turno 2875:
+>>kcj
+A8 D4
+
+>>Turno 2876:
+>>CPU
+L6 H11
+
+>>Turno 2877:
+>>kcj
+A8 B4
+
+>>Turno 2878:
+>>CPU
+C3 L1
+
+>>Turno 2879:
+>>kcj
+A8 D12
+
+>>Turno 2880:
+>>CPU
+F3 F7
+
+>>Turno 2881:
+>>kcj
+A8 M4
+
+>>Turno 2882:
+>>CPU
+H11 M2
+
+>>Turno 2883:
+>>kcj
+A8 B10
+
+>>Turno 2884:
+>>CPU
+F3 N4
+
+>>Turno 2885:
+>>kcj
+A8 M10
+
+>>Turno 2886:
+>>CPU
+C3 M3
+
+>>Turno 2887:
+>>kcj
+A8 G6
+
+>>Turno 2888:
+>>CPU
+M2 G11
+
+>>Turno 2889:
+>>kcj
+A8 E11
+
+>>Turno 2890:
+>>CPU
+F3 D10
+
+>>Turno 2891:
+>>kcj
+A8 I6
+
+>>Turno 2892:
+>>CPU
+G11 F6
+
+>>Turno 2893:
+>>kcj
+A8 L7
+
+>>Turno 2894:
+>>CPU
+F3 C7
+
+>>Turno 2895:
+>>kcj
+A8 E12
+
+>>Turno 2896:
+>>CPU
+C3 C4
+
+>>Turno 2897:
+>>kcj
+A8 E3
+
+>>Turno 2898:
+>>CPU
+F6 D10
+
+>>Turno 2899:
+>>kcj
+A8 G8
+
+>>Turno 2900:
+>>CPU
+D10
+
+>>Turno 2901:
+>>kcj
+A8 E8
+
+>>Turno 2902:
+>>CPU
+C3 H7
+
+>>Turno 2903:
+>>kcj
+A8 B8
+
+>>Turno 2904:
+>>CPU
+F3 D5
+
+>>Turno 2905:
+>>kcj
+A8 A11
+
+>>Turno 2906:
+>>CPU
+F3 L6
+
+>>Turno 2907:
+>>kcj
+A8 G3
+
+>>Turno 2908:
+>>CPU
+C3 L5
+
+>>Turno 2909:
+>>kcj
+A8 F6
+
+>>Turno 2910:
+>>CPU
+C3 B2
+
+>>Turno 2911:
+>>kcj
+A8 N2
+
+>>Turno 2912:
+>>CPU
+F3 N11
+
+>>Turno 2913:
+>>kcj
+A8 C1
+
+>>Turno 2914:
+>>CPU
+F3 A2
+
+>>Turno 2915:
+>>kcj
+A8 M10
+
+>>Turno 2916:
+>>CPU
+F3 I9
+
+>>Turno 2917:
+>>kcj
+A8 A4
+
+>>Turno 2918:
+>>CPU
+F3 F12
+
+>>Turno 2919:
+>>kcj
+A8 C3
+
+>>Turno 2920:
+>>CPU
+F3 C12
+
+>>Turno 2921:
+>>kcj
+A8 B3
+
+>>Turno 2922:
+>>CPU
+C3 L4
+
+>>Turno 2923:
+>>kcj
+A8 L10
+
+>>Turno 2924:
+>>CPU
+F3 D8
+
+>>Turno 2925:
+>>kcj
+A8 B6
+
+>>Turno 2926:
+>>CPU
+C3 I11
+
+>>Turno 2927:
+>>kcj
+A8 A2
+
+>>Turno 2928:
+>>CPU
+C3 A7
+
+>>Turno 2929:
+>>kcj
+A8 E5
+
+>>Turno 2930:
+>>CPU
+C3 G1
+
+>>Turno 2931:
+>>kcj
+A8 H8
+
+>>Turno 2932:
+>>CPU
+C3 C9
+
+>>Turno 2933:
+>>kcj
+A8 A4
+
+>>Turno 2934:
+>>CPU
+F3 N5
+
+>>Turno 2935:
+>>kcj
+A8 F11
+
+>>Turno 2936:
+>>CPU
+C3 M9
+
+>>Turno 2937:
+>>kcj
+A8 I12
+
+>>Turno 2938:
+>>CPU
+C3 F7
+
+>>Turno 2939:
+>>kcj
+A8 B5
+
+>>Turno 2940:
+>>CPU
+C3 H9
+
+>>Turno 2941:
+>>kcj
+A8 C3
+
+>>Turno 2942:
+>>CPU
+C3 C1
+
+>>Turno 2943:
+>>kcj
+A8 D12
+
+>>Turno 2944:
+>>CPU
+C3 B2
+
+>>Turno 2945:
+>>kcj
+A8 C8
+
+>>Turno 2946:
+>>CPU
+D10 C8
+
+>>Turno 2947:
+>>kcj
+A8 L8
+
+>>Turno 2948:
+>>CPU
+F3 L8
+
+>>Turno 2949:
+>>kcj
+A8 C10
+
+>>Turno 2950:
+>>CPU
+C3 H8
+
+>>Turno 2951:
+>>kcj
+A8 B2
+
+>>Turno 2952:
+>>CPU
+C3 I8
+
+>>Turno 2953:
+>>kcj
+A8 E1
+
+>>Turno 2954:
+>>CPU
+C3 I5
+
+>>Turno 2955:
+>>kcj
+A8 C4
+
+>>Turno 2956:
+>>CPU
+F3 I11
+
+>>Turno 2957:
+>>kcj
+A8 B6
+
+>>Turno 2958:
+>>CPU
+F3 D4
+
+>>Turno 2959:
+>>kcj
+A8 B2
+
+>>Turno 2960:
+>>CPU
+C8 F2
+
+>>Turno 2961:
+>>kcj
+A8 H9
+
+>>Turno 2962:
+>>CPU
+C3 D9
+
+>>Turno 2963:
+>>kcj
+A8 D1
+
+>>Turno 2964:
+>>CPU
+F2 B11
+
+>>Turno 2965:
+>>kcj
+A8 G8
+
+>>Turno 2966:
+>>CPU
+B11 I10
+
+>>Turno 2967:
+>>kcj
+A8 I6
+
+>>Turno 2968:
+>>CPU
+C3 D4
+
+>>Turno 2969:
+>>kcj
+A8 C10
+
+>>Turno 2970:
+>>CPU
+C3 F9
+
+>>Turno 2971:
+>>kcj
+A8 G1
+
+>>Turno 2972:
+>>CPU
+F3 L5
+
+>>Turno 2973:
+>>kcj
+A8 A3
+
+>>Turno 2974:
+>>CPU
+F3 N11
+
+>>Turno 2975:
+>>kcj
+A8 N11
+
+>>Turno 2976:
+>>CPU
+C3 D6
+
+>>Turno 2977:
+>>kcj
+A8 D12
+
+>>Turno 2978:
+>>CPU
+F3 H1
+
+>>Turno 2979:
+>>kcj
+A8 D2
+
+>>Turno 2980:
+>>CPU
+I10 F5
+
+>>Turno 2981:
+>>kcj
+A8 G5
+
+>>Turno 2982:
+>>CPU
+F3 C3
+
+>>Turno 2983:
+>>kcj
+A8 M5
+
+>>Turno 2984:
+>>CPU
+C3 B11
+
+>>Turno 2985:
+>>kcj
+A8 L3
+
+>>Turno 2986:
+>>CPU
+F3 E10
+
+>>Turno 2987:
+>>kcj
+A8 B4
+
+>>Turno 2988:
+>>CPU
+C3 N5
+
+>>Turno 2989:
+>>kcj
+A8 E3
+
+>>Turno 2990:
+>>CPU
+F3 B4
+
+>>Turno 2991:
+>>kcj
+A8 C4
+
+>>Turno 2992:
+>>CPU
+F3 L1
+
+>>Turno 2993:
+>>kcj
+A8 E9
+
+>>Turno 2994:
+>>CPU
+C3 H1
+
+>>Turno 2995:
+>>kcj
+A8 B2
+
+>>Turno 2996:
+>>CPU
+C3 E5
+
+>>Turno 2997:
+>>kcj
+A8 E4
+
+>>Turno 2998:
+>>CPU
+F3 F2
+
+>>Turno 2999:
+>>kcj
+A8 G4
+
+>>Turno 3000:
+>>CPU
+C3 F12
+
+>>Turno 3001:
+>>kcj
+A8 H11
+
+>>Turno 3002:
+>>CPU
+F5 D9
+
+>>Turno 3003:
+>>kcj
+A8 I1
+
+>>Turno 3004:
+>>CPU
+F3 L11
+
+>>Turno 3005:
+>>kcj
+A8 B11
+
+>>Turno 3006:
+>>CPU
+C3 L4
+
+>>Turno 3007:
+>>kcj
+A8 G1
+
+>>Turno 3008:
+>>CPU
+F3 E3
+
+>>Turno 3009:
+>>kcj
+A8 C7
+
+>>Turno 3010:
+>>CPU
+F3 L8
+
+>>Turno 3011:
+>>kcj
+A8 F5
+
+>>Turno 3012:
+>>CPU
+F3 F5
+
+>>Turno 3013:
+>>kcj
+A8 L1
+
+>>Turno 3014:
+>>CPU
+D9 B7
+
+>>Turno 3015:
+>>kcj
+A8 I2
+
+>>Turno 3016:
+>>CPU
+C3 F6
+
+>>Turno 3017:
+>>kcj
+A8 B12
+
+>>Turno 3018:
+>>CPU
+F3 I1
+
+>>Turno 3019:
+>>kcj
+A8 L1
+
+>>Turno 3020:
+>>CPU
+C3 L9
+
+>>Turno 3021:
+>>kcj
+A8 B1
+
+>>Turno 3022:
+>>CPU
+C3 A6
+
+>>Turno 3023:
+>>kcj
+A8 M2
+
+>>Turno 3024:
+>>CPU
+F3 G9
+
+>>Turno 3025:
+>>kcj
+A8 G6
+
+>>Turno 3026:
+>>CPU
+F3 L4
+
+>>Turno 3027:
+>>kcj
+A8 G10
+
+>>Turno 3028:
+>>CPU
+F3 B1
+
+>>Turno 3029:
+>>kcj
+A8 N12
+
+>>Turno 3030:
+>>CPU
+B7 I11
+
+>>Turno 3031:
+>>kcj
+A8 M12
+
+>>Turno 3032:
+>>CPU
+I11 L6
+
+>>Turno 3033:
+>>kcj
+A8 C8
+
+>>Turno 3034:
+>>CPU
+C3 I3
+
+>>Turno 3035:
+>>kcj
+A8 E12
+
+>>Turno 3036:
+>>CPU
+C3 E4
+
+>>Turno 3037:
+>>kcj
+A8 F1
+
+>>Turno 3038:
+>>CPU
+F3 B7
+
+>>Turno 3039:
+>>kcj
+A8 N12
+
+>>Turno 3040:
+>>CPU
+L6 I11
+
+>>Turno 3041:
+>>kcj
+A8 G12
+
+>>Turno 3042:
+>>CPU
+C3 G4
+
+>>Turno 3043:
+>>kcj
+A8 D3
+
+>>Turno 3044:
+>>CPU
+C3 N12
+
+>>Turno 3045:
+>>kcj
+A8 H4
+
+>>Turno 3046:
+>>CPU
+C3 M12
+
+>>Turno 3047:
+>>kcj
+A8 H10
+
+>>Turno 3048:
+>>CPU
+F3 E2
+
+>>Turno 3049:
+>>kcj
+A8 B7
+
+>>Turno 3050:
+>>CPU
+F3 B12
+
+>>Turno 3051:
+>>kcj
+A8 L3
+
+>>Turno 3052:
+>>CPU
+C3 L10
+
+>>Turno 3053:
+>>kcj
+A8 N1
+
+>>Turno 3054:
+>>CPU
+C3 A11
+
+>>Turno 3055:
+>>kcj
+A8 L4
+
+>>Turno 3056:
+>>CPU
+I11 F4
+
+>>Turno 3057:
+>>kcj
+A8 G12
+
+>>Turno 3058:
+>>CPU
+F4 I10
+
+>>Turno 3059:
+>>kcj
+A8 L7
+
+>>Turno 3060:
+>>CPU
+F3 N12
+
+>>Turno 3061:
+>>kcj
+A8 A6
+
+>>Turno 3062:
+>>CPU
+F3 G11
+
+>>Turno 3063:
+>>kcj
+A8 H7
+
+>>Turno 3064:
+>>CPU
+F3 I8
+
+>>Turno 3065:
+>>kcj
+A8 A1
+
+>>Turno 3066:
+>>CPU
+I10 G9
+
+>>Turno 3067:
+>>kcj
+A8 M4
+
+>>Turno 3068:
+>>CPU
+G9 H1
+
+>>Turno 3069:
+>>kcj
+A8 B4
+
+>>Turno 3070:
+>>CPU
+F3 C7
+
+>>Turno 3071:
+>>kcj
+A8 A10
+
+>>Turno 3072:
+>>CPU
+C3 D1
+
+>>Turno 3073:
+>>kcj
+A8 M10
+
+>>Turno 3074:
+>>CPU
+C3 C7
+
+>>Turno 3075:
+>>kcj
+A8 E11
+
+>>Turno 3076:
+>>CPU
+F3 B7
+
+>>Turno 3077:
+>>kcj
+A8 I6
+
+>>Turno 3078:
+>>CPU
+H1 G9
+
+>>Turno 3079:
+>>kcj
+A8 D7
+
+>>Turno 3080:
+>>CPU
+C3 H2
+
+>>Turno 3081:
+>>kcj
+A8 D3
+
+>>Turno 3082:
+>>CPU
+F3 M3
+
+>>Turno 3083:
+>>kcj
+A8 G3
+
+>>Turno 3084:
+>>CPU
+G9 H11
+
+>>Turno 3085:
+>>kcj
+A8 I6
+
+>>Turno 3086:
+>>CPU
+F3 L2
+
+>>Turno 3087:
+>>kcj
+A8 B8
+
+>>Turno 3088:
+>>CPU
+F3 G3
+
+>>Turno 3089:
+>>kcj
+A8 L1
+
+>>Turno 3090:
+>>CPU
+C3 M5
+
+>>Turno 3091:
+>>kcj
+A8 L10
+
+>>Turno 3092:
+>>CPU
+F3 F9
+
+>>Turno 3093:
+>>kcj
+A8 G5
+
+>>Turno 3094:
+>>CPU
+H11 L3
+
+>>Turno 3095:
+>>kcj
+A8 H1
+
+>>Turno 3096:
+>>CPU
+F3 B4
+
+>>Turno 3097:
+>>kcj
+A8 B3
+
+>>Turno 3098:
+>>CPU
+F3 M2
+
+>>Turno 3099:
+>>kcj
+A8 I3
+
+>>Turno 3100:
+>>CPU
+C3
+
+>>Turno 3101:
+>>kcj
+A8 N4
+
+>>Turno 3102:
+>>CPU
+C3 L1
+
+>>Turno 3103:
+>>kcj
+A8 B6
+
+>>Turno 3104:
+>>CPU
+F3 B1
+
+>>Turno 3105:
+>>kcj
+A8 D2
+
+>>Turno 3106:
+>>CPU
+C3 C6
+
+>>Turno 3107:
+>>kcj
+A8 B8
+
+>>Turno 3108:
+>>CPU
+F3 N7
+
+>>Turno 3109:
+>>kcj
+A8 N12
+
+>>Turno 3110:
+>>CPU
+L3 H9
+
+>>Turno 3111:
+>>kcj
+A8 H4
+
+>>Turno 3112:
+>>CPU
+H9 I4
+
+>>Turno 3113:
+>>kcj
+A8 I6
+
+>>Turno 3114:
+>>CPU
+F3 H8
+
+>>Turno 3115:
+>>kcj
+A8 E7
+
+>>Turno 3116:
+>>CPU
+F3 A12
+
+>>Turno 3117:
+>>kcj
+A8 H9
+
+>>Turno 3118:
+>>CPU
+F3 G12
+
+>>Turno 3119:
+>>kcj
+A8 L7
+
+>>Turno 3120:
+>>CPU
+F3 E1
+
+>>Turno 3121:
+>>kcj
+A8 C1
+
+>>Turno 3122:
+>>CPU
+C3 B10
+
+>>Turno 3123:
+>>kcj
+A8 F11
+
+>>Turno 3124:
+>>CPU
+F3 E10
+
+>>Turno 3125:
+>>kcj
+A8 I9
+
+>>Turno 3126:
+>>CPU
+F3 D10
+
+>>Turno 3127:
+>>kcj
+A8 C3
+
+>>Turno 3128:
+>>CPU
+F3 I11
+
+>>Turno 3129:
+>>kcj
+A8 F1
+
+>>Turno 3130:
+>>CPU
+C3 A4
+
+>>Turno 3131:
+>>kcj
+A8 F5
+
+>>Turno 3132:
+>>CPU
+F3 A1
+
+>>Turno 3133:
+>>kcj
+A8 F7
+
+>>Turno 3134:
+>>CPU
+I4 G12
+
+>>Turno 3135:
+>>kcj
+A8 H10
+
+>>Turno 3136:
+>>CPU
+C3 I2
+
+>>Turno 3137:
+>>kcj
+A8 G3
+
+>>Turno 3138:
+>>CPU
+G12 B6
+
+>>Turno 3139:
+>>kcj
+A8 E4
+
+>>Turno 3140:
+>>CPU
+B6 D12
+
+>>Turno 3141:
+>>kcj
+A8 E8
+
+>>Turno 3142:
+>>CPU
+C3 A11
+
+>>Turno 3143:
+>>kcj
+A8 G12
+
+>>Turno 3144:
+>>CPU
+C3 L6
+
+>>Turno 3145:
+>>kcj
+A8 I10
+
+>>Turno 3146:
+>>CPU
+F3 I8
+
+>>Turno 3147:
+>>kcj
+A8 L2
+
+>>Turno 3148:
+>>CPU
+C3 A6
+
+>>Turno 3149:
+>>kcj
+A8 C4
+
+>>Turno 3150:
+>>CPU
+F3 M11
+
+>>Turno 3151:
+>>kcj
+A8 G2
+
+>>Turno 3152:
+>>CPU
+D12 D11
+
+>>Turno 3153:
+>>kcj
+A8 I8
+
+>>Turno 3154:
+>>CPU
+D11 H4
+
+>>Turno 3155:
+>>kcj
+A8 A5
+
+>>Turno 3156:
+>>CPU
+C3 B11
+
+>>Turno 3157:
+>>kcj
+A8 I10
+
+>>Turno 3158:
+>>CPU
+H4 C6
+
+>>Turno 3159:
+>>kcj
+A8 G2
+
+>>Turno 3160:
+>>CPU
+F3 F8
+
+>>Turno 3161:
+>>kcj
+A8 H11
+
+>>Turno 3162:
+>>CPU
+C3 D8
+
+>>Turno 3163:
+>>kcj
+A8 B5
+
+>>Turno 3164:
+>>CPU
+F3 B7
+
+>>Turno 3165:
+>>kcj
+A8
+
+>>Turno 3166:
+>>CPU
+C3 I6
+
+>>Turno 3167:
+>>kcj
+A8 C6
+
+>>Turno 3168:
+>>CPU
+C3 B9
+
+>>Turno 3169:
+>>kcj
+A8 M9
+
+>>Turno 3170:
+>>CPU
+F3 E8
+
+>>Turno 3171:
+>>kcj
+A8 E1
+
+>>Turno 3172:
+>>CPU
+F3 L11
+
+>>Turno 3173:
+>>kcj
+A8 G12
+
+>>Turno 3174:
+>>CPU
+F3 A11
+
+>>Turno 3175:
+>>kcj
+A8 G5
+
+>>Turno 3176:
+>>CPU
+F3 M4
+
+>>Turno 3177:
+>>kcj
+A8 F10
+
+>>Turno 3178:
+>>CPU
+F3 H6
+
+>>Turno 3179:
+>>kcj
+A8 E4
+
+>>Turno 3180:
+>>CPU
+F3 H8
+
+>>Turno 3181:
+>>kcj
+A8 B4
+
+>>Turno 3182:
+>>CPU
+F3 D5
+
+>>Turno 3183:
+>>kcj
+A8 H3
+
+>>Turno 3184:
+>>CPU
+C3 H3
+
+>>Turno 3185:
+>>kcj
+A8 F2
+
+>>Turno 3186:
+>>CPU
+F3 F11
+
+>>Turno 3187:
+>>kcj
+A8 M9
+
+>>Turno 3188:
+>>CPU
+F3 E1
+
+>>Turno 3189:
+>>kcj
+A8 H12
+
+>>Turno 3190:
+>>CPU
+C3 H4
+
+>>Turno 3191:
+>>kcj
+A8 E12
+
+>>Turno 3192:
+>>CPU
+C3 G8
+
+>>Turno 3193:
+>>kcj
+A8 A3
+
+>>Turno 3194:
+>>CPU
+C3 F1
+
+>>Turno 3195:
+>>kcj
+A8 E2
+
+>>Turno 3196:
+>>CPU
+F3 N11
+
+>>Turno 3197:
+>>kcj
+A8
+
+>>Turno 3198:
+>>CPU
+C3 N7
+
+>>Turno 3199:
+>>kcj
+A8 C7
+
+>>Turno 3200:
+>>CPU
+C3 L10
+
+>>Turno 3201:
+>>kcj
+A8 N7
+
+>>Turno 3202:
+>>CPU
+F3 C9
+
+>>Turno 3203:
+>>kcj
+A8 I8
+
+>>Turno 3204:
+>>CPU
+C3 L5
+
+>>Turno 3205:
+>>kcj
+A8 E9
+
+>>Turno 3206:
+>>CPU
+F3 G9
+
+>>Turno 3207:
+>>kcj
+A8 F9
+
+>>Turno 3208:
+>>CPU
+C3 B2
+
+>>Turno 3209:
+>>kcj
+A8 E10
+
+>>Turno 3210:
+>>CPU
+F3 H9
+
+>>Turno 3211:
+>>kcj
+A8 F10
+
+>>Turno 3212:
+>>CPU
+C3 L10
+
+>>Turno 3213:
+>>kcj
+A8 B5
+
+>>Turno 3214:
+>>CPU
+F3 D10
+
+>>Turno 3215:
+>>kcj
+A8 G2
+
+>>Turno 3216:
+>>CPU
+C3 G8
+
+>>Turno 3217:
+>>kcj
+A8 N1
+
+>>Turno 3218:
+>>CPU
+C3 G9
+
+>>Turno 3219:
+>>kcj
+A8 C10
+
+>>Turno 3220:
+>>CPU
+C3 D4
+
+>>Turno 3221:
+>>kcj
+A8 H2
+
+>>Turno 3222:
+>>CPU
+C3 N1
+
+>>Turno 3223:
+>>kcj
+A8 B2
+
+>>Turno 3224:
+>>CPU
+F3 H5
+
+>>Turno 3225:
+>>kcj
+A8 H7
+
+>>Turno 3226:
+>>CPU
+F3 E1
+
+>>Turno 3227:
+>>kcj
+A8 E6
+
+>>Turno 3228:
+>>CPU
+F3 D9
+
+>>Turno 3229:
+>>kcj
+A8 G6
+
+>>Turno 3230:
+>>CPU
+F3 L2
+
+>>Turno 3231:
+>>kcj
+A8 C2
+
+>>Turno 3232:
+>>CPU
+F3 E4
+
+>>Turno 3233:
+>>kcj
+A8 I1
+
+>>Turno 3234:
+>>CPU
+C3 B11
+
+>>Turno 3235:
+>>kcj
+A8 H1
+
+>>Turno 3236:
+>>CPU
+F3 E4
+
+>>Turno 3237:
+>>kcj
+A8 I6
+
+>>Turno 3238:
+>>CPU
+C3 H7
+
+>>Turno 3239:
+>>kcj
+A8 D10
+
+>>Turno 3240:
+>>CPU
+C3 C7
+
+>>Turno 3241:
+>>kcj
+A8 F5
+
+>>Turno 3242:
+>>CPU
+F3 G3
+
+>>Turno 3243:
+>>kcj
+A8 A12
+
+>>Turno 3244:
+>>CPU
+F3 D10
+
+>>Turno 3245:
+>>kcj
+A8 M1
+
+>>Turno 3246:
+>>CPU
+C3 A9
+
+>>Turno 3247:
+>>kcj
+A8 C1
+
+>>Turno 3248:
+>>CPU
+C3 H9
+
+>>Turno 3249:
+>>kcj
+A8 L9
+
+>>Turno 3250:
+>>CPU
+C3 L12
+
+>>Turno 3251:
+>>kcj
+A8 G1
+
+>>Turno 3252:
+>>CPU
+C3 A8
+
+>>Turno 3253:
+>>kcj
+A8 M8
+
+>>Turno 3254:
+>>CPU
+F3 I2
+
+>>Turno 3255:
+>>kcj
+A8 B12
+
+>>Turno 3256:
+>>CPU
+F3 M5
+
+>>Turno 3257:
+>>kcj
+A8 I11
+
+>>Turno 3258:
+>>CPU
+C3 L7
+
+>>Turno 3259:
+>>kcj
+A8 D1
+
+>>Turno 3260:
+>>CPU
+F3 M1
+
+>>Turno 3261:
+>>kcj
+A8 A9
+
+>>Turno 3262:
+>>CPU
+F3 A3
+
+>>Turno 3263:
+>>kcj
+A8 D1
+
+>>Turno 3264:
+>>CPU
+F3 D3
+
+>>Turno 3265:
+>>kcj
+A8 F12
+
+>>Turno 3266:
+>>CPU
+F3 B9
+
+>>Turno 3267:
+>>kcj
+A8 L3
+
+>>Turno 3268:
+>>CPU
+C3 M3
+
+>>Turno 3269:
+>>kcj
+A8 N2
+
+>>Turno 3270:
+>>CPU
+F3 B1
+
+>>Turno 3271:
+>>kcj
+A8 C4
+
+>>Turno 3272:
+>>CPU
+F3 B4
+
+>>Turno 3273:
+>>kcj
+A8 N3
+
+>>Turno 3274:
+>>CPU
+F3 A7
+
+>>Turno 3275:
+>>kcj
+A8 E6
+
+>>Turno 3276:
+>>CPU
+C3 C9
+
+>>Turno 3277:
+>>kcj
+A8 D6
+
+>>Turno 3278:
+>>CPU
+C3 E2
+
+>>Turno 3279:
+>>kcj
+A8 G10
+
+>>Turno 3280:
+>>CPU
+C3 B4
+
+>>Turno 3281:
+>>kcj
+A8 N1
+
+>>Turno 3282:
+>>CPU
+C3 F8
+
+>>Turno 3283:
+>>kcj
+A8 A6
+
+>>Turno 3284:
+>>CPU
+F3 E7
+
+>>Turno 3285:
+>>kcj
+A8 H1
+
+>>Turno 3286:
+>>CPU
+F3
+
+>>Turno 3287:
+>>kcj
+A8 D12
+
+>>Turno 3288:
+>>CPU
+F3 C8
+
+>>Turno 3289:
+>>kcj
+A8 G9
+
+>>Turno 3290:
+>>CPU
+F3 M8
+
+>>Turno 3291:
+>>kcj
+A8 C4
+
+>>Turno 3292:
+>>CPU
+F3 H12
+
+>>Turno 3293:
+>>kcj
+A8 D2
+
+>>Turno 3294:
+>>CPU
+C3 C9
+
+>>Turno 3295:
+>>kcj
+A8 B10
+
+>>Turno 3296:
+>>CPU
+F3 F8
+
+>>Turno 3297:
+>>kcj
+A8 C11
+
+>>Turno 3298:
+>>CPU
+F3 N9
+
+>>Turno 3299:
+>>kcj
+A8 H8
+
+>>Turno 3300:
+>>CPU
+C3 M2
+
+>>Turno 3301:
+>>kcj
+A8 L10
+
+>>Turno 3302:
+>>CPU
+C3 N11
+
+>>Turno 3303:
+>>kcj
+A8 F11
+
+>>Turno 3304:
+>>CPU
+F3 B7
+
+>>Turno 3305:
+>>kcj
+A8 A3
+
+>>Turno 3306:
+>>CPU
+C3 G11
+
+>>Turno 3307:
+>>kcj
+A8 F9
+
+>>Turno 3308:
+>>CPU
+C3 M9
+
+>>Turno 3309:
+>>kcj
+A8 F4
+
+>>Turno 3310:
+>>CPU
+C3 M12
+
+>>Turno 3311:
+>>kcj
+A8 C2
+
+>>Turno 3312:
+>>CPU
+C3 C1
+
+>>Turno 3313:
+>>kcj
+A8 L9
+
+>>Turno 3314:
+>>CPU
+F3 C1
+
+>>Turno 3315:
+>>kcj
+A8 D5
+
+>>Turno 3316:
+>>CPU
+F3 D12
+
+>>Turno 3317:
+>>kcj
+A8 N2
+
+>>Turno 3318:
+>>CPU
+C3 C11
+
+>>Turno 3319:
+>>kcj
+A8 N1
+
+>>Turno 3320:
+>>CPU
+C3 E2
+
+>>Turno 3321:
+>>kcj
+A8 H9
+
+>>Turno 3322:
+>>CPU
+F3 G11
+
+>>Turno 3323:
+>>kcj
+A8 N11
+
+>>Turno 3324:
+>>CPU
+C3 N9
+
+>>Turno 3325:
+>>kcj
+A8 C4
+
+>>Turno 3326:
+>>CPU
+F3 G1
+
+>>Turno 3327:
+>>kcj
+A8 M7
+
+>>Turno 3328:
+>>CPU
+C3 H10
+
+>>Turno 3329:
+>>kcj
+A8 M7
+
+>>Turno 3330:
+>>CPU
+C3 B5
+
+>>Turno 3331:
+>>kcj
+A8 D4
+
+>>Turno 3332:
+>>CPU
+C3 L1
+
+>>Turno 3333:
+>>kcj
+A8 G10
+
+>>Turno 3334:
+>>CPU
+C3 B8
+
+>>Turno 3335:
+>>kcj
+A8 F8
+
+>>Turno 3336:
+>>CPU
+C3 C6
+
+>>Turno 3337:
+>>kcj
+A8 M6
+
+>>Turno 3338:
+>>CPU
+F3 M1
+
+>>Turno 3339:
+>>kcj
+A8 H7
+
+>>Turno 3340:
+>>CPU
+F3 C5
+
+>>Turno 3341:
+>>kcj
+A8 F8
+
+>>Turno 3342:
+>>CPU

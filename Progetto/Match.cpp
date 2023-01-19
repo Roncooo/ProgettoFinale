@@ -496,21 +496,36 @@ int round(Player& player, Player& enemy, Log& file_log)
 	
 	if(enemy.has_lost())
 	{
+		std::cout << "\n";
 		print_winner(player);
 		recap(player, enemy);
 		
+//		std::string winner = winner_string(player);
 		file_log.write("\n" + eof + "Il vincitore e'  " + player.name);
 		
 		return 100;	// partita terminata
 	}
 }
 
-void print_winner(Player& player)
+std::string winner_string(Player& player)
 {
 	std::string str = player.name + " hai vinto!";
-	std::cout << "\n+" + std::string(str.length()+2, '~') + "+\n";
-	std::cout << "| " + str + " |\n";
-	std::cout << "+" + std::string(str.length()+2, '~') + "+\n\n";
+	std::string winner = "+";
+	std::string tilde = std::string(str.length()+2, '~');
+	winner += tilde + "+\n";
+	winner += "| " + str + " |\n";
+	winner += "+" + tilde + "+\n\n";
+	
+	return winner;
+}
+
+void print_winner(Player& player)
+{
+//	std::string str = player.name + " hai vinto!";
+//	std::cout << "\n+" + std::string(str.length()+2, '~') + "+\n";
+//	std::cout << "| " + str + " |\n";
+//	std::cout << "+" + std::string(str.length()+2, '~') + "+\n\n";
+	std::cout << winner_string(player);
 }
 
 void Match::play()
