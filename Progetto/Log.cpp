@@ -4,7 +4,7 @@
 
 Log::Log() 
 {
-	output.open("Progetto\\log.txt", std::ios::out);
+	output.open("log.txt", std::ios::out);
 };
 
 

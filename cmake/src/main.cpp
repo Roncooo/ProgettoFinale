@@ -5,7 +5,7 @@
 
 using std::cout, std::cin, std::endl, std::string;
 
-int main_f(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	std::string match_type;
 	// argc vale 2 se c'è un argomento (perché argv[0] contiene nome e percorso dell'eseguibile)
@@ -21,7 +21,7 @@ int main_f(int argc, char* argv[])
 			argv[1][i] = toupper(argv[1][i]);
 		if(strcmp(argv[1], "CC")==0)
 			match_type = "CC";
-		else if(strcmp(argv[1], "PC")==0)
+		else if(strcmp(argv[1], "PC")==0 || strcmp(argv[1], "CP")==0)
 			match_type = "PC";
 		else
 			match_type = "INVALID";

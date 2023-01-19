@@ -2,7 +2,6 @@
 
 #include "Support.h"
 
-//using game_board::Position;
 using namespace game_board;
 
 Support::Support(const Position& prune, const Position& stern, Player& p) 
@@ -16,7 +15,6 @@ std::string Support::ship_type() const
 	return "support";
 }
 
-// controlla se, rispetto al center di support, la nave da curare è nella posizione giusta
 // dice se la posizione passata è curabile dalla nave di supporto che invoca la funzione
 // quindi deve essere sufficentemente vicina e non può essere la nave stessa
 bool Support::is_curable(const Position& p)
@@ -28,21 +26,17 @@ bool Support::is_curable(const Position& p)
 	}
 	
 	Position center = get_center();
-	if( p != center+Position(-1,-1) && 	// top left
-		p != center+Position(-1, 0) &&	// top
-		p != center+Position(-1,+1) &&	// top right
-		p != center+Position( 0,+1) &&	// right
-		p != center+Position(+1,+1) &&	// bottom right
-		p != center+Position(+1, 0) &&	// bottom
-		p != center+Position(+1,-1) &&	// bottom left
-		p != center+Position( 0,-1)  	)	// left
-		return false;
-	
-	return true;
+	for(int i = -1; i < 2; i++)
+	{
+		for(int j = -1; j < 2; j++)
+		{
+			if(p == center+Position(i, j)) return true;
+		}
+	}
+	return false;
 }
 
-// mi sposto dove chiede l'utente, se la posizione non e' valida ritorno, altrimenti
-// curo
+// mi sposto dove chiede l'utente, se la posizione non e' valida ritorno, altrimenti curo
 int Support::action(const Position& pos, Player& enemy)
 {
 	// mi muovo dove chiede l'utente se questo è possibile, altrimenti termina
@@ -65,7 +59,7 @@ int Support::action(const Position& pos, Player& enemy)
 
 int Support::is_sunk()
 {
-	if(Ship::is_sunk() == 1)	// la nave non è affondata (necessariamente ora)
+	if(Ship::is_sunk() == 1)	// la nave è affondata (necessariamente ora)
 		return 41;
 	
 	return 0;	// non è affondata

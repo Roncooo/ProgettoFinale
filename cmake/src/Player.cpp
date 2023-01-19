@@ -31,7 +31,7 @@ int Player::how_many_battleships() const
 	int count=0;
 	for(int i=0; i<get_placed_ships(); i++)
 	{
-		// non serve più il controllo defence.ships[i]->is_sunk()==false perché ships contiene solo navi non affondate
+		// ships contiene solo le navi non affondate
 		if(defence.ships[i]->ship_type()=="battleship")
 			count++;
 	}
@@ -116,6 +116,11 @@ int Player::is_there_ship(const Position& sonar_request) const
 		}
 	}
 	return -1;	// nella posizione richiesta non c'è una nave
+}
+
+std::string Player::grids_to_string()
+{
+	return Grid::to_string(defence, attack);
 }
 
 void Player::print_defence()
