@@ -9,7 +9,7 @@ using std::ifstream, std::ofstream, std::string, std::ios, game_board::Position,
 
 
 
-int command_for_replay(Position& a, Position& b, ifstream& input)
+int command_for_replay(Position& a, Position& b, ifstream& input, string& match_string)
 {
 	
 	string input_string;
@@ -21,7 +21,7 @@ int command_for_replay(Position& a, Position& b, ifstream& input)
 		
 		if(input_string.length() < 1)				//controllo che ci siano almeno due caratteri
 		{
-			break;
+			continue;
 		}
 		if (input_string.substr(0, 2) == ignore)		//controllo che non ci sia la flag che ignora la riga
 		{
@@ -30,8 +30,7 @@ int command_for_replay(Position& a, Position& b, ifstream& input)
 		
 		if (input_string.substr(0, 2) == eof)		//controllo che non ci sia la flag di fine partita
 		{
-			cout << "\n";
-			cout << input_string.substr(2) << "\n";
+			match_string += "\n" + input_string.substr(2) + "\n";
 			return -1;
 		}
 		
@@ -59,100 +58,41 @@ int command_for_replay(Position& a, Position& b, ifstream& input)
 void replay_placement(Player& p, ifstream& input)
 {
 	Position prow, prune;
+	string temp = "";
 	
 	for(int i = 1; i <= game_board::MAX_BATTLESHIPS; i++)
 	{
-		command_for_replay(prow, prune, input);
+		command_for_replay(prow, prune, input, temp);
 		p.add_ship(new Battleship(prow, prune, p)); 
 	}
 	
 	for(int i = 1; i <= game_board::MAX_SUPPORTS; i++)
 	{
-		command_for_replay(prow, prune, input);
+		command_for_replay(prow, prune, input, temp);
 		p.add_ship(new Support(prow, prune, p)); 
 	}
 	
 	for(int i = 1; i <= game_board::MAX_SUBMARINES; i++)
 	{
-		command_for_replay(prow, prune, input);
+		command_for_replay(prow, prune, input, temp);
 		p.add_ship(new Submarine(prow, p)); 
 	}
 }
 
 
-int replay_round(Player& player, Player& enemy, ifstream& input)
-{
-	Position origin, target;
-	
-	player.print_defence();
-	int code = command_for_replay(origin, target, input);
-	player.act_ship(player.get_ship_index(origin), target, enemy);
-
-	return code;
-}
-
-int replay_round_in_file(Player& player, Player& enemy, ifstream& input, string& match_string)
+int replay_round(Player& player, Player& enemy, ifstream& input, string& match_string)
 {
 	Position origin, target;
 	
 	match_string += player.grids_to_string();
-	int code = command_for_replay(origin, target, input);
+	int code = command_for_replay(origin, target, input, match_string);
 	player.act_ship(player.get_ship_index(origin), target, enemy);
 
 	return code;
 }
 
 
-void re_play(ifstream& input)
-{
-	if (!input.is_open())
-	{
-		cout << "~~~~ERRORE APERTURA FILE~~~~";
-		return;
-	}
-	
-	Player p1, p2;
-	string temp = "";
-	//leggo i nomi dei giocatori
-	std::getline(input, temp);
-	p1.name = temp;
-	std::getline(input, temp);
-	p2.name = temp;
-	
-	std::getline(input, temp);		//serve per bypassare la riga vuota
-	
-	//posizionamento delle navi
-	replay_placement(p1, input);
-	replay_placement(p2, input);
-	
-	int n_rounds = 1;
-	//eseguo i turni, leggendo le mosse dal file, finchè non arrivo alla fine del file
-	while(input.good())
-	{
-		std::getline(input, temp);		//serve per bypassare la riga vuota
-		
-		cout << "\nTurno: " << n_rounds << "\n";
-		if (replay_round(p1, p2, input) == -1)
-		{
-			cout << "\n### FINE PARTITA ###\n";
-			return;
-		}
-		n_rounds++;
-		
-		cout << "\n";
-		std::this_thread::sleep_for(std::chrono::milliseconds(300));
-		
-		if(replay_round(p2, p1, input) == -1)
-		{
-			cout << "\n### FINE PARTITA ###\n";
-			return;
-		}
-		n_rounds++;
-	}
-	
-}
-
-std::string replay_in_file(ifstream& input)
+std::string replay_in_string(ifstream& input)
 {
 	string match_string = "";
 	
@@ -182,15 +122,15 @@ std::string replay_in_file(ifstream& input)
 		std::getline(input, temp);		//serve per bypassare la riga vuota
 		
 		match_string += "\nTurno: " + std::to_string(n_rounds) + "\n";
-		if (replay_round(p1, p2, input) == -1)
+		if (replay_round(p1, p2, input, match_string) == -1)
 		{
 			match_string += "\n### FINE PARTITA ###\n";
 			return match_string;
 		}
 		n_rounds++;
-		cout << "\n";
+		match_string += "\n";
 		
-		if(replay_round(p2, p1, input) == -1)
+		if(replay_round(p2, p1, input, match_string) == -1)
 		{
 			match_string += "\n### FINE PARTITA ###\n";
 			return match_string;
@@ -202,9 +142,6 @@ std::string replay_in_file(ifstream& input)
 
 void re_write(ifstream& input, ofstream& output)
 {
-	//mi chiedo se abbia senso far eseguire il replay e salvare su una stringa tutto quello che viene stampato
-	//ma come prelevo l'ostream?
-	
 	//oppure vado a modifcare print_defence, facendo in modo che tutto quello che stampa lo salva 
 	//anche in una stringa che puoò benissimo ritornare
 	
@@ -215,20 +152,20 @@ void re_write(ifstream& input, ofstream& output)
 	if (!output.is_open())
 		cout << "**** OPS!! QUALCOSA E' ANDATO STORTO COL FILE OUTPUT ****";
 	
-//	string line;
-//	string txt = "";
-//	
-//	while(input.good())
-//	{
-//		std::getline(input, line);
-//		line += "\n";
-//		txt += line;
-//	}
-//	output << txt;
-	
 	//deve rigiocare la partita con replay, ma senza stampare nulla a video
-	string text = replay_in_file(input);
+	string text = replay_in_string(input);
 	output << text;
+}
+
+
+void re_play(ifstream& input)
+{
+	if (!input.is_open())
+	{
+		cout << "~~~~ERRORE APERTURA FILE~~~~";
+		return;
+	}
+	cout << replay_in_string(input);
 }
 
 
@@ -246,19 +183,6 @@ int main(int argc, char* argv[])
 	if(argc==1)
 	{
 		match_type = "UNASSIGNED";
-		
-		file_log_name = "Progetto\\log.txt";
-		file_output_replay_name = "Progetto\\output.txt";
-		
-		ifstream input(file_log_name, ios::in);
-		ofstream output(file_output_replay_name, ios::out | ios::app);
-		
-		re_write(input, output);
-		input.close();
-		output.close();
-//		Player p1("pippo");
-//		string grid = p1.grids_to_string();
-//		cout << grid;
 	}
 	if(argc==2)
 		match_type = "TOO_LOW_ARGS";
@@ -286,7 +210,7 @@ int main(int argc, char* argv[])
 			file_output_replay_name = argv[3];
 			
 			ifstream input(file_log_name, ios::in);
-			ofstream output(file_output_replay_name, ios::out | ios::app);
+			ofstream output(file_output_replay_name, ios::out);
 			
 			re_write(input, output);
 			input.close();
@@ -311,16 +235,4 @@ int main(int argc, char* argv[])
 	
 	return 0;
 }
-
-
-//	ifstream input("Progetto\\log.txt", ios::in);
-//	re_play(input);
-//	input.close();
-
-//PAUSA
-
-//#include <chrono>
-//#include <thread>
-//
-//std::this_thread::sleep_for(std::chrono::milliseconds(500));
 

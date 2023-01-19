@@ -18,7 +18,6 @@ set(SOURCES
 	src/Support.cpp
 	src/Submarine.cpp
 	src/Log.cpp
-	src/replay.cpp
 )
 
 add_library(my_lib
@@ -26,7 +25,7 @@ add_library(my_lib
 )
 
 add_executable(battaglia_navale 
-	src/main.cpp
+	src/battaglia_navale.cpp
 )
 
 target_link_libraries(battaglia_navale

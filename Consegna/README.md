@@ -2,6 +2,43 @@ author: Beatrice Bellesso
 
 # ProgettoFinale C(alabrese)++
 
+***Suddivisione del lavoro***
+A causa del ritardo impiegato da uno dei tre componenti (più volte sollecitato dagli altri) nello sviluppo della sua porzione di progetto, la suddivisione risulta molto poco equilibrata. 
+Sempre a causa di questo ritardo, alcune delle features richieste dalla consegna non funzionano in modo ottimale per esempio nel replay stampato sul terminale non avviene nessuna pausa e la formattazione non è completa.
+
+Autore: Beatrice Bellesso
+AttackGrid.cpp
+AttackGrid.h
+DefenceGrid.cpp
+DefenceGrid.h
+Ship.cpp
+Ship.h
+Submarine.cpp
+Submarine.h
+Support.cpp
+Support.h
+README.md
+
+Autore: Bruzzese Fulvio
+Log.cpp
+Log.h
+replay.cpp
+
+Autore: Roncolato Francesco
+Battleship.cpp
+Battleship.h
+Grid.cpp
+Grid.h
+Match.cpp
+Match.h
+Player.cpp
+Player.h
+Position.cpp
+Position.h
+main.cpp
+CMakeLists.txt
+
+
 ***SCHEMA DI DERIVAZIONE DELLE CLASSI***
 
 namespace game_board
@@ -12,7 +49,7 @@ Grid
 +-- DefenceGrid	
 |					
 +-- AttackGrid		
-							
+
 Position						
 
 }

@@ -85,7 +85,10 @@ void replay_placement(Player& p, ifstream& input, string& match_string)
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 308576b271d7afa58f838a20e1ed80869bfc8346
 int replay_round(Player& player, Player& enemy, ifstream& input, string& match_string)
 {
 	Position origin, target;
