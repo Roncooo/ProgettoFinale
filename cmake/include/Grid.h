@@ -27,8 +27,9 @@ namespace game_board
 		//	non const perché i print fanno l'update
 		static void print(Grid& a);			//	stampa una sola Grid
 		static void print(Grid& a, Grid& b);		//	stampa due griglie affiancate
-		static bool is_valid(const Position& pos);
+		static std::string to_string(Grid& a);
 		static std::string to_string(Grid& a, Grid& b);
+		static bool is_valid(const Position& pos);
 		
 		//	virtuale pura perché avviene diversamente per la difesa e l'attacco
 		virtual void update()=0;

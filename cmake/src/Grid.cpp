@@ -63,6 +63,104 @@ void Grid::print(Grid& a)
 	//N |   |   |   |   |   |   |   |   |   |   |   |   | 
 	//  +---+---+---+---+---+---+---+---+---+---+---+---+
 	
+//	a.update();
+//	
+//	std::string delimiter_line = "  +";
+//	for(int i=0; i<cols; i++)
+//		delimiter_line += "---+";
+//	
+//	// riga di numeri
+//	std::cout << "  ";	// identazione per le lettere
+//	
+//	for(int i=1; i<=cols; i++)
+//	{
+//		std::cout << "| "+std::to_string(i);
+//		
+//		if(i<10)
+//			std::cout << " ";	// padding a destra
+//	}
+//	std::cout << "|\n"; 	// ultimo delimitatore
+//	
+//	std::cout << delimiter_line << "\n";
+//	
+//	// inizio matrice
+//	for(int r=0; r<rows; r++)
+//	{
+//		std::cout << letters[r] << " |";
+//		
+//		for(int c=0; c<cols; c++)
+//			std::cout << " " << a.matrix[r][c] << " |";
+//		
+//		std::cout << "\n" << delimiter_line << "\n";
+//	}
+	std::cout << to_string(a);
+}
+
+
+// stampa due griglie affiancate
+void Grid::print(Grid& a, Grid& b)
+{
+//	a.update();
+//	b.update();
+//
+//	std::string margin = "\t";
+//	
+//	std::string delimiter_line = "  +";
+//	for(int i=0; i<cols; i++)
+//		delimiter_line += "---+";
+//	
+//	// riga dei numeri a
+//	std::cout << "  ";	// identazione per le lettere
+//	for(int i=1; i<=cols; i++)
+//	{
+//		std::cout << "| "+std::to_string(i);
+//		if(i<10)
+//			std::cout << " ";	// padding a destra
+//	}
+//	std::cout << "|";	// ultimo delimitatore
+//
+//	std::cout << margin;
+//	
+//	// riga di numeri 2
+//	std::cout << "  ";	// identazione per le lettere
+//	for(int i=1; i<=cols; i++)
+//	{
+//		std::cout << "| "+std::to_string(i);
+//		if(i<10)
+//			std::cout << " ";	// padding a destra
+//	}
+//	
+//	std::cout << "|";	// ultimo delimitatore
+//	
+//	std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
+//	
+//	// inizio matrice
+//	for(int r=0; r<rows; r++)
+//	{
+//		// riga matrice a
+//		std::cout << letters[r] << " |";
+//		for(int c=0; c<cols; c++)
+//		{
+//			std::cout << " " << a.matrix[r][c] << " |";
+//		}
+//		
+//		std::cout << margin;
+//		
+//		// riga matrice b
+//		std::cout << letters[r] << " |";
+//		for(int c=0; c<cols; c++)
+//		{
+//			std::cout << " " << b.matrix[r][c] << " |";
+//		}
+//		
+//		std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
+//	}
+	std::cout << to_string(a, b);
+}
+
+std::string Grid::to_string(Grid& a)
+{
+	std::string grid_string = "";		//necessaria per il replay
 	a.update();
 	
 	std::string delimiter_line = "  +";
@@ -70,92 +168,34 @@ void Grid::print(Grid& a)
 		delimiter_line += "---+";
 	
 	// riga di numeri
-	std::cout << "  ";	// identazione per le lettere
+	grid_string += "  ";	// identazione per le lettere
 	
 	for(int i=1; i<=cols; i++)
 	{
-		std::cout << "| "+std::to_string(i);
-		
+		grid_string += "| "+std::to_string(i);
 		if(i<10)
-			std::cout << " ";	// padding a destra
+			grid_string += " ";	// padding a destra
 	}
-	std::cout << "|\n"; 	// ultimo delimitatore
+	grid_string += "|\n";	// ultimo delimitatore
 	
-	std::cout << delimiter_line << "\n";
+	grid_string += delimiter_line + "\n";
 	
 	// inizio matrice
 	for(int r=0; r<rows; r++)
 	{
-		std::cout << letters[r] << " |";
+		grid_string += letters[r];
+		grid_string += " |";
 		
-		for(int c=0; c<cols; c++)
-			std::cout << " " << a.matrix[r][c] << " |";
-		
-		std::cout << "\n" << delimiter_line << "\n";
-	}
-	
-}
-
-
-// stampa due griglie affiancate
-void Grid::print(Grid& a, Grid& b)
-{
-	a.update();
-	b.update();
-
-	std::string margin = "\t";
-	
-	std::string delimiter_line = "  +";
-	for(int i=0; i<cols; i++)
-		delimiter_line += "---+";
-	
-	// riga dei numeri a
-	std::cout << "  ";	// identazione per le lettere
-	for(int i=1; i<=cols; i++)
-	{
-		std::cout << "| "+std::to_string(i);
-		if(i<10)
-			std::cout << " ";	// padding a destra
-	}
-	std::cout << "|";	// ultimo delimitatore
-
-	std::cout << margin;
-	
-	// riga di numeri 2
-	std::cout << "  ";	// identazione per le lettere
-	for(int i=1; i<=cols; i++)
-	{
-		std::cout << "| "+std::to_string(i);
-		if(i<10)
-			std::cout << " ";	// padding a destra
-	}
-	
-	std::cout << "|";	// ultimo delimitatore
-	
-	std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
-	
-	// inizio matrice
-	for(int r=0; r<rows; r++)
-	{
-		// riga matrice a
-		std::cout << letters[r] << " |";
 		for(int c=0; c<cols; c++)
 		{
-			std::cout << " " << a.matrix[r][c] << " |";
+			grid_string += " ";
+			grid_string += a.matrix[r][c];
+			grid_string += " |";
 		}
 		
-		std::cout << margin;
-		
-		// riga matrice b
-		std::cout << letters[r] << " |";
-		for(int c=0; c<cols; c++)
-		{
-			std::cout << " " << b.matrix[r][c] << " |";
-		}
-		
-		std::cout << "\n" << delimiter_line << margin << delimiter_line << "\n";
+		grid_string += "\n" + delimiter_line + "\n";
 	}
-//	std::cout << to_string(a, b);
+	return grid_string;
 }
 
 
@@ -163,7 +203,7 @@ std::string Grid::to_string(Grid& a, Grid& b)
 {
 	std::string grid_string = "";		//necessaria per il replay
 	std::string margin = "\t";
-	
+
 	a.update();
 	b.update();
 	
@@ -201,22 +241,24 @@ std::string Grid::to_string(Grid& a, Grid& b)
 	for(int r=0; r<rows; r++)
 	{
 		//riga matrice a
-		grid_string += letters[r] + " |";
+		grid_string += letters[r];
+		grid_string += " |";
 		for(int c=0; c<cols; c++)
 		{
 			grid_string += " ";
-			grid_string.push_back(a.matrix[r][c]);
+			grid_string += a.matrix[r][c];
 			grid_string += " |";
 		}
 		
 		grid_string += margin;
 		
 		//riga matrice b
-		grid_string += letters[r] + " |";
+		grid_string += letters[r];
+		grid_string += " |";
 		for(int c=0; c<cols; c++)
 		{
 			grid_string += " ";
-			grid_string.push_back(b.matrix[r][c]);
+			grid_string += b.matrix[r][c];
 			grid_string += " |";
 		}
 		
