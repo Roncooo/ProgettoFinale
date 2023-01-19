@@ -3,8 +3,7 @@ author: Beatrice Bellesso
 # ProgettoFinale C(alabrese)++
 
 ***Suddivisione del lavoro***
-A causa del ritardo impiegato da uno dei tre componenti (più volte sollecitato dagli altri) nello sviluppo della sua porzione di progetto, la suddivisione risulta molto poco equilibrata. 
-Sempre a causa di questo ritardo, alcune delle features richieste dalla consegna non funzionano in modo ottimale per esempio nel replay stampato sul terminale non avviene nessuna pausa e la formattazione non è completa.
+A causa del ritardo impiegato da uno dei tre componenti (più volte sollecitato dagli altri) nello sviluppo della sua porzione di progetto, la suddivisione risulta molto poco equilibrata. Sempre a causa di questo ritardo è stato necessario l'intervento nel codice altrui.
 
 Autore: Beatrice Bellesso
 AttackGrid.cpp

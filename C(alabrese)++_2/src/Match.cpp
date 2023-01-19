@@ -7,7 +7,7 @@ using namespace game_board;
 Match::Match(Player& p1, Player& p2, Log& file)
 	: player1{p1}, player2{p2}, file_log{file}
 {
-	// definizione della regex statica per il riconoscimento di una posizione valida
+	// definizione della regex per il riconoscimento di una posizione valida
 	// una posizione valida è formata da una lettera compresa tra quelle valide (game_board::letters)
 	// e da un numero compreso tra 1 e 12 (sono stati divisi i due casi dove il numero è tra 1-9 e tra 10-12)
 	std::string reg_rule = "[";
@@ -496,21 +496,32 @@ int round(Player& player, Player& enemy, Log& file_log)
 	
 	if(enemy.has_lost())
 	{
+		std::cout << "\n";
 		print_winner(player);
 		recap(player, enemy);
 		
+//		std::string winner = winner_string(player);
 		file_log.write("\n" + eof + "Il vincitore e'  " + player.name);
 		
 		return 100;	// partita terminata
 	}
 }
 
-void print_winner(Player& player)
+std::string winner_string(Player& player)
 {
 	std::string str = player.name + " hai vinto!";
-	std::cout << "\n+" + std::string(str.length()+2, '~') + "+\n";
-	std::cout << "| " + str + " |\n";
-	std::cout << "+" + std::string(str.length()+2, '~') + "+\n\n";
+	std::string winner = "+";
+	std::string tilde = std::string(str.length()+2, '~');
+	winner += tilde + "+\n";
+	winner += "| " + str + " |\n";
+	winner += "+" + tilde + "+\n\n";
+	
+	return winner;
+}
+
+void print_winner(Player& player)
+{
+	std::cout << winner_string(player);
 }
 
 void Match::play()
