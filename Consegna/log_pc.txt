@@ -1,0 +1,377 @@
+Francesco
+CPU
+
+L1 F1
+H11 N11
+M9 G9
+H5 L5
+H12 L12
+B12 B10
+G3
+F7
+G11 G7
+H9 H5
+C6 C2
+L10 N10
+M8 I8
+E10 C10
+M5
+D1
+
+>>Turno 1:
+>>Francesco
+G3 C3
+
+>>Turno 2:
+>>CPU
+M10 E9
+
+>>Turno 3:
+>>Francesco
+H1 D1
+
+>>Turno 4:
+>>CPU
+G9 F7
+
+>>Turno 5:
+>>Francesco
+C3 H3
+
+>>Turno 6:
+>>CPU
+D10 E7
+
+>>Turno 7:
+>>Francesco
+H3 H6
+
+>>Turno 8:
+>>CPU
+C4 G2
+
+>>Turno 9:
+>>Francesco
+H1 H5
+
+>>Turno 10:
+>>CPU
+C4 E1
+
+>>Turno 11:
+>>Francesco
+H1 H6
+
+>>Turno 12:
+>>CPU
+E7 M4
+
+>>Turno 13:
+>>Francesco
+H1 H7
+
+>>Turno 14:
+>>CPU
+C4 A1
+
+>>Turno 15:
+>>Francesco
+H1 H8
+
+>>Turno 16:
+>>CPU
+G9 C2
+
+>>Turno 17:
+>>Francesco
+H1 I8
+
+>>Turno 18:
+>>CPU
+C4 A8
+
+>>Turno 19:
+>>Francesco
+H1 L8
+
+>>Turno 20:
+>>CPU
+G9
+
+>>Turno 21:
+>>Francesco
+H1 G9
+
+>>Turno 22:
+>>CPU
+C4 G3
+
+>>Turno 23:
+>>Francesco
+H6 H7
+
+>>Turno 24:
+>>CPU
+M5 C9
+
+>>Turno 25:
+>>Francesco
+H1 G8
+
+>>Turno 26:
+>>CPU
+E9 E11
+
+>>Turno 27:
+>>Francesco
+H1 F8
+
+>>Turno 28:
+>>CPU
+L8 H12
+
+>>Turno 29:
+>>Francesco
+H1 H9
+
+>>Turno 30:
+>>CPU
+C9 N7
+
+>>Turno 31:
+>>Francesco
+H1 M8
+
+>>Turno 32:
+>>CPU
+H12 E9
+
+>>Turno 33:
+>>Francesco
+H1 F9
+
+>>Turno 34:
+>>CPU
+G9 D12
+
+>>Turno 35:
+>>Francesco
+H7 G6
+
+>>Turno 36:
+>>CPU
+M4 I3
+
+>>Turno 37:
+>>Francesco
+H1 G7
+
+>>Turno 38:
+>>CPU
+G9 D9
+
+>>Turno 39:
+>>Francesco
+H1 G8
+
+>>Turno 40:
+>>CPU
+C4 N10
+
+>>Turno 41:
+>>Francesco
+H1 G9
+
+>>Turno 42:
+>>CPU
+E11 F6
+
+>>Turno 43:
+>>Francesco
+H1 G10
+
+>>Turno 44:
+>>CPU
+I3 D9
+
+>>Turno 45:
+>>Francesco
+H1 G11
+
+>>Turno 46:
+>>CPU
+N7 A11
+
+>>Turno 47:
+>>Francesco
+H1 G12
+
+>>Turno 48:
+>>CPU
+F6 C7
+
+>>Turno 49:
+>>Francesco
+G6 H10
+
+>>Turno 50:
+>>CPU
+C4 B10
+
+>>Turno 51:
+>>Francesco
+H1 G7
+
+>>Turno 52:
+>>CPU
+D9 B8
+
+>>Turno 53:
+>>Francesco
+H1 G8
+
+>>Turno 54:
+>>CPU
+C4 N3
+
+>>Turno 55:
+>>Francesco
+H1 G9
+
+>>Turno 56:
+>>CPU
+A11 H10
+
+>>Turno 57:
+>>Francesco
+H10 C9
+
+>>Turno 58:
+>>CPU
+H10 I2
+
+>>Turno 59:
+>>Francesco
+H1 A8
+
+>>Turno 60:
+>>CPU
+C4 L2
+
+>>Turno 61:
+>>Francesco
+H1 B8
+
+>>Turno 62:
+>>CPU
+I2 B11
+
+>>Turno 63:
+>>Francesco
+H1 C8
+
+>>Turno 64:
+>>CPU
+C4 D2
+
+>>Turno 65:
+>>Francesco
+H1 B11
+
+>>Turno 66:
+>>CPU
+C7 F10
+
+>>Turno 67:
+>>Francesco
+H1 C2
+
+>>Turno 68:
+>>CPU
+C4 L11
+
+>>Turno 69:
+>>Francesco
+H1 C3
+
+>>Turno 70:
+>>CPU
+F10 L5
+
+>>Turno 71:
+>>Francesco
+H1 C4
+
+>>Turno 72:
+>>CPU
+C4 B9
+
+>>Turno 73:
+>>Francesco
+H1 C5
+
+>>Turno 74:
+>>CPU
+C4 E11
+
+>>Turno 75:
+>>Francesco
+H1 C6
+
+>>Turno 76:
+>>CPU
+L5 B10
+
+>>Turno 77:
+>>Francesco
+H1 A10
+
+>>Turno 78:
+>>CPU
+B10 D1
+
+>>Turno 79:
+>>Francesco
+H1 B10
+
+>>Turno 80:
+>>CPU
+D1 F11
+
+>>Turno 81:
+>>Francesco
+I12 I10
+
+>>Turno 82:
+>>CPU
+F11 D11
+
+>>Turno 83:
+>>Francesco
+B11 G5
+
+>>Turno 84:
+>>CPU
+D11 D12
+
+>>Turno 85:
+>>Francesco
+I5 G3
+
+>>Turno 86:
+>>CPU
+D12 G5
+
+>>Turno 87:
+>>Francesco
+H1 H5
+
+>>Turno 88:
+>>CPU
+G5 G3
+
+>>Turno 89:
+>>Francesco
+H1 G3
+
+<<Il vincitore e'  Francesco

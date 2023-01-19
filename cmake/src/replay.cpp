@@ -285,7 +285,7 @@ int main(int argc, char* argv[])
 			file_output_replay_name = argv[3];
 			
 			ifstream input(file_log_name, ios::in);
-			ofstream output(file_output_replay_name, ios::out | ios::app);
+			ofstream output(file_output_replay_name, ios::out);
 			
 			re_write(input, output);
 			input.close();

@@ -80,17 +80,6 @@ void replay_placement(Player& p, ifstream& input)
 }
 
 
-//int replay_round(Player& player, Player& enemy, ifstream& input)
-//{
-//	Position origin, target;
-//	
-//	player.print_defence_attack();
-//	int code = command_for_replay(origin, target, input);
-//	player.act_ship(player.get_ship_index(origin), target, enemy);
-//
-//	return code;
-//}
-
 int replay_round(Player& player, Player& enemy, ifstream& input, string& match_string)
 {
 	Position origin, target;
